@@ -1,0 +1,857 @@
+# ##################################################
+#
+# Radial Effect / Aura components
+#
+# ##################################################
+
+### Variables
+
+@shipAuraRange = 80
+@shipAuraRangeLarge = 110
+@stationSmallAuraRange = 70
+@stationMediumAuraRange = 90
+@stationLargeAuraRange = 110
+
+### Empty Aura-slot
+utility_component_template = {
+	key = "STATION_SPECIAL_AURA_EMPTY"
+	size = medium
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+	cost = 0
+	
+	component_set = "station_special_auras"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+### Empty Aura-slot
+utility_component_template = {
+	key = "SC_DEFENSE_AURA_EMPTY"
+	size = medium
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+	cost = 0
+	
+	component_set = "sc_defense_aura"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+### Empty Aura-slot
+utility_component_template = {
+	key = "TRANSPORT_DEFENSE_AURA_EMPTY"
+	size = medium
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+	cost = 0
+	
+	component_set = "transport_defense_aura"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "SHIP_AURA_SHIELDS"
+	size = medium
+	icon = "GFX_ship_part_shield_recharger"
+	icon_frame = 1
+	power = -200
+	cost = 250
+	
+	component_set = "ship_aura_components"
+	
+	friendly_aura = {
+		name = "aura_nanobot_cloud"
+		radius = @shipAuraRange
+		apply_on = ships
+		
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = friendly_support_aura_1
+			priority = 70
+		}
+		
+		modifier = {
+			ship_shield_regen_add_perc = 0.30
+		}
+		
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+utility_component_template = {
+	key = "SHIP_AURA_FIRING"
+	size = medium
+	icon = "GFX_ship_part_science_lab_1"
+	icon_frame = 1
+	power = -200
+	cost = 250
+	
+	component_set = "ship_aura_components"
+	
+	friendly_aura = {
+		name = "aura_nanobot_cloud"
+		radius = @shipAuraRange
+		apply_on = ships
+		
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = friendly_support_aura_2
+			priority = 60
+		}
+		
+		modifier = {
+			ship_fire_rate_mult = 0.30
+		}
+		
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+
+utility_component_template = {
+	key = "SHIP_AURA_DAMAGE"
+	size = medium
+	icon = "GFX_ship_part_aura_snare"
+	icon_frame = 1
+	power = -200
+	cost = 250
+	
+	component_set = "ship_aura_components"
+	
+	friendly_aura = {
+		name = "aura_nanobot_cloud"
+		radius = @shipAuraRange
+		apply_on = ships
+		
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = friendly_support_aura_3
+			priority = 50
+		}
+		
+		modifier = {
+			ship_weapon_damage = 0.30
+		}
+		
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+utility_component_template = {
+	key = "SC_DEFENSE_AURA"
+	size = medium
+	icon = "GFX_ship_part_aura_nanobot"
+	icon_frame = 1
+	power = -200
+	cost = 1000
+	
+	component_set = "sc_defense_aura"
+	
+	hostile_aura = {
+		name = "aura_nanobot_cloud"
+		radius = @shipAuraRangeLarge
+		apply_on = ships
+		
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = sc_defense_aura
+			priority = 1
+		}
+		
+		damage_per_day = {
+			accuracy = 0.85
+			damage = { min = 75 max = 150 }
+			shield_penetration = 0.75
+			armor_penetration = 0.75
+		}
+		
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 75
+	}
+}
+
+
+utility_component_template = {
+	key = "TRANSPORT_DEFENSE_AURA"
+	size = medium
+	icon = "GFX_ship_part_aura_nanobot"
+	icon_frame = 1
+	power = -100
+	cost = 500
+	
+	component_set = "transport_defense_aura"
+	
+	hostile_aura = {
+		name = "aura_nanobot_cloud"
+		radius = @shipAuraRange
+		apply_on = ships
+		
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = transport_defense_aura
+			priority = 1
+		}
+		
+		damage_per_day = {
+			accuracy = 0.95
+			damage = { min = 5 max = 10 }
+			shield_penetration = 0.75
+			armor_penetration = 0.75
+		}
+		
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 75
+	}
+}
+
+
+utility_component_template = {
+	key = "STATION_REPAIR_AURA"
+	size = medium
+	icon = "GFX_ship_part_science_lab_1"
+	icon_frame = 1
+	power = -400
+	cost = 1000
+	
+	component_set = "station_special_auras"
+	
+	friendly_aura = {
+		name = "aura_nanobot_cloud"
+		radius = 40
+		apply_on = ships
+		
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = station_repair_aura
+			priority = 1
+		}
+		
+		modifier = {
+			ship_auto_repair_add = 1.0
+			ship_shield_regen_add_perc = 1.0
+		}
+		
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 75
+	}
+}
+
+utility_component_template = {
+	key = "COFH_SE_SHIP_AURA_HYPERSPACE"
+	size = medium
+	icon = "GFX_cofh_se_ship_part_aura_hyperspace"
+	icon_frame = 1
+	power = -200
+	cost = 250
+
+	component_set = "ship_aura_components"
+
+	friendly_aura = {
+		name = "cofh_se_aura_ship_hyperspace"
+		radius = @shipAuraRange
+		apply_on = fleets
+
+		stack_info = {
+			id = friendly_hyperspace_aura
+			priority = 1
+		}
+
+		modifier = {
+			ship_accuracy_add = 5
+			ship_weapon_range_mult = 0.1
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	prerequisites = {"tech_hyper_drive_3"}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "COFH_SE_STATION_SMALL_AURA_HYPERSPACE"
+	size = medium
+	icon = "GFX_cofh_se_ship_part_aura_hyperspace"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "station_small_aura_components"
+	class_restriction = { shipclass_military_station }
+
+	friendly_aura = {
+		name = "cofh_se_aura_ship_hyperspace"
+		radius = @stationSmallAuraRange
+		apply_on = fleets
+
+		stack_info = {
+			id = friendly_hyperspace_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_accuracy_add = 10
+			ship_weapon_range_mult = 0.2
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	prerequisites = {"tech_hyper_drive_3"}
+
+	ai_weight = {
+		weight = 110
+	}
+}
+
+utility_component_template = {
+	key = "COFH_SE_STATION_MEDIUM_AURA_HYPERSPACE"
+	size = medium
+	icon = "GFX_cofh_se_ship_part_aura_hyperspace"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "station_medium_aura_components"
+	class_restriction = { shipclass_military_station }
+
+	friendly_aura = {
+		name = "cofh_se_aura_ship_hyperspace"
+		radius = @stationMediumAuraRange
+		apply_on = fleets
+
+		stack_info = {
+			id = friendly_hyperspace_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_accuracy_add = 10
+			ship_weapon_range_mult = 0.2
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	prerequisites = {"tech_hyper_drive_3"}
+
+	ai_weight = {
+		weight = 110
+	}
+}
+
+utility_component_template = {
+	key = "COFH_SE_STATION_LARGE_AURA_HYPERSPACE"
+	size = medium
+	icon = "GFX_cofh_se_ship_part_aura_hyperspace"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "station_large_aura_components"
+	class_restriction = { shipclass_military_station }
+
+	friendly_aura = {
+		name = "cofh_se_aura_ship_hyperspace"
+		radius = @stationLargeAuraRange
+		apply_on = fleets
+
+		stack_info = {
+			id = friendly_hyperspace_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_accuracy_add = 10
+			ship_weapon_range_mult = 0.2
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	prerequisites = {"tech_hyper_drive_3"}
+
+	ai_weight = {
+		weight = 110
+	}
+}
+
+utility_component_template = {
+	key = "COFH_SE_SHIP_AURA_WARP"
+	size = medium
+	icon = "GFX_cofh_se_ship_part_aura_warp"
+	icon_frame = 1
+	power = -200
+	cost = 250
+
+	component_set = "ship_aura_components"
+
+	friendly_aura = {
+		name = "cofh_se_aura_ship_warp"
+		radius = @shipAuraRange
+		apply_on = fleets
+
+		stack_info = {
+			id = friendly_warp_aura
+			priority = 1
+		}
+
+		modifier = {
+			ship_combat_speed_mult = 0.25
+			ship_speed_mult = 0.25
+			ship_evasion_add = 5
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	prerequisites = {"tech_warp_drive_3"}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "COFH_SE_STATION_SMALL_AURA_WARP"
+	size = medium
+	icon = "GFX_cofh_se_ship_part_aura_warp"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "station_small_aura_components"
+	class_restriction = { shipclass_military_station }
+
+	friendly_aura = {
+		name = "cofh_se_aura_ship_warp"
+		radius = @stationSmallAuraRange
+		apply_on = fleets
+
+		stack_info = {
+			id = friendly_warp_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_combat_speed_mult = 0.5
+			ship_speed_mult = 0.5
+			ship_evasion_add = 10
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	prerequisites = {"tech_warp_drive_3"}
+
+	ai_weight = {
+		weight = 110
+	}
+}
+
+utility_component_template = {
+	key = "COFH_SE_STATION_MEDIUM_AURA_WARP"
+	size = medium
+	icon = "GFX_cofh_se_ship_part_aura_warp"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "station_medium_aura_components"
+	class_restriction = { shipclass_military_station }
+
+	friendly_aura = {
+		name = "cofh_se_aura_ship_warp"
+		radius = @stationMediumAuraRange
+		apply_on = fleets
+
+		stack_info = {
+			id = friendly_warp_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_combat_speed_mult = 0.5
+			ship_speed_mult = 0.5
+			ship_evasion_add = 10
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	prerequisites = {"tech_warp_drive_3"}
+
+	ai_weight = {
+		weight = 110
+	}
+}
+
+utility_component_template = {
+	key = "COFH_SE_STATION_LARGE_AURA_WARP"
+	size = medium
+	icon = "GFX_cofh_se_ship_part_aura_warp"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "station_large_aura_components"
+	class_restriction = { shipclass_military_station }
+
+	friendly_aura = {
+		name = "cofh_se_aura_ship_warp"
+		radius = @stationLargeAuraRange
+		apply_on = fleets
+
+		stack_info = {
+			id = friendly_warp_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_combat_speed_mult = 0.5
+			ship_speed_mult = 0.5
+			ship_evasion_add = 10
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	prerequisites = {"tech_warp_drive_3"}
+
+	ai_weight = {
+		weight = 110
+	}
+}
+
+utility_component_template = {
+	key = "COFH_SE_SHIP_AURA_WORMHOLE"
+	size = medium
+	icon = "GFX_cofh_se_ship_part_aura_wormhole"
+	icon_frame = 1
+	power = -200
+	cost = 250
+
+	component_set = "ship_aura_components"
+
+	friendly_aura = {
+		name = "cofh_se_aura_ship_wormhole"
+		radius = @shipAuraRange
+		apply_on = fleets
+
+		stack_info = {
+			id = friendly_wormhole_aura
+			priority = 1
+		}
+
+		modifier = {
+			ship_hitpoints_mult = 0.1
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	prerequisites = {"tech_wormhole_generation_3"}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "COFH_SE_STATION_SMALL_AURA_WORMHOLE"
+	size = medium
+	icon = "GFX_cofh_se_ship_part_aura_wormhole"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "station_small_aura_components"
+	class_restriction = { shipclass_military_station }
+
+	friendly_aura = {
+		name = "cofh_se_aura_ship_wormhole"
+		radius = @stationSmallAuraRange
+		apply_on = fleets
+
+		stack_info = {
+			id = friendly_wormhole_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_hitpoints_mult = 0.2
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	prerequisites = {"tech_wormhole_generation_3"}
+
+	ai_weight = {
+		weight = 110
+	}
+}
+
+utility_component_template = {
+	key = "COFH_SE_STATION_MEDIUM_AURA_WORMHOLE"
+	size = medium
+	icon = "GFX_cofh_se_ship_part_aura_wormhole"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "station_medium_aura_components"
+	class_restriction = { shipclass_military_station }
+
+	friendly_aura = {
+		name = "cofh_se_aura_ship_wormhole"
+		radius = @stationMediumAuraRange
+		apply_on = fleets
+
+		stack_info = {
+			id = friendly_wormhole_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_hitpoints_mult = 0.2
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	prerequisites = {"tech_wormhole_generation_3"}
+
+	ai_weight = {
+		weight = 110
+	}
+}
+
+utility_component_template = {
+	key = "COFH_SE_STATION_LARGE_AURA_WORMHOLE"
+	size = medium
+	icon = "GFX_cofh_se_ship_part_aura_wormhole"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "station_large_aura_components"
+	class_restriction = { shipclass_military_station }
+
+	friendly_aura = {
+		name = "cofh_se_aura_ship_wormhole"
+		radius = @stationLargeAuraRange
+		apply_on = fleets
+
+		stack_info = {
+			id = friendly_wormhole_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_hitpoints_mult = 0.2
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	prerequisites = {"tech_wormhole_generation_3"}
+
+	ai_weight = {
+		weight = 110
+	}
+}

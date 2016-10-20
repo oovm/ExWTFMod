@@ -1,0 +1,18 @@
+name="Ex WTF Mod"
+path="mod/wtf"
+tags={
+	"Gameplay"
+}
+picture="wtf.png"
+remote_file_id="689052002"
+supported_version="1.0.0"
+
+
+
+[h1]游戏增强 V1.0 [/h1]
+[i]支持版本  V1.0.0[/i]
+舰队上限资源上限*10
+能源上限*100
+隐藏星区和战列舰光环
+25格家园
+快速合并和快速舰队升级

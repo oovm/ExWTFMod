@@ -1,0 +1,189 @@
+###我爱学习
+tech_study1 = {
+	cost = 1200
+	area = physics
+	tier = 2
+	category = { biology }
+	is_rare = yes
+	weight = 100
+	modifier = {
+		all_technology_research_speed = 0.01
+		tile_resource_food_mult = -0.02
+	}
+	ai_weight = {
+	}
+}
+
+tech_study2 = {
+	cost = 2840
+	area = physics
+	tier = 3
+	category = { biology }
+	is_rare = yes
+	weight = 100
+	prerequisites = { "tech_study1" }
+	modifier = {
+		all_technology_research_speed = 0.02
+		tile_resource_food_mult = -0.04
+	}
+	ai_weight = {
+	}
+}
+
+tech_study3 = {
+	cost = 5200
+	area = physics
+	tier = 4
+	category = { biology }
+	is_rare = yes
+	weight = 100
+	prerequisites = { "tech_study2" }
+	modifier = {
+		all_technology_research_speed = 0.03
+		tile_resource_food_mult = -0.06
+	}
+	ai_weight = {
+	}
+}
+
+tech_study4 = {
+	cost = 7600
+	area = physics
+	tier = 4
+	category = { biology }
+	is_rare = yes
+	weight = 100
+	prerequisites = { "tech_study3" }
+	modifier = {
+		all_technology_research_speed = 0.04
+		tile_resource_food_mult = -0.08
+	}
+	ai_weight = {
+	}
+}
+
+tech_study5 = {
+	cost = 11600
+	area = physics
+	tier = 4
+	category = { biology }
+	is_rare = yes
+	is_dangerous = yes
+	weight = 100
+	prerequisites = { "tech_study4" }
+	modifier = {
+		all_technology_research_speed = 0.05
+		tile_resource_food_mult = -0.10
+	}
+	ai_weight = {
+	}
+}
+
+tech_xeno_aesthetic = {
+	cost = 900
+	area = society
+	tier = 2
+	category = { biology }
+	weight = 75
+	modifier = {
+		planet_migration_xeno_pull = 0.50
+		planet_migration_same_pull = 0.50
+	}
+	ai_weight = {
+	}
+}
+
+tech_gay_reproduction = {
+	area = society
+	cost = 1200
+	tier = 2
+	category = { biology }
+	weight = 70
+	ai_weight = {
+	}
+}
+
+tech_sex_hegemony = {
+	area = society
+	cost = 1500
+	tier = 2
+	category = { biology }
+	weight = 65
+	modifier = {
+		country_insult_efficiency = 25
+	}
+	prereqfor_desc = {
+		diplo_action = {
+			title = "tech_sex_hegemony_title"
+			desc  = "tech_sex_hegemony_title_desc"
+		}
+	}
+	ai_weight = {
+	}
+}
+
+tech_tentacle_rear = {
+	area = society
+	cost = 1800
+	tier = 2
+	category = { biology }
+	weight = 60
+	ai_weight = {
+	}
+}
+
+tech_alien_teach = {
+	area = society
+	cost = 2320
+	tier = 3
+	category = { biology }
+	weight = 50
+	ai_weight = {
+	}
+}
+
+tech_senpai_teach = {
+	area = society
+	cost = 2840
+	tier = 3
+	category = { biology }
+	weight = 45
+	ai_weight = {
+	}
+}
+
+tech_xeno_coition = {
+	area = society
+	cost = 3360
+	tier = 3
+	category = { biology }
+	weight = 40
+	prereqfor_desc = {
+		diplo_action = {
+			title = "tech_xeno_coition_title"
+			desc  = "tech_xeno_coition_title_desc"
+		}
+	}
+	ai_weight = {
+	}
+}
+
+tech_eros_robot = {
+	area = society
+	cost = 3880
+	tier = 3
+	category = { biology }
+	weight = 35
+	ai_weight = {
+	}
+}
+
+tech_deep_communication = {
+	area = society
+	cost = 3880
+	tier = 3
+	category = { biology }
+	weight = 35
+	ai_weight = {
+	}
+}

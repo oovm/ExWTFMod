@@ -1,0 +1,833 @@
+##################
+### 核心科技
+##################
+
+##################
+### 科技权
+##################
+@tier1cost1 = 240
+@tier1cost2 = 360
+@tier1cost3 = 480
+@tier1cost4 = 600
+
+@tier2cost1 = 900
+@tier2cost2 = 1200
+@tier2cost3 = 1500
+@tier2cost4 = 1800
+
+@tier3cost1 = 2320
+@tier3cost2 = 2840
+@tier3cost3 = 3360
+@tier3cost4 = 3880
+
+@tier4cost1 = 4800
+@tier4cost2 = 5200
+@tier4cost3 = 5600
+@tier4cost4 = 6000
+
+@tier5cost1 = 6800
+@tier5cost2 = 7600
+@tier5cost3 = 8400
+@tier5cost4 = 9200
+
+@tierXcost1 = 10400
+@tierXcost2 = 11600
+@tierXcost3 = 12800
+@tierXcost4 = 14000
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+@tier4weight1 = 30
+@tier4weight2 = 26
+@tier4weight3 = 22
+@tier4weight4 = 18
+
+@tier5weight1 = 15
+@tier5weight2 = 13
+@tier5weight3 = 11
+@tier5weight4 = 9
+
+@tierXweight1 = 8
+@tierXweight2 = 7
+@tierXweight3 = 6
+@tierXweight4 = 5
+
+###更多政策
+tech_tax_policy = {
+	cost = @tier2cost2
+	area = society
+	tier = 2
+	category = { statecraft }
+	weight = @tier2weight2
+	
+	# unlocks fleet focus policy
+
+	weight_modifier = {
+		factor = 3
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+	ai_weight = {
+	}
+}
+
+tech_tax_policy_adv = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	category = { statecraft }
+	weight = @tier3weight3
+	weight_modifier = {	}
+	ai_weight = { }
+}
+
+tech_fleet_focus = {
+	cost = @tier2cost2
+	area = society
+	tier = 2
+	category = { military_theory }
+	weight = @tier2weight2
+	
+	# unlocks fleet focus policy
+
+	weight_modifier = {
+		factor = 3
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+	
+	ai_weight = {
+	}
+}
+
+tech_mind_or_materials = {
+	cost = @tier2cost2
+	area = society
+	tier = 2
+	category = { particles }
+	weight = @tier2weight2
+	
+	# unlocks mind or materials policy
+
+	weight_modifier = {
+		factor = 3
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 0.75
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+	
+	ai_weight = {
+	}
+}
+
+tech_centralization_extent = {
+	cost = @tier2cost2
+	area = society
+	tier = 2
+	category = { statecraft }
+	weight = @tier2weight2
+	
+	# unlocks centralization extent edict
+
+	weight_modifier = {
+		factor = 3
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 0.75
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+	
+	ai_weight = {
+	}
+}
+
+tech_policy_unlock_two = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = { statecraft }
+	prerequisites = { "tech_centralization_extent" }
+	weight = @tier3weight1
+	prereqfor_desc = {
+		diplo_action = {
+			title = "tech_policy_unlock_two_title"
+			desc  = "tech_policy_unlock_two_title_desc"
+		}
+	}
+	weight_modifier = {
+		factor = 1
+	}
+
+	ai_weight = {
+		factor = 1
+	}
+}
+
+tech_policy_unlock_three = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	category = { statecraft }
+	is_rare = yes
+	prerequisites = { "tech_policy_unlock_two" }
+	weight = @tier3weight1
+	prereqfor_desc = {
+		diplo_action = {
+			title = "tech_policy_unlock_three_title"
+			desc  = "tech_policy_unlock_three_title_desc"
+		}
+	}
+	weight_modifier = {
+		factor = 1
+	}
+
+	ai_weight = {
+		factor = 1
+	}
+}
+
+###基因改造科技
+
+tech_genetic_restructuring_one = {
+	cost = @tier2cost2
+	area = society
+	tier = 2
+	category = { biology }	
+	prerequisites = { "tech_gene_tailoring" }
+	weight = @tier2weight2
+	
+	modifier = {
+		trait_points = 1
+		leader_age = 1
+	}
+	
+	weight_modifier = {
+		factor = 7
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_genetic_restructuring_two = {
+	cost = @tier2cost4
+	area = society
+	tier = 2
+	category = { biology }	
+	prerequisites = { "tech_genetic_restructuring_one" }
+	weight = @tier2weight4
+	
+	modifier = {
+		trait_points = 1
+		leader_age = 2
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+
+tech_genetic_restructuring_three = {
+	cost = @tier3cost2
+	area = society
+	tier = 3
+	category = { biology }	
+	prerequisites = { "tech_genetic_restructuring_two" }
+	weight = @tier3weight2
+	
+	modifier = {
+		trait_points = 1
+		leader_age = 3
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+
+tech_genetic_restructuring_four = {
+	cost = @tier3cost4
+	area = society
+	tier = 3
+	category = { biology }	
+	prerequisites = { "tech_genetic_restructuring_three" }
+	weight = @tier3weight4
+	
+	modifier = {
+		trait_points = 1
+		leader_age = 4
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_genetic_restructuring_five = {
+	cost = @tier4cost2
+	area = society
+	tier = 3
+	category = { biology }	
+	prerequisites = { "tech_genetic_restructuring_four" }
+	weight = @tier4weight2
+	
+	modifier = {
+		trait_points = 2
+		leader_age = 5
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_genetic_restructuring_six = {
+	cost = @tier4cost4
+	area = society
+	tier = 4
+	category = { biology }	
+	prerequisites = { "tech_genetic_restructuring_five" }
+	weight = @tier4weight4
+	
+	modifier = {
+		max_trait_points_leader = 1
+		trait_points = 2
+		leader_age = 6
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+
+tech_genetic_restructuring_seven = {
+	cost = @tier5cost2
+	area = society
+	tier = 5
+	category = { biology }
+	prerequisites = { "tech_genetic_restructuring_six" }
+	weight = @tier5weight2
+	
+	modifier = {
+		leader_skill_levels = 1
+		trait_points = 2
+		leader_age = 7
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_prehistorical_powers = {
+	cost = @tier5cost4
+	area = society
+	tier = 5
+	category = { biology }
+	is_rare = yes
+	prerequisites = { "tech_genetic_restructuring_seven" }
+	weight = @tier3weight4
+	
+	modifier = {
+		trait_points = 3
+		army_health = 0.50
+		army_damage_mult = 0.25
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_final_sublimation = {
+	cost = @tierXcost1
+	area = society
+	tier = 6
+	category = { excited }
+	is_rare = yes
+	is_dangerous = yes
+	prerequisites = { "tech_prehistorical_powers" }
+	weight = @tierXweight1
+	
+	modifier = {
+		trait_points = 5
+		army_damage_mult = 0.25
+		army_upkeep_mult = -0.05
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_psi_warrior1 = {
+	cost = @tierXcost1
+	area = society
+	tier = 6
+	category = { excited }
+	is_rare = yes
+	prerequisites = { "tech_final_sublimation" }
+	weight = @tierXweight1
+	
+	modifier = {
+		garrison_health = 0.20
+	}
+}
+
+tech_psi_warrior2 = {
+	cost = @tierXcost2
+	area = society
+	tier = 6
+	category = { excited }
+	is_rare = yes
+	prerequisites = { "tech_psi_warrior1" }
+	weight = @tierXweight2
+	
+	modifier = {
+		garrison_health = 0.20
+	}
+}
+
+tech_psi_warrior3 = {
+	cost = @tierXcost3
+	area = society
+	tier = 6
+	category = { excited }
+	is_rare = yes
+	prerequisites = { "tech_psi_warrior2" }
+	weight = @tierXweight3
+	
+	modifier = {
+		garrison_health = 0.20
+	}
+}
+
+tech_psi_warrior4 = {
+	cost = @tierXcost4
+	area = society
+	tier = 6
+	category = { excited }
+	is_rare = yes
+	prerequisites = { "tech_psi_warrior3" }
+	weight = @tierXweight4
+	
+	modifier = {
+		garrison_health = 0.40
+	}
+}
+
+###超级战争要求
+tech_military_supremacy = {
+	cost = @tierXcost4
+	area = society
+	tier = 6
+	category = { military_theory }
+	is_rare = yes
+	is_dangerous = yes
+	prerequisites = { "tech_policy_unlock_three" }
+	weight = @tierXweight4
+	
+	# unlocks supremacy wargoal
+	
+	prereqfor_desc = {
+		diplo_action = {
+			title = "TECH_SUPREMACY_WARGOAL_TYPES_TITLE"
+			desc = "TECH_SUPREMACY_WARGOAL_TYPES_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.15
+		
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+}
+
+
+tech_xenoplague = {
+	cost = @tierXcost2
+	area = society
+	tier = 6
+	category = { excited }
+	is_rare = yes
+	is_dangerous = yes
+	prerequisites = { "tech_genetic_restructuring_seven" }
+	weight = @tierXweight2
+	
+	# unlocks xenoplague wargoal
+	
+	prereqfor_desc = {
+		diplo_action = {
+			title = "TECH_XENOPLAGUE_WARGOAL_TYPES_TITLE"
+			desc = "TECH_XENOPLAGUE_WARGOAL_TYPES_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.01
+
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 10
+			has_ethic = ethic_xenophobe
+		}
+		modifier = {
+			factor = 30
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 0.5
+		modifier = {
+			factor = 2
+			has_ethic = ethic_xenophobe
+		}	
+		modifier = {
+			factor = 5
+			has_ethic = ethic_fanatic_xenophobe
+		}		
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+tech_scorched_earth = {
+	area = engineering
+	cost = @tier3cost1
+	tier = 3
+	category = { military_theory }
+	weight = @tier3weight1
+	prereqfor_desc = {
+		diplo_action = {
+			title = "tech_scorched_earth_title"
+			desc  = "tech_scorched_earth_title_desc"
+		}
+	}
+}
+
+tech_core_boom = {
+	area = engineering
+	cost = @tier5cost1
+	tier = 5
+	category = { excited }
+	prerequisites = { "tech_scorched_earth" }
+	weight = @tier5weight1
+	prereqfor_desc = {
+		diplo_action = {
+			title = "tech_core_boom_title"
+			desc  = "tech_core_boom_title_desc"
+		}
+	}
+}

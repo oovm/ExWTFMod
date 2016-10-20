@@ -1,0 +1,295 @@
+#特异化建造基地
+specialized_yard_1 = {
+	icon = "GFX_EX_specialized_yard_1"
+	section = "ASSEMBLYYARD_SPACEPORT_SECTION"
+	construction_days = 135
+	prerequisites = { "tech_facruiser_1" }
+	spaceport_level = 3
+	
+	cost = {
+		minerals = 3000
+		influence = 50
+	}
+	
+	required_resources = {
+		energy = 5
+	}
+	
+	modifier = {
+		shipsize_constructor_construction_speed_mult = 0.50
+		shipsize_constructor_build_cost_mult = -0.25
+		shipsize_science_construction_speed_mult = 0.50
+		shipsize_science_build_cost_mult = -0.25
+		shipsize_corvette_construction_speed_mult = 0.50
+		shipsize_corvette_build_cost_mult = -0.25
+		shipsize_destroyer_construction_speed_mult = 0.50
+		shipsize_destroyer_build_cost_mult = -0.25
+	}
+}
+
+specialized_yard_2 = {
+	icon = "GFX_EX_specialized_yard_2"
+	section = "ASSEMBLYYARD_SPACEPORT_SECTION"
+	construction_days = 270
+	prerequisites = { "tech_battlecruiser_1" }
+	spaceport_level = 4
+	
+	cost = {
+		minerals = 6000
+		influence = 100
+	}
+	
+	required_resources = {
+		energy = 10
+	}
+	
+	modifier = {
+		shipsize_colonizer_construction_speed_mult = 0.50
+		shipsize_colonizer_build_cost_mult = -0.25
+		shipsize_facruiser_construction_speed_mult = 0.50
+		shipsize_facruiser_build_cost_mult = -0.25
+		shipsize_Light_Carrier_construction_speed_mult = 0.50
+		shipsize_Light_Carrier_build_cost_mult = -0.25
+		shipsize_cruiser_construction_speed_mult = 0.50
+		shipsize_cruiser_build_cost_mult = -0.25
+	}	
+}
+
+specialized_yard_3 = {
+	icon = "GFX_EX_specialized_yard_3"
+	section = "ASSEMBLYYARD_SPACEPORT_SECTION"
+	construction_days = 540
+	prerequisites = { "tech_dreadnought_1" }
+	spaceport_level = 5
+	
+	cost = {
+		minerals = 12000
+		influence = 200
+	}
+	
+	required_resources = {
+		energy = 20
+	}
+	
+	modifier = {
+		shipsize_Battlecruiser_construction_speed_mult = 0.50
+		shipsize_Battlecruiser_build_cost_mult = -0.25
+		shipsize_Carrier_construction_speed_mult = 0.50
+		shipsize_Carrier_build_cost_mult = -0.25
+		shipsize_battleship_construction_speed_mult = 0.50
+		shipsize_battleship_build_cost_mult = -0.25
+		shipsize_Dreadnought_construction_speed_mult = 0.50
+		shipsize_Dreadnought_build_cost_mult = -0.25
+	}	
+}
+
+specialized_yard_4 = {
+	icon = "GFX_EX_specialized_yard_4"
+	section = "ASSEMBLYYARD_SPACEPORT_SECTION"
+	construction_days = 1080
+	prerequisites = { "tech_flagship_1" }
+	spaceport_level = 6
+	
+	cost = {
+		minerals = 24000
+		influence = 400
+	}	
+	
+	required_resources = {
+		energy = 40
+	}
+	
+	modifier = {
+		shipsize_sun_crusher_construction_speed_mult = 0.50
+		shipsize_sun_crusher_build_cost_mult = -0.25		
+		shipsize_Flagship_construction_speed_mult = 0.50
+		shipsize_Flagship_build_cost_mult = -0.25		
+		shipsize_titan_construction_speed_mult = 0.50
+		shipsize_titan_build_cost_mult = -0.25
+		shipsize_leviathan_construction_speed_mult = 0.50
+		shipsize_leviathan_build_cost_mult = -0.25
+	}	
+}
+
+#军事基地
+spaceport_base_1 = {
+	icon = "GFX_EX_base_yard_1"
+	section = "ASSEMBLYYARD_SPACEPORT_SECTION"
+	construction_days = 180
+	prerequisites = { "tech_advanced_corvette_construction" }
+	spaceport_level = 1
+	
+	cost = {
+		minerals = 250
+		influence = 25
+	}	
+	
+	required_resources = {
+		energy = 3
+
+	}
+	
+	modifier = {
+		spaceport_ship_build_cost_mult = -0.05
+		spaceport_ship_build_speed_mult = 0.05
+	}
+	
+	station_modifier = {
+		ship_hitpoints_add = 1500
+		ship_armor_add = 15
+		ship_weapon_damage = 0.15
+		ship_fire_rate_mult = 0.15
+	}
+	
+	ai_weight = {
+		modifier = {
+			weight = 0
+			OR = {
+				has_technology = tech_spaceport_3
+				has_technology = tech_spaceport_4
+				has_technology = tech_spaceport_5
+				has_technology = tech_spaceport_6
+			}
+		}
+	}
+}
+
+spaceport_base_2 = {
+	icon = "GFX_EX_base_yard_2"
+	section = "ASSEMBLYYARD_SPACEPORT_SECTION"
+	construction_days = 360
+	prerequisites = { "tech_advanced_corvette_construction" }
+	spaceport_level = 1
+	
+	cost = {
+		minerals = 1250
+		influence = 150
+	}	
+	
+	required_resources = {
+		energy = 6
+	}
+	
+	modifier = {
+		spaceport_ship_build_cost_mult = -0.10
+		spaceport_ship_build_speed_mult = 0.10
+	}
+	
+	station_modifier = {
+		ship_hitpoints_add = 3000
+		ship_armor_add = 30
+		ship_weapon_damage = 0.3
+		ship_fire_rate_mult = 0.3
+	}
+		
+	ai_weight = { 
+		modifier = {
+			factor = 75
+		}
+	}
+}
+
+spaceport_base_3 = {
+	icon = "GFX_EX_base_yard_3"
+	section = "ASSEMBLYYARD_SPACEPORT_SECTION"
+	construction_days = 720
+	prerequisites = { "tech_advanced_corvette_construction" }
+	spaceport_level = 1
+	
+	cost = {
+		minerals = 2500
+		influence = 300
+	}	
+	
+	required_resources = {
+		energy = 12
+	}
+	
+	modifier = {
+		spaceport_ship_build_cost_mult = -0.15
+		spaceport_ship_build_speed_mult = 0.15
+	}
+	
+	station_modifier = {
+		ship_hitpoints_add = 6000
+		ship_armor_add = 60
+		ship_weapon_damage = 0.6
+		ship_fire_rate_mult = 0.6
+	}
+		
+	ai_weight = { 
+		modifier = {
+			factor = 75
+		}
+	}
+}
+
+spaceport_base_4 = {
+	icon = "GFX_EX_base_yard_4"
+	section = "ASSEMBLYYARD_SPACEPORT_SECTION"
+	construction_days = 1440
+	prerequisites = { "tech_advanced_corvette_construction" }
+	spaceport_level = 1
+	
+	cost = {
+		minerals = 5000
+		influence = 625
+	}	
+	
+	required_resources = {
+		energy = 24
+	}
+	
+	modifier = {
+		spaceport_ship_build_cost_mult = -0.20
+		spaceport_ship_build_speed_mult = 0.20
+	}
+	
+	station_modifier = {
+		ship_hitpoints_add = 12000
+		ship_armor_add = 120
+		ship_weapon_damage = 1.2
+		ship_fire_rate_mult = 1.2
+	}
+		
+	ai_weight = { 
+		modifier = {
+			factor = 75
+		}
+	}
+}
+
+spaceport_base_5 = {
+	icon = "GFX_EX_base_yard_5"
+	section = "ASSEMBLYYARD_SPACEPORT_SECTION"
+	construction_days = 2880
+	prerequisites = { "tech_advanced_corvette_construction" }
+	spaceport_level = 1
+	
+	cost = {
+		minerals = 10000
+		influence = 1250
+	}	
+	
+	required_resources = {
+		energy = 36
+	}
+	
+	modifier = {
+		spaceport_ship_build_cost_mult = -0.25
+		spaceport_ship_build_speed_mult = 0.25
+	}
+	
+	station_modifier = {
+		ship_hitpoints_add = 25000
+		ship_armor_add = 250
+		ship_weapon_damage = 2.5
+		ship_fire_rate_mult = 2.5
+	}
+		
+	ai_weight = { 
+		modifier = {
+			factor = 75
+		}
+	}
+}

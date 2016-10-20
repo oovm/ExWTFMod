@@ -1,0 +1,3 @@
+main                 主界面		V1.2.5      
+species_mod_window   种族基因修改界面    V1.1.0
+technology_view.gui  已研发科技列表拉长  V1.2.5

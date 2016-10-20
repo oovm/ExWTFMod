@@ -1,0 +1,85 @@
+# Psionic Armies
+psi_trainee = {
+	damage = 3.5
+	morale_damage = 3
+	health = 1.75
+	morale = 6
+	time = 360
+	maintenance = 1
+	icon_frame = 9
+	cost = {influence = 100}
+	prerequisites = { "tech_psi_warrior1" }
+	allow = {has_building = "building_psy_1"}
+}
+
+psi_warrior = {
+	damage = 7
+	morale_damage = 6
+	health = 2.5
+	morale = 9
+	time = 720
+	maintenance = 1
+	icon_frame = 9
+	cost = {influence = 400}
+	prerequisites = { "tech_psi_warrior2" }
+	allow = {has_building = "building_psy_2"}
+}
+
+psi_master = {
+	damage = 15
+	morale_damage = 12
+	health = 3.75
+	morale = 12
+	time = 1440
+	maintenance = 1
+	icon_frame = 9
+	cost = {influence = 750}
+	prerequisites = { "tech_psi_warrior3" }
+	allow = {has_building = "building_psy_3"}
+}
+
+psi_grandmaster = {
+	damage = 32
+	morale_damage = 25
+	health = 5
+	morale = 15
+	time = 2880
+	maintenance = 1
+	icon_frame = 9
+	cost = {influence = 1000}
+	prerequisites = { "tech_psi_warrior4" }
+	allow = {has_building = "building_psy_4"}
+}
+
+#Emermy Armies
+enermy_demigod = {
+	damage = 10
+	morale_damage = 50
+	health = 10
+	morale = 10
+	time = 0
+	icon_frame = 8
+	has_species = no
+	
+	potential = {
+		owner = {
+			is_country_type = "swarm"
+		}
+	}
+}
+
+enermy_kami = {
+	damage = 25
+	morale_damage = 100
+	health = 50
+	morale = 25
+	time = 0
+	icon_frame = 8
+	has_species = no
+	
+	potential = {
+		owner = {
+			is_country_type = "swarm"
+		}
+	}
+}

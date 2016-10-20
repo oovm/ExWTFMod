@@ -1,0 +1,548 @@
+# CoFH - Stellar Expansion - Terraforming
+# Author: King Lemming
+
+@energy_purification = 2500
+@time_purification = 2700
+
+@energy_habitable = 5000
+@time_habitable = 3600
+
+@energy_extreme = 5000
+@time_extreme = 3600
+
+@energy_gaia = 10000
+@time_gaia = 7200
+
+
+################################################################################
+# 气态星球改造
+################################################################################
+terraform_link = {
+	from = "pc_gas_giant"
+	to = "pc_molten"
+	duration = 3600
+	energy = 2500
+	resources = { 
+		sr_dark_matter = 1
+		sr_neutronium = 1
+	}
+	condition = {
+		AND = {
+			has_technology = "tech_terraforming_gas"
+		}
+	}
+}
+################################################################################
+# Purification Terraforming Links
+################################################################################
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_continental"
+
+	duration = @time_purification
+	energy = @energy_purification
+
+	resources = {
+		sr_terraform_gases = 3
+		sr_terraform_liquids = 3
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_purification"
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_ocean"
+
+	duration = @time_purification
+	energy = @energy_purification
+
+	resources = {
+		sr_terraform_gases = 2
+		sr_terraform_liquids = 4
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_purification"
+	}
+}
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_tropical"
+
+	duration = @time_purification
+	energy = @energy_purification
+
+	resources = {
+		sr_terraform_gases = 4
+		sr_terraform_liquids = 2
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_purification"
+	}
+}
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_continental"
+
+	duration = @time_purification
+	energy = @energy_purification
+
+	resources = {
+		sr_terraform_gases = 3
+		sr_terraform_liquids = 3
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_purification"
+	}
+}
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_ocean"
+
+	duration = @time_purification
+	energy = @energy_purification
+
+	resources = {
+		sr_terraform_gases = 2
+		sr_terraform_liquids = 4
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_purification"
+	}
+}
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_tropical"
+
+	duration = @time_purification
+	energy = @energy_purification
+
+	resources = {
+		sr_terraform_gases = 4
+		sr_terraform_liquids = 2
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_purification"
+	}
+}
+
+################################################################################
+# Habitable Terraforming Links
+################################################################################
+
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_arid"
+
+	duration = @time_habitable
+
+	energy = @energy_habitable
+	resources = {
+		sr_terraform_gases = 3
+		sr_terraform_liquids = 3
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_habitable"
+	}
+}
+
+terraform_link = {
+	from = "pc_barren"
+	to = "pc_desert"
+
+	duration = @time_habitable
+	energy = @energy_habitable
+
+	resources = {
+		sr_terraform_gases = 4
+		sr_terraform_liquids = 2
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_habitable"
+	}
+}
+
+terraform_link = {
+	from = "pc_barren_cold"
+	to = "pc_tundra"
+
+	duration = @time_habitable
+	energy = @energy_habitable
+
+	resources = {
+		sr_terraform_gases = 3
+		sr_terraform_liquids = 3
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_habitable"
+	}
+}
+
+terraform_link = {
+	from = "pc_barren_cold"
+	to = "pc_arctic"
+
+	duration = @time_habitable
+	energy = @energy_habitable
+
+	resources = {
+		sr_terraform_gases = 2
+		sr_terraform_liquids = 4
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_habitable"
+	}
+}
+
+################################################################################
+# Gaia Terraforming Links
+################################################################################
+
+terraform_link = {
+	from = "pc_arctic"
+	to = "pc_gaia"
+
+	duration = @time_gaia
+	energy = @energy_gaia
+
+	resources = {
+		sr_terraform_gases = 1
+		sr_terraform_liquids = 4
+		sr_pitharan = 1
+		sr_alien_pets = 1
+		sr_satramene = 1
+		sr_engos = 1
+		sr_lythuric = 1
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_gaia"
+	}
+}
+
+terraform_link = {
+	from = "pc_arid"
+	to = "pc_gaia"
+
+	duration = @time_gaia
+	energy = @energy_gaia
+
+	resources = {
+		sr_terraform_gases = 3
+		sr_terraform_liquids = 2
+		sr_pitharan = 1
+		sr_alien_pets = 1
+		sr_satramene = 1
+		sr_engos = 1
+		sr_lythuric = 1
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_gaia"
+	}
+}
+
+terraform_link = {
+	from = "pc_continental"
+	to = "pc_gaia"
+
+	duration = @time_gaia
+	energy = @energy_gaia
+
+	resources = {
+		sr_terraform_gases = 3
+		sr_terraform_liquids = 2
+		sr_pitharan = 1
+		sr_alien_pets = 1
+		sr_satramene = 1
+		sr_engos = 1
+		sr_lythuric = 1
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_gaia"
+	}
+}
+
+terraform_link = {
+	from = "pc_desert"
+	to = "pc_gaia"
+
+	duration = @time_gaia
+	energy = @energy_gaia
+
+	resources = {
+		sr_terraform_gases = 4
+		sr_terraform_liquids = 1
+		sr_pitharan = 1
+		sr_alien_pets = 1
+		sr_satramene = 1
+		sr_engos = 1
+		sr_lythuric = 1
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_gaia"
+	}
+}
+
+terraform_link = {
+	from = "pc_ocean"
+	to = "pc_gaia"
+
+	duration = @time_gaia
+	energy = @energy_gaia
+
+	resources = {
+		sr_terraform_gases = 5
+		sr_pitharan = 1
+		sr_alien_pets = 1
+		sr_satramene = 1
+		sr_engos = 1
+		sr_lythuric = 1
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_gaia"
+	}
+}
+
+terraform_link = {
+	from = "pc_tropical"
+	to = "pc_gaia"
+
+	duration = @time_gaia
+	energy = @energy_gaia
+
+	resources = {
+		sr_terraform_gases = 3
+		sr_terraform_liquids = 2
+		sr_pitharan = 1
+		sr_alien_pets = 1
+		sr_satramene = 1
+		sr_engos = 1
+		sr_lythuric = 1
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_gaia"
+	}
+}
+
+terraform_link = {
+	from = "pc_tundra"
+	to = "pc_gaia"
+
+	duration = @time_gaia
+	energy = @energy_gaia
+
+	resources = {
+		sr_terraform_gases = 2
+		sr_terraform_liquids = 3
+		sr_pitharan = 1
+		sr_alien_pets = 1
+		sr_satramene = 1
+		sr_engos = 1
+		sr_lythuric = 1
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_gaia"
+	}
+}
+
+################################################################################
+# Extreme Terraforming Links
+################################################################################
+
+terraform_link = {
+	from = "pc_molten"
+	to = "pc_arid"
+
+	duration = @time_extreme
+
+	energy = @energy_extreme
+	resources = {
+		sr_terraform_gases = 2
+		sr_terraform_liquids = 4
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_extreme"
+	}
+}
+
+terraform_link = {
+	from = "pc_molten"
+	to = "pc_desert"
+
+	duration = @time_extreme
+	energy = @energy_extreme
+
+	resources = {
+		sr_terraform_gases = 3
+		sr_terraform_liquids = 3
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_extreme"
+	}
+}
+
+terraform_link = {
+	from = "pc_frozen"
+	to = "pc_tundra"
+
+	duration = @time_extreme
+	energy = @energy_extreme
+
+	resources = {
+		sr_terraform_gases = 4
+		sr_terraform_liquids = 2
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_extreme"
+	}
+}
+
+terraform_link = {
+	from = "pc_frozen"
+	to = "pc_arctic"
+
+	duration = @time_extreme
+	energy = @energy_extreme
+
+	resources = {
+		sr_terraform_gases = 3
+		sr_terraform_liquids = 3
+	}
+
+	condition = {
+		has_technology = "tech_terraforming_extreme"
+	}
+}
+
+###圆环世界修复
+terraform_link = {
+	from = "pc_ringworld_seam_damaged"
+	to = "pc_ringworld_seam"
+	duration = 360
+	energy = 1000
+	resources = {sr_neutronium = 1}
+	condition = {has_technology = "tech_ringworld_repair1"}
+}
+terraform_link = {
+	from = "pc_ringworld_seam"
+	to = "pc_ringworld_tech_damaged"
+	duration = 360
+	energy = 2000
+	resources = {sr_neutronium = 2}
+	condition = {has_technology = "tech_ringworld_repair2"}
+}
+terraform_link = {
+	from = "pc_ringworld_tech_damaged"
+	to = "pc_ringworld_tech"
+	duration = 360
+	energy = 3000
+	resources = {sr_neutronium = 3}
+	condition = {has_technology = "tech_ringworld_repair3"}
+}
+terraform_link = {
+	from = "pc_ringworld_tech"
+	to = "pc_ringworld_habitable_damaged"
+	duration = 360
+	energy = 4000
+	resources = {sr_neutronium = 4}
+	condition = {has_technology = "tech_ringworld_repair4"}
+}
+terraform_link = {
+	from = "pc_ringworld_habitable_damaged"
+	to = "pc_ringworld_habitable"
+	duration = 360
+	energy = 5000
+	resources = {sr_neutronium = 5}
+	condition = {has_technology = "tech_ringworld_repair5"}
+}
+
+####恒星改造
+terraform_link = {
+	from = "pc_a_star"
+	to = "pc_neutron_star"
+	duration = 360
+	energy = 5000
+	resources = {sr_neutronium = 5}
+	condition = {has_technology = "tech_ringworld_repair5"}
+}
+terraform_link = {
+	from = "pc_b_star"
+	to = "pc_neutron_star"
+	duration = 360
+	energy = 5000
+	resources = {sr_neutronium = 5}
+	condition = {has_technology = "tech_ringworld_repair5"}
+}
+terraform_link = {
+	from = "pc_f_star"
+	to = "pc_neutron_star"
+	duration = 360
+	energy = 5000
+	resources = {sr_neutronium = 5}
+	condition = {has_technology = "tech_ringworld_repair5"}
+}
+terraform_link = {
+	from = "pc_g_star"
+	to = "pc_neutron_star"
+	duration = 360
+	energy = 5000
+	resources = {sr_neutronium = 5}
+	condition = {has_technology = "tech_ringworld_repair5"}
+}
+terraform_link = {
+	from = "pc_k_star"
+	to = "pc_neutron_star"
+	duration = 360
+	energy = 5000
+	resources = {sr_neutronium = 5}
+	condition = {has_technology = "tech_ringworld_repair5"}
+}
+terraform_link = {
+	from = "pc_m_star"
+	to = "pc_neutron_star"
+	duration = 360
+	energy = 5000
+	resources = {sr_neutronium = 5}
+	condition = {has_technology = "tech_ringworld_repair5"}
+}
+terraform_link = {
+	from = "pc_neutron_star"
+	to = "pc_pulsar"
+	duration = 360
+	energy = 5000
+	resources = {sr_neutronium = 5}
+	condition = {has_technology = "tech_ringworld_repair5"}
+}
+terraform_link = {
+	from = "pc_pulsar"
+	to = "pc_black_hole"
+	duration = 360
+	energy = 5000
+	resources = {sr_neutronium = 5}
+	condition = {has_technology = "tech_ringworld_repair5"}
+}

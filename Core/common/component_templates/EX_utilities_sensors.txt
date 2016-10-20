@@ -1,0 +1,35 @@
+@sensor5 = 150
+
+
+utility_component_template = {
+	key = "SHIP_SENSOR_5"
+	size = medium
+	icon = "GFX_ship_part_ewars"
+	icon_frame = 1
+	power = -50
+	cost = 50
+	sensor_range = @sensor5
+	
+	prerequisites = { "tech_ewar_1" }
+	component_set = "EWAR_sensor_components"
+	
+	ai_weight = {
+		weight = 1000
+	}	
+}
+
+### Empty Aura-slot
+utility_component_template = {
+	key = "SHIP_SENSOR_EMPTY"
+	size = medium
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+	cost = 0
+	
+	component_set = "EWAR_sensor_components"
+	
+	ai_weight = {
+		weight = 1
+	}
+}

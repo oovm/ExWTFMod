@@ -1,0 +1,168 @@
+################################################################################
+# General
+################################################################################
+building_resource_base = {
+	base_buildtime = 90
+	cost = {energy = 50}
+	requires_pop = no
+	upgrades = {
+		building_combo_food_power_1
+		building_combo_mineral_power_1
+		building_combo_mineral_food_1
+		building_irrigation_system_1
+		building_power_relay_1
+		building_mining_barracks_1
+		building_science_campus_phys_1
+		building_science_campus_soc_1
+		building_science_campus_eng_1
+		building_tile_terraformer
+		building_base_1
+	}
+	prerequisites = {"tech_resource_base"}
+}
+
+building_base_1 = {
+	base_buildtime = 180
+	cost = {influence = 10}
+	requires_pop = no
+	is_listed = no
+	upgrades = {
+		building_climate_station
+		building_diplomatic_hub
+		building_robot_maintenance
+		building_concord_assembly
+		building_frontier_institute
+		building_ministry_intelligence
+		building_ministry_vigilance
+		building_monument_creation
+		building_the_supercollider
+		building_galactic_insititute_of_technology
+		building_base_2
+	}
+	prerequisites = {"tech_building_base_1"}		
+}
+
+building_base_2 = {
+	base_buildtime = 360
+	cost = {influence = 100}
+	is_listed = no
+	requires_pop = no
+	upgrades = {
+		building_base_3
+	}
+	prerequisites = {"tech_building_base_2"}		
+}
+
+building_base_3 = {
+	base_buildtime = 720
+	cost = {influence = 1000}
+	is_listed = no
+	requires_pop = no
+	upgrades = {
+		building_psy_1
+	}
+	prerequisites = {"tech_building_base_3"}		
+}
+
+building_capital_3 = {
+	base_buildtime = 1080
+	is_listed = no
+	cost = {
+		minerals = 1000
+		influence = 200
+	}
+	planet_modifier = {pop_ethic_shift = -0.15}
+	allow = {
+		custom_tooltip = {
+			text = "requires_pops_20"
+			planet = {
+				count_pops = {
+					count > 19
+					limit = {is_colony_pop = yes}
+				}
+			}
+		}
+	}
+	planet_unique = yes
+	level = 3
+	produced_resources = {
+		food = 5
+		minerals = 5
+	}
+	adjacency_bonus = {
+		resource_minerals_add = 3
+		resource_food_add = 3
+		resource_energy_add = 3
+	}
+	upgrades = {
+	
+	}
+	prerequisites = {"tech_galactic_administration"}	
+}
+
+building_tile_terraformer = {
+	base_buildtime = 360
+	is_listed = no
+	requires_pop = no
+	planet_unique = yes
+	cost = {influence = 250}
+	produced_resources = {engineering_research = 5}
+	required_resources = {
+		energy = 25
+		minerals = 25
+	}
+	planet_modifier = {pop_happiness = -0.10}
+	prerequisites = {"tech_terrestrial_sculpting"}
+	potential = {planet = {NOT = {planet_size > 24}}}
+	ai_replace = no
+}
+#灵力武士系列
+building_psy_1 = {
+	base_buildtime = 360
+	is_listed = no
+	planet_unique = yes
+	cost = {
+		energy = 775
+		influence = 775
+	}
+	planet_modifier = {pop_happiness = 0.02}
+	upgrades = {building_psy_2}
+	prerequisites = {"tech_psi_warrior1"}	
+}
+building_psy_2 = {
+	base_buildtime = 720
+	is_listed = no
+	planet_unique = yes
+	cost = {
+		energy = 1250
+		influence = 1250
+	}
+	planet_modifier = {pop_happiness = 0.04}
+	upgrades = {building_psy_3}
+	prerequisites = {"tech_psi_warrior2"}	
+}
+building_psy_3 = {
+	base_buildtime = 1440
+	is_listed = no
+	planet_unique = yes
+	empire_unique = yes
+	cost = {
+		energy = 2500
+		influence = 2500
+	}
+	planet_modifier = {pop_happiness = 0.06}
+	upgrades = {building_psy_4}
+	prerequisites = {"tech_psi_warrior3"}	
+}
+building_psy_4 = {
+	base_buildtime = 2880
+	is_listed = no
+	planet_unique = yes
+	empire_unique = yes
+	cost = {
+		energy = 5000
+		influence = 5000
+	}
+	planet_modifier = {pop_happiness = 0.10}
+	prerequisites = {"tech_psi_warrior4"}	
+}

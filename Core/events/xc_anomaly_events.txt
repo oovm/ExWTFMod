@@ -1,0 +1,92 @@
+namespace = xc_anomaly_event
+
+country_event = {
+	id = xc_anomaly_event.1
+	title = OK
+	desc = OK
+	hide_window = yes
+
+	trigger = {
+		has_country_edict  = xc_anomaly
+	}
+	
+	immediate = {
+		every_owned_leader = {
+			if = {
+				limit = {
+					leader_class = scientist
+					NOT = { 
+						has_trait = leader_trait_super_careful
+						leader = ruler
+					}
+				}
+				add_trait = leader_trait_super_careful
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xc_anomaly_event.2
+	title = OK
+	desc = OK
+	hide_window = yes
+
+	trigger = {
+		NOT = {
+			has_country_edict  = xc_anomaly
+		}
+	}
+
+	immediate = {
+		every_owned_leader = {
+			remove_trait = leader_trait_super_careful
+		}
+	}
+}
+
+country_event = {
+	id = xc_anomaly_event.3
+	title = OK
+	desc = OK
+	hide_window = yes
+
+	trigger = {
+		has_country_edict  = xc_survey
+	}
+
+immediate = {
+		every_owned_leader = {
+			if = {
+				limit = {
+					leader_class = scientist
+					NOT = { 
+						has_trait = leader_trait_intense_scrutiny
+						leader = ruler
+					}
+				}
+				add_trait = leader_trait_intense_scrutiny
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xc_anomaly_event.4
+	title = OK
+	desc = OK
+	hide_window = yes
+
+	trigger = {
+		NOT = {
+			has_country_edict  = xc_survey
+		}
+	}
+	
+	immediate = {
+		every_owned_leader = {
+			remove_trait = leader_trait_intense_scrutiny
+		}
+	}
+}
+

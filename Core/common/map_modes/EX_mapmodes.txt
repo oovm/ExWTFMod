@@ -1,0 +1,969 @@
+plentiful_mapmodes_fleet_power_map_mode = {
+	icon = "GFX_map_mode_plentiful_fleet_power"
+	enable_terra_incognita = no
+
+#
+# Pink
+#
+	
+	color = {
+		value = hsv { 0.93 1.00 1.00 1.00 } # pink
+		custom_tooltip = "HAS_FLEET_POWER_10A"
+		condition = {
+			fleet_power > 500000
+		}
+	}
+
+#
+# Gold
+#
+	
+	color = {
+		value = hsv { 0.14 0.66 0.91 1.00 } # gold
+		custom_tooltip = "HAS_FLEET_POWER_9H"
+		condition = {
+			fleet_power > 450000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.14 0.66 0.91 1.00 } # gold
+		custom_tooltip = "HAS_FLEET_POWER_9G"
+		condition = {
+			fleet_power > 400000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.14 0.66 0.91 1.00 } # gold
+		custom_tooltip = "HAS_FLEET_POWER_9F"
+		condition = {
+			fleet_power > 350000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.14 0.66 0.91 1.00 } # gold
+		custom_tooltip = "HAS_FLEET_POWER_9E"
+		condition = {
+			fleet_power > 300000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.14 0.66 0.91 1.00 } # gold
+		custom_tooltip = "HAS_FLEET_POWER_9D"
+		condition = {
+			fleet_power > 250000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.14 0.66 0.91 1.00 } # gold
+		custom_tooltip = "HAS_FLEET_POWER_9C"
+		condition = {
+			fleet_power > 200000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.14 0.66 0.91 1.00 } # gold
+		custom_tooltip = "HAS_FLEET_POWER_9B"
+		condition = {
+			fleet_power > 150000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.14 0.66 0.91 1.00 } # gold
+		custom_tooltip = "HAS_FLEET_POWER_9A"
+		condition = {
+			fleet_power > 100000
+		}
+	}
+
+#
+# Blue
+#
+	
+	color = {
+		value = hsv { 0.54 0.85 0.98 1.00 } # blue
+		custom_tooltip = "HAS_FLEET_POWER_8L"
+		condition = {
+			fleet_power > 95000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.54 0.85 0.98 1.00 } # blue
+		custom_tooltip = "HAS_FLEET_POWER_8K"
+		condition = {
+			fleet_power > 90000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.54 0.85 0.98 1.00 } # blue
+		custom_tooltip = "HAS_FLEET_POWER_8J"
+		condition = {
+			fleet_power > 85000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.54 0.85 0.98 1.00 } # blue
+		custom_tooltip = "HAS_FLEET_POWER_8I"
+		condition = {
+			fleet_power > 80000
+		}
+	}
+
+	color = {
+		value = hsv { 0.54 0.85 0.98 1.00 } # blue
+		custom_tooltip = "HAS_FLEET_POWER_8H"
+		condition = {
+			fleet_power > 75000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.54 0.85 0.98 1.00 } # blue
+		custom_tooltip = "HAS_FLEET_POWER_8G"
+		condition = {
+			fleet_power > 70000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.54 0.85 0.98 1.00 } # blue
+		custom_tooltip = "HAS_FLEET_POWER_8F"
+		condition = {
+			fleet_power > 65000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.54 0.85 0.98 1.00 } # blue
+		custom_tooltip = "HAS_FLEET_POWER_8E"
+		condition = {
+			fleet_power > 60000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.54 0.85 0.98 1.00 } # blue
+		custom_tooltip = "HAS_FLEET_POWER_8D"
+		condition = {
+			fleet_power > 55000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.54 0.85 0.98 1.00 } # blue
+		custom_tooltip = "HAS_FLEET_POWER_8C"
+		condition = {
+			fleet_power > 50000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.54 0.85 0.98 1.00 } # blue
+		custom_tooltip = "HAS_FLEET_POWER_8B"
+		condition = {
+			fleet_power > 45000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.54 0.85 0.98 1.00 } # blue
+		custom_tooltip = "HAS_FLEET_POWER_8A"
+		condition = {
+			fleet_power > 40000
+		}
+	}
+
+#
+# Green
+#
+	
+	color = {
+		value = hsv { 0.28 0.93 0.91 1.00 } # green
+		custom_tooltip = "HAS_FLEET_POWER_7J"
+		condition = {
+			fleet_power > 38000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.28 0.93 0.91 1.00 } # green
+		custom_tooltip = "HAS_FLEET_POWER_7I"
+		condition = {
+			fleet_power > 36000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.28 0.93 0.91 1.00 } # green
+		custom_tooltip = "HAS_FLEET_POWER_7H"
+		condition = {
+			fleet_power > 34000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.28 0.93 0.91 1.00 } # green
+		custom_tooltip = "HAS_FLEET_POWER_7G"
+		condition = {
+			fleet_power > 32000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.28 0.93 0.91 1.00 } # green
+		custom_tooltip = "HAS_FLEET_POWER_7F"
+		condition = {
+			fleet_power > 30000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.28 0.93 0.91 1.00 } # green
+		custom_tooltip = "HAS_FLEET_POWER_7E"
+		condition = {
+			fleet_power > 28000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.28 0.93 0.91 1.00 } # green
+		custom_tooltip = "HAS_FLEET_POWER_7D"
+		condition = {
+			fleet_power > 26000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.28 0.93 0.91 1.00 } # green
+		custom_tooltip = "HAS_FLEET_POWER_7C"
+		condition = {
+			fleet_power > 24000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.28 0.93 0.91 1.00 } # green
+		custom_tooltip = "HAS_FLEET_POWER_7B"
+		condition = {
+			fleet_power > 22000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.28 0.93 0.91 1.00 } # green
+		custom_tooltip = "HAS_FLEET_POWER_7A"
+		condition = {
+			fleet_power > 20000
+		}
+	}
+
+#
+# Yellow
+#
+	
+	color = {
+		value = hsv { 0.13 1.0 0.94 1.00 } # yellow
+		custom_tooltip = "HAS_FLEET_POWER_6F"
+		condition = {
+			fleet_power > 17500
+		}
+	}
+	
+	color = {
+		value = hsv { 0.13 1.0 0.94 1.00 } # yellow
+		custom_tooltip = "HAS_FLEET_POWER_6E"
+		condition = {
+			fleet_power > 15000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.13 1.0 0.94 1.00 } # yellow
+		custom_tooltip = "HAS_FLEET_POWER_6D"
+		condition = {
+			fleet_power > 12500
+		}
+	}
+	
+	color = {
+		value = hsv { 0.13 1.0 0.94 1.00 } # yellow
+		custom_tooltip = "HAS_FLEET_POWER_6C"
+		condition = {
+			fleet_power > 10000
+		}
+	}
+	
+	color = {
+		value = hsv { 0.13 1.0 0.94 1.00 } # yellow
+		custom_tooltip = "HAS_FLEET_POWER_6B"
+		condition = {
+			fleet_power > 7500
+		}
+	}
+	
+	color = {
+		value = hsv { 0.13 1.0 0.94 1.00 } # yellow
+		custom_tooltip = "HAS_FLEET_POWER_6A"
+		condition = {
+			fleet_power > 5000
+		}
+	}
+
+# Orange
+#
+	
+	color = {
+		value = hsv { 0.07 1.00 1.00 1.00 } # orange
+		custom_tooltip = "HAS_FLEET_POWER_5F"
+		condition = {
+			fleet_power > 4500
+		}
+	}
+		
+	color = {
+		value = hsv { 0.07 1.00 1.00 1.00 } # orange
+		custom_tooltip = "HAS_FLEET_POWER_5E"
+		condition = {
+			fleet_power > 4000
+		}
+	}
+		
+	color = {
+		value = hsv { 0.07 1.00 1.00 1.00 } # orange
+		custom_tooltip = "HAS_FLEET_POWER_5D"
+		condition = {
+			fleet_power > 3500
+		}
+	}
+		
+	color = {
+		value = hsv { 0.07 1.00 1.00 1.00 } # orange
+		custom_tooltip = "HAS_FLEET_POWER_5C"
+		condition = {
+			fleet_power > 3000
+		}
+	}
+		
+	color = {
+		value = hsv { 0.07 1.00 1.00 1.00 } # orange
+		custom_tooltip = "HAS_FLEET_POWER_5B"
+		condition = {
+			fleet_power > 2500
+		}
+	}
+		
+	color = {
+		value = hsv { 0.07 1.00 1.00 1.00 } # orange
+		custom_tooltip = "HAS_FLEET_POWER_5A"
+		condition = {
+			fleet_power > 2000
+		}
+	}
+	
+#
+# Red
+#
+	
+	color = {
+		value = hsv { 0.00 1.00 0.80 1.00 } # red
+		custom_tooltip = "HAS_FLEET_POWER_4J"
+		condition = {
+			fleet_power > 1900
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 1.00 0.80 1.00 } # red
+		custom_tooltip = "HAS_FLEET_POWER_4I"
+		condition = {
+			fleet_power > 1800
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 1.00 0.80 1.00 } # red
+		custom_tooltip = "HAS_FLEET_POWER_4H"
+		condition = {
+			fleet_power > 1700
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 1.00 0.80 1.00 } # red
+		custom_tooltip = "HAS_FLEET_POWER_4G"
+		condition = {
+			fleet_power > 1600
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 1.00 0.80 1.00 } # red
+		custom_tooltip = "HAS_FLEET_POWER_4F"
+		condition = {
+			fleet_power > 1500
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 1.00 0.80 1.00 } # red
+		custom_tooltip = "HAS_FLEET_POWER_4E"
+		condition = {
+			fleet_power > 1400
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 1.00 0.80 1.00 } # red
+		custom_tooltip = "HAS_FLEET_POWER_4D"
+		condition = {
+			fleet_power > 1300
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 1.00 0.80 1.00 } # red
+		custom_tooltip = "HAS_FLEET_POWER_4C"
+		condition = {
+			fleet_power > 1200
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 1.00 0.80 1.00 } # red
+		custom_tooltip = "HAS_FLEET_POWER_4B"
+		condition = {
+			fleet_power > 1100
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 1.00 0.80 1.00 } # red
+		custom_tooltip = "HAS_FLEET_POWER_4A"
+		condition = {
+			fleet_power > 1000
+		}
+	}
+
+#
+# Purple
+#
+		
+	color = {
+		value = hsv { 0.74 0.82 0.78 1.00 } # purple
+		custom_tooltip = "HAS_FLEET_POWER_3J"
+		condition = {
+			fleet_power > 950
+		}
+	}
+		
+	color = {
+		value = hsv { 0.74 0.82 0.78 1.00 } # purple
+		custom_tooltip = "HAS_FLEET_POWER_3I"
+		condition = {
+			fleet_power > 900
+		}
+	}
+		
+	color = {
+		value = hsv { 0.74 0.82 0.78 1.00 } # purple
+		custom_tooltip = "HAS_FLEET_POWER_3H"
+		condition = {
+			fleet_power > 850
+		}
+	}
+		
+	color = {
+		value = hsv { 0.74 0.82 0.78 1.00 } # purple
+		custom_tooltip = "HAS_FLEET_POWER_3G"
+		condition = {
+			fleet_power > 800
+		}
+	}
+		
+	color = {
+		value = hsv { 0.74 0.82 0.78 1.00 } # purple
+		custom_tooltip = "HAS_FLEET_POWER_3F"
+		condition = {
+			fleet_power > 750
+		}
+	}
+		
+	color = {
+		value = hsv { 0.74 0.82 0.78 1.00 } # purple
+		custom_tooltip = "HAS_FLEET_POWER_3E"
+		condition = {
+			fleet_power > 700
+		}
+	}
+		
+	color = {
+		value = hsv { 0.74 0.82 0.78 1.00 } # purple
+		custom_tooltip = "HAS_FLEET_POWER_3D"
+		condition = {
+			fleet_power > 650
+		}
+	}
+		
+	color = {
+		value = hsv { 0.74 0.82 0.78 1.00 } # purple
+		custom_tooltip = "HAS_FLEET_POWER_3C"
+		condition = {
+			fleet_power > 600
+		}
+	}
+		
+	color = {
+		value = hsv { 0.74 0.82 0.78 1.00 } # purple
+		custom_tooltip = "HAS_FLEET_POWER_3B"
+		condition = {
+			fleet_power > 550
+		}
+	}
+		
+	color = {
+		value = hsv { 0.74 0.82 0.78 1.00 } # purple
+		custom_tooltip = "HAS_FLEET_POWER_3A"
+		condition = {
+			fleet_power > 500
+		}
+	}
+
+#
+# White
+#
+
+	color = {
+		value = hsv { 0.00 0.00 0.70 1.00 } # white
+		custom_tooltip = "HAS_FLEET_POWER_2I"
+		condition = {
+			fleet_power > 450
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 0.00 0.70 1.00 } # white
+		custom_tooltip = "HAS_FLEET_POWER_2H"
+		condition = {
+			fleet_power > 400
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 0.00 0.70 1.00 } # white
+		custom_tooltip = "HAS_FLEET_POWER_2G"
+		condition = {
+			fleet_power > 350
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 0.00 0.70 1.00 } # white
+		custom_tooltip = "HAS_FLEET_POWER_2F"
+		condition = {
+			fleet_power > 300
+		}
+	}
+
+	color = {
+		value = hsv { 0.00 0.00 0.70 1.00 } # white
+		custom_tooltip = "HAS_FLEET_POWER_2E"
+		condition = {
+			fleet_power > 250
+		}
+	}
+
+	color = {
+		value = hsv { 0.00 0.00 0.70 1.00 } # white
+		custom_tooltip = "HAS_FLEET_POWER_2D"
+		condition = {
+			fleet_power > 200
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 0.00 0.70 1.00 } # white
+		custom_tooltip = "HAS_FLEET_POWER_2C"
+		condition = {
+			fleet_power > 150
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 0.00 0.70 1.00 } # white
+		custom_tooltip = "HAS_FLEET_POWER_2B"
+		condition = {
+			fleet_power > 100
+		}
+	}
+
+	color = {
+		value = hsv { 0.00 0.00 0.70 1.00 } # white
+		custom_tooltip = "HAS_FLEET_POWER_2A"
+		condition = {
+			fleet_power > 50
+		}
+	}
+
+#
+# Grey
+#
+
+	color = {
+		value = hsv { 0.00 0.00 0.50 1.00 } # grey
+		custom_tooltip = "HAS_FLEET_POWER_1A"
+		condition = {
+			always = yes
+		}
+	}
+}
+
+ethos_map_mode = {
+	icon = "GFX_map_mode_ethos"
+	enable_terra_incognita = no
+	shortcut = "CTRL+b"
+	
+	color = {
+		value = hsv { 0.13 1.0 0.94 1.00 } # happy yellow?
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_ethic = ethic_fanatic_xenophile
+		}
+	}
+	
+	color = {
+		value = hsv { 0.94 0.91 0.45 1.00 } # angry burgundy, like a bruise
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_ethic = ethic_fanatic_xenophobe
+		}
+	}
+	
+	color = {
+		value = hsv { 0.07 1.00 1.00 1.00 } # the future's bright, the future's orange
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+	
+	color = {
+		value = hsv { 0.74 0.82 0.78 1.00 } # psi purple
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_ethic = ethic_fanatic_spiritualist
+		}
+	}
+	
+	color = {
+		value = hsv { 0.93 1.00 1.00 1.00 } # PINK YEAH BITCHES
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_ethic = ethic_fanatic_individualist
+		}
+	}
+	
+	color = {
+		value = hsv { 0.54 0.85 0.98 1.00 } # the blue meme
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_ethic = ethic_fanatic_collectivist
+		}
+	}
+	
+	color = {
+		value = hsv { 0.28 0.93 0.91 1.00 } # green in root and branch
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 1.00 0.80 1.00 } # red in tooth and claw
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 0.00 0.50 1.00 } # grey for losers
+		custom_tooltip = "SUPER_BORING"
+		condition = {
+			always = yes
+		}
+	}
+}
+
+government_ideology_map_mode = {
+	icon = "GFX_map_mode_government"
+	enable_terra_incognita = no
+	shortcut = "CTRL+n"
+	
+	color = {
+		value = hsv { 0.00 1.00 0.80 1.00 } # red in tooth and claw
+		custom_tooltip = "HAS_MILITARIST_GOVERNMENT"
+		condition = {
+			OR = {
+				has_government = military_republic
+				has_government = martial_demarchy
+				has_government = military_junta
+				has_government = ordered_stratocracy
+				has_government = military_autocracy
+				has_government = martial_empire
+				has_government = military_order
+				has_government = pirate_codex
+			}
+		}
+	}
+	
+	color = {
+		value = hsv { 0.74 0.82 0.78 1.00 } # psi purple
+		custom_tooltip = "HAS_SPIRITUALIST_GOVERNMENT"
+		condition = {
+			OR = {
+				has_government = theocratic_republic
+				has_government = transcendent_republic
+				has_government = theocratic_oligarchy
+				has_government = transcendent_oligarchy
+				has_government = divine_mandate
+				has_government = transcendent_empire
+			}
+		}
+	}
+	
+	color = {
+		value = hsv { 0.07 1.00 1.00 1.00 } # the future's bright, the future's orange
+		custom_tooltip = "HAS_MATERIALIST_GOVERNMENT"
+		condition = {
+			OR = {
+				has_government = direct_democracy
+				has_government = subconscious_consensus
+				has_government = science_directorate
+				has_government = illuminated_technocracy
+				has_government = despotic_hegemony
+				has_government = ai_overlordship
+				has_government = machine_consciousness
+			}
+		}
+	}
+	
+	color = {
+		value = hsv { 0.28 0.93 0.91 1.00 } # green in root and branch
+		custom_tooltip = "HAS_PACIFIST_GOVERNMENT"
+		condition = {
+			OR = {
+				has_government = moral_democracy
+				has_government = irenic_democracy
+				has_government = peacful_bureaucracy
+				has_government = irenic_protectorate
+				has_government = enlightened_monarchy
+				has_government = irenic_monarchy
+			}
+		}
+	}
+	
+	color = {
+		value = hsv { 0.14 0.66 0.91 1.00 } # gold
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_government = stagnated_ascendancy
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 0.00 0.50 1.00 } # grey for losers
+		custom_tooltip = "SUPER_BORING"
+		condition = {
+			always = yes
+		}
+	}
+}
+
+democracy_rating_map_mode = {
+	icon = "GFX_map_mode_democracy"
+	enable_terra_incognita = no
+	shortcut = "CTRL+a"
+	
+	color = {
+		value = hsv { 0.93 1.00 1.00 1.00 } # PINK YEAH BITCHES
+		custom_tooltip = "IS_DEMOCRACY"
+		condition = {
+			has_election_type = democratic
+		}
+	}
+	
+	color = {
+		value = hsv { 0.13 1.0 0.94 1.00 } # happy yellow?
+		custom_tooltip = "IS_OLIGARCHY"
+		condition = {
+			has_election_type = oligarchic
+		}
+	}
+	
+	color = {
+		value = hsv { 0.54 0.85 0.98 1.00 } # the blue meme
+		custom_tooltip = "IS_AUTOCRACY"
+		condition = {
+			has_election_type = none
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 0.00 0.50 1.00 } # grey for losers
+		custom_tooltip = "SUPER_BORING"
+		condition = {
+			always = yes
+		}
+	}
+}
+
+ai_rights_map_mode = {
+	icon = "GFX_map_mode_ai_rights"
+	enable_terra_incognita = no
+	shortcut = "CTRL+s"
+	
+	color = {
+		value = hsv { 0.54 0.85 0.98 1.00 } # Blue for ULTRA YES
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			OR = {
+				has_policy_flag = leadership_allow_robot
+				has_policy_flag = leadership_allow_all
+			}
+			
+			has_policy_flag = ai_full_rights
+		}
+	}
+	
+	color = {
+		value = hsv { 0.28 1.00 0.90 1.00 } # Green for GAME ON
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_policy_flag = ai_full_rights
+		}
+	}
+	
+	color = {
+		value = hsv { 0.15 1.00 1.00 1.00 } # Yellow for kinda-maybe
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_policy_flag = ai_servitude
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 1.00 0.85 1.00 } # Red for no-go
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_policy_flag = ai_outlawed
+		}
+	}
+}
+
+slavery_policy_map_mode = {
+	icon = "GFX_map_mode_slavery"
+	enable_terra_incognita = no
+	shortcut = "CTRL+d"
+	
+	color = {
+		value = hsv { 0.54 0.85 0.98 1.00 } # Blue for ULTRA YES
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_policy_flag = slavery_allowed_all
+		}
+	}
+	
+	color = {
+		value = hsv { 0.28 1.00 0.90 1.00 } # Green for GAME ON
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_policy_flag = slavery_allowed_regulated
+		}
+	}
+	
+	color = {
+		value = hsv { 0.15 1.00 1.00 1.00 } # Yellow for kinda-maybe
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_policy_flag = slavery_allowed_xenos_only
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 1.00 0.85 1.00 } # Red for no-go
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_policy_flag = slavery_not_allowed
+		}
+	}
+}
+
+purge_policy_map_mode = {
+	icon = "GFX_map_mode_purge"
+	enable_terra_incognita = no
+	shortcut = "CTRL+f"
+	
+	color = {
+		value = hsv { 0.28 1.00 0.90 1.00 } # Green for GAME ON
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_policy_flag = purge_allowed_all
+		}
+	}
+	
+	color = {
+		value = hsv { 0.15 1.00 1.00 1.00 } # Yellow for kinda-maybe
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_policy_flag = purge_xenos_only
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 1.00 0.85 1.00 } # Red for no-go
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_policy_flag = purge_not_allowed
+		}
+	}
+}
+
+war_philosophy_map_mode = {
+	icon = "GFX_map_mode_war_philosophy"
+	enable_terra_incognita = no
+	shortcut = "CTRL+g"
+	
+	color = {
+		value = hsv { 0.28 1.00 0.90 1.00 } # Green for GAME ON
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_policy_flag = unrestricted_wars
+		}
+	}
+	
+	color = {
+		value = hsv { 0.15 1.00 1.00 1.00 } # Yellow for kinda-maybe
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_policy_flag = liberation_wars
+		}
+	}
+	
+	color = {
+		value = hsv { 0.00 1.00 0.85 1.00 } # Red for no-go
+		#custom_tooltip = "SOME_TOOLTIP"
+		condition = {
+			has_policy_flag = no_wars
+		}
+	}
+}

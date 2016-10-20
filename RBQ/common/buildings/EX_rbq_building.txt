@@ -1,0 +1,96 @@
+################################################################################
+# General
+################################################################################
+building_xeno_brothel = {
+	base_buildtime = 360
+	planet_unique = yes
+	cost = {
+		energy = 720
+		influence = 36
+	}
+	planet_modifier = {
+		pop_happiness = 0.10
+		pop_migration_speed = 1.00
+		pop_ethic_shift = -0.10
+	}
+	prerequisites = {"tech_xeno_aesthetic"}	
+}
+
+building_xeno_sex_slaves = {
+	base_buildtime = 360
+	planet_unique = yes
+	cost = {
+		energy = 720
+		influence = 36
+	}
+	planet_modifier = {
+		pop_happiness = 0.10
+		pop_ethic_shift = -0.10
+		pop_growth_req = 0.15
+	}
+	prerequisites = {"tech_alien_teach"}	
+}
+
+building_hotbed_tentacles = {
+	base_buildtime = 360
+	planet_unique = yes
+	cost = {
+		energy = 720
+		influence = 36
+	}
+	prerequisites = {"tech_tentacle_rear"}	
+}
+
+building_live_center = {
+	base_buildtime = 360
+	planet_unique = yes
+	empire_unique = yes
+	cost = {
+		energy = 720
+		influence = 36
+	}
+	country_modifier = {
+		pop_happiness = 0.10
+		pop_ethic_shift = -0.10
+	}
+	produced_resources = {
+		influence = 1
+	}
+	prerequisites = {"tech_senpai_teach"}	
+}
+
+building_sex_robot = {
+	base_buildtime = 360
+	planet_unique = yes
+	empire_unique = yes
+	cost = {
+		energy = 720
+		influence = 360
+	}
+	country_modifier = {
+		pop_happiness = 0.05
+		pop_ethic_shift = -0.10
+		pop_growth_req = 0.15
+		pop_fertility = -0.10
+		
+	}
+	prerequisites = {"tech_eros_robot"}	
+}
+
+building_interstellar_aid_center = {
+	base_buildtime = 360
+	planet_unique = yes
+	empire_unique = yes
+	cost = {
+		energy = 720
+		influence = 360
+	}
+	country_modifier = {
+		country_resource_energy_mult = 0.05
+	}
+	produced_resources = {
+		influence = 1
+	}
+	prerequisites = {"tech_deep_communication"}	
+}
+
