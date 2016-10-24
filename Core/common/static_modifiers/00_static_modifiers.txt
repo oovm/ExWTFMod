@@ -50,6 +50,25 @@ difficulty_hard_special = {
 }
 
 ##########################################################################
+# FE Modifiers
+##########################################################################
+mod_fallen_empire = {
+	country_border_mult = -0.5
+}
+
+mod_awakened_fallen_empire = {
+	tile_resource_energy_mult = 0.5
+	tile_resource_minerals_mult = 0.5
+	country_border_mult = -0.5
+}
+
+mod_war_in_heaven = {
+	tile_resource_energy_mult = 1
+	tile_resource_minerals_mult = 1
+	country_border_mult = -0.5
+}
+
+##########################################################################
 # Pop Modifiers
 ##########################################################################
 
@@ -75,7 +94,7 @@ pop_happiness_negative = {
 	tile_resource_physics_research_mult = -0.25
 	tile_resource_society_research_mult = -0.25
 	tile_resource_engineering_research_mult = -0.25
-	pop_ethic_shift = 0.50	
+	#pop_ethic_shift = 0.50	
 }
 
 # One step wrong gravity
@@ -416,14 +435,14 @@ irradiated_planet = {
 }
 
 low_gravity = {
-	planet_building_cost_mult = -0.15
+	planet_building_cost_mult = -0.1
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_low_gravity.dds"
 	icon_frame = 1
 }
 
 high_gravity = {
-	planet_building_cost_mult = 0.15
+	planet_building_cost_mult = 0.1
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_high_gravity.dds"
 	icon_frame = 3
@@ -596,6 +615,7 @@ alien_mural = {
 damaged_ecology = {
 	pop_happiness = -0.2
 	icon = "gfx/interface/icons/planet_modifiers/pm_wasteland.dds"
+	icon_frame = 3
 }
 
 friendly_trees = {
@@ -628,7 +648,7 @@ abandoned_terraforming = {
 }
 
 gaia_world = {
-	pop_happiness = 0.1
+	pop_happiness = 0.2
 	icon = "gfx/interface/icons/planet_modifiers/pm_lush.dds"
 }
 
@@ -639,7 +659,7 @@ mutant_stalker = {
 }
 
 wasteland_infrastructure = {
-	planet_building_cost_mult = -0.15
+	planet_building_cost_mult = -0.1
 	icon = "gfx/interface/icons/planet_modifiers/pm_factory.dds"
 }
 
@@ -650,7 +670,7 @@ wasteland_radiation = {
 }
 
 wasteland_orbital_debris = {
-	planet_building_cost_mult = 0.15
+	planet_building_cost_mult = 0.1
 	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_impacts.dds"
 }
 
@@ -692,8 +712,8 @@ ancient_weapon = {
 }
 
 holy_planet = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
-	icon_frame = 2
+	icon = "gfx/interface/icons/planet_modifiers/pm_holy_planet.dds"
+	icon_frame = 3
 }
 
 disconnected_from_sector = {
@@ -790,6 +810,20 @@ planet_separatist_supporter = {
 }
 sector_separatist_supporter = {
 	pop_happiness = -0.1
+	icon_frame = 3
+}
+
+stellarite_high_temp = {
+	pop_happiness = -0.25
+	pop_environment_tolerance = -0.25
+	icon = "gfx/interface/icons/planet_modifiers/pm_unstable_tectonics.dds"
+	icon_frame = 3
+}
+
+stellarite_low_temp = {
+	pop_happiness = -0.25
+	pop_environment_tolerance = -0.25
+	icon = "gfx/interface/icons/planet_modifiers/pm_carbon_world.dds"
 	icon_frame = 3
 }
 
@@ -1106,4 +1140,34 @@ nomad_strength = {
 	ship_shield_hp_mult = 5
 	ship_armor_mult = 5
 	ship_fire_rate_mult = 5
+}
+
+##########################################################################
+# Fallen Empire Tasks & Requests Modifiers
+##########################################################################
+
+fallen_empire_gift_databanks = {
+	tile_resource_physics_research_mult = 0.25
+	tile_resource_society_research_mult = 0.25
+	tile_resource_engineering_research_mult = 0.25
+}
+
+gave_up_scientist_xenophobe = {
+	pop_happiness = -0.1
+}
+
+gave_up_pop = {
+	pop_happiness = -0.1
+}
+
+gave_up_pop_xenophile = {
+	pop_happiness = -0.05
+}
+
+gave_up_pop_xenophobe = {
+	pop_happiness = -0.2
+}
+
+fe_gift_ship = {
+	ship_upkeep_mult = -0.33
 }

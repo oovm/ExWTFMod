@@ -225,14 +225,7 @@
  building_combo_mineral_food_1_desc:1 "$ building_combo_mineral_food_desc$"
  building_combo_mineral_food_2_desc:1 "$ building_combo_mineral_food_desc$" 
  building_combo_mineral_food_3_desc:1 "$ building_combo_mineral_food_desc$" 
- building_psy_1: "灵能学院"
- building_psy_1_desc: ""
- building_psy_2: "圣堂"
- building_psy_2_desc: ""
- building_psy_3: "神堡"
- building_psy_3_desc: ""
- building_psy_4: "应许之地"
- building_psy_4_desc: ""
+
  
  
  

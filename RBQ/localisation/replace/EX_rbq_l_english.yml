@@ -50,6 +50,34 @@
  
  
 
+ tech_psi_warrior1: "天心之锁:觉醒"
+ tech_psi_warrior1_desc: ""
+ psi_trainee: "灵力学徒"
+ psi_trainee_desc: ""
+ tech_psi_warrior2: "天心之锁:执念"
+ tech_psi_warrior2_desc: ""
+ psi_warrior: "灵力武士"
+ psi_warrior_desc: ""
+ tech_psi_warrior3: "天心之锁:超脱"
+ tech_psi_warrior3_desc: ""
+ psi_master: "灵力大师"
+ psi_master_desc: ""
+ tech_psi_warrior4: "天心之锁:合道"
+ tech_psi_warrior4_desc: ""
+ psi_grandmaster: "灵力宗师"
+ psi_grandmaster_desc: ""
+ enermy_demigod: "旧日"
+ enermy_demigod_desc: "旧日支配者是宇宙中强大而古老的存在，其存在多数都是由远超凡间的不明物质组成，他们的能力依然远远超过你的想像，普通的存在只是看到它们就会陷入疯狂"
+ enermy_demigod: "大敌"
+ enermy_demigod_desc: "尽可能杀死大敌。不要攻击大敌,除非你人多势众,并且不暴露你所在的位置。不要在攻击时让大敌看见你，并在攻击后立即离开该区域以避免遭到不详。不要让大敌虏获,不要捕捉大敌！魔鬼的同胞使我们的家园受到威胁。"
+ building_psy_1: "灵能学院"
+ building_psy_1_desc: ""
+ building_psy_2: "圣堂"
+ building_psy_2_desc: ""
+ building_psy_3: "神堡"
+ building_psy_3_desc: ""
+ building_psy_4: "应许之地"
+ building_psy_4_desc: ""
  
  
  

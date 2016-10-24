@@ -52,6 +52,14 @@ pm_hazardous_weather = {
 		}
 		modifier = {
 			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
+		modifier = {
+			add = 10
 			is_planet_class = "pc_gaia"
 		}
 		modifier = {
@@ -98,6 +106,14 @@ pm_dangerous_wildlife = {
 			add = 10
 			is_planet_class = "pc_arctic"
 		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}		
 		modifier = {
 			add = 10
 			is_planet_class = "pc_gaia"
@@ -160,6 +176,14 @@ pm_weak_magnetic_field = {
 		}
 		modifier = {
 			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
+		modifier = {
+			add = 10
 			is_planet_class = "pc_gaia"
 		}
 		modifier = {
@@ -214,6 +238,14 @@ pm_strong_magnetic_field = {
 			add = 10
 			is_planet_class = "pc_arctic"
 		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
 		modifier = {
 			add = 10
 			is_planet_class = "pc_gaia"
@@ -271,6 +303,14 @@ pm_unstable_tectonics = {
 			is_planet_class = "pc_arctic"
 		}
 		modifier = {
+			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
+		modifier = {
 			factor = 4
 			has_planet_modifier = "pm_high_gravity"
 		}
@@ -318,6 +358,14 @@ pm_tidal_locked = {
 			add = 5
 			is_planet_class = "pc_arctic"
 		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_savannah"
+		}				
 		modifier = {
 			add = 5
 			is_planet_class = "pc_gaia"
@@ -403,6 +451,14 @@ pm_asteroid_impacts = {
 			add = 10
 			is_planet_class = "pc_arctic"
 		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
 		modifier = {
 			add = 10
 			is_planet_class = "pc_gaia"
@@ -519,6 +575,14 @@ pm_wild_storms = {
 		}
 		modifier = {
 			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
+		modifier = {
+			add = 10
 			is_planet_class = "pc_gaia"
 		}
 		modifier = {
@@ -565,6 +629,14 @@ pm_low_gravity = {
 			add = 10
 			is_planet_class = "pc_arctic"
 		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
 		modifier = {
 			add = 10
 			is_planet_class = "pc_gaia"
@@ -675,6 +747,14 @@ pm_high_gravity = {
 		}
 		modifier = {
 			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
+		modifier = {
+			add = 10
 			is_planet_class = "pc_gaia"
 		}
 		modifier = {
@@ -783,6 +863,14 @@ pm_mineral_rich = {
 		}
 		modifier = {
 			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
+		modifier = {
+			add = 10
 			is_planet_class = "pc_gaia"
 		}
 		modifier = {
@@ -847,6 +935,14 @@ pm_ultra_rich = {
 		}
 		modifier = {
 			add = 5
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 5
+			is_planet_class = "pc_savannah"
+		}				
+		modifier = {
+			add = 5
 			is_planet_class = "pc_gaia"
 		}
 		modifier = {
@@ -909,6 +1005,14 @@ pm_mineral_poor = {
 			add = 10
 			is_planet_class = "pc_arctic"
 		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
 		modifier = {
 			add = 10
 			is_planet_class = "pc_molten"
@@ -999,6 +1103,14 @@ pm_titanic_life = {
 		}
 		modifier = {
 			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
+		modifier = {
+			add = 10
 			is_planet_class = "pc_gaia"
 		}
 		modifier = {
@@ -1061,6 +1173,14 @@ pm_asteroid_belt = {
 			add = 10
 			is_planet_class = "pc_arctic"
 		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
 		modifier = {
 			add = 10
 			is_planet_class = "pc_molten"
@@ -1142,6 +1262,14 @@ pm_natural_beauty = {
 			is_planet_class = "pc_arctic"
 		}
 		modifier = {
+			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
+		modifier = {
 			add = 30
 			is_planet_class = "pc_gaia"
 		}
@@ -1188,6 +1316,14 @@ pm_atmospheric_aphrodisiac = {
 			add = 10
 			is_planet_class = "pc_arctic"
 		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
 		modifier = {
 			add = 20
 			is_planet_class = "pc_gaia"
@@ -1236,6 +1372,14 @@ pm_atmospheric_hallucinogen = {
 			add = 10
 			is_planet_class = "pc_arctic"
 		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
 		modifier = {
 			add = 20
 			is_planet_class = "pc_gaia"
@@ -1326,6 +1470,14 @@ pm_bleak = {
 			is_planet_class = "pc_arctic"
 		}
 		modifier = {
+			add = 10
+			is_planet_class = "pc_alpine"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_savannah"
+		}				
+		modifier = {
 			factor = 0
 			has_planet_modifier = "pm_bleak"
 		}
@@ -1397,12 +1549,4 @@ pm_ancient_weapon = {
 	}
 	
 	modifier = "ancient_weapon"
-}
-
-pm_holy_planet = {
-	spawn_chance = {
-		#None - From anomaly 
-	}
-	
-	modifier = "holy_planet"
 }

@@ -1,4 +1,15 @@
 ### System Resources
+# accumulative = yes					- 
+# collect_if_wrong_building = yes/no	- 
+# accumulated_by_sectors = yes/no		- 
+# tradable = yes/no						- 
+# is_rare = yes/no						- Rare resources are shown in strategic resources view.
+# is_global = yes/no					- On orbital tiles only. Collected with station. Can have country modifiers. Aren't necessarily consumed. Can't be planet_local.
+# is_planet_local = yes/no				- On planet tiles only. Collected with building. Are consumed. Can't be global.
+# modifier = {}							- Global resource country modifiers.
+# prerequisites = {}					- Must be fulfilled before resource is shown.
+# modifier_prerequisites = {}			- Must be fulfilled before resource can be used.
+#
 
 time = {
 }
@@ -62,10 +73,13 @@ influence = {
 sr_terraform_gases = {
 	AI_category = strategic_resource
 	prerequisites = { "tech_terrestrial_sculpting" }
-	tradable = yes
+	tradable = no
 	is_rare = yes
+	is_global = yes
 	
-	num_ai_wanted = 100
+	modifier = {	
+		terraforming_cost_mult = -0.25
+	}
 }
 
 sr_terraform_liquids = {
@@ -73,8 +87,11 @@ sr_terraform_liquids = {
 	prerequisites = { "tech_terrestrial_sculpting" }
 	tradable = yes
 	is_rare = yes
-	
-	num_ai_wanted = 100
+	is_global = yes
+
+	modifier = {	
+		terraforming_cost_mult = -0.25
+	}
 }
 
 sr_xed_sp_feedthegalaxy_food_ration = {
@@ -98,6 +115,11 @@ sr_garanthium = {
 	prerequisites = { "tech_mine_garanthium" }
 	tradable = yes
 	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		ship_hitpoints_mult = 0.10
+	}
 }
 
 # Lythuric Gas
@@ -106,14 +128,11 @@ sr_lythuric = {
 	prerequisites = { "tech_lythuric_gas" }
 	tradable = yes
 	is_rare = yes
-}
-
-# Engos Vapor
-sr_engos = {
-	AI_category = strategic_resource
-	prerequisites = { "tech_engos_vapor" }
-	tradable = yes
-	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		ship_shield_hp_mult = 0.15
+	}
 }
 
 # Teldar Crystals
@@ -122,14 +141,11 @@ sr_teldar = {
 	prerequisites = { "tech_mine_teldar" }
 	tradable = yes
 	is_rare = yes
-}
-
-# Pitharan Dust
-sr_pitharan = {
-	AI_category = strategic_resource
-	prerequisites = { "tech_pitharan_dust" }
-	tradable = yes
-	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		weapon_type_kinetic_weapon_damage_mult = 0.10
+	}
 }
 
 # Orillium Ore
@@ -138,19 +154,42 @@ sr_orillium = {
 	prerequisites = { "tech_mine_orillium" }
 	tradable = yes
 	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		weapon_type_explosive_weapon_damage_mult = 0.10
+	}
+}
+
+# Pitharan Dust
+sr_pitharan = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_pitharan_dust" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		tile_resource_food_mult = 0.20
+	}
+}
+
+# Engos Vapor
+sr_engos = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_engos_vapor" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		pop_environment_tolerance = 0.05
+	}
 }
 
 #################
 # Non-clustered #
 #################
-
-# Satramene Gas
-sr_satramene = {
-	AI_category = strategic_resource
-	prerequisites = { "tech_mine_satramene" }
-	tradable = yes
-	is_rare = yes
-}
 
 # Neutronium Ore
 sr_neutronium = {
@@ -158,6 +197,11 @@ sr_neutronium = {
 	prerequisites = { "tech_mine_neutronium" }
 	tradable = yes
 	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		ship_armor_mult = 0.15
+	}
 }
 
 # Living Metal
@@ -166,6 +210,12 @@ sr_living_metal = {
 	prerequisites = { "tech_mine_living_metal" }
 	tradable = yes
 	is_rare = yes
+	is_global = yes
+	
+	modifier = {
+		ship_armor_mult = 0.05
+		ship_auto_repair_add = 0.02
+	}
 }
 
 # Zro
@@ -174,24 +224,12 @@ sr_zro = {
 	prerequisites = { "tech_mine_zro" }
 	tradable = yes
 	is_rare = yes
-}
-
-# Alien Pets
-sr_alien_pets = {
-	AI_category = strategic_resource
-	prerequisites = { "tech_alien_life_studies" }
-	tradable = yes
-	is_rare = yes
-}
-
-# Betharian Stone
-sr_betharian = {
-	AI_category = strategic_resource
-	prerequisites = { "tech_mine_betharian" }
-	tradable = yes
-	is_rare = yes
+	is_global = yes
 	
-	num_ai_wanted = 100
+	modifier = {
+		ship_interstellar_speed_mult = 0.50
+		ship_sensor_range_mult = 1.00
+	}
 }
 
 # Dark Matter
@@ -200,4 +238,95 @@ sr_dark_matter = {
 	prerequisites = { "tech_mine_dark_matter" }
 	tradable = yes
 	is_rare = yes
+	is_global = yes
+	
+	modifier = {		
+		tile_resource_physics_research_mult = 0.15
+	}
+}
+
+# Helium
+#sr_helium = {
+#	AI_category = strategic_resource
+#	prerequisites = { "tech_mine_dark_matter" }
+#	tradable = yes
+#	is_rare = yes
+#	is_global = yes
+#	
+#	modifier = {
+#		tile_resource_energy_mult = 0.10
+#	}
+#}
+
+#################
+#    Policy     #
+#################
+
+# Satramene Gas
+sr_satramene = {
+	AI_category = strategic_resource
+	prerequisites = { "tech_mine_satramene" }
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {		
+		pop_ethic_shift = -0.10
+	}
+}
+
+#################
+#    Local      #
+#################
+
+# Alien Pets
+sr_alien_pets = {
+	AI_category = strategic_resource
+	is_rare = yes
+	is_planet_local = yes
+}
+
+# Betharian Stone
+sr_betharian = {
+	is_rare = yes
+	is_planet_local = yes
+	AI_category = energy
+}
+
+#################
+#   Enclaves    #
+#################
+
+#Riggan Spice
+sr_riggan = {
+	AI_category = strategic_resource
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {		
+		pop_happiness = 0.05
+	}
+}
+
+sr_xuran = {
+	AI_category = strategic_resource
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {	
+		pop_environment_tolerance = 0.05		
+	}
+}
+
+sr_muutagan = {
+	AI_category = strategic_resource
+	tradable = yes
+	is_rare = yes
+	is_global = yes
+	
+	modifier = {		
+		pop_ethic_shift = -0.1
+	}
 }

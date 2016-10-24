@@ -1,4 +1,7 @@
 spriteTypes = {
+
+	### ship size icons ###
+
 	spriteType = {
 		name = "GFX_text_corvette"
 		texturefile = "gfx/interface/icons/text_icons/icon_text_corvette.dds"
@@ -18,6 +21,8 @@ spriteTypes = {
 		name = "GFX_text_battleship"
 		texturefile = "gfx/interface/icons/text_icons/icon_text_battleship.dds"
 	}
+
+	### ship icons ###
 	
 	spriteType = {
 		name = "GFX_text_military_ship"
@@ -43,15 +48,59 @@ spriteTypes = {
 		name = "GFX_text_army_ship"
 		texturefile = "gfx/interface/icons/text_icons/text_icon_military_transport.dds"
 	}
+
+	### ship class icons ###
+
+	spriteType = {
+		name = "GFX_text_shipclass_military"
+		texturefile = "gfx/interface/icons/text_icons/text_icon_military_ship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_text_shipclass_military_station"
+		texturefile = "gfx/interface/icons/text_icons/text_icon_military_ship.dds"
+	}
 	
 	spriteType = {
-		name = "GFX_text_space_creature"
+		name = "GFX_text_shipclass_science_ship"
+		textureFile = "gfx/interface/icons/text_icons/text_icon_science_ship.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_text_shipclass_constructor"
+		textureFile = "gfx/interface/icons/text_icons/text_icon_construction_ship.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_text_shipclass_colonizer"
+		textureFile = "gfx/interface/icons/text_icons/text_icon_colony_ship.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_text_shipclass_transport"
 		texturefile = "gfx/interface/icons/text_icons/text_icon_military_transport.dds"
+	}
+
+	###
+
+	spriteType = {
+		name = "GFX_text_trigger_no"
+		texturefile = "gfx/interface/icons/text_icons/trigger_no.dds"
+	}
+
+	spriteType = {
+		name = "GFX_text_trigger_yes"
+		texturefile = "gfx/interface/icons/text_icons/trigger_yes.dds"
 	}
 
 	spriteType = {
 		name = "GFX_text_military_power"
 		texturefile = "gfx/interface/system/offensive_value.dds"
+	}
+
+	spriteType = {
+		name = "GFX_text_military_power_boss"
+		texturefile = "gfx/interface/icons/skull.dds"
 	}
 	
 	spriteType = {
@@ -104,13 +153,51 @@ spriteTypes = {
 		name = "GFX_text_pop"
 		textureFile = "gfx/interface/icons/text_icons/icon_text_pop.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_text_pops"
+		textureFile = "gfx/interface/icons/text_icons/tooltip_pop.dds"
+	}
 
 	spriteType = {
 		name = "GFX_text_blocker"
 		texturefile = "gfx/interface/icons/text_icons/text_icon_tile_blocker.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_text_planetsize"
+		textureFile = "gfx/interface/icons/planet_size.dds"
+	}
 	
+	spriteType = {
+		name = "GFX_text_building"
+		textureFile = "gfx/interface/icons/text_icons/tooltip_building.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_text_happiness"
+		textureFile = "gfx/interface/icons/text_icons/tooltip_happiness.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_text_opinion"
+		textureFile = "gfx/interface/icons/text_icons/tooltip_opinion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_text_empire_modifier"
+		texturefile = "gfx/interface/icons/text_icons/empire_modifier.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_text_pop_modifier"
+		textureFile = "gfx/interface/icons/text_icons/pop_modifier.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_text_ship_modifier"
+		textureFile = "gfx/interface/icons/text_icons/ship_modifier.dds"
+	}
 
 	# Anomalies
 

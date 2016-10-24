@@ -9,8 +9,8 @@ spriteTypes = {
 		color = { 1.0 1.0 1.0 }
 		colortwo = { 1.0 1.0 1.0 }
 		textureFile1 = "gfx/interface/progressbars/tech_research_progressbar.dds"
-		textureFile2 = "gfx/interface/progressbars/tech_research_progressbar_empty.dds"
-		size = { x = 235 y = 38 }
+		textureFile2 = "gfx/interface/progressbars/tech_research_progressbar_empty_short.dds"
+		size = { x = 232 y = 38 }
 		effectFile = "gfx/FX/progress.lua"
 	}	
 	
@@ -305,6 +305,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/tech_view/tech_bg_unlocked.dds"
 	}	
 
+	spriteType = {
+		name = "GFX_tech_gateway"
+		texturefile = "gfx/interface/icons/tech_gateway.dds"
+	}	
+
 	#spriteType = {
 	#	name = "GFX_tech_selection_bg"
 	#	texturefile = "gfx/interface/tech_view/tech_selection_bg.dds"
@@ -341,6 +346,26 @@ spriteTypes = {
 			animationrotation = 180.0
 			animationlooping = yes
 			animationtime = 60.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationframes = { 1 2 3 }
+		}
+	}
+	
+	spriteType = {
+		name = "GFX_button_1134_50_animated"
+		texturefile = "gfx/interface/buttons/button_1134_50_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3			
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_1134_50_animated_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/button_411_58_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 180.0	#Higher is slower
 			animationdelay = 0.0
 			animationblendmode = "overlay"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing

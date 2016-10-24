@@ -1,8 +1,8 @@
 ﻿l_english:
  #地图形状
  spiral:0 "螺旋银河"
- elliptical:0 "拟真银河"
- spiral_4:0 "辐射银河"
+ elliptical:0 "椭圆银河"
+ spiral_4:0 "拟真银河"
  spiral_2:0 "双漩银河"
  ring:0 "环状银河"
  #i_english
@@ -26,6 +26,8 @@
  OPEN_COMBAT_STATS:0 "§G点击打开战斗数据面板§!"
  SUBJECT_tributary:0 "朝贡国"
  SUBJECT_INTEGRATION_INFLUENCE:0 "附庸吞并： $VALUE|+=2$"
+ 
+ building_capital_3:0 "星区首府"
  #ship_sections_l_english
  #破坏器 核心 壁垒  -------->  舰艏 核心 舷墙
  #戴森环 -----> 环形天体

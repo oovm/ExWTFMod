@@ -12,6 +12,8 @@
 # gets_access(yes): gets overlords access
 # can_be_integrated(no): the overlord is able to integrate the subject
 # can_switch_to: a list of other subject types this type can switch to.
+# diplo_threat: threat generated from diplomatically vassalizing this type of subject
+# effect: executes when subject relation is created
 
 @protectorate_tech_threshold = 0.6
 

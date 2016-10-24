@@ -187,3 +187,64 @@ tech_deep_communication = {
 	ai_weight = {
 	}
 }
+
+tech_psi_warrior1 = {
+	cost = @tierXcost1
+	area = society
+	tier = 6
+	category = { excited }
+	is_rare = yes
+	prerequisites = { "tech_final_sublimation" }
+	weight = @tierXweight1
+	
+	modifier = {
+		garrison_health = 0.20
+	}
+}
+
+tech_psi_warrior2 = {
+	cost = @tierXcost2
+	area = society
+	tier = 6
+	category = { excited }
+	is_rare = yes
+	prerequisites = { "tech_psi_warrior1" }
+	weight = @tierXweight2
+	
+	modifier = {
+		garrison_health = 0.20
+	}
+}
+
+tech_psi_warrior3 = {
+	cost = @tierXcost3
+	area = society
+	tier = 6
+	category = { excited }
+	is_rare = yes
+	prerequisites = { "tech_psi_warrior2" }
+	weight = @tierXweight3
+	
+	modifier = {
+		garrison_health = 0.20
+	}
+}
+
+tech_psi_warrior4 = {
+	cost = @tierXcost4
+	area = society
+	tier = 6
+	category = { excited }
+	is_rare = yes
+	prerequisites = { "tech_psi_warrior3" }
+	weight = @tierXweight4
+	
+	modifier = {
+		garrison_health = 0.40
+	}
+}
+
+
+
+
+

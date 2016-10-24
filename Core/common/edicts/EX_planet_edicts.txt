@@ -153,38 +153,6 @@ planet_edict = {
 }
 
 planet_edict = {
-	name = "planet_capital"
-	desc = "edict_planet_capital_desc"
-	influence_cost = 1000
-	length = 0
-	potential = { 
-		NOT = { is_capital = yes }
-	}
-	length = 1
-	allow = { 
-	}
-	effect = {
-		owner = {
-				every_owned_planet = {
-					limit = {
-						is_capital = yes
-					}
-					hidden_effect = {
-						set_capital = no
-					}
-				}
-			}
-		custom_tooltip = edict_planet_capital.tooltip
-		hidden_effect = {
-							set_capital = yes
-					}
-	}
-	ai_weight = {
-		weight = 0
-	}
-}
-
-planet_edict = {
 	name = "planet_Abandon"
 	influence_cost = 250
 	length = 0
@@ -194,6 +162,8 @@ planet_edict = {
 	allow = {}
 	effect = {	
 		owner = {
+			add_minerals = 1000
+			add_energy = 200
 		}
 		hidden_effect = {
 			while = {
@@ -215,7 +185,7 @@ planet_edict = {
 
 planet_edict = {
 	name = "planet_CoreBoom"
-	influence_cost = 500
+	influence_cost = 1000
 	length = 0
 	show_sound = event_activating_unknown_technology
 	potential = { 
@@ -226,12 +196,11 @@ planet_edict = {
 	}
 	effect = {		
 		owner = {
-		add_minerals = 5000
-		add_energy = 1000
+			add_minerals = 25000
+			add_energy = 5000
 		}
 		destroy_colony = yes
 		change_pc = pc_asteroid
-		planet_size = 1
 	}
 	prerequisites = {
 	   "tech_core_boom"

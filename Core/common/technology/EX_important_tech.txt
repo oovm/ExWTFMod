@@ -5,35 +5,35 @@
 ##################
 ### 科技权
 ##################
-@tier1cost1 = 240
-@tier1cost2 = 360
-@tier1cost3 = 480
-@tier1cost4 = 600
+@tier1cost1 = 360
+@tier1cost2 = 480
+@tier1cost3 = 600
+@tier1cost4 = 720
 
-@tier2cost1 = 900
-@tier2cost2 = 1200
-@tier2cost3 = 1500
-@tier2cost4 = 1800
+@tier2cost1 = 1000
+@tier2cost2 = 1400
+@tier2cost3 = 1800
+@tier2cost4 = 2200
 
-@tier3cost1 = 2320
-@tier3cost2 = 2840
-@tier3cost3 = 3360
-@tier3cost4 = 3880
+@tier3cost1 = 3000
+@tier3cost2 = 4000
+@tier3cost3 = 5000
+@tier3cost4 = 6000
 
-@tier4cost1 = 4800
-@tier4cost2 = 5200
-@tier4cost3 = 5600
-@tier4cost4 = 6000
+@tier4cost1 = 6800
+@tier4cost2 = 7600
+@tier4cost3 = 8400
+@tier4cost4 = 9200
 
-@tier5cost1 = 6800
-@tier5cost2 = 7600
-@tier5cost3 = 8400
-@tier5cost4 = 9200
+@tier5cost1 = 10400
+@tier5cost2 = 11600
+@tier5cost3 = 12800
+@tier5cost4 = 14000
 
-@tierXcost1 = 10400
-@tierXcost2 = 11600
-@tierXcost3 = 12800
-@tierXcost4 = 14000
+@tierXcost1 = 16500
+@tierXcost2 = 18000
+@tierXcost3 = 19500
+@tierXcost4 = 21000
 
 @tier1weight1 = 100
 @tier1weight2 = 95
@@ -589,62 +589,6 @@ tech_final_sublimation = {
 				has_trait = "leader_trait_expertise_biology"
 			}
 		}
-	}
-}
-
-tech_psi_warrior1 = {
-	cost = @tierXcost1
-	area = society
-	tier = 6
-	category = { excited }
-	is_rare = yes
-	prerequisites = { "tech_final_sublimation" }
-	weight = @tierXweight1
-	
-	modifier = {
-		garrison_health = 0.20
-	}
-}
-
-tech_psi_warrior2 = {
-	cost = @tierXcost2
-	area = society
-	tier = 6
-	category = { excited }
-	is_rare = yes
-	prerequisites = { "tech_psi_warrior1" }
-	weight = @tierXweight2
-	
-	modifier = {
-		garrison_health = 0.20
-	}
-}
-
-tech_psi_warrior3 = {
-	cost = @tierXcost3
-	area = society
-	tier = 6
-	category = { excited }
-	is_rare = yes
-	prerequisites = { "tech_psi_warrior2" }
-	weight = @tierXweight3
-	
-	modifier = {
-		garrison_health = 0.20
-	}
-}
-
-tech_psi_warrior4 = {
-	cost = @tierXcost4
-	area = society
-	tier = 6
-	category = { excited }
-	is_rare = yes
-	prerequisites = { "tech_psi_warrior3" }
-	weight = @tierXweight4
-	
-	modifier = {
-		garrison_health = 0.40
 	}
 }
 

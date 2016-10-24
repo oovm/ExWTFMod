@@ -368,6 +368,7 @@ sol_neighbor_t1 = {
 		initializer = "sol_neighbor_t2_second_colony"
 	}
 }
+
 # Neighbor Tier 1 First Colony
 sol_neighbor_t1_first_colony = {	
 	name = "半人马座α"
