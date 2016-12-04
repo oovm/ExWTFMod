@@ -1,0 +1,30 @@
+# Icons set here are the ones shown in compnent editor list.
+
+component_set = {
+	key = "ADV_ZERO_POINT_REACTOR"
+	
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "NAVIGATIONAL_ARRAY"
+	
+	icon = "GFX_special_slot_navigational_array"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "STELLAR_CARTOGRAPHY"
+	
+	icon = "GFX_special_slot_stellar_cartography"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "KITCHEN_SINK"
+	
+	icon = "GFX_special_slot_kitchen_sink"
+	icon_frame = 1	
+}
+

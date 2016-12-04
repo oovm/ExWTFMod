@@ -94,7 +94,7 @@
  abandoned_mining:0 "遗弃的采矿设施"
  abandoned_mining_desc:0 "一个古老的采矿设施围绕着这个星球旋转，证明这里有可能有潜在的资源。"
  gas_rich_planet:0 "富气存储"
- gas_rich_planet_desc:0 "在星球上建立一个殖民地并开采这个资源。\n£energy  §G+50%§!"
+ gas_rich_planet_desc:0 "在星球上建立一个殖民地并开采这个资源。\n£energy §G+50%§!"
  gas_rich_planet_fo_realz:0 "富气矿"
  gas_rich_planet_fo_realz_desc:0 "在星球上开采稀有资源能提升整体的能源生产水平。"
  gas_responsible_mining:0 "可靠的气矿"

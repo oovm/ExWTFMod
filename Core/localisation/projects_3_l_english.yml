@@ -40,4 +40,4 @@
  CRYOPOD_OPENING_PROJECT:0 "撬开它"
  CRYOPOD_OPENING_PROJECT_DESC:0 "在避难所中我们只发现了各种各样的容器。如果我们想知道里面有什么，我们需要找到撬开它的最佳方法。"
  ANCIENT_OCEAN_SHIP:0 "被淹没的巡洋舰"
- ANCIENT_OCEAN_SHIP_DESC:0 "一艘外星人的巡洋舰躺在 [Root.GetName] 的海底。打捞她也许能得到宝贵的技术或资源。"
+ ANCIENT_OCEAN_SHIP_DESC:0 "一艘外星人的巡洋舰躺在[Root.GetName]的海底。打捞她也许能得到宝贵的技术或资源。"

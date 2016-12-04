@@ -1,0 +1,364 @@
+#########################
+####mod ethic rebuild####
+ethic_categories = {
+	
+	soc = {
+		opinions = { 1 1 1 1 1 }
+	}
+	
+	grn = {
+		opinions = { 1 1 1 1 1 }
+	}
+	
+	exp = {
+		opinions = { 1 1 1 1 1 }
+	}
+	
+	
+	elt = {
+		opinions = { 1 1 1 1 1 }
+	}	
+	
+	
+	
+}
+
+
+
+	
+
+ethic_socialism = {
+	cost = 1
+	category = "soc"
+	category_value = 1
+	opposite_dislike = -0.05
+	
+	
+	
+	
+	random_weight = {
+		value = 100
+	}	
+	
+
+}
+
+
+ethic_fanatic_socialism = {
+	cost = 2
+	category = "soc"
+	category_value = 0
+	opposite_dislike = -0.1
+	
+		
+	
+	random_weight = {
+		value = 100
+	}	
+	
+
+}
+
+
+
+
+
+ethic_capitalism = {
+	cost = 1
+	category = "soc"
+	category_value = 3
+	opposite_dislike = -0.05
+	
+	
+	random_weight = {
+		value = 100
+	}	
+	
+
+}
+
+
+ethic_fanatic_capitalism = {
+	cost = 2
+	category = "soc"
+	category_value = 4
+	opposite_dislike = -0.1
+	
+	
+	random_weight = {
+		value = 100
+	}	
+	
+
+}
+
+
+
+
+
+ethic_green = {
+	cost = 1
+	category = "grn"
+	category_value = 1
+    opposite_dislike = -0.05
+	
+	country_modifier = {
+		pop_environment_tolerance = 0.05
+	}
+	
+	pop_modifier = {
+		tile_resource_food_mult = 0.1
+	}
+	
+	random_weight = {
+		value = 100
+	}	
+	
+
+}
+
+
+ethic_fanatic_green = {
+	cost = 2
+	category = "grn"
+	category_value = 0
+    opposite_dislike = -0.1
+	
+	country_modifier = {
+		pop_environment_tolerance = 0.1
+	}
+	
+	pop_modifier = {
+		tile_resource_food_mult = 0.2
+	}
+	
+	random_weight = {
+		value = 100
+	}	
+	
+
+}
+
+
+
+ethic_industrial = {
+	cost = 1
+	category = "grn"
+	category_value = 3
+    opposite_dislike = -0.05
+	
+	country_modifier = {
+		building_time_mult = -0.05
+		spaceport_ship_build_time_mult = -0.05
+	}
+	
+		pop_modifier = {
+		tile_resource_minerals_mult = 0.05
+	}
+	
+	random_weight = {
+		value = 100
+	}	
+	
+
+}
+
+
+ethic_fanatic_industrial = {
+	cost = 2
+	category = "grn"
+    category_value = 4
+    opposite_dislike = -0.1
+	
+	country_modifier = {
+		building_time_mult = -0.15
+		spaceport_ship_build_time_mult = -0.15
+	}
+	
+	pop_modifier = {
+		tile_resource_minerals_mult = 0.15
+	}
+	
+	random_weight = {
+		value = 100
+	}	
+	
+
+}
+
+
+
+ethic_expansionist = {
+	cost = 1
+	category = "exp"
+    category_value = 1
+	country_modifier = {
+		shipsize_outpost_station_build_cost_mult = -0.25
+		planet_colony_development_speed_mult = 0.1
+	}
+	
+	pop_modifier = {
+		pop_migration_speed = 0.15
+	}
+	
+	random_weight = {
+		value = 75
+	}	
+	
+
+}
+
+
+ethic_fanatic_expansionist = {
+	cost = 2
+	category = "exp"
+    category_value = 0
+	
+	country_modifier = {
+		shipsize_outpost_station_build_cost_mult = -0.50
+		planet_colony_development_speed_mult = 0.3
+	}
+	
+	pop_modifier = {
+		pop_migration_speed = 0.45
+	}
+	
+	random_weight = {
+		value = 75
+	}	
+	
+
+}
+
+
+
+
+
+ethic_isolationist = {
+	cost = 1
+	category = "exp"
+    category_value = 3
+	
+	country_modifier = {
+		country_border_mult = 0.1
+	}
+	
+	pop_modifier = {
+		pop_fortification_defense = 0.2
+	}
+	
+	random_weight = {
+		value = 75
+	}	
+	
+
+}
+
+
+ethic_fanatic_isolationist = {
+	cost = 2
+	category = "exp"
+    category_value = 4
+	
+	country_modifier = {
+             country_border_mult = 0.3
+	}
+	
+	pop_modifier = {
+		pop_fortification_defense  = 0.6
+	}
+	
+	random_weight = {
+		value = 75
+	}	
+	
+	
+}	
+
+
+
+ethic_elitist = {
+	cost = 1
+	category = "elt"
+    category_value = 1
+	
+	
+	country_modifier = {
+		leader_skill_levels = 1
+		leader_influence_cost = 0.2
+	}
+	
+
+	
+	random_weight = {
+		value = 75
+	}	
+	
+
+}
+
+
+ethic_fanatic_elitist = {
+	cost = 2
+	category = "elt"
+    category_value = 0
+	
+	country_modifier = {
+		leader_skill_levels = 2
+		leader_influence_cost = 0.4
+	}
+	
+	
+	random_weight = {
+		value = 75
+	}	
+	
+
+}
+
+
+
+
+
+ethic_pluralist = {
+	cost = 1
+	category = "elt"
+    category_value = 3
+	
+	country_modifier = {
+	    country_leader_pool_size = 2
+		leader_influence_cost = -0.2
+        
+	}
+	
+
+	
+	random_weight = {
+		value = 75
+	}	
+	
+
+}
+
+
+ethic_fanatic_pluralist = {
+	cost = 2
+	category = "elt"
+    category_value = 4
+	
+	country_modifier = {
+        country_leader_pool_size = 4
+		leader_influence_cost = -0.4
+	}
+	
+	
+	random_weight = {
+		value = 75
+	}	
+	
+	
+}	
+
+
+
+

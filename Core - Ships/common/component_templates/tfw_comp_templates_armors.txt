@@ -1,0 +1,529 @@
+# ######################
+#  SSSSSHIIIIIEEEEELDS #
+# ######################
+
+#############
+#	ARMOR	#
+#############
+
+@armor_1S = 2
+@armor_1M = 4
+@armor_1L = 8
+
+@armor_2S = 2.5
+@armor_2M = 5
+@armor_2L = 10
+
+@armor_3S = 3
+@armor_3M = 6
+@armor_3L = 12
+
+@armor_4S = 3.5
+@armor_4M = 7
+@armor_4L = 14
+
+@armor_5S = 4
+@armor_5M = 8
+@armor_5L = 16
+
+@armor_6S = 4.5
+@armor_6M = 9
+@armor_6L = 18
+
+@armor_7S = 5
+@armor_7M = 10
+@armor_7L = 20
+
+@armor_8S = 5.5
+@armor_8M = 11
+@armor_8L = 22
+
+@armor_85S = 6
+@armor_85M = 12
+@armor_85L = 24
+
+@armor_9S = 6.5
+@armor_9M = 13
+@armor_9L = 26
+
+@armor_95S = 7
+@armor_95M = 14
+@armor_95L = 28
+
+@armor_10S = 7.5
+@armor_10M = 15
+@armor_10L = 30
+
+#############
+#	COST	#
+#############
+
+@cost_1S = 2
+@cost_1M = 4
+@cost_1L = 8
+
+@cost_2S = 4
+@cost_2M = 8
+@cost_2L = 16
+
+@cost_3S = 6
+@cost_3M = 12
+@cost_3L = 24
+
+@cost_4S = 8
+@cost_4M = 16
+@cost_4L = 32
+
+@cost_5S = 10
+@cost_5M = 20
+@cost_5L = 40
+
+@cost_6S = 12
+@cost_6M = 24
+@cost_6L = 48
+
+@cost_7S = 14
+@cost_7M = 28
+@cost_7L = 56
+
+@cost_8S = 16
+@cost_8M = 32
+@cost_8L = 64
+
+@cost_85S = 17
+@cost_85M = 34
+@cost_85L = 68
+
+@cost_9S = 18
+@cost_9M = 36
+@cost_9L = 52
+
+@cost_95S = 19
+@cost_95M = 38
+@cost_95L = 76
+
+@cost_10S = 20
+@cost_10M = 40
+@cost_10L = 80
+
+################
+# CRYSTAL ARMOR#
+################
+# Crystal-Merged Plating 
+utility_component_template = {
+	key = "LARGE_TFW_CRYSTAL_ARMOR_3"
+	size = aux
+	icon = "GFX_tfw_crystal_armor_3"
+	icon_frame = 1
+	power = 0
+	cost = 65
+	
+	modifier = {
+		ship_hitpoints_mult = 0.15
+	}
+	
+	prerequisites = { "tech_tfw_crystal_armor_3" }
+	component_set = "TFW_CRYSTAL_ARMOR_3"
+	upgrades_to = "LARGE_TFW_CRYSTAL_ARMOR_4"
+}
+
+# Crystal-Interfered Plating 
+utility_component_template = {
+	key = "LARGE_TFW_CRYSTAL_ARMOR_4"
+	size = aux
+	icon = "GFX_tfw_crystal_armor_4"
+	icon_frame = 1
+	power = 0
+	cost = 90
+	
+	modifier = {
+		ship_hitpoints_mult = 0.20
+	}
+	
+	prerequisites = { "tech_tfw_crystal_armor_4" }
+	component_set = "TFW_CRYSTAL_ARMOR_4"
+}
+
+######################################Adv Armor############################################ 
+#Crystal-Neutronium Armor
+utility_component_template = {
+	key = "SMALL_TFW_ARMOR_6"
+	size = small
+	icon = "GFX_tfw_armor_6"
+	icon_frame = 1
+	power = 0
+	cost = @cost_6S
+	armor_value = @armor_6S
+	
+	prerequisites = { "tech_tfw_ship_armor_6" }
+	component_set = "TFW_ARMOR_6"
+}
+
+utility_component_template = {
+	key = "MEDIUM_TFW_ARMOR_6"
+	size = medium
+	icon = "GFX_tfw_armor_6"
+	icon_frame = 1
+	power = 0
+	cost = @cost_6M
+	armor_value = @armor_6M
+	
+	prerequisites = { "tech_tfw_ship_armor_6" }
+	component_set = "TFW_ARMOR_6"
+}
+
+utility_component_template = {
+	key = "LARGE_TFW_ARMOR_6"
+	size = large
+	icon = "GFX_tfw_armor_6"
+	icon_frame = 1
+	power = 0
+	cost = @cost_6L
+	armor_value = @armor_6L
+	
+	prerequisites = { "tech_tfw_ship_armor_6" }
+	component_set = "TFW_ARMOR_6"
+}
+
+#Strangelet Armor
+utility_component_template = {
+	key = "SMALL_TFW_ARMOR_7"
+	size = small
+	icon = "GFX_tfw_armor_7"
+	icon_frame = 1
+	power = 0
+	cost = @cost_7S
+	armor_value = @armor_7S
+	
+	prerequisites = { "tech_tfw_ship_armor_7" }
+	component_set = "TFW_ARMOR_7"
+}
+
+utility_component_template = {
+	key = "MEDIUM_TFW_ARMOR_7"
+	size = medium
+	icon = "GFX_tfw_armor_7"
+	icon_frame = 1
+	power = 0
+	cost = @cost_7M
+	armor_value = @armor_7M
+	
+	prerequisites = { "tech_tfw_ship_armor_7" }
+	component_set = "TFW_ARMOR_7"
+}
+
+utility_component_template = {
+	key = "LARGE_TFW_ARMOR_7"
+	size = large
+	icon = "GFX_tfw_armor_7"
+	icon_frame = 1
+	power = 0
+	cost = @cost_7L
+	armor_value = @armor_7L
+	
+	prerequisites = { "tech_tfw_ship_armor_7" }
+	component_set = "TFW_ARMOR_7"
+}
+
+#Hyperon Armor
+utility_component_template = {
+	key = "SMALL_TFW_ARMOR_8"
+	size = small
+	icon = "GFX_tfw_armor_8"
+	icon_frame = 1
+	power = 0
+	cost = @cost_8S
+	armor_value = @armor_8S
+	
+	prerequisites = { "tech_tfw_ship_armor_8" }
+	component_set = "TFW_ARMOR_8"
+}
+
+utility_component_template = {
+	key = "MEDIUM_TFW_ARMOR_8"
+	size = medium
+	icon = "GFX_tfw_armor_8"
+	icon_frame = 1
+	power = 0
+	cost = @cost_8M
+	armor_value = @armor_8M
+	
+	prerequisites = { "tech_tfw_ship_armor_8" }
+	component_set = "TFW_ARMOR_8"
+}
+
+utility_component_template = {
+	key = "LARGE_TFW_ARMOR_8"
+	size = large
+	icon = "GFX_tfw_armor_8"
+	icon_frame = 1
+	power = 0
+	cost = @cost_8L
+	armor_value = @armor_8L
+	
+	prerequisites = { "tech_tfw_ship_armor_8" }
+	component_set = "TFW_ARMOR_8"
+}
+
+#Dybarion Armor
+utility_component_template = {
+	key = "SMALL_TFW_ARMOR_9"
+	size = small
+	icon = "GFX_tfw_armor_9"
+	icon_frame = 1
+	power = 0
+	cost = @cost_9S
+	armor_value = @armor_9S
+	
+	prerequisites = { "tech_tfw_ship_armor_9" }
+	component_set = "TFW_ARMOR_9"
+}
+
+utility_component_template = {
+	key = "MEDIUM_TFW_ARMOR_9"
+	size = medium
+	icon = "GFX_tfw_armor_9"
+	icon_frame = 1
+	power = 0
+	cost = @cost_9M
+	armor_value = @armor_9M
+	
+	prerequisites = { "tech_tfw_ship_armor_9" }
+	component_set = "TFW_ARMOR_9"
+}
+
+utility_component_template = {
+	key = "LARGE_TFW_ARMOR_9"
+	size = large
+	icon = "GFX_tfw_armor_9"
+	icon_frame = 1
+	power = 0
+	cost = @cost_9L
+	armor_value = @armor_9L
+	
+	prerequisites = { "tech_tfw_ship_armor_9" }
+	component_set = "TFW_ARMOR_9"
+}
+
+#Dybarion Alloy Armor
+utility_component_template = {
+	key = "SMALL_TFW_ARMOR_10"
+	size = small
+	icon = "GFX_tfw_armor_10"
+	icon_frame = 1
+	power = 0
+	cost = @cost_10S
+	armor_value = @armor_10S
+	
+	prerequisites = { "tech_tfw_ship_armor_10" }
+	component_set = "TFW_ARMOR_10"
+}
+
+utility_component_template = {
+	key = "MEDIUM_TFW_ARMOR_10"
+	size = medium
+	icon = "GFX_tfw_armor_10"
+	icon_frame = 1
+	power = 0
+	cost = @cost_10M
+	armor_value = @armor_10M
+	
+	prerequisites = { "tech_tfw_ship_armor_10" }
+	component_set = "TFW_ARMOR_10"
+}
+
+utility_component_template = {
+	key = "LARGE_TFW_ARMOR_10"
+	size = large
+	icon = "GFX_tfw_armor_10"
+	icon_frame = 1
+	power = 0
+	cost = @cost_10L
+	armor_value = @armor_10L
+	
+	prerequisites = { "tech_tfw_ship_armor_10" }
+	component_set = "TFW_ARMOR_10"
+}
+
+####################BIOARMOR###########################
+#1
+utility_component_template = {
+	key = "SMALL_TFW_BIOARMOR_1"
+	size = small
+	icon = "GFX_tfw_bioarmor_1"
+	icon_frame = 1
+	cost = @cost_85S
+	armor_value = @armor_8S
+	modifier = {
+		ship_auto_repair_add = 0.004 # Regenerates 0.4% ship-health per month
+	}
+	
+	ai_weight = {
+		weight = 10
+	
+	modifier = {
+			factor = 6.0
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = peaceful_traders
+				has_ai_personality = harmonious_hierarchy
+				has_ai_personality = federation_builders
+			}
+		}
+	}
+	
+	prerequisites = { "tech_tfw_bioarmor_1" }
+	component_set = "TFW_BIOARMOR_1"
+}
+
+utility_component_template = {
+	key = "MEDIUM_TFW_BIOARMOR_1"
+	size = medium
+	icon = "GFX_tfw_bioarmor_1"
+	icon_frame = 1
+	cost = @cost_85M
+	armor_value = @armor_8M
+	modifier = {
+		ship_auto_repair_add = 0.008 # Regenerates 0.8% ship-health per month
+	}
+	
+	ai_weight = {
+		weight = 15
+	
+	modifier = {
+			factor = 6.0
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = peaceful_traders
+				has_ai_personality = harmonious_hierarchy
+				has_ai_personality = federation_builders
+			}
+		}
+	}
+	
+	prerequisites = { "tech_tfw_bioarmor_1" }
+	component_set = "TFW_BIOARMOR_1"
+}
+
+utility_component_template = {
+	key = "LARGE_TFW_BIOARMOR_1"
+	size = large
+	icon = "GFX_tfw_bioarmor_1"
+	icon_frame = 1
+	cost = @cost_85L
+	armor_value = @armor_8L
+	modifier = {
+		ship_auto_repair_add = 0.016 # Regenerates 1.6% ship-health per month
+	}
+	
+	ai_weight = {
+		weight = 20
+	
+	modifier = {
+			factor = 6.0
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = peaceful_traders
+				has_ai_personality = harmonious_hierarchy
+				has_ai_personality = federation_builders
+			}
+		}
+	}	
+	
+	prerequisites = { "tech_tfw_bioarmor_1" }
+	component_set = "TFW_BIOARMOR_1"
+}
+
+#2
+utility_component_template = {
+	key = "SMALL_TFW_BIOARMOR_2"
+	size = small
+	icon = "GFX_tfw_bioarmor_2"
+	icon_frame = 1
+	cost = @cost_95S
+	armor_value = @armor_9S
+	modifier = {
+		ship_auto_repair_add = 0.005 # Regenerates 0.5% ship-health per month
+	}
+
+	ai_weight = {
+		weight = 10
+	
+	modifier = {
+			factor = 6.0
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = peaceful_traders
+				has_ai_personality = harmonious_hierarchy
+				has_ai_personality = federation_builders
+			}
+		}
+	}
+	
+	prerequisites = { "tech_tfw_bioarmor_2" }
+	component_set = "TFW_BIOARMOR_2"
+}
+
+utility_component_template = {
+	key = "MEDIUM_TFW_BIOARMOR_2"
+	size = medium
+	icon = "GFX_tfw_bioarmor_2"
+	icon_frame = 1
+	cost = @cost_95M
+	armor_value = @armor_9M
+	modifier = {
+		ship_auto_repair_add = 0.01 # Regenerates 1.0% ship-health per month
+	}
+
+	ai_weight = {
+		weight = 15
+	
+	modifier = {
+			factor = 6.0
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = peaceful_traders
+				has_ai_personality = harmonious_hierarchy
+				has_ai_personality = federation_builders
+			}
+		}
+	}
+	
+	prerequisites = { "tech_tfw_bioarmor_2" }
+	component_set = "TFW_BIOARMOR_2"
+}
+
+utility_component_template = {
+	key = "LARGE_TFW_BIOARMOR_2"
+	size = large
+	icon = "GFX_tfw_bioarmor_2"
+	icon_frame = 1
+	cost = @cost_95L
+	armor_value = @armor_9L
+	modifier = {
+		ship_auto_repair_add = 0.02 # Regenerates 2.0% ship-health per month
+	}
+
+	ai_weight = {
+		weight = 20
+	
+	modifier = {
+			factor = 6.0
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = peaceful_traders
+				has_ai_personality = harmonious_hierarchy
+				has_ai_personality = federation_builders
+			}
+		}
+	}
+	
+	prerequisites = { "tech_tfw_bioarmor_2" }
+	component_set = "TFW_BIOARMOR_2"
+}

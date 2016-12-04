@@ -1,0 +1,60 @@
+namespace = miningbase
+
+planet_event = {
+  id = miningbase.1
+
+  trigger = {
+    NOT = { has_planet_flag = "miningbase_bonus" }
+    is_colony = yes
+  }
+
+  hide_window = yes
+
+  mean_time_to_happen = { days = 3 } # If you don't want the event to be called every single day of the year, you can set a mean time to happen.
+
+  immediate = {
+    if = {
+      limit = {
+        solar_system = {
+          any_ship_in_system = {
+            is_ship_size = MiningBase
+          }
+        }
+      }
+      add_modifier = {
+        modifier = "miningbase_bonus_planet"
+        days = -1
+      }
+      set_planet_flag = miningbase_bonus
+    }
+  }
+}
+
+planet_event = {
+  id = miningbase.2
+
+  trigger = {
+    has_planet_flag = "miningbase_bonus"
+  }
+
+  hide_window = yes
+
+  mean_time_to_happen = { days = 3 } # If you don't want the event to be called every single day of the year, you can set a mean time to happen.
+
+  immediate = {
+    if = {
+      limit = {
+        solar_system = {
+          NOT = {
+            any_ship_in_system = {
+              is_ship_size = MiningBase
+            }
+          }
+        }
+      }
+      remove_planet_flag = miningbase_bonus
+      remove_modifier = miningbase_bonus_planet
+    }
+  }
+}
+

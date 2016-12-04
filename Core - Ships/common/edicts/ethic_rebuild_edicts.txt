@@ -1,0 +1,276 @@
+
+# Variables:
+#  name, the name of the edict, also serves as localisation key.
+#  influence_cost, the base influence cost of activating the edict.
+#  potential, planet or country trigger to decide whether the edict should be shown.
+#  allow, planet or country trigger to decide if whether this edict can be activated.
+#  effect, an effect that is executed when this trigger activates.
+#  prerequisites, tech requirements for this trigger.
+#  ai_will_do, determines AI scoring for edict
+#  modifier, a list of modifiers
+#  length, number of days the trigger is active.
+
+# Sets the edict-cost for all edicts with this variable
+@standardEdictCost = 150
+
+country_edict = {
+	name = "forced_industrialization"
+	modifier = {
+	            pop_happiness = 0.1
+	            building_time_mult = -0.2
+                spaceport_ship_build_time_mult = -0.2
+		        pop_robot_production_output = 0.33
+                tile_resource_energy_mult = -0.1
+                pop_environment_tolerance = -0.05
+
+	}
+	
+	influence_cost = 1
+		
+	allow = {
+	}
+	
+	ai_weight = {
+		weight = 1
+	}	
+	
+	prerequisites = {
+		"tech_advanced_industrialization"
+	}
+}
+
+
+
+country_edict = {
+	name = "edict_loyalty"
+	modifier = {
+		        pop_ethic_shift = -0.1
+                army_morale = 0.2
+                edict_length_mult = 0.25				
+                edict_influence_cost = -0.25
+				faction_surpression_cost = -0.25
+                country_resettlement_cost_mult = -0.25				
+				pop_happiness = -0.1
+				tile_resource_energy_mult = -0.1
+
+
+	}
+	
+	influence_cost = 1
+		
+	allow = {
+	}
+	
+	ai_weight = {
+		weight = 1
+	}	
+	
+	prerequisites = {
+		"tech_loyalty"
+	}
+}
+
+
+
+
+
+
+country_edict = {
+	name = "clean_air"
+	modifier = {
+                pop_environment_tolerance = 0.05
+                pop_happiness = 0.05
+                pop_growth_req_mult = -0.1
+	}
+	
+	influence_cost = 1
+		
+	allow = {
+	}
+	
+	ai_weight = {
+		weight = 1
+	}	
+	
+	prerequisites = {
+		"tech_bioreactor"
+	}
+}
+
+
+
+
+
+
+# Spirit of Freedom (Fanatic Individualist special power)
+country_edict = {
+	name = "spirit_freedom"
+
+
+	modifier = {
+                pop_happiness = 0.10
+               	all_technology_research_speed = 0.10
+                pop_migration_speed = 0.3
+                pop_ethic_shift = 0.15
+
+	}
+
+        influence_cost = 1
+	
+	
+	allow = {
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+		prerequisites = {
+		"tech_spirit_freedom"
+	}
+}
+
+
+
+# Divine Crusade (Divine Imperium special power)
+country_edict = {
+	name = "div_crusade"
+
+
+	modifier = {
+	            max_rivalries = 1
+                pop_war_happiness = 0.15
+                navy_size_mult = 0.15				
+               	army_attack_morale_mult = 0.2
+                army_attack_damage_mult = 0.2
+                spaceport_ship_build_time_mult = -0.2
+                planet_army_build_speed_mult = 0.2
+
+
+
+	}
+
+        influence_cost = 2
+	
+	
+	allow = {
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+	
+			prerequisites = {
+		"tech_div_crusade"
+	}
+}
+
+
+# Meal'n'Real (Slaver Republic special power)
+
+country_edict = {
+name = "meal_real"
+
+
+	modifier = {
+                pop_happiness = 0.1
+				tile_resource_food_mult = 0.2
+
+	}
+	
+	influence_cost = 1
+	
+		allow = {
+	}
+	
+		ai_weight = {
+		weight = 1
+	}
+	
+				prerequisites = {
+		"tech_colliseum"
+	}
+
+}	
+	
+
+
+
+	
+	
+	
+#Festival "Ancestor's Call"
+
+planet_edict = {
+	name = "ancestor_call"
+	influence_cost = @standardEdictCost
+	
+	
+	modifier = {
+		pop_happiness = 0.1
+		tile_resource_food_mult = 0.2
+		pop_growth_req_mult = -0.2
+		planet_migration_all_pull = 0.5
+	}
+	
+	length = 3600
+	
+	
+	allow = {
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			num_pops > 9
+		}		
+	}	
+	
+	prerequisites = { 
+		"tech_ancestor_call"
+	}
+}
+	
+	
+	
+	
+planet_edict = {
+	name = "increase_planetsize"
+	influence_cost = 30
+	length = 0
+	potential = { 
+	
+	NOT = { 
+	
+	planet_size = 25 
+	has_planet_flag = planet_size_increased
+	
+	} 
+	
+	}
+	allow = { } 
+
+	effect = {
+		custom_tooltip = edict_increase_planetsize.tooltip
+		planet_event = { id = increase_planetsize.1 }
+		}
+		
+		ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			NOT = { any_tile = { has_building = yes } }
+		}
+	} 
+	
+	prerequisites = { 
+		"tech_adv_engin"
+	}
+}	
+	
+	
+	
+	
+	
+	

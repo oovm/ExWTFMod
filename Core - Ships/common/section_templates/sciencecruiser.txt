@@ -1,0 +1,13 @@
+ship_section_template = {
+	key = "SCIENCECRUISER_SECTION"
+	ship_size = ScienceCruiser
+	fits_on_slot = mid
+	entity = "ScienceCruiser_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	cost = 0
+	
+	small_utility_slots = 5
+	medium_utility_slots = 3
+	large_utility_slots = 1
+}

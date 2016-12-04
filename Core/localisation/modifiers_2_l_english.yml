@@ -80,8 +80,8 @@
  crystal_sonar_desc:0 "你的舰队可以使用一种涉及晶状生命体的特殊科技从而立刻调查他们所在的星系。"
  greater_crystal_bounty:0 "更多的晶体奖励"
  greater_crystal_bounty_desc:0 "§L允许你的舰队回收利用这些晶状生命体而不是破坏它们§!\n你的舰队每破坏一个便可获得：§G100§!矿物。"
- crystal_bounty:0 "晶体悬赏"
- crystal_bounty_desc:0 "§L允许你的舰队回收利用这些晶状生命体而不是破坏它们§!\n你的舰队每破坏一个便可获得：§G50§!矿物。"
+ greater_crystal_bounty:0 "更多的晶体奖励"
+ greater_crystal_bounty_desc:0 "§L允许你的舰队回收利用这些晶状生命体而不是破坏它们§!\n你的舰队每破坏一个便可获得：§G100§!矿物。"
  amoeba_extirpator:0 "变形虫抹杀者"
  amoeba_extirpator_desc:0 "我们的舰队擅长瞄准深空变形虫的弱点攻击。"
  crystal_breaker:0 "水晶破坏者"
@@ -97,17 +97,19 @@
  unbalanced_ecosystem:0 "不平衡的生态系统"
  unbalanced_ecosystem_desc:0 "生物圈朝着植物类生命不断发展，达到一种极端同质化，使得这颗星球并不适合开展农业活动。"
  ruler_failed_savior:0 "失败的救援"
- ruler_failed_savior_desc:0 "一个失败的营救计划使得我们的POP遭到毁灭。"
+ ruler_failed_savior_desc:0 "一个失败的营救计划使得我们的人口遭到毁灭。"
  ruler_savior:0 "救星"
- ruler_savior_desc:0 "我们的POP从成功的营救计划中得到了巨大的喜悦。"
+ ruler_savior_desc:0 "我们的人口从成功的营救计划中得到了巨大的喜悦。"
  missing_scientist:0 "人员流失"
  missing_scientist_desc:0 "一位在观察哨所工作的科学家和我们失去了联系，这在科学界掀起了巨大的波浪。"
  humiliated:0 "受辱"
  humiliated_desc:0 "我们被别的帝国公开羞辱了。"
- TOOLTIP_HAPPINESS_GOV_ETHOS:0 "$ETHIC$ 政权： $VAL$"
- TOOLTIP_HAPPINESS_XENO_OVERLORDS:0 "外星宗主： $VAL$"
+ TOOLTIP_HAPPINESS_GOV_ETHOS:0 "$ETHIC$政权：$VAL$"
+ TOOLTIP_HAPPINESS_XENO_OVERLORDS:0 "外星宗主：$VAL$"
  swarm_border:1 ""
  swarm_border_desc:1 ""
+ drone_processing: "无人机处理"
+ drone_processing_desc: "我们从古代无人机中学习到的知识进一步提高了我们的矿物开采和精炼效率。"
 
  ####################################
  # Pop Modifiers
@@ -115,9 +117,9 @@
  mandate_fulfilled_mod:0 "授案完成"
  mandate_fulfilled_mod_desc:0 "成诺兑现"
  tyrannized:0 "暴政"
- tyrannized_desc:0 "受到 [Root.Owner.GetName] 的暴政。"
+ tyrannized_desc:0 "受到[Root.Owner.GetName]的暴政。"
  favored:0 "恩赐"
- favored_desc:0 "受到 [Root.Owner.GetName] 的恩赐。"
+ favored_desc:0 "受到[Root.Owner.GetName]的恩赐。"
  6_hour_workday:0 "6小时工作日"
  6_hour_workday_desc:0 "在工作环境未改善的情况下无偿工作"
  validated:0 "生效"
@@ -153,7 +155,7 @@
  damage_vs_country_type_crystal_mult:0 "对晶状生命体造成伤害"
  damage_vs_country_type_drone_mult:0 "对古代采矿探机造成伤害"
  damage_vs_country_type_cloud_mult:0 "对虚空云怪造成伤害"
- damage_vs_country_type_swarm_mult:1 "对Prethoryn生物造成伤害"
+ damage_vs_country_type_swarm_mult:1 "对索林原虫造成伤害"
 
  ####################################
  # Opinion Modifiers
@@ -162,6 +164,7 @@
  opinion_literary_savior:0 "文学救世主"
  opinion_book_burner:0 "书籍焚化炉"
  opinion_faction_insult:0 "派系侮辱"
+
  ####################################
  # Pop Faction Modifiers
  ####################################

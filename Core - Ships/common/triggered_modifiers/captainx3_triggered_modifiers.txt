@@ -1,0 +1,461 @@
+flagship_bonus = {
+	icon = "gfx/interface/icons/modifiers/mod_ship_fire_rate_mult.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = "Flagship" }
+			count = 1
+		}
+	}
+
+	planet_sensor_range_mult = 0.2
+	ship_sensor_range_mult = 0.2
+	influence_gain_add = -2
+	species_leader_exp_gain = 0.2
+	pop_happiness = 0.1
+	pop_war_happiness = 0.15
+	fleet_emergency_ftl_min_days_mult = -0.25
+	ship_emergency_ftl_mult = -0.25
+}
+
+headquarters_bonus = {
+	icon = "gfx/interface/icons/modifiers/mod_country_max_embassies.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = "Headquarters" }
+			count = 1
+		}
+	}
+
+	country_sector_cap_add = 5
+	country_leader_cap = 10
+	country_ship_upgrade_cost_mult = -0.25
+	leader_skill_levels = 1
+	planet_border_mult = 0.20
+	ship_upkeep_mult = -0.25
+	shipsize_military_station_small_upkeep_mult = -0.25
+	shipsize_military_station_medium_upkeep_mult = -0.25
+	shipsize_military_station_large_upkeep_mult = -0.25
+	shipsize_military_station_xlarge_upkeep_mult = -0.25
+	navy_size_mult = 0.25
+	influence_gain_add = -2
+	pop_happiness = 0.1
+	pop_war_happiness = 0.15
+}
+
+
+miningbase_bonus1 = {
+	icon = "gfx/interface/icons/modifiers/country_resource_minerals_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = MiningBase }
+			count = 1
+		}
+	}
+
+	shipsize_miningbase_upkeep_mult = -1.10
+	max_minerals = 5000
+	tile_resource_energy_mult = -0.01
+}
+
+miningbase_bonus2 = {
+	icon = "gfx/interface/icons/modifiers/country_resource_minerals_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = MiningBase }
+			count = 2
+		}
+	}
+
+	shipsize_miningbase_upkeep_mult = -1.00
+	max_minerals = 10000
+	tile_resource_energy_mult = -0.02
+}
+
+miningbase_bonus3 = {
+	icon = "gfx/interface/icons/modifiers/country_resource_minerals_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = MiningBase }
+			count = 3
+		}
+	}
+
+	shipsize_miningbase_upkeep_mult = -0.90
+	max_minerals = 15000
+	tile_resource_energy_mult = -0.03
+}
+
+miningbase_bonus4 = {
+	icon = "gfx/interface/icons/modifiers/country_resource_minerals_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = MiningBase }
+			count = 4
+		}
+	}
+
+	shipsize_miningbase_upkeep_mult = -0.80
+	max_minerals = 20000
+	tile_resource_energy_mult = -0.04
+}
+
+miningbase_bonus5 = {
+	icon = "gfx/interface/icons/modifiers/country_resource_minerals_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = MiningBase }
+			count = 5
+		}
+	}
+
+	shipsize_miningbase_upkeep_mult = -0.70
+	max_minerals = 25000
+	tile_resource_energy_mult = -0.05
+}
+
+miningbase_bonus6 = {
+	icon = "gfx/interface/icons/modifiers/country_resource_minerals_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = MiningBase }
+			count = 6
+		}
+	}
+
+	shipsize_miningbase_upkeep_mult = -0.60
+	max_minerals = 30000
+	tile_resource_energy_mult = -0.06
+}
+
+miningbase_bonus7 = {
+	icon = "gfx/interface/icons/modifiers/country_resource_minerals_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = MiningBase }
+			count = 7
+		}
+	}
+
+	shipsize_miningbase_upkeep_mult = -0.50
+	max_minerals = 35000
+	tile_resource_energy_mult = -0.07
+}
+
+miningbase_bonus8 = {
+	icon = "gfx/interface/icons/modifiers/country_resource_minerals_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = MiningBase }
+			count = 8
+		}
+	}
+
+	shipsize_miningbase_upkeep_mult = -0.40
+	max_minerals = 40000
+	tile_resource_energy_mult = -0.08
+}
+
+
+powerstation_bonus1 = {
+	icon = "gfx/interface/icons/modifiers/country_resource_energy_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = PowerStation }
+			count = 1
+		}
+	}
+
+	shipsize_powerstation_upkeep_mult = -1.10
+	max_energy = 5000
+	tile_resource_minerals_mult = -0.01
+}
+
+powerstation_bonus2 = {
+	icon = "gfx/interface/icons/modifiers/country_resource_energy_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = PowerStation }
+			count = 2
+		}
+	}
+
+	shipsize_powerstation_upkeep_mult = -1.00
+	max_energy = 10000
+	tile_resource_minerals_mult = -0.02
+}
+
+powerstation_bonus3 = {
+	icon = "gfx/interface/icons/modifiers/country_resource_energy_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = PowerStation }
+			count = 3
+		}
+	}
+
+	shipsize_powerstation_upkeep_mult = -0.90
+	max_energy = 15000
+	tile_resource_minerals_mult = -0.03
+}
+
+powerstation_bonus4 = {
+	icon = "gfx/interface/icons/modifiers/country_resource_energy_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = PowerStation }
+			count = 4
+		}
+	}
+
+	shipsize_powerstation_upkeep_mult = -0.80
+	max_energy = 20000
+	tile_resource_minerals_mult = -0.04
+}
+
+powerstation_bonus5 = {
+	icon = "gfx/interface/icons/modifiers/country_resource_energy_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = PowerStation }
+			count = 5
+		}
+	}
+
+	shipsize_powerstation_upkeep_mult = -0.70
+	max_energy = 25000
+	tile_resource_minerals_mult = -0.05
+}
+
+powerstation_bonus6 = {
+	icon = "gfx/interface/icons/modifiers/country_resource_energy_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = PowerStation }
+			count = 6
+		}
+	}
+
+	shipsize_powerstation_upkeep_mult = -0.60
+	max_energy = 30000
+	tile_resource_minerals_mult = -0.06
+}
+
+powerstation_bonus7 = {
+	icon = "gfx/interface/icons/modifiers/country_resource_energy_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = PowerStation }
+			count = 7
+		}
+	}
+
+	shipsize_powerstation_upkeep_mult = -0.50
+	max_energy = 35000
+	tile_resource_minerals_mult = -0.07
+}
+
+powerstation_bonus8 = {
+
+	icon = "gfx/interface/icons/modifiers/country_resource_energy_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = PowerStation }
+			count = 8
+		}
+	}
+
+	shipsize_powerstation_upkeep_mult = -0.40
+	max_energy = 40000
+	tile_resource_minerals_mult = -0.08
+}
+
+
+miningbase_final = {
+
+	icon = "gfx/interface/icons/modifiers/country_resource_minerals_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = MiningBase }
+			count > 8
+		}
+	}
+
+	shipsize_miningbase_upkeep_mult = 10.0
+	max_minerals = 40000
+}
+
+powerstation_final = {
+
+	icon = "gfx/interface/icons/modifiers/country_resource_energy_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		count_owned_ships = {
+			limit = { is_ship_size = PowerStation }
+			count > 8
+		}
+	}
+
+	shipsize_powerstation_upkeep_mult = 10.0
+	max_energy = 40000
+}
+
+
+mansion_limit = {
+
+	icon = "gfx/interface/icons/modifiers/mod_country_influence_gain_add.dds"
+	icon_frame = 2
+
+	potential = {
+		always = yes
+	}
+
+	trigger = {
+		is_country_type = default
+		any_planet_within_border = {
+			has_building = building_governors_mansion
+			count > 50
+		}
+	}
+
+	tile_resource_energy_mult = -0.30
+	tile_resource_minerals_mult = -0.30
+}

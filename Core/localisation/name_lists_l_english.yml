@@ -4,6 +4,23 @@
  # Species Classes
  ####################################
  
+ 
+ HUM: "人型生物"
+ HUM_desc: "种族类型对你的帝国并无影响，但是相对于其他物种，人形种族对其他人型生物的好感会较高。"
+ HUM_plural: "人型生物"
+ HUM_insult_01: "野兽"
+ HUM_insult_plural_01: "野兽"
+ HUM_compliment_01: "人面兽"
+ HUM_compliment_plural_01: "人面兽"
+ HUM_spawn: "幼仔"
+ HUM_spawn_plural: "幼仔"
+ HUM_sound_01: "咆哮"
+ HUM_sound_02: "咕哝"
+ HUM_sound_03: "聒噪"
+ HUM_sound_04: "吼叫"
+ HUM_sound_05: "低泣"
+ HUM_organ: "胃"
+ HUM_mouth: "嘴"
  MAM:0 "哺乳类"
  MAM_desc:1 "除了哺乳类，其他物种不会对你另眼相看。"
  MAM_plural:0 "哺乳类们"
@@ -117,11 +134,11 @@
  PLANT_compliment_plural_01:1 "玫瑰们"
  PLANT_spawn:1 "小幼苗"
  PLANT_spawn_plural:1 "小幼苗们"
- PLANT_sound_01:1 "rustling"
- PLANT_sound_02:1 "cracking"
- PLANT_sound_03:1 "swishing"
- PLANT_sound_04:1 "dribbling"
- PLANT_sound_05:1 "wilting"
+ PLANT_sound_01:1 "低语声"
+ PLANT_sound_02:1 "破裂声"
+ PLANT_sound_03:1 "沙沙声"
+ PLANT_sound_04:1 "液体滴落声"
+ PLANT_sound_05:1 "枯萎声"
  PLANT_organ:1 "珠心"
  PLANT_mouth:1 "花萼"
  PRE_MAM:0 "哺乳类"
@@ -233,7 +250,7 @@
  # Species
  ####################################
 
- Human:0 "人类" # Needs to be localized, alone among all species
+ Human:0 "Human" # Needs to be localized, alone among all species
  Human_adj:0 "人类的"
  Human_plural:0 "人们"
  Human_insult:0 "猴子"

@@ -1,0 +1,31 @@
+deep_observation = {
+	icon = "GFX_fleet_task_deep_observation"
+	small_icon = 4
+
+	gain = {
+		society_research = 15
+	}
+	
+    potential = {}	
+
+	valid = {
+	
+	 AND = {
+		OR = {
+			has_policy_flag = interference_active
+			has_policy_flag = interference_full
+		}
+
+		OR = {
+			has_government = xeno_congress
+			has_government = adv_xeno_congress
+		}		
+		
+	 }	
+		
+	}
+	
+	ai_weight = {
+		weight = 5	# Use if policy allows it
+	}
+}

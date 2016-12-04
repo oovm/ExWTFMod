@@ -1,0 +1,100 @@
+# All leaders will have a common trait-point value set in defines, which they use to grab traits
+
+# leader_trait = yes - this tags the trait as a leader-trait and not a species-trait
+# initial = no - if set to no, this trait can not be granted to leaders when they are generated
+# leader_class = { admiral scientist }  -- OR  - if not set, it can be given to all leader-types except Rulers
+# requires_traits = { trait_psionic } -- AND - leader-trait can only be randomly given on generation if the leaders species has this trait
+# requires_governments = { despotic_hegemony ai_overlordship } -- OR - leader-trait can only be randomly given on generation if the Empire has this type of government form
+# prerequisites = { tech_psionic_theory } - AND - leader-trait can only be given if the technology specified has been researched by the Empire
+
+#effects on research traits
+@categorybonus = 0.10
+ 
+
+trait_drone_mindset = {
+	
+	modifier = {
+            pop_ethic_shift = -0.05
+	}
+	cost = 2	
+
+}
+
+trait_slaver_gene = {
+	
+	modifier = {
+            pop_slavery_tolerance = 0.1
+	}
+	cost = 2	
+
+}
+
+
+trait_brainchip = {
+	
+	modifier = {
+			army_morale = -0.25
+            army_damage_mult = -0.25	
+	}
+	cost = 2
+    modification = no	
+
+}
+
+
+trait_machine_worship = {
+	
+	initial = no
+	modification = no
+	
+	cost = 0	
+
+}
+
+trait_xeno_interference = {
+	
+	initial = no
+	modification = no
+	
+	cost = 0	
+
+}
+
+
+####################
+# Scientist Traits #
+####################
+
+leader_trait_expertise_good_trading = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_trading.dds"
+	modifier = {
+		category_good_trading_research_speed_mult = @categorybonus
+	}
+	leader_trait = yes
+	leader_class = { scientist }
+	opposites = { 
+		"leader_trait_expertise_rocketry" 
+		"leader_trait_expertise_voidcraft"
+		"leader_trait_expertise_industry" 
+		"leader_trait_expertise_field_manipulation"
+		"leader_trait_expertise_particles"
+		"leader_trait_expertise_psionics"
+		"leader_trait_expertise_computing" 
+		"leader_trait_expertise_biology" 
+		"leader_trait_expertise_statecraft"
+		"leader_trait_expertise_military_theory" 
+		"leader_trait_expertise_new_worlds" 
+	}
+	# higher chance to generate techs in category good_trading (done in tech-script)
+	
+	ai_categories = {
+		society
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+

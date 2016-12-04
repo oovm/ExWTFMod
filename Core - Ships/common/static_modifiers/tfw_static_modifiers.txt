@@ -1,0 +1,7 @@
+pop_bioterror_neg = {
+	pop_happiness = -0.01
+}
+
+pop_bioterror = {
+	pop_happiness = 0.01
+}

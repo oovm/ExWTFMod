@@ -1,0 +1,514 @@
+#BOW
+
+ship_section_template = {
+	key = "LightCarrier_BOW_M1S2_1"
+	ship_size = LightCarrier
+	fits_on_slot = bow
+	entity = "LightCarrier_bow_M1S2_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	medium_utility_slots = 2
+	aux_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "LightCarrier_BOW_M1S2_2"
+	ship_size = LightCarrier
+	fits_on_slot = bow
+	entity = "LightCarrier_bow_M1S2_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	prerequisites = { tech_pd_tracking_1 }
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	medium_utility_slots = 2
+	aux_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "LightCarrier_BOW_M1S2_3"
+	ship_size = LightCarrier
+	fits_on_slot = bow
+	entity = "LightCarrier_bow_M1S2_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	prerequisites = { tech_pd_tracking_1 }
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	medium_utility_slots = 2
+	aux_utility_slots = 1
+	
+	cost = 0
+}
+
+#MID1
+
+ship_section_template = {
+	key = "LightCarrier_MID1_S2HB_1"
+	ship_size = LightCarrier
+	fits_on_slot = mid1
+	entity = "LightCarrier_mid1_S2HB_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = -90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	small_utility_slots = 2
+	large_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "LightCarrier_MID1_S2HB_2"
+	ship_size = LightCarrier
+	fits_on_slot = mid1
+	entity = "LightCarrier_mid1_S2HB_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_pd_tracking_1 }
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = -90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	small_utility_slots = 2
+	large_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "LightCarrier_MID1_S2HB_3"
+	ship_size = LightCarrier
+	fits_on_slot = mid1
+	entity = "LightCarrier_mid1_S2HB_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_pd_tracking_1 }
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = -90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	small_utility_slots = 2
+	large_utility_slots = 1
+	
+	cost = 0
+}
+
+
+#MID2
+
+ship_section_template = {
+	key = "LightCarrier_MID2_S2HB_1"
+	ship_size = LightCarrier
+	fits_on_slot = mid2
+	entity = "LightCarrier_mid2_S2HB_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = -90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	small_utility_slots = 2
+	large_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "LightCarrier_MID2_S2HB_2"
+	ship_size = LightCarrier
+	fits_on_slot = mid2
+	entity = "LightCarrier_mid2_S2HB_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_pd_tracking_1 }
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = -90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	small_utility_slots = 2
+	large_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "LightCarrier_MID2_S2HB_3"
+	ship_size = LightCarrier
+	fits_on_slot = mid2
+	entity = "LightCarrier_mid2_S2HB_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_pd_tracking_1 }
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = -90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	small_utility_slots = 2
+	large_utility_slots = 1
+	
+	cost = 0
+}
+
+
+#STERN
+
+ship_section_template = {
+	key = "LightCarrier_STERN_M1"
+	ship_size = LightCarrier
+	fits_on_slot = stern
+	entity = "LightCarrier_stern_M1_entity"
+	icon = "GFX_ship_part_core_stern"
+	
+	prerequisites = { tech_pd_tracking_1 }
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	medium_utility_slots = 2
+	aux_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "LightCarrier_STERN_S2"
+	ship_size = LightCarrier
+	fits_on_slot = stern
+	entity = "LightCarrier_stern_S2_entity"
+	icon = "GFX_ship_part_core_stern"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 2
+	aux_utility_slots = 1
+	
+	cost = 0
+}

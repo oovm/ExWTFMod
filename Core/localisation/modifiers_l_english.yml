@@ -4,7 +4,6 @@
  # Modifiers
  ####################################
 
-
  #Country
  MOD_COUNTRY_FORTIFICATION_STRENGTH:0 "工事强度"
  MOD_COUNTRY_BORDER_MULT:0 "疆域范围"
@@ -19,9 +18,9 @@
  MOD_COUNTRY_EDICT_LENGTH_MULT:2 "法案期限"
  MOD_COUNTRY_EDICT_LENGTH_MULT_DESC:1 "影响所有帝国内的行星法案，使其期限增加或减少"。
  MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED:0 "研究速度"
- MOD_COUNTRY_PHYSICS_TECH_RESEARCH_SPEED:0 "研究速度 (物理)"
- MOD_COUNTRY_SOCIETY_TECH_RESEARCH_SPEED:0 "研究速度 (社会)"
- MOD_COUNTRY_ENGINEERING_TECH_RESEARCH_SPEED:0 "研究速度 (工程)"
+ MOD_COUNTRY_PHYSICS_TECH_RESEARCH_SPEED:0 "研究速度 (£physics 物理)"
+ MOD_COUNTRY_SOCIETY_TECH_RESEARCH_SPEED:0 "研究速度 (£society 社会)"
+ MOD_COUNTRY_ENGINEERING_TECH_RESEARCH_SPEED:0 "研究速度 (£engineering 工程)"
  MOD_COUNTRY_MINING_STATION_COST_MULT:0 "矿物空间站花费"
  MOD_COUNTRY_RESEARCH_STATION_COST_MULT:0 "科研空间站花费"
  MOD_COUNTRY_SHIP_UPGRADE_COST_MULT:0 "舰船升级花费"
@@ -38,7 +37,7 @@
  MOD_COUNTRY_MAX_RIVALRIES:0 "宿敌上限"
  MOD_COUNTRY_MAX_EMBASSIES:0 "大使馆上限"
  MOD_COUNTRY_TRADE_ATTRACTIVENESS:0 "贸易吸引力"
- WAR_ECONOMY_MOD:0 "§H修正 §R-100§! 防御战争分数：§!"
+ WAR_ECONOMY_MOD:0 "§H修正§R-100§!防御战争分数：§!"
  MOD_COUNTRY_RESETTLEMENT_COST_MULT:1 "强制迁移花费"
  MOD_POP_RESETTLEMENT_COST_MULT:0 "强制迁移花费"
 
@@ -47,8 +46,8 @@
  MOD_POP_HAPPINESS:0 "幸福度"
  MOD_POP_HAPPINESS_DESC:0 "所有帝国內人口的幸福度都会受到此数值影响"
  MOD_POP_RADIATION_HAPPINESS:0 "辐射影响幸福度"
- MOD_POP_RADIATION_HAPPINESS_DESC:0 "帝国境内所有机械POP的幸福度受这个数值的影响。"
- MOD_POP_ENVIRONMENT_TOLERANCE:1 "宜居性"
+ MOD_POP_RADIATION_HAPPINESS_DESC:0 "帝国境内所有机械人口的幸福度受这个数值的影响。"
+ MOD_POP_ENVIRONMENT_TOLERANCE:1 "适居性"
  MOD_POP_SLAVERY_TOLERANCE:0 "奴隶容忍度"
  MOD_POP_ALIEN_SLAVERY_TOLERANCE:0 "外星奴隶容忍度"
  MOD_POP_WAR_TOLERANCE:0 "战争容忍度"
@@ -56,6 +55,9 @@
  MOD_POP_PEACE_HAPPINESS:0 "和平幸福度"
  MOD_POP_XENOPHOBIA:0 "排外主义"
  MOD_POP_ETHIC_SHIFT:0 "思潮分歧"
+ MOD_COUNTRY_COLONY_INFLUENCE_COST_MULT:0 "殖民地影响力花费"
+ MOD_COUNTRY_FACTION_SURPRESSION_COST_MULT:0 "派系镇压花费"
+ MOD_COUNTRY_POLICY_HAPPINESS_MULT:0 "政策幸福度影响"
  MOD_POP_ETHIC_SHIFT_DESC:0 "这个数值影响帝国内人民自发地转变思潮的几率。"
  MOD_POP_SLOTS:0 "人口容量"
  MOD_POP_FOOD_REQ:1 "食物消耗"
@@ -70,7 +72,7 @@
  MOD_POP_FORTIFICATION_DEFENSE:0 "工事防守加成"
  MOD_POP_OTHER_SPECIES_HAPPINESS:0 "其他种族幸福度"
  MOD_POP_MIGRATION_SPEED:1 "移民速度"
- MOD_POP_MIGRATION_SPEED_DESC:0 "此数值影响POP在帝国境内进行自发移民的所花费的时间。"
+ MOD_POP_MIGRATION_SPEED_DESC:0 "此数值影响人口在帝国境内进行自发移民的所花费的时间。"
  MOD_POP_SLAVE_PRODUCTION_OUTPUT:1 "奴隶矿物产出"
  MOD_POP_SLAVE_FOOD_OUTPUT:0 "奴隶食物产出"
  MOD_POP_ROBOT_PRODUCTION_OUTPUT:0 "机器人资源产出"
@@ -121,10 +123,12 @@
  MOD_SHIP_ANOMALY_RESEARCH_SPEED:0 "异常点研究速度"
  MOD_SHIP_ANOMALY_GENERATION_CHANCE:0 "异常点发现机率"
  MOD_SHIP_SCIENCE_SURVEY_SPEED:0 "调查速度"
+ MOD_SHIP_TRACKING_ADD:0 "索敌"
+ MOD_SHIP_TRACKING_MULT:0 "索敌"
 
  #Army
  MOD_ARMY_UPKEEP_MULT:0 "陆军维护"
- MOD_ARMY_UPKEEP_MULT_DESC:0 "影响所有帝国内的陸軍维护费用，使其每月花费增加或减少。"
+ MOD_ARMY_UPKEEP_MULT_DESC:0 "影响所有帝国内的陆军维护费用，使其每月花费增加或减少。"
  MOD_ARMY_HEALTH:0 "陆军健康值"
  MOD_ARMY_DAMAGE_MULT:0 "陆军伤害"
  MOD_ARMY_MORALE_DAMAGE_MULT:0 "士气伤害"
@@ -155,7 +159,7 @@
  MOD_PLANET_ARMY_BUILD_SPEED_MULT:0 "陆军建造速度"
  MOD_PLANET_ARMY_BUILD_TIME_MULT:1 "陆军建造时间"
  MOD_PLANET_ARMY_BUILD_TIME_MULT_DESC:0 "影响所有帝国内的陆军建造花费"
- MOD_SPACEPORT_SHIP_BUILD_SPEED_MULT:0 "舰船建造时间"
+ MOD_SPACEPORT_SHIP_BUILD_SPEED_MULT:0 "舰船建造速度"
  MOD_PLANET_ARMY_BUILD_COST_MULT:0 "陆军花费"
  MOD_PLANET_ARMY_BUILD_COST_MULT_DESC:0 "影响帝国内陆军需要的资源，使其招聘的成本增加或减少。"
  MOD_PLANET_BORDER_MULT:0 "星球疆域扩张"
@@ -175,8 +179,8 @@
  MOD_LEADER_ADMIRAL_SKILL_LEVELS:0 "舰队司令技能"
  MOD_LEADER_GENERAL_SKILL_LEVELS:0 "将领技能"
  MOD_LEADER_GOVERNOR_SKILL_LEVELS:0 "总督技能"
- MOD_LEADER_INFLUENCE_COST:0 "领导者招募花费"
- MOD_LEADER_SPECIES_EXP_GAIN:0 "领导者经验收益"
+ MOD_LEADER_INFLUENCE_COST:0 "领袖招募花费"
+ MOD_LEADER_SPECIES_EXP_GAIN:0 "领袖经验收益"
 
  #Component
  MOD_COMPONENT_RANGE_MULT:0 "部件作用范围"
@@ -289,12 +293,13 @@
  weapon_type_energy_weapon_fire_rate_mult:0 "能量武器攻击速度"
  weapon_type_strike_craft_weapon_damage_mult:0 "舰载机伤害"
  weapon_type_strike_craft_weapon_fire_rate_mult:0 "舰载机攻击速度"
+ weapon_type_strike_craft_speed_mult:0 "舰载机速度"
 
  #vultaum_asteroid_category_research_speed_mult: "Anomaly Research Speed (Precursor - ADD CATEGORIES PROPER)"
  #vultaum_asteroid_category_research_fail_risk_mult: "Anomaly Fail Risk (Precursor - ADD CATEGORIES PROPER)"
  # TEMP should these be detailed?
- vultaum_asteroid_category_research_speed_mult:0 "异常点研究速度 (先驱)"
- vultaum_asteroid_category_research_fail_risk_mult:0 "异常点研究失败机率 (先驱)"
+ #vultaum_asteroid_category_research_speed_mult: "Anomaly Research Speed (Precursor - ADD CATEGORIES PROPER)"
+ #vultaum_asteroid_category_research_fail_risk_mult: "Anomaly Fail Risk (Precursor - ADD CATEGORIES PROPER)"
  vultaum_gasgiant_category_research_speed_mult:0 "异常点研究速度 (先驱)"
  vultaum_gasgiant_category_research_fail_risk_mult:0 "异常点研究失败机率 (先驱)"
  vultaum_uninhabitable_category_research_speed_mult:0 "异常点研究速度 (先驱)"
@@ -398,11 +403,11 @@
  # Static Modifiers
  ####################################
  very_easy_player:0 "非常简单难度"
- easy_player:0 "简单难度"
+ very_easy_player:0 "非常简单难度"
  hard_player:0 "困难难度"
  very_hard_player:0 "非常困难难度"
  very_easy_ai:0 "非常简单难度"
- easy_ai:0 "简单难度"
+ very_easy_ai:0 "非常简单难度"
  hard_ai:0 "困难难度"
  very_hard_ai:0 "非常困难难度"
  inefficient_planet_management:0 "低效率的行星管理"
@@ -443,6 +448,17 @@
 
  nomad_strength:0 "银河游牧民"
 
+ pirate_power: "海盗势力"
+ cloud_power: "云怪势力"
+ enigmatic_power: "神秘势力"
+ technosphere_power: "科技势力"
+ dreadnought_power: "无畏势力"
+
+ curator_insight: "策展人的见识"
+ curator_insight_desc: "策展人同你分享了他们的知识。尽管这些知识还需要进一步的解读，但这毫无疑问增进了你对宇宙的理解。"
+ fallen_empire_gift_databanks: "先驱者数据缓存"
+ fallen_empire_gift_databanks_desc: "失落帝国恩赐给了我们一批科研数据，这毫无疑问可以加速我们的科学发展。"
+ 
  ####################################
  # Pop Modifiers
  ####################################
@@ -504,6 +520,8 @@
  pc_ai_habitability:1 "AI世界适居性"
  pc_gaia_habitability:1 "盖亚世界适居性"
  pc_ringworld_habitable_habitability:1 "环形世界宜居度"
+ pc_savannah_habitability:0 "稀树草原适应性"
+ pc_alpine_habitability:0 "高山高原适应性"
 
  ####################################
  # Triggered Modifiers
@@ -526,8 +544,8 @@
  ####################################
  
  ## SPECIES
- opinion_repugnant_species:0 "令人厌恶的"
- opinion_charismatic_species:0 "有魅力的"
+ opinion_repugnant_species:0 "令人厌恶的统治者"
+ opinion_charismatic_species:0 "魅力非凡的统治者"
 
  ## ETHOS
  opinion_xenophobia:0 "排外主义"
@@ -542,7 +560,7 @@
  opinion_of_pacifist_pos:0 "开明的和平主义者"
  opinion_of_individualist:0 "个人主义刁民"
  opinion_of_collectivist:0 "集体主义暴君"
- opinion_from_personality:0 "[Root.GetPersonalityName] 性格"
+ opinion_from_personality:0 "[Root.GetPersonalityName]性格"
  opinion_desecrated_holy_world:0 "被玷污的圣地"
  opinion_desecrated_tomb_world:0 "被玷污的死寂世界"
  opinion_researching_ai:1 "正在研究人工智能"
@@ -589,7 +607,7 @@
  opinion_broke_non_aggression_pact:0 "撕毁互不侵犯条约"
  opinion_broke_migration_pact:0 "撕毁移民条约"
  opinion_broke_guarantee:0 "收回独立保障"
- opinion_demanded_subjectization:0 "要求臣服"
+ opinion_demanded_subjectization:0 "拒绝臣服"
  opinion_changed_alliance:0 "盟友变更"
  opinion_kicked_from_alliance:0 "将我们提出联盟"
  opinion_tried_to_kick:0 "试图将我们踢出联盟"
@@ -606,8 +624,9 @@
  opinion_friction:0 "边境摩擦"
  opinion_rivalry:0 "我们的宿敌"
  opinion_declared_rival:0 "视我们为宿敌"
- opinion_mutual_threat:0 "互为威胁"
+ opinion_mutual_threat:0 "共同威胁"
  opinion_mutual_rival:0 "共同宿敌"
+ opinion_ally_of_ally:0 "盟友的盟友"
  opinion_allied_to_rival:0 "与我们的宿敌是盟友"
  opinion_rivals_with_ally:0 "视我们的盟友为宿敌"
  opinion_insult:0 "被羞辱"
@@ -652,13 +671,23 @@
 
  opinion_primitive_violation:0 "吞并了土著"
  
+ opinion_fallen_empire_gift: "接收恩惠"
  opinion_put_in_their_place:0 "将他们放在正确的位置上"
  opinion_accepted_fallen_empire_demand:0 "同意要求"
  opinion_refused_fallen_empire_demand:0 "拒绝要求"
+ opinion_accepted_fallen_empire_request: "接受要求"
+ opinion_refused_fallen_empire_request: "拒绝要求"
+ opinion_refused_fallen_empire_task: "拒绝任务"
+ opinion_failed_fallen_empire_task: "任务失败"
+ opinion_majorly_failed_fallen_empire_task: "令我们大师缩放"
+ opinion_spurned_fallen_empire_gift: "摒弃恩惠"
+ opinion_completed_fallen_empire_task: "完成任务"
 
  opinion_heretical_research:0 "异端研究"
  encroaching_colony:1 "妨碍殖民地"
  encroaching_scientists:1 "妨碍科学家"
+
+ opinion_shade_giver:0 "给予庇护"
 
  ####################################
  # Planet Modifiers
@@ -736,7 +765,7 @@
  migrating_forests:0 "森林迁移"
  migrating_forests_desc:0 "这个星球上可移动的森林经常迁移到新的区域，令道路，能源路线和其他基础建设的建造难度大大提升。"
  migrating_forests_2:0 "温顺森林迁移"
- migrating_forests_2_desc:1 "§W£blocker  §Y迁移森林保留地§!新增, 在临近地块增加£society  §Y研究点§! 。§!\n\n这个星球上迁移中的森林现在会避免进入人口密集地区，并不再会破坏定居点，但这些森林仍然限制星球上可用的土地"
+ migrating_forests_2_desc:1 "§W£blocker §Y迁移森林保留地§!新增，在临近地块增加£society §Y研究点§!。§!\n\n这个星球上迁移中的森林现在会避免进入人口密集地区，并不再会破坏定居点，但这些森林仍然限制星球上可用的土地"
  damaged_ecology:0 "生态破坏"
  damaged_ecology_desc:0 "森林迁移被破坏深深影响了这个星球的生态系统。"
  friendly_trees:0 "适应共存"
@@ -884,3 +913,7 @@
 
  subterranean_tech_transaction:0 "地下技术规定"
  subterranean_tech_transation_desc:0 "我们部分的研究材料和资金将会专门用于研究在我们某一个殖民星中的地底文明"
+ stellarite_high_temp:0 "温度升高"
+ stellarite_high_temp_desc:0 "一个浑身发光的巨兽出现在这个星系，它让这个星球的地表温度升高了。"
+ stellarite_low_temp:0 "温度降低"
+ stellarite_low_temp_desc:0 "一个浑身发光的巨兽吞食了这个星系太阳的一部分，这使得星球的地表温度比往常要低。"
