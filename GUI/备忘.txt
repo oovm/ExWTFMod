@@ -1,0 +1,17 @@
+图标类:
+folk_tinybuildings
+folk_tinymodules
+folk_tinyoutliner
+
+UI类:
+ui_overhaul_1080
+cleanspace
+epicgalaxiestexture2
+
+星球类:
+morestars(no binary)
+hypo_stars
+asymmetricstarts
+
+
+cnmod

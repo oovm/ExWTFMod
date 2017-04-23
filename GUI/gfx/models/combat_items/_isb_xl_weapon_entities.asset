@@ -1,0 +1,47 @@
+# MUZZLE FLASH
+entity = {
+	name = "mass_accelerator_1_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "mass_accelerator_2_muzzle_particle" keep_particle = yes sound = { soundeffect = kinectic_artillery_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_kinectic_artillery_fire" } }
+	}
+}
+
+entity = {
+	name = "mass_accelerator_2_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "mass_accelerator_2_muzzle_particle" keep_particle = yes sound = { soundeffect = adv_kinectic_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_adv_kinectic_fire" } }
+	}
+}
+
+# PROJECTILE
+entity = {
+	name = "mass_accelerator_1_entity"
+	pdxmesh = "mass_accelerator_1_mesh"
+	
+	default_state = idle
+	state = { name = "idle"
+		#event = { time = 0 particle = "kinetic_artillery_idle_particle" keep_particle = yes }
+	}
+	
+	scale = 3.5
+}
+
+entity = {
+	name = "mass_accelerator_2_entity"
+	pdxmesh = "mass_accelerator_2_mesh"
+	
+	default_state = idle
+	state = { name = "idle"
+		#event = { time = 0 particle = "kinetic_artillery_idle_particle" keep_particle = yes }
+	}
+	
+	scale = 3.5
+}

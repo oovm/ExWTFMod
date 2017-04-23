@@ -1,0 +1,109 @@
+sc_blue_dwarf_star = {
+	class 			= a_star
+	icon_scale		= 0.7
+	planet			= pc_blue_dwarf_star
+	spawn_odds 		= 2
+	num_planets 	= { min = 4 max = 10 }
+	
+	pc_continental 	= { spawn_odds = 0.6 }
+	pc_desert		= { spawn_odds = 0.6 }
+	pc_tropical		= { spawn_odds = 0.6 }
+	pc_arid 		= { spawn_odds = 0.6 }
+	pc_ocean		= { spawn_odds = 0.6 }
+	pc_tundra		= { spawn_odds = 0.6 }
+	pc_arctic		= { spawn_odds = 0.6 }
+	pc_alpine		= { spawn_odds = 0.6 }
+	pc_savannah		= { spawn_odds = 0.6 }
+}
+
+sc_black_dwarf_star = {
+	class 			= black_star
+	icon_scale		= 1
+	planet			= pc_black_dwarf_star
+	spawn_odds 		= 1
+	num_planets 	= { min = 4 max = 10 }
+	
+	pc_desert 		= { spawn_odds = 0.2 }
+	pc_tropical 	= { spawn_odds = 0.2 }	
+	pc_arid 		= {	spawn_odds = 0.2 }
+	pc_continental 	= { spawn_odds = 0.2 }
+	pc_ocean 		= { spawn_odds = 0.2 }
+	pc_tundra 		= { spawn_odds = 0.2 }
+	pc_arctic 		= { spawn_odds = 0.2 }
+	pc_alpine		= { spawn_odds = 0.2 }
+	pc_savannah		= { spawn_odds = 0.2 }
+}
+
+sc_dark_star = {
+	class 			= dark_star
+	icon_scale		= 1.5
+	planet			= pc_dark_star
+	spawn_odds 		= 0.2
+	num_planets 	= { min = 4 max = 10 }
+	
+	pc_desert 		= { spawn_odds = 0.2 }
+	pc_tropical 	= { spawn_odds = 0.2 }	
+	pc_arid 		= {	spawn_odds = 0.2 }
+	pc_continental 	= { spawn_odds = 0.2 }
+	pc_ocean 		= { spawn_odds = 0.2 }
+	pc_tundra 		= { spawn_odds = 0.2 }
+	pc_arctic 		= { spawn_odds = 0.2 }
+	pc_alpine		= { spawn_odds = 0.2 }
+	pc_savannah		= { spawn_odds = 0.2 }
+}
+
+sc_quasi_star = {
+	class 			= g_star
+	icon_scale		= 1.5
+	planet			= pc_quasi_star
+	spawn_odds 		= 0.2
+	num_planets 	= { min = 1 max = 4 }	
+	
+	pc_desert 		= { spawn_odds = 0.2 }
+	pc_tropical 	= { spawn_odds = 0.2 }	
+	pc_arid 		= {	spawn_odds = 0.2 }
+	pc_continental 	= { spawn_odds = 0.2 }
+	pc_ocean 		= { spawn_odds = 0.2 }
+	pc_tundra 		= { spawn_odds = 0.2 }
+	pc_arctic 		= { spawn_odds = 0.2 }
+	pc_alpine		= { spawn_odds = 0.2 }
+	pc_savannah		= { spawn_odds = 0.2 }
+}
+
+sc_strange_star = {
+	class 			= strange_star
+	icon_scale		= 1.5
+	planet			= pc_strange_star
+	spawn_odds 		= 0.01
+	num_planets 	= { min = 1 max = 4 }	
+	
+	pc_desert 		= { spawn_odds = 0 }
+	pc_tropical 	= { spawn_odds = 0 }	
+	pc_arid 		= {	spawn_odds = 0 }
+	pc_continental 	= { spawn_odds = 0 }
+	pc_ocean 		= { spawn_odds = 0 }
+	pc_tundra 		= { spawn_odds = 0 }
+	pc_arctic 		= { spawn_odds = 0 }
+	pc_gaia			= { spawn_odds = 0 }
+	pc_alpine		= { spawn_odds = 0 }
+	pc_savannah		= { spawn_odds = 0 }
+}
+
+sc_white_hole = {
+	class 			= white_hole
+	icon_scale		= 1.5
+	planet			= pc_white_hole
+	spawn_odds 		= 0.02
+	num_planets 	= { min = 1 max = 4 }	
+	
+	pc_desert 		= { spawn_odds = 0 }
+	pc_tropical 	= { spawn_odds = 0 }	
+	pc_arid 		= {	spawn_odds = 0 }
+	pc_continental 	= { spawn_odds = 0 }
+	pc_ocean 		= { spawn_odds = 0 }
+	pc_tundra 		= { spawn_odds = 0 }
+	pc_arctic 		= { spawn_odds = 0 }
+	pc_gaia			= { spawn_odds = 0 }
+	pc_alpine		= { spawn_odds = 0 }
+	pc_savannah		= { spawn_odds = 0 }
+}

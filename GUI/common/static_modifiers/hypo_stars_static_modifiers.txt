@@ -1,0 +1,20 @@
+electroweak_star = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_ew_star.dds"
+	icon_frame = 1
+}
+q_star = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_black_hole.dds"
+	icon_frame = 1
+}
+intermediate_black_hole = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_black_hole.dds"
+	icon_frame = 1
+}
+pop_iii_star = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_red_star.dds"
+	icon_frame = 1
+}
+tz_object = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_red_star.dds"
+	icon_frame = 1
+}

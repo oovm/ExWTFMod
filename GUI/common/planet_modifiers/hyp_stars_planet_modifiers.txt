@@ -1,0 +1,105 @@
+### Planet Modifiers
+
+pm_electroweak_star = {
+	spawn_chance = {
+		modifier = {
+			add = 75
+			AND = {
+				is_planet_class = "pc_neutron_star"
+				has_planet_modifier = pm_quark_star
+			}
+		}
+		modifier = {
+			add = 75
+			AND = {
+				is_planet_class = "pc_pulsar"
+				has_planet_modifier = pm_quark_star
+			}
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_electroweak_star"
+		}
+	}
+	modifier = "electroweak_star"
+}
+
+pm_q_star = {
+	spawn_chance = {
+		modifier = {
+			add = 75
+			is_planet_class = "pc_black_hole"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_quasar"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_q_star"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_intermediate_black_hole"
+		}
+	}
+	modifier = "q_star"
+}
+
+pm_intermediate_black_hole = {
+	spawn_chance = {
+		modifier = {
+			add = 75
+			is_planet_class = "pc_black_hole"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_quasar"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_q_star"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_intermediate_black_hole"
+		}
+	}
+	modifier = "intermediate_black_hole"
+}
+
+pm_pop_iii_star = {
+	spawn_chance = {
+		modifier = {
+			add = 75
+			is_planet_class = "pc_m_star"
+		}
+		modifier = {
+			add = 75
+			is_planet_class = "pc_k_star"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_pop_iii_star"
+		}
+	}
+	modifier = "pop_iii_star"
+}
+
+pm_tz_object = {
+	spawn_chance = {
+		modifier = {
+			add = 75
+			is_planet_class = "pc_rsg_star"
+		}
+		modifier = {
+			add = 75
+			is_planet_class = "pc_rhg_star"
+		}
+		modifier = {
+			factor = 0
+			has_planet_modifier = "pm_tz_object"
+		}
+	}
+	modifier = "tz_object"
+}

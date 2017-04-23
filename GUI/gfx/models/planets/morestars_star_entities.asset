@@ -1,0 +1,144 @@
+#####    Stars    ######
+
+
+entity = { # O
+	name = "o_star_class_star_entity"
+	pdxmesh = "star_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0.0 node = "planet" particle = "b_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient" } }  
+		event = { trigger_once = yes sound = { soundeffect = "falling_star" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient_layer_02" } }
+	 }
+	scale = 1.9
+}
+
+entity = { # RG
+	name = "rg_star_class_star_entity"
+	pdxmesh = "star_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0.0 node = "planet" particle = "m_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient" } }  
+		event = { trigger_once = yes sound = { soundeffect = "falling_star" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient_layer_02" } }
+	 }
+	scale = 1.0
+}
+entity = { # RSG
+	name = "rsg_star_class_star_entity"
+	pdxmesh = "star_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0.0 node = "planet" particle = "m_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient" } }  
+		event = { trigger_once = yes sound = { soundeffect = "falling_star" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient_layer_02" } }
+	 }
+	scale = 1.0
+}
+entity = { # RHG
+	name = "rhg_star_class_star_entity"
+	pdxmesh = "star_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0.0 node = "planet" particle = "m_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient" } }  
+		event = { trigger_once = yes sound = { soundeffect = "falling_star" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient_layer_02" } }
+	 }
+	scale = 1.0
+}
+entity = { # WD
+	name = "wd_star_class_star_entity"
+	pdxmesh = "star_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0.0 node = "planet" particle = "f_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient" } }  
+		event = { trigger_once = yes sound = { soundeffect = "falling_star" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient_layer_02" } }
+	 }
+	scale = 1.5
+}
+entity = { # WR
+	name = "wr_star_class_star_entity"
+	pdxmesh = "star_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0.0 node = "planet" particle = "b_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient" } }  
+		event = { trigger_once = yes sound = { soundeffect = "falling_star" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient_layer_02" } }
+	 }
+	scale = 1.5
+}
+entity = { # L
+	name = "l_star_class_star_entity"
+	pdxmesh = "star_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		
+		event = { trigger_once = yes sound = { soundeffect = "falling_star" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient_layer_02" } }
+	 }
+	scale = 1.5
+}
+entity = { # T
+	name = "t_star_class_star_entity"
+	pdxmesh = "star_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		
+		event = { trigger_once = yes sound = { soundeffect = "falling_star" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient_layer_02" } }
+	 }
+	scale = 1.5
+}
+entity = { # Y
+	name = "y_star_class_star_entity"
+	pdxmesh = "star_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		
+		event = { trigger_once = yes sound = { soundeffect = "falling_star" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient_layer_02" } }
+	 }
+	scale = 1.5
+}
+entity = { # PR
+	name = "pr_star_class_star_entity"
+	pdxmesh = "star_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0.0 node = "planet" particle = "b_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient" } }  
+		event = { trigger_once = yes sound = { soundeffect = "falling_star" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient_layer_02" } }
+	 }
+	scale = 1.9
+}
+entity = { # GRN
+	name = "grn_star_class_star_entity"
+	pdxmesh = "star_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0.0 node = "planet" particle = "grn_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient" } }
+		event = { trigger_once = yes sound = { soundeffect = "falling_star" } }
+		event = { trigger_once = yes sound = { soundeffect = "space_ambient_layer_02" } }
+	 }
+	scale = 1.3
+}

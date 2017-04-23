@@ -1,0 +1,20 @@
+magnetar = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_strong_magnetic_field.dds"
+	icon_frame = 1
+}
+carbon_star = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_carbon_world.dds"
+	icon_frame = 1
+}
+quasar = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_strong_magnetic_feild.dds"
+	icon_frame = 1
+}
+quark_star = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_strong_magnetic_field.dds"
+	icon_frame = 1
+}
+oxygen_star = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_atmospheric_aphrodisiac.dds"
+	icon_frame = 1
+}

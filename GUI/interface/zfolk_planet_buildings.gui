@@ -1,0 +1,104 @@
+guiTypes = {
+
+	@tile_info_module_width = 335
+
+	containerWindowType = {
+		name = "planet_view_tile_construction_panel_module_list"
+		size = { width = @tile_info_module_width height = 400 }
+		show_sound = "planet_view_menu_slide"
+
+		smoothListboxType = {
+			name = "modular_content"
+			position = { x = 0 y = 0 }
+			background = ""
+			size = { x = @tile_info_module_width y = 400 }
+			scrollbarType = "standardlistbox_slider"
+			borderSize = { x = 0 y = 0 }
+			orientation = "UPPER_LEFT"
+			autohide_scrollbar = yes
+			spacing = -8
+		}
+	}
+
+	containerWindowType = {
+		name = "planet_view_tile_construction_panel_module_list_entry"
+		size = { width = @tile_info_module_width height = 48 }
+		show_sound = "planet_view_menu_slide"
+
+		background = {
+			name = "planet_bg"
+			position = { x = -6 y = -6 }
+			quadTextureSprite = "GFX_zfolk_building_button"
+		}
+
+		# HIDDEN LULZ
+		iconType = {
+			name = "building_bg"
+			spriteType = "GFX_building_bg"
+			position = { x = -1000 y = -1000 }
+			scale = 0.4
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_building"
+			position = { x = -6 y = 4 }
+			scale = 0.48
+			alwaysTransparent = yes
+		}
+
+		# Building Output
+
+		overlappingElementsBoxType = {
+			name = "output_box"
+			size = { x = 96 y = 0 }
+			position = { x = 42 y = 12 }
+			orientation = upper_left
+			spacing = -2
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			text = "TILE_DESC"
+			position = { x = 98 y = 15 }
+			maxWidth = 214
+			maxHeight = 40
+			fixedSize = yes
+			format = right
+			orientation = upper_left
+			alwaysTransparent = no
+			text_color_code = "H"
+		}
+
+		# MOVED TO AFRICA LULZ
+		# shown in tooltip anyway
+		instantTextBoxType = {
+			name = "cost"
+			font = "cg_16b"
+			text = ""
+			position = { x = -1000 y = -1000 }
+			maxWidth = 5
+			maxHeight = 5
+			fixedSize = yes
+			format = centre
+			orientation = upper_left
+		}
+
+		iconType = {
+			name = "missing_resources"
+			orientation = UPPER_RIGHT
+			position = { x = -38 y = 9 }
+			spriteType = "GFX_missing_resources_icon"
+		}
+
+		iconType = {
+			name = "missing_maintenance"
+			orientation = UPPER_RIGHT
+			position = { x = -38 y = 9 }
+			spriteType = "GFX_failure_risk_icon"
+		}
+	}
+}

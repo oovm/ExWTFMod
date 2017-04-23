@@ -1,0 +1,162 @@
+# Star glow from sun is set under atmosphere in   00_planet_classes
+# Star surface is set in worldgfx file for each star
+# Effects are set in particle effect for each star
+# New planets also need planet tiles (game\gfx\interface\icons\tile_backgrounds)
+# New planets need surface background (game\gfx\portraits\environments)
+
+
+# ###########
+# Stars
+# ###########
+
+pc_blue_dwarf_star = {
+	entity = "a_star_class_star_entity"
+	entity_scale = 10.0
+	picture = "pc_a_star"
+
+	atmosphere_color 		= hsv { 0.71 0.6 0.7 }
+	atmosphere_intensity 	= 0.8
+	atmosphere_width 		= 1.4	
+
+
+	star = yes	
+	min_distance_from_sun = 0
+	max_distance_from_sun = 0
+	spawn_odds = 0
+	
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 0
+	
+	planet_size = { min = 20 max = 35 }
+	
+	colonizable = no
+}
+
+
+pc_black_dwarf_star = {
+	entity = "black_dwarf_star_entity"
+	entity_scale = 14.0
+	picture = "pc_black_dwarf_star"
+
+	atmosphere_color 		= hsv { 0 0 0.2 }
+	atmosphere_intensity 	= 0.8
+	atmosphere_width 		= 1.7	
+
+
+	star = yes
+	
+	min_distance_from_sun = 0
+	max_distance_from_sun = 0
+	spawn_odds = 0
+	
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 0
+	
+	planet_size = { min = 20 max = 35 }
+	
+	colonizable = no
+}
+
+pc_dark_star = {
+	entity = "dark_star_entity"
+	entity_scale = 30.0
+	picture = "pc_dark_star"
+	
+	atmosphere_color 		= hsv { 0.72 1 0.3 }
+	atmosphere_intensity 	= 0.5
+	atmosphere_width 		= 1.0	
+
+	star = yes
+	
+	min_distance_from_sun = 0
+	max_distance_from_sun = 0
+	
+	spawn_odds = 0
+	
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 0
+	
+	planet_size = { min = 20 max = 35 }
+	
+	colonizable = no
+}
+
+pc_quasi_star = {
+	entity = "g_star_class_star_entity"
+	entity_scale = 100.0
+	picture = "pc_g_star"
+
+	atmosphere_color 		= hsv { 0.09 0.7 0.7 }
+	atmosphere_intensity 	= 0.5
+	atmosphere_width 		= 1.9	
+	
+	star = yes
+	
+	min_distance_from_sun = 0
+	max_distance_from_sun = 0
+	spawn_odds = 0
+	
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 0
+	
+	planet_size = { min = 20 max = 35 }
+	
+	colonizable = no
+}
+
+pc_strange_star = {
+	entity = "strange_star_entity"
+	entity_scale = 14.0
+	picture = "pc_strange_star"
+	
+	star = yes
+	
+	min_distance_from_sun = 0
+	max_distance_from_sun = 0
+	spawn_odds = 0
+	
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 0
+	
+	planet_size = { min = 20 max = 35 }
+	
+	colonizable = no
+}
+
+pc_white_hole = {
+	entity = "white_hole_entity"
+	entity_scale = 20.0
+	picture = "pc_white_hole"
+	
+	atmosphere_color 		= hsv { 0 0 1.5 }
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 1.0	
+
+	star = yes
+	
+	min_distance_from_sun = 0
+	max_distance_from_sun = 0
+	
+	spawn_odds = 0
+	
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 0
+	
+	planet_size = { min = 20 max = 35 }
+	
+	colonizable = no
+}
+
+

@@ -1,0 +1,60 @@
+d_baryphysics_deposit = {
+	resources = { physics_research = 3 }
+	station = shipclass_research_station 
+	orbital_weight = {
+		weight = 10
+	}
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 7
+			planet = {
+				OR = {
+					is_planet_class = pc_barycenter
+				}
+			}
+		}
+	}
+}
+d_baryengineering_deposit = {
+	resources = { engineering_research = 3 }
+	station = shipclass_research_station 
+	orbital_weight = {
+		weight = 10
+	}
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 7
+			planet = {
+				OR = {
+					is_planet_class = pc_barycenter
+				}
+			}
+		}
+	}
+}
+d_barymixed_deposit = {
+	resources = { 
+		engineering_research = 2 
+		physics_research = 2
+		}
+	station = shipclass_research_station 
+	orbital_weight = {
+		weight = 10
+	}
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 7
+			planet = {
+				OR = {
+					is_planet_class = pc_barycenter
+				}
+			}
+		}
+	}
+}
