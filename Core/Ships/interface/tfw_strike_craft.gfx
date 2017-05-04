@@ -1,0 +1,42 @@
+#############STRIKE_CRAFT
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_fighter_4"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_fighter_4.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_bomber_4"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_bomber_4.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_drone_fighter"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_fighter_5.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_drone_bomber"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_bomber_5.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_psi_fighter"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_psi_fighter.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_psi_bomber"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_psi_bomber.dds"
+	}
+}

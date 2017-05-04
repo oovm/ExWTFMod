@@ -1,0 +1,91 @@
+
+################## Weapon #############################
+category = {
+ name = "Weapon"
+ soundeffects = {
+		####### WEAPONS
+	
+	####### CLOSE
+	darkmatter_fire           #linked with gfx\models\combat_items\
+	tfw_artillery_fire
+	tfw_artillery_hit
+	laserstorm_fire
+	laserstorm_hit
+	mortar_fire
+	tfw_missle_hit
+	tfw_shield_hit
+	tfw_pt1_fire
+	tfw_pt1_hit
+	biocannon_fire
+	biocannon_hit
+	psicannon_fire
+	psicannon_hit
+	gravicannon_fire
+	gravicannon_hit
+	infector_fire
+	infector_hit
+	psilance_fire
+	psilance_hit
+	gravilance_fire
+	gravilance_hit
+	kamikaze_fire
+	kamikaze_hit
+	guardian_fire
+	maser_windup
+	maser_fire
+	phaser_fire
+	maser_hit
+	tfw_torpedo_hit
+	tfw_hammer_fire
+	tfw_hammer_hit
+#	phaserspear_fire
+#	phaserspear_hit
+	
+	
+	####### FAR
+	distance_darkmatter_fire  #linked with gfx\models\combat_items\
+	tfw_distance_artillery_fire
+	tfw_distance_artillery_hit
+	distance_laserstorm_fire
+	distance_laserstorm_hit
+	distance_mortar_fire
+	tfw_distance_missle_hit
+	tfw_distance_shield_hit
+	tfw_distance_pt1_fire
+	tfw_distance_pt1_hit
+	distance_biocannon_fire
+	distance_biocannon_hit
+	distance_psicannon_fire
+	distance_psicannon_hit
+	distance_gravicannon_fire
+	distance_gravicannon_hit
+	distance_infector_fire
+	distance_infector_hit
+	distance_psilance_fire
+	distance_psilance_hit
+	distance_gravilance_fire
+	distance_gravilance_hit
+	distance_kamikaze_fire
+	distance_kamikaze_hit
+	distance_guardian_fire
+	distance_maser_fire
+	distance_phaser_fire
+	distance_maser_hit
+	distance_tfw_torpedo_hit
+	distance_tfw_hammer_fire
+	distance_tfw_hammer_hit
+#	distance_phaserspear_fire
+#	distance_phaserspear_hit
+ }
+ 
+ compressor = 
+ {
+ enabled = yes
+ pregain = 2.0
+ postgain = -4.0
+ ratio = 10.0
+ threshold = -15.0
+ attacktime = 0.030
+ releasetime = 1.2
+ }
+}

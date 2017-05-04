@@ -1,0 +1,663 @@
+# ####################
+#  	Bio Cannon		 #
+# ####################
+# Small
+weapon_component_template = {
+	key = "SMALL_TFW_BIOCANNON"
+	size = small
+	entity = "small_laser_gun_entity"
+	damage = { min = 22.0 max = 46.0 }
+	windup = { min = 10.0 max = 18.0 }
+	total_fire_time = 40
+	range = 30.0
+	accuracy = 0.84
+	type = instant
+	power = -15
+	cost = 15
+	armor_penetration = 0.9
+	shield_damage = 0.56
+	tracking = 0.6
+	
+	icon = "GFX_biocannon"
+	icon_frame = 1
+	
+	prerequisites = { "tech_tfw_biocannon" }
+	component_set = "TFW_BIOCANNON"
+	projectile_gfx = "tfw_biocannon_small"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+}
+
+# Medium
+weapon_component_template = {
+	key = "MEDIUM_TFW_BIOCANNON"
+	size = medium
+	entity = "medium_laser_gun_entity"
+	damage = { min = 48.0 max = 95.0 }
+	windup = { min = 10.0 max = 18.0 }
+	total_fire_time = 40
+	range = 50.0
+	accuracy = 0.8
+	type = instant
+	power = -30.0
+	cost = 30.0
+	armor_penetration = 0.9
+	shield_damage = 0.56
+	tracking = 0.3
+	
+	icon = "GFX_biocannon"
+	icon_frame = 1
+	
+	prerequisites = { "tech_tfw_biocannon" }
+	component_set = "TFW_BIOCANNON"
+	projectile_gfx = "tfw_biocannon_medium"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+}
+
+# Large
+weapon_component_template = {
+	key = "LARGE_TFW_BIOCANNON"
+	size = large
+	entity = "large_laser_gun_entity"
+	damage = { min = 92.0 max = 212.0 }
+	windup = { min = 10.0 max = 18.0 }
+	total_fire_time = 40
+	range = 70.0
+	accuracy = 0.76
+	type = instant
+	power = -60.0
+	cost = 60.0
+	armor_penetration = 0.9
+	shield_damage = 0.56
+	tracking = 0.05
+	
+	icon = "GFX_biocannon"
+	icon_frame = 1
+	
+	prerequisites = { "tech_tfw_biocannon" }
+	component_set = "TFW_BIOCANNON"
+	projectile_gfx = "tfw_biocannon_large"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+}
+
+# ####################
+#  	Psi Cannon		 #
+# ####################
+# Small
+weapon_component_template = {
+	key = "SMALL_TFW_PSICANNON"
+	size = small
+	entity = "small_laser_gun_entity"
+	damage = { min = 21.0 max = 49.0 }
+	windup = { min = 12.0 max = 21.0 }
+	total_fire_time = 40
+	range = 30.0
+	accuracy = 0.92
+	type = instant
+	power = -20
+	cost = 20
+	armor_penetration = 0.6
+	shield_damage = 1.0
+	tracking = 0.6
+	
+	icon = "GFX_psicannon"
+	icon_frame = 1
+	
+	prerequisites = { "tech_tfw_psicannon" }
+	component_set = "TFW_PSICANNON"
+	projectile_gfx = "tfw_psicannon_small"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield }
+}
+
+# Medium
+weapon_component_template = {
+	key = "MEDIUM_TFW_PSICANNON"
+	size = medium
+	entity = "medium_laser_gun_entity"
+	damage = { min = 45.0 max = 104.0 }
+	windup = { min = 12.0 max = 21.0 }
+	total_fire_time = 40
+	range = 50.0
+	accuracy = 0.88
+	type = instant
+	power = -40.0
+	cost = 40.0
+	armor_penetration = 0.6
+	shield_damage = 1.0
+	tracking = 0.3
+	
+	icon = "GFX_psicannon"
+	icon_frame = 1
+	
+	prerequisites = { "tech_tfw_psicannon" }
+	component_set = "TFW_PSICANNON"
+	projectile_gfx = "tfw_psicannon_medium"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield }
+}
+
+# Large
+weapon_component_template = {
+	key = "LARGE_TFW_PSICANNON"
+	size = large
+	entity = "large_laser_gun_entity"
+	damage = { min = 86.0 max = 232.0 }
+	windup = { min = 12.0 max = 21.0 }
+	total_fire_time = 40
+	range = 70.0
+	accuracy = 0.84
+	type = instant
+	power = -80.0
+	cost = 80.0
+	armor_penetration = 0.6
+	shield_damage = 1.0
+	tracking = 0.05
+	
+	icon = "GFX_psicannon"
+	icon_frame = 1
+	
+	prerequisites = { "tech_tfw_psicannon" }
+	component_set = "TFW_PSICANNON"
+	projectile_gfx = "tfw_psicannon_large"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield }
+}
+
+# ####################
+#  	Gravicannon		 #
+# ####################
+# Small
+weapon_component_template = {
+	key = "SMALL_TFW_GRAVICANNON"
+	size = small
+	entity = "small_laser_gun_entity"
+	damage = { min = 23.0 max = 50.0 }
+	windup = { min = 12.0 max = 21.0 }
+	total_fire_time = 40
+	range = 30.0
+	accuracy = 0.88
+	type = instant
+	power = -32
+	cost = 32
+	armor_penetration = 0.90
+	shield_damage = 0.67
+	tracking = 0.6
+	
+	icon = "GFX_gravicannon"
+	icon_frame = 1
+	
+	prerequisites = { "tech_tfw_gravicannon" }
+	component_set = "TFW_GRAVICANNON"
+	projectile_gfx = "tfw_gravicannon_small"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+}
+
+# Medium
+weapon_component_template = {
+	key = "MEDIUM_TFW_GRAVICANNON"
+	size = medium
+	entity = "medium_laser_gun_entity"
+	damage = { min = 46.0 max = 109.0 }
+	windup = { min = 12 max = 21.0 }
+	total_fire_time = 40
+	range = 50.0
+	accuracy = 0.84
+	type = instant
+	power = -65.0
+	cost = 65.0
+	armor_penetration = 0.9
+	shield_damage = 0.67
+	tracking = 0.3
+	
+	icon = "GFX_gravicannon"
+	icon_frame = 1
+	
+	prerequisites = { "tech_tfw_gravicannon" }
+	component_set = "TFW_GRAVICANNON"
+	projectile_gfx = "tfw_gravicannon_medium"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+}
+
+# Large
+weapon_component_template = {
+	key = "LARGE_TFW_GRAVICANNON"
+	size = large
+	entity = "large_laser_gun_entity"
+	damage = { min = 92.0 max = 240.0 }
+	windup = { min = 12.0 max = 21.0 }
+	total_fire_time = 40
+	range = 70.0
+	accuracy = 0.80
+	type = instant
+	power = -100.0
+	cost = 100.0
+	armor_penetration = 0.9
+	shield_damage = 0.67
+	tracking = 0.05
+	
+	icon = "GFX_gravicannon"
+	icon_frame = 1
+	
+	prerequisites = { "tech_tfw_gravicannon" }
+	component_set = "TFW_GRAVICANNON"
+	projectile_gfx = "tfw_gravicannon_large"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+}
+
+#############NEXT TIER#######################
+# ####################
+#  	Infector		 #
+# ####################
+
+# Large
+weapon_component_template = {
+	key = "LARGE_TFW_INFECTOR"
+	size = torpedo
+	entity = "turret_missile_large_entity"
+	damage = { min = 142.0 max = 261.0 }
+	windup = { min = 5.0 max = 25.0 }
+	type = missile
+	total_fire_time = 85
+	range = 140.0
+	accuracy = 1.0
+	missile_speed = 7.00
+	missile_health = 30.0
+	
+	power = -80.0
+	cost = 80.0
+	armor_penetration = 0.9
+	shield_penetration = 1.0
+	shield_damage = 0.0
+	tracking = 0.0
+	
+	icon = "GFX_infector"
+	icon_frame = 1
+	
+	prerequisites = { "tech_tfw_infector" }
+	component_set = "TFW_INFECTOR"
+	projectile_gfx = "tfw_infector_large"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield weapon_role_long_range }
+
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 20000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 2000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}	
+}
+
+# ####################
+#  	Psi Lance		 #
+# ####################
+# Large
+weapon_component_template = {
+	key = "TFW_PSILANCE"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	damage = { min = 188.0 max = 351.0 }
+	windup = { min = 22.0 max = 35.0 }
+	total_fire_time = 60
+	range = 120.0
+	accuracy = 0.95
+	type = instant
+	power = -120.0
+	cost = 120.0
+	armor_penetration = 0.6
+	shield_damage = 1.0
+
+	firing_arc = 25.0
+	min_range = 10.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	icon = "GFX_psilance"
+	icon_frame = 1
+	
+	prerequisites = { "tech_tfw_psilance" }
+	component_set = "TFW_PSILANCE"
+	projectile_gfx = "tfw_psilance_large"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield weapon_role_long_range }
+
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+# ####################
+#  	Gravi Lance		 #
+# ####################
+# Large
+weapon_component_template = {
+	key = "TFW_GRAVILANCE"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	damage = { min = 192.0 max = 358.0 }
+	windup = { min = 22.0 max = 35.0 }
+	total_fire_time = 60
+	range = 120.0
+	accuracy = 0.93
+	type = instant
+	power = -130.0
+	cost = 130.0
+	armor_penetration = 0.90
+	shield_damage = 0.67
+
+	firing_arc = 25.0
+	min_range = 10.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	icon = "GFX_gravilance"
+	icon_frame = 1
+	
+	prerequisites = { "tech_tfw_gravilance" }
+	component_set = "TFW_GRAVILANCE"
+	projectile_gfx = "tfw_gravilance_large"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor weapon_role_long_range }
+	
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+# ####################
+#  	KINETIC HAMMER	 #
+# ####################
+# Large
+weapon_component_template = {
+	key = "TFW_KINETIC_HAMMER"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	damage = { min = 146.0 max = 420.0 }
+	windup = { min = 2.0 max = 25.0 }
+	total_fire_time = 65
+	range = 120.0
+	accuracy = 0.90
+	type = instant
+	power = -140.0
+	cost = 140.0
+	armor_penetration = 0.50
+	shield_damage = 1.33
+
+	firing_arc = 25.0
+	min_range = 10.0
+	static_rotation = yes
+	use_ship_kill_target = no
+	
+	icon = "GFX_tfw_kinetic_hammer"
+	icon_frame = 1
+	
+	prerequisites = { "tech_tfw_kinetic_hammer" }
+	component_set = "TFW_KINETIC_HAMMER"
+	projectile_gfx = "tfw_kinetic_hammer"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield weapon_role_long_range }
+	
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+# ####################
+#  	Kamikaze_Drone	 #
+# ####################
+# Medium
+weapon_component_template = {
+	key = "MEDIUM_TFW_KAMIKAZE"
+	size = medium
+	entity = "turret_missile_medium_entity"
+	damage = { min = 266.0 max = 418.0 }
+	windup = { min = 1.0 max = 5.0 }
+	total_fire_time = 150
+	range = 140.0
+	accuracy = 1.0
+	missile_speed = 2.5
+	missile_evasion = 1.5
+	missile_health = 15.0
+	missile_armor = 4.0
+	
+	type = missile
+	power = -60.0
+	cost = 60.0
+	armor_penetration = 1.0
+	shield_penetration = 1.0
+	shield_damage = 0.0
+	
+	static_rotation = no
+	tracking = 0.0
+	
+	icon = "GFX_tfw_kamikaze"
+	icon_frame = 1
+	
+	prerequisites = { "tech_tfw_kamikaze" }
+	component_set = "TFW_KAMIKAZE"
+	projectile_gfx = "tfw_kamikaze_medium"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield weapon_role_long_range }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+# Large
+weapon_component_template = {
+	key = "LARGE_TFW_KAMIKAZE"
+	size = large
+	entity = "turret_missile_large_entity"
+	damage = { min = 300.0 max = 452.0 }
+	windup = { min = 1.0 max = 5.0 }
+	total_fire_time = 150
+	range = 140.0
+	accuracy = 1.0
+	missile_speed = 2.5
+	missile_evasion = 1.5
+	missile_health = 30.0
+	missile_armor = 8.0
+	
+	type = missile
+	power = -80.0
+	cost = 80.0
+	armor_penetration = 1.0
+	shield_penetration = 1.0
+	shield_damage = 0.0
+	
+	static_rotation = no
+	tracking = 0.0
+	
+	icon = "GFX_tfw_kamikaze"
+	icon_frame = 1
+	
+	prerequisites = { "tech_tfw_kamikaze" }
+	component_set = "TFW_KAMIKAZE"
+	projectile_gfx = "tfw_kamikaze_large"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield weapon_role_long_range }
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 50000
+		Flagship = 50000
+		Superdreadnought = 50000
+		Dreadnought = 50000
+		Carrier = 50000
+		large_ship_fallen_empire = 10000
+		battleship = 10000
+		Battlecruiser = 5000
+		LightCarrier = 5000
+		cruiser = 2500
+		StrikeCruiser = 1500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+}
+
+#################################PEACEFUL###################################
+# ####################
+#  	Peacekeeper		 #
+# ####################
+weapon_component_template = {
+	key = "TFW_PEACEKEEPER"
+	size = point_defence
+	entity = "turret_point_defence_entity"
+	type = point_defence	
+	icon = "GFX_tfw_peacekeeper"
+	icon_frame = 1
+	
+	damage = { min = 7.0 max = 14.0 }
+	windup = { min = 1.0 max = 2.0 }
+	total_fire_time = 22.0
+	range = 20.0
+	accuracy = 0.9
+	armor_penetration = 0.30
+	tracking = 0.4
+	
+	power = -18.00
+	cost = 18.00
+	
+	prerequisites = { "tech_tfw_peacekeeper" }
+	component_set = "TFW_PEACEKEEPER"
+	projectile_gfx = "tfw_peacekeeper_small"
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense }	
+	
+}
+
+#######################################JAMMER#################################
+utility_component_template = {
+	key = "TFW_JAMMER_LARGE"
+	icon = "GFX_tfw_jammer"
+	icon_frame = 1
+	size = aux
+	prerequisites = { "tech_tfw_active_cm" }
+	power = -120
+	cost = 120
+	
+	component_set = "TFW_JAMMER"
+	military_power = 1
+	
+	hostile_aura = {
+		name = "tfw_aura_jammer_large"
+		radius = 100
+		apply_on = ships
+		
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = hostile_jammer_aura
+			priority = 25
+		}
+		
+		modifier = {
+			ship_fire_rate_mult = -0.15
+			ship_shield_regen_add_perc = -0.4
+			ship_combat_speed_mult = -0.7
+			ship_evasion_add = -10
+		}
+		
+		graphics = {
+#			area_effect = {
+#				entity = "circle_area_entity"
+#				dynamic_scale = yes
+#			}
+			ship_effect = {
+				entity = "tfw_negative_effect_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 48
+		modifier = {
+			factor = 0.5
+			NOR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+#			NOR = {
+#				has_ai_personality = federation_builders
+#				has_ai_personality = harmonious_hierarchy
+#				has_ai_personality = decadent_hierarchy
+#				has_ai_personality = spiritual_seekers
+#				has_ai_personality = peaceful_traders
+#				has_ai_personality = migrating_flock
+#			}
+		}
+	}
+}

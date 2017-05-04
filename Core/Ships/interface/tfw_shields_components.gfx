@@ -1,0 +1,34 @@
+spriteTypes{
+	spriteType = {
+		name = "GFX_ship_part_shield_violet"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_shield_violet.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_ship_part_shield_green"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_shield_green.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_ship_part_shield_yellow"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_shield_yellow.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_ship_part_shield_orange"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_shield_orange.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_ship_part_shield_red"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_shield_red.dds"
+	}
+}

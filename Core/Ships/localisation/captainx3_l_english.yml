@@ -1,0 +1,951 @@
+﻿l_english:
+
+#######################################################################################################################################################################
+#
+# ATTENTION MOD TRANSLATORS: 
+# Each time this file is updated, listed in this commented out box will be a listing of all localisation file changes with the mod version it's for at the top.
+# There there will be NEW or CHANGED that tells you want happened to each line in this file. Example: you'll see "NEW: 1, 2, 3..." which tells you which lines are new.
+# DELETED lines will be given in full to make sure you know exactly what to delete since it won't be in this version of the file.
+# If a change to this file isn't included in the NEW/CHANGED/DELETE anywhere, then it's "FIXED" for the reference coding (the blue wording that comes first).
+# If the NEW/CHANGED/DELETED/FIXED lines are completely blank, there are ZERO changes in localisation for that release.
+# 
+# Localisation Update Log: Mod Version 3.0.5
+# 
+# NEW: 	178-182
+# CHANGED:	
+# DELETED:	dublicate copies of coding, sm_advanced_assembly_yards, Frigate_BOW_L1
+# FIXED:	Moved certain coding blocks around to place them in proper areas, no changes made to lines.
+#
+#######################################################################################################################################################################
+
+
+ ####################################
+ # Events
+ ####################################
+
+ captainx3.1.name: "Flagship Launched"
+ captainx3.1.desc: "After working tirelessly for years, your people have finally finished construction of the §YFlagship§!, the pride of your fleet!\n\nHowever, the massive expenditure of resources and time required to build it took a heavy toll on your empire.\n\n§PBecause of the overwhelming costs, your workers will strike if you attempt to build another Flagship, and the project will never be completed.§!"
+
+ captainx3.2.name:0 "Flagship Lost"
+ captainx3.2.desc:0 "With the loss of your fleet's Flagship, your citizens have offered their full support for construction of a replacement at your discretion."
+
+ captainx3.4.name:0 "Mining Base Bonus Received"
+ captainx3.4.desc:0 "After months of dangerous work, we have finally built our first mining base! This base boosts the mineral production of the colonies of the system it is in by 200% and increases our mineral storage capacity by 5000. Our experts say that we can build up to 8 of these bases for a 200% mineral production bonus in each system and 40000 additional mineral storage. Remember that only one base per colonized system will produce the bonus."
+
+ captainx3.5.name:0 "Mining Base Limit Reached"
+ captainx3.5.desc:0 "We have built a total of 8 mining bases and reached our maximum potential production bonus. Building additional bases will cause the maintenance costs to skyrocket out of control."
+
+ captainx3.6.name:0 "Power Station Bonus Received"
+ captainx3.6.desc:0 "After months of dangerous work, we have finally built our first power station! This base boosts the energy production of the colonies of the system it is in by 200% and increases our energy storage capacity by 5000. Our experts say that we can build up to 8 of these bases for a 200% energy production bonus in each system and 40000 additional energy storage. Remember that only one base per colonized system will produce the bonus."
+
+ captainx3.7.name:0 "Power Station Limit Reached"
+ captainx3.7.desc:0 "We have built a total of 8 power stations and reached our maximum potential production bonus. Building additional bases will cause the maintenance costs to skyrocket out of control."
+
+ captainx3.8.name: "Headquarters Completed"
+ captainx3.8.desc: "After working tirelessly for years, your people have finally finished construction of the §YHeadquarters Station§!, the command center for your fleet.\n\nHowever, the massive expenditure of resources and time required to build it took a heavy toll on your empire.\n\n§PBecause of the overwhelming costs, your workers will strike if you attempt to build another HQ station, and the project will never be completed.§!\n\nYou can §Bmove the Headquarters§! to a new solar system using a planet edict on colonized planets."
+ 
+ captainx3.9.name:0 "Headquarters Lost"
+ captainx3.9.desc:0 "With the loss of your Headquarters, your citizens have offered their full support for construction of a replacement at your discretion."
+
+ flagship_bonus:0 "Flagship Inspired Fleet"
+ headquarters_bonus:0 "Centralized Command"
+
+ edict_nsc_move_hq: "Move Headquarters Here"
+ # Shown when the project can not be completed
+ edict_nsc_move_hq_desc: " " # Space prevents silly error.log message
+ edict_nsc_move_hq_tooltip: "Engages the Headquarters Stations jump FTL drive to orbit §Y[Root.GetName]§!.\n\n§RMake sure you only have one available design for the Headquarters Station.§!"
+
+ miningbase_bonus1:0 "Mining Base Bonus Level 1"
+ miningbase_bonus2:0 "Mining Base Bonus Level 2"
+ miningbase_bonus3:0 "Mining Base Bonus Level 3"
+ miningbase_bonus4:0 "Mining Base Bonus Level 4"
+ miningbase_bonus5:0 "Mining Base Bonus Level 5"
+ miningbase_bonus6:0 "Mining Base Bonus Level 6"
+ miningbase_bonus7:0 "Mining Base Bonus Level 7"
+ miningbase_bonus8:0 "Mining Base Bonus Level 8"
+ powerstation_bonus1:0 "Power Station Bonus Level 1"
+ powerstation_bonus2:0 "Power Station Bonus Level 2"
+ powerstation_bonus3:0 "Power Station Bonus Level 3"
+ powerstation_bonus4:0 "Power Station Bonus Level 4"
+ powerstation_bonus5:0 "Power Station Bonus Level 5"
+ powerstation_bonus6:0 "Power Station Bonus Level 6"
+ powerstation_bonus7:0 "Power Station Bonus Level 7"
+ powerstation_bonus8:0 "Power Station Bonus Level 8"
+
+ miningbase_final:0 "Too Many Mining Bases"
+ powerstation_final:0 "Too Many Power Stations"
+
+ mansion_limit:0 "Corruption (Too Many Mansions)"
+
+ ####################################
+ # Dynamic Modifiers
+ ####################################
+ shipsize_Frigate_construction_speed_mult:0 "Frigate Build Speed"
+ shipsize_StrikeCruiser_construction_speed_mult:0 "Strike Cruiser Build Speed"
+ shipsize_LightCarrier_construction_speed_mult:0 "Light Carrier Build Speed"
+ shipsize_Battlecruiser_construction_speed_mult:0 "Battlecruiser Build Speed"
+ shipsize_Carrier_construction_speed_mult:0 "Carrier Build Speed"
+ shipsize_Dreadnought_construction_speed_mult:0 "Dreadnought Build Speed"
+ shipsize_Superdreadnought_construction_speed_mult:0 "Superdreadnought Build Speed"
+ shipsize_Flagship_construction_speed_mult:0 "Flagship Build Speed"
+ shipsize_Headquarters_construction_speed_mult:0 "HQ Station Build Speed"
+ shipsize_military_station_xlarge_construction_speed_mult:0 "Battle Fortress Build Speed"
+ shipsize_military_station_small_construction_speed_mult:0 "Defense Platform Build Speed"
+ shipsize_military_station_medium_construction_speed_mult:0 "Defense Station Build Speed"
+ shipsize_military_station_large_construction_speed_mult:0 "Fortress Build Speed"
+
+ shipsize_Frigate_build_cost_mult:0 "Frigate Build Cost"
+ shipsize_StrikeCruiser_build_cost_mult:0 "Strike Cruiser Build Cost"
+ shipsize_LightCarrier_build_cost_mult:0 "Light Carrier Build Cost"
+ shipsize_Battlecruiser_build_cost_mult:0 "Battlecruiser Build Cost"
+ shipsize_Carrier_build_cost_mult:0 "Carrier Build Cost"
+ shipsize_Dreadnought_build_cost_mult:0 "Dreadnought Build Cost"
+ shipsize_Superdreadnought_build_cost_mult:0 "Superdreadnought Build Cost"
+ shipsize_Flagship_build_cost_mult:0 "Flagship Build Cost"
+ shipsize_ScienceCruiser_build_cost_mult:0 "Science Cruiser Build Cost"
+ shipsize_Headquarters_build_cost_mult:0 "HQ Station Build Cost"
+ shipsize_military_station_xlarge_build_cost_mult:0 "Battle Fortress Build Cost"
+ shipsize_military_station_small_build_cost_mult:0 "Defense Platform Build Cost"
+ shipsize_military_station_medium_build_cost_mult:0 "Defense Station Build Cost"
+ shipsize_military_station_large_build_cost_mult:0 "Fortress Build Cost"
+ 
+ # Static Modifiers
+ nsc_hq_buildtime: "Headquarters Limit"
+ nsc_hq_buildtime_desc: "Only one HQ station allowed."
+ nsc_flagship_buildtime: "Flagship Limit"
+ nsc_flagship_buildtime_desc: "Only one Flagship allowed."
+
+ ####################################
+ # Hull Sizes
+ ####################################
+
+ SCIENCECRUISER:0 "Science Cruiser"
+ CONSTRUCTIONCRUISER:0 "Construction Cruiser"
+ FRIGATE:0 "Frigate"
+ STRIKECRUISER:0 "Strike Cruiser"
+ LIGHTCARRIER:0 "Light Carrier"
+ BATTLECRUISER:0 "Battlecruiser"
+ CARRIER:0 "Carrier"
+ DREADNOUGHT:0 "Dreadnought"
+ SUPERDREADNOUGHT:0 "Superdreadnought"
+ FLAGSHIP:0 "Flagship"
+
+ ScienceCruiser:0 "Science Cruiser"
+ ScienceCruiser_plural:0 "Science Cruisers"
+ ConstructionCruiser:0 "Construction Cruiser"
+ ConstructionCruiser_plural:0 "Construction Cruiser"
+ Frigate:0 "Frigate"
+ Frigate_plural:0 "Frigates"
+ StrikeCruiser:0 "Strike Cruiser"
+ StrikeCruiser_plural:0 "Strike Cruisers"
+ LightCarrier:0 "Light Carrier"
+ LightCarrier_plural:0 "Light Carriers"
+ Battlecruiser:0 "Battlecruiser"
+ Battlecruiser_plural:0 "Battlecruisers"
+ Carrier:0 "Carrier"
+ Carrier_plural:0 "Carriers"
+ Dreadnought:0 "Dreadnought"
+ Dreadnought_plural:0 "Dreadnoughts"
+ Superdreadnought:0 "Superdreadnought"
+ Superdreadnought_plural:0 "Superdreadnoughts"
+ Flagship:0 "Flagship"
+ Flagship_plural:0 "Flagships"
+ military_station_xlarge:0 "Battle Fortress"
+ military_station_xlarge_plural:0 "Battle Fortresses"
+ SensorStation:0 "Sensor Station"
+ SensorStation_plural:0 "Sensor Stations"
+ MiningBase:0 "Mining Base"
+ MiningBase_plural:0 "Mining Bases"
+ PowerStation:0 "Power Station"
+ PowerStation_plural:0 "Power Stations"
+ Headquarters:0 "Headquarters Station"
+ Headquarters_plural:0 "Headquarters Stations"
+ Drydock:0 "Drydock"
+ Drydock_plural:0 "Drydocks"
+
+
+ ####################################
+ # Corvette
+ ####################################
+ CORVETTE_MID_M1S1_1:0 "Torpedo Boat"
+ CORVETTE_MID_M1S1_2:0 "Patrol Boat"
+
+ 
+ ####################################
+ # Frigate
+ ####################################
+ Frigate_BOW_M1S2:0 "Picket Ship Bow"
+ Frigate_BOW_S3_1:0 "Point Defense Bow"
+ Frigate_BOW_S3_2:0 "Pinpoint Bow"
+
+ Frigate_STERN_S2_1:0 "Point Defense Stern"
+ Frigate_STERN_S2_2:0 "Point Defense Stern"
+ Frigate_STERN_M1:0 "Picket Ship Stern"
+
+
+ ####################################
+ # Destroyer
+ ####################################
+ DESTROYER_BOW_S3_1:0 "Picket Ship Bow"
+ DESTROYER_BOW_S3_2:0 "Pinpoint Bow"
+
+
+ ####################################
+ # Cruiser
+ ####################################
+ CRUISER_BOW_L1_1:0 "Artillery Bow"
+ CRUISER_BOW_M2_1:0 "Broadside Bow"
+ CRUISER_BOW_M2_2:0 "Torpedo Bow"
+ CRUISER_BOW_M2_3:0 "Barrage Bow"
+
+ ####################################
+ # Light Carrier
+ ####################################
+ LightCarrier_BOW_L1:0 "Artillery Bow"
+ LightCarrier_BOW_M2:0 "Broadside Bow"
+ LightCarrier_BOW_M1S2_1:0 "Salvo Bow"
+ LightCarrier_BOW_M1S2_2:0 "Pinpoint Bow"
+ LightCarrier_BOW_M1S2_3:0 "Point Defense Bow"
+
+ LightCarrier_MID1_L1M1:0 "Artillery Core 1"
+ LightCarrier_MID1_M3:0 "Broadside Core 1"
+ LightCarrier_MID1_M2S2:0 "Wrath Core 1"
+ LightCarrier_MID1_S2HB_1:0 "Hangar Core 1"
+ LightCarrier_MID1_S2HB_2:0 "Terminal Core 1"
+ LightCarrier_MID1_S2HB_3:0 "Carrier Core 1"
+
+ LightCarrier_MID2_L1M1:0 "Artillery Core 2"
+ LightCarrier_MID2_M3:0 "Broadside Core 2"
+ LightCarrier_MID2_M2S2:0 "Wrath Core 2"
+ LightCarrier_MID2_S2HB_1:0 "Hangar Core 2"
+ LightCarrier_MID2_S2HB_2:0 "Terminal Core 2"
+ LightCarrier_MID2_S2HB_3:0 "Carrier Core 2"
+
+ LightCarrier_STERN_M1:0 "Point Defense Stern"
+ LightCarrier_STERN_S2:0 "Pinpoint Stern"
+
+ 
+ ####################################
+ # Strike Cruiser
+ ####################################
+ StrikeCruiser_BOW_L1:0 "Guard Breaker"
+ StrikeCruiser_BOW_M1S2_1:0 "Barrage Bow"
+ StrikeCruiser_BOW_M1S2_2:0 "Pinpoint Bow"
+ StrikeCruiser_BOW_M2_1:0 "Broadside Bow"
+ StrikeCruiser_BOW_M2_2:0 "Torpedo Bow"
+ StrikeCruiser_BOW_M2_3:0 "Salvo Bow"
+
+ StrikeCruiser_MID_L1M1:0 "Punisher Core"
+ StrikeCruiser_MID_S2HB_1:0 "Salvo Core"
+ StrikeCruiser_MID_S2HB_2:0 "Pinpoint Core"
+ StrikeCruiser_MID_M3_1:0 "Broadside Core"
+ StrikeCruiser_MID_M3_2:0 "Torpedo Core"
+ StrikeCruiser_MID_M2S2_1:0 "Barrage Core"
+ StrikeCruiser_MID_M2S2_2:0 "Spitfire Core"
+
+ StrikeCruiser_STERN_M1_1:0 "Broadside Stern"
+ StrikeCruiser_STERN_M1_2:0 "Torpedo Stern"
+ StrikeCruiser_STERN_S2_1:0 "Pinpoint Stern"
+ StrikeCruiser_STERN_S2_2:0 "Point Defense Stern"
+
+ 
+ ####################################
+ # Battlecruiser
+ ####################################
+ Battlecruiser_BOW_L1_1:0 "Artillery Bow"
+ Battlecruiser_BOW_L1_2:0 "Barrage Bow"
+ Battlecruiser_BOW_M1S2_1:0 "Pinpoint Bow"
+ Battlecruiser_BOW_M1S2_2:0 "Torpedo Bow"
+ Battlecruiser_BOW_M2:0 "Broadside Bow"
+
+ Battlecruiser_MID1_S2HB:0 "Hangar Core 1"
+ Battlecruiser_MID1_L1M1_1:0 "Artillery Core 1"
+ Battlecruiser_MID1_L1M1_2:0 "Barrage Core 1"
+ Battlecruiser_MID1_M3_1:0 "Broadside Core 1"
+ Battlecruiser_MID1_M3_2:0 "Torpedo Core 1"
+ Battlecruiser_MID1_M2S2_1:0 "Salvo Core 1"
+ Battlecruiser_MID1_M2S2_2:0 "Pinpoint Core 1"
+
+ Battlecruiser_MID2_S2HB:0 "Hangar Core 2"
+ Battlecruiser_MID2_L1M1_1:0 "Artillery Core 2"
+ Battlecruiser_MID2_L1M1_2:0 "Barrage Core 2"
+ Battlecruiser_MID2_M3_1:0 "Broadside Core 2"
+ Battlecruiser_MID2_M3_2:0 "Torpedo Core 2"
+ Battlecruiser_MID2_M2S2_1:0 "Salvo Core 2"
+ Battlecruiser_MID2_M2S2_2:0 "Pinpoint Core 2"
+
+ Battlecruiser_STERN_M1_1:0 "Broadside Stern"
+ Battlecruiser_STERN_M1_2:0 "Torpedo Stern"
+ Battlecruiser_STERN_S2_1:0 "Pinpoint Stern"
+ Battlecruiser_STERN_S2_2:0 "Point Defense Stern"
+
+ 
+ ####################################
+ # Battleship
+ ####################################
+ BATTLESHIP_BOW_L1M1S2_1:0 "Broadside Bow"
+ BATTLESHIP_MID_M4SHB_1:0 "Salvo Core"
+
+ BATTLESHIP_STERN_M2_1:0 "Broadside Stern"
+
+ 
+ ####################################
+ # Carrier
+ ####################################
+ Carrier_BOW_L1M1S2:0 "Broadside Bow"
+ Carrier_BOW_L1S4:0 "Titan Breaker"
+ Carrier_BOW_L2:0 "Artillery Bow"
+ Carrier_BOW_M1S2SHB_1:0 "Barrage Bow"
+ Carrier_BOW_M1S2SHB_2:0 "Pinpoint Bow"
+ Carrier_BOW_M1S2SHB_3:0 "Point Defense Bow"
+ Carrier_BOW_M2S4_1:0 "Broadside Bow"
+ Carrier_BOW_M2S4_2:0 "Coverage Bow"
+ Carrier_BOW_M3S2:0 "Salvo Bow"
+
+ Carrier_MID1_L1M4:0 "Stormbringer Core 1"
+ Carrier_MID1_L2M2:0 "Broadside Core 1"
+ Carrier_MID1_L3:0 "Singularity Core 1"
+ Carrier_MID1_M4SHB:0 "Hangar Core 1"
+ Carrier_MID1_L2S4_1:0 "Broadside Core 1"
+ Carrier_MID1_L2S4_2:0 "Hangar Core 1"
+ Carrier_MID1_L2S4_3:0 "Salvo Core 1"
+ Carrier_MID1_S4LHB_1:0 "Barrage Core 1"
+ Carrier_MID1_S4LHB_2:0 "Carrier Core 1"
+ Carrier_MID1_S4LHB_3:0 "Pinpoint Core 1"
+
+ Carrier_MID2_L1M4:0 "Stormbringer Core 2"
+ Carrier_MID2_L2M2:0 "Broadside Core 2"
+ Carrier_MID2_L3:0 "Singularity Core 2"
+ Carrier_MID2_M4SHB:0 "Hangar Core 2"
+ Carrier_MID2_L2S4_1:0 "Broadside Core 2"
+ Carrier_MID2_L2S4_2:0 "Hangar Core 2"
+ Carrier_MID2_L2S4_3:0 "Salvo Core 2"
+ Carrier_MID2_S4LHB_1:0 "Barrage Core 2"
+ Carrier_MID2_S4LHB_2:0 "Carrier Core 2"
+ Carrier_MID2_S4LHB_3:0 "Pinpoint Core 2"
+
+ Carrier_STERN_L1:0 "Pinpoint Stern"
+ Carrier_STERN_M1S2_1:0 "Salvo Stern"
+ Carrier_STERN_M1S2_2:0 "Marksman Stern"
+ Carrier_STERN_M2:0 "Broadside Stern"
+ Carrier_STERN_S4_1:0 "Barrage Stern"
+ Carrier_STERN_S4_2:0 "Pinpoint Stern"
+ Carrier_STERN_S4_3:0 "Point Defense Stern"
+
+ 
+ ####################################
+ # Dreadnought
+ ####################################
+ Dreadnought_BOW_L1M1S2:0 "Broadside Bow"
+ Dreadnought_BOW_L1S4:0 "Barrage Bow"
+ Dreadnought_BOW_L2:0 "Artillery Bow"
+ Dreadnought_BOW_M1S2SHB:0 "Hangar Bow"
+ Dreadnought_BOW_M2S4:0 "Spinal Mount Bow"
+ Dreadnought_BOW_M3S2:0 "Torpedo Defense Bow"
+
+ Dreadnought_MID1_L3:0 "Annihilator Core 1"
+ Dreadnought_MID1_L2M2_1:0 "Artillery Core 1"
+ Dreadnought_MID1_L2M2_2:0 "Broadside Core 1"
+ Dreadnought_MID1_L1M4_1:0 "Salvo Core 1"
+ Dreadnought_MID1_L1M4_2:0 "Barrage Core 1"
+ Dreadnought_MID1_M4SHB:0 "Torrent Core 1"
+ Dreadnought_MID1_L2S4:0 "Nova Core 1"
+ Dreadnought_MID1_S4LHB:0 "Carrier Core 1"
+
+ Dreadnought_MID2_L3:0 "Annihilator Core 2"
+ Dreadnought_MID2_L2M2_1:0 "Artillery Core 2"
+ Dreadnought_MID2_L2M2_2:0 "Broadside Core 2"
+ Dreadnought_MID2_L1M4_1:0 "Salvo Core 2"
+ Dreadnought_MID2_L1M4_2:0 "Barrage Core 2"
+ Dreadnought_MID2_M4SHB:0 "Torrent Core 2"
+ Dreadnought_MID2_L2S4:0 "Nova Core 2"
+ Dreadnought_MID2_S4LHB:0 "Carrier Core 2"
+
+ Dreadnought_STERN_M1S2:0 "Aeon Bulwark"
+ Dreadnought_STERN_L1:0 "Artillery Stern"
+ Dreadnought_STERN_M2:0 "Broadside Stern"
+ Dreadnought_STERN_S4:0 "Pinpoint Stern"
+
+ 
+ ####################################
+ # Command Dreadnought
+ ####################################
+
+ Superdreadnought_BOW_L1M1S2:0 "Broadside Bow"
+ Superdreadnought_BOW_L1S4:0 "Barrage Bow"
+ Superdreadnought_BOW_L2:0 "Artillery Bow"
+ Superdreadnought_BOW_M1S2SHB:0 "Hangar Bow"
+ Superdreadnought_BOW_M2S4:0 "Spinal Mount Bow"
+ Superdreadnought_BOW_M3S2:0 "Spitfire Bow"
+
+ Superdreadnought_MID1_L3:0 "Annihilator Core 1"
+ Superdreadnought_MID1_L2M2_1:0 "Artillery Core 1"
+ Superdreadnought_MID1_L2M2_2:0 "Bombardment Core 1"
+ Superdreadnought_MID1_L1M4_1:0 "Broadside Core 1"
+ Superdreadnought_MID1_L1M4_2:0 "Fusillade Core 1"
+ Superdreadnought_MID1_M4SHB_1:0 "Salvo Core 1"
+ Superdreadnought_MID1_M4SHB_2:0 "Torrent Core 1"
+ Superdreadnought_MID1_L2S4_1:0 "Barrage Core 1"
+ Superdreadnought_MID1_L2S4_2:0 "Volley Core 1"
+ Superdreadnought_MID1_S4LHB:0 "Carrier Core 1"
+
+ Superdreadnought_MID2_L3:0 "Annihilator Core 2"
+ Superdreadnought_MID2_L2M2_1:0 "Artillery Core 2"
+ Superdreadnought_MID2_L2M2_2:0 "Bombardment Core 2"
+ Superdreadnought_MID2_L1M4_1:0 "Broadside Core 2"
+ Superdreadnought_MID2_L1M4_2:0 "Fusillade Core 2"
+ Superdreadnought_MID2_M4SHB_1:0 "Salvo Core 2"
+ Superdreadnought_MID2_M4SHB_2:0 "Torrent Core 2"
+ Superdreadnought_MID2_L2S4_1:0 "Barrage Core 2"
+ Superdreadnought_MID2_L2S4_2:0 "Volley Core 2"
+ Superdreadnought_MID2_S4LHB:0 "Carrier Core 2"
+
+ Superdreadnought_STERN_M1S2:0 "Aeon Bulwark"
+ Superdreadnought_STERN_L1:0 "Artillery Stern"
+ Superdreadnought_STERN_M2:0 "Broadside Stern"
+ Superdreadnought_STERN_S4:0 "Pinpoint Stern"
+
+ 
+ ####################################
+ # Flagship
+ ####################################
+ Flagship_BOW_XL1:0 "Spinal Mount Bow 1"
+ Flagship_BOW_XL2:0 "Spinal Mount Bow 2"
+ Flagship_BOW_XL3:0 "Spinal Mount Bow 3"
+ Flagship_BOW_L2:0 "Annihilator Bow"
+ Flagship_BOW_L1S4_1:0 "Artillery Bow"
+ Flagship_BOW_L1S4_2:0 "Fusillade Bow"
+ Flagship_BOW_L1S4_3:0 "Volley Bow"
+ Flagship_BOW_L1M1S2_1:0 "Barrage Bow"
+ Flagship_BOW_L1M1S2_2:0 "Bombardment Bow"
+ Flagship_BOW_L1M1S2_3:0 "Broadside Bow"
+ Flagship_BOW_M3S2_1:0 "Torrent Bow"
+ Flagship_BOW_M3S2_2:0 "Pinpoint Bow"
+ Flagship_BOW_M3S2_3:0 "Spitfire Bow"
+ Flagship_BOW_M2S4_1:0 "Salvo Bow"
+ Flagship_BOW_M2S4_2:0 "Purifier Bow"
+ 
+ Flagship_MID1_L3_1:0 "Annihilator Core 1"
+ Flagship_MID1_L3_2:0 "Artillery Core 1"
+ Flagship_MID1_L3_3:0 "Bombardment Core 1"
+ Flagship_MID1_L2M2_1:0 "Broadside Core 1"
+ Flagship_MID1_L2S4_1:0 "Barrage Core 1"
+ Flagship_MID1_L1M4_1:0 "Salvo Core 1"
+ Flagship_MID1_L2M2_2:0 "Fusillade Core 1"
+ Flagship_MID1_L2S4_2:0 "Volley Core 1"
+ Flagship_MID1_L2S4_3:0 "Purifier Core 1"
+ Flagship_MID1_L1M4_2:0 "Pinpoint Core 1"
+ Flagship_MID1_M4SHB_1:0 "Torrent Core 1"
+ Flagship_MID1_M4SHB_2:0 "Spitfire Core 1"
+ Flagship_MID1_S4LHB:0 "Supercarrier Core 1"
+ 
+ Flagship_MID2_L3_1:0 "Annihilator Core 2"
+ Flagship_MID2_L3_2:0 "Artillery Core 2"
+ Flagship_MID2_L3_3:0 "Bombardment Core 2"
+ Flagship_MID2_L2M2_1:0 "Broadside Core 2"
+ Flagship_MID2_L2S4_1:0 "Barrage Core 2"
+ Flagship_MID2_L1M4_1:0 "Salvo Core 2"
+ Flagship_MID2_L2M2_2:0 "Fusillade Core 2"
+ Flagship_MID2_L2S4_2:0 "Volley Core 2"
+ Flagship_MID2_L2S4_3:0 "Purifier Core 2"
+ Flagship_MID2_L1M4_2:0 "Pinpoint Core 2"
+ Flagship_MID2_M4SHB_1:0 "Torrent Core 2"
+ Flagship_MID2_M4SHB_2:0 "Spitfire Core 2"
+ Flagship_MID2_S4LHB:0 "Supercarrier Core 2"
+ 
+ Flagship_MID3_L3_1:0 "Annihilator Core 3"
+ Flagship_MID3_L3_2:0 "Artillery Core 3"
+ Flagship_MID3_L3_3:0 "Bombardment Core 3"
+ Flagship_MID3_L2M2_1:0 "Broadside Core 3"
+ Flagship_MID3_L2S4_1:0 "Barrage Core 3"
+ Flagship_MID3_L1M4_1:0 "Salvo Core 3"
+ Flagship_MID3_L2M2_2:0 "Fusillade Core 3"
+ Flagship_MID3_L2S4_2:0 "Volley Core 3"
+ Flagship_MID3_L2S4_3:0 "Purifier Core 3"
+ Flagship_MID3_L1M4_2:0 "Pinpoint Core 3"
+ Flagship_MID3_M4SHB_1:0 "Torrent Core 3"
+ Flagship_MID3_M4SHB_2:0 "Spitfire Core 3"
+ Flagship_MID3_S4LHB:0 "Supercarrier Core 3"
+ 
+ Flagship_STERN_L1_1:0 "Annihilator Stern"
+ Flagship_STERN_L1_2:0 "Artillery Stern"
+ Flagship_STERN_M2_1:0 "Broadside Stern"
+ Flagship_STERN_M2_2:0 "Bombardment Stern"
+ Flagship_STERN_M2_3:0 "Barrage Stern"
+ Flagship_STERN_M1S2_1:0 "Salvo Stern"
+ Flagship_STERN_M1S2_2:0 "Purifier Stern"
+ Flagship_STERN_M1S2_3:0 "Fusillade Stern"
+ Flagship_STERN_M1S2_4:0 "Torrent Stern"
+ Flagship_STERN_S4_1:0 "Spitfire Stern"
+ Flagship_STERN_S4_2:0 "Pinpoint Stern"
+ Flagship_STERN_S4_3:0 "Volley Stern"
+ 
+
+####################################
+# Defense Platform
+####################################
+
+ LIGHT_PLATFORM_SMALL_MILITARY_STATION_SECTION:0 "Small Platform"
+ LIGHT_PLATFORM_POINT_DEFENSE_MILITARY_STATION_SECTION:0 "Point Defense Platform"
+ LIGHT_PLATFORM_MIXED_MILITARY_STATION_SECTION:0 "Light Platform"
+ MEDIUM_MILITARY_STATION_SECTION:0 "Medium Platform"
+ MEDIUM_PLATFORM_TORPEDO_MILITARY_STATION_SECTION:0 "Torpedo Platform"
+ HEAVY_MILITARY_STATION_SECTION:0 "Heavy Platform"
+ HANGAR_PLATFORM_MILITARY_STATION_SECTION:0 "Hangar Platform"
+
+####################################
+# Defense Station
+####################################
+
+ LIGHT_DSTATION_SMALL_MILITARY_STATION_SECTION:0 "Small Platform"
+ LIGHT_DSTATION_POINT_DEFENSE_MILITARY_STATION_SECTION:0 "Point Defense Platform"
+ LIGHT_DSTATION_MIXED_MILITARY_STATION_SECTION:0 "Light Platform"
+ MEDIUM_DSTATION_MEDIUM_MILITARY_STATION_SECTION:0 "Medium Platform"
+ MEDIUM_DSTATION_TORPEDO_MILITARY_STATION_SECTION:0 "Torpedo Platform"
+ MEDIUM_DSTATION_MIXED_MILITARY_STATION_SECTION:0 "Moderate Platform"
+ HEAVY_DSTATION_LARGE_MILITARY_STATION_SECTION:0 "Heavy Platform"
+ HANGAR_DSTATION_MILITARY_STATION_SECTION:0 "Hangar Platform"
+
+####################################
+# Fortress
+####################################
+
+ LIGHT_LSTATION_SMALL_MILITARY_STATION_SECTION:0 "Small Platform"
+ LIGHT_LSTATION_POINT_DEFENSE_MILITARY_STATION_SECTION:0 "Point Defense Platform"
+ LIGHT_LSTATION_MIXED_MILITARY_STATION_SECTION:0 "Light Platform"
+ MEDIUM_LSTATION_MEDIUM_MILITARY_STATION_SECTION:0 "Medium Platform"
+ MEDIUM_LSTATION_TORPEDO_MILITARY_STATION_SECTION:0 "Torpedo Platform"
+ MEDIUM_LSTATION_MIXED_MILITARY_STATION_SECTION:0 "Moderate Platform"
+ HEAVY_LSTATION_LARGE_MILITARY_STATION_SECTION:0 "Heavy Platform"
+ HANGAR_LSTATION_MILITARY_STATION_SECTION:0 "Hangar Platform"
+
+####################################
+# Battle Fortress
+####################################
+
+ LIGHT_SMALL_MILITARY_STATION_XLARGE_SECTION:0 "Small Platform"
+ LIGHT_POINT_DEFENSE_MILITARY_STATION_XLARGE_SECTION:0 "Point Defense Platform"
+ LIGHT_MIXED_MILITARY_STATION_XLARGE_SECTION:0 "Light Platform"
+ MEDIUM_MEDIUM_MILITARY_STATION_XLARGE_SECTION:0 "Medium Platform"
+ MEDIUM_TORPEDO_MILITARY_STATION_XLARGE_SECTION:0 "Torpedo Platform"
+ MEDIUM_MIXED_MILITARY_STATION_XLARGE_SECTION:0 "Moderate Platform"
+ HEAVY_MILITARY_STATION_XLARGE_SECTION:0 "Heavy Platform"
+ HANGAR_MILITARY_STATION_XLARGE_SECTION:0 "Hangar Platform"
+
+####################################
+# Other Stations
+####################################
+
+ OUTPOST_STATION_SECTION_1:0 "Frontier Outpost (Tier 1)"
+ OUTPOST_STATION_SECTION_2:0 "Frontier Outpost (Tier 2)"
+ OUTPOST_STATION_SECTION_3:0 "Frontier Outpost (Tier 3)"
+ OUTPOST_STATION_SECTION_4:0 "Frontier Outpost (Tier 4)"
+
+ SENSOR_STATION_SECTION:0 "Sensor Section"
+ MININGBASE_SECTION:0 "Mining Section"
+ POWERSTATION_SECTION:0 "Energy Section"
+ HEADQUARTERS_SECTION_1:0 "HQ Section 1"
+ HEADQUARTERS_SECTION_2:0 "HQ Section 2"
+ HEADQUARTERS_SECTION_3:0 "HQ Section 3"
+ HEADQUARTERS_SECTION_4:0 "HQ Section 4"
+
+ ####################################
+ # Miscellaneous
+ ####################################
+ 
+ SCIENCECRUISER_SECTION:0 "Science Section"
+ CONSTRUCTIONCRUISER_SECTION:0 "Construction Section"
+ DRYDOCK_SECTION:0 "Drydock Section"
+
+
+ ####################################
+ # TECH STUFF
+ ####################################
+ 
+ 
+ tech_spaceport_1:0 "Spaceport"
+ tech_spaceport_1_desc:0 "The spaceport is a planet's foothold in space, a center for trade and commerce as well as home base for military and civilian vessels."
+ tech_spaceport_2:0 "§HUnlocks Spaceport Type:§! Level 2 (Frigates)"
+ tech_spaceport_2_desc:0 "Expanded dry-docks allow for the construction of Frigate-class military vessels."
+ tech_spaceport_3:0 "§HUnlocks Spaceport Type:§! Level 3 (Destroyers)"
+ tech_spaceport_3_desc:0 "Expanded dry-docks allow for the construction of Destroyer-class military vessels."
+ tech_spaceport_4:0 "§HUnlocks Spaceport Type:§! Level 4 (Cruisers)"
+ tech_spaceport_4_desc:0 "Expanded dry-docks allow for the construction of Cruiser-class military vessels."
+ tech_spaceport_5:0 "§HUnlocks Spaceport Type:§! Level 5 (Strike Cruisers)"
+ tech_spaceport_5_desc:0 "§HStrike Cruiser§!\nExpanded dry-docks allow for the construction of Strike Cruiser-class military vessels."
+ tech_spaceport_6:0 "§HUnlocks Spaceport Type:§! Level 6 (Battlecruisers)"
+ tech_spaceport_6_desc:0 "§HBattlecruiser§!\nExpanded dry-docks allow for the construction of advanced Battlecruiser-class military vessels."
+
+ feature_spaceport_level_2:0 "Spaceport Level II"
+ feature_spaceport_level_2_desc:0 "The Spaceport can be upgraded to support §Y2§! modules and allow the construction of Frigates."
+ feature_spaceport_level_3:0 "Spaceport Level III"
+ feature_spaceport_level_3_desc:0 "The Spaceport can be upgraded to support §Y3§! modules and allow the construction of Destroyers."
+ feature_spaceport_level_4:0 "Spaceport Level IV"
+ feature_spaceport_level_4_desc:0 "The Spaceport can be upgraded to support §Y4§! modules and allow the construction of Cruisers."
+ feature_spaceport_level_5:0 "Spaceport Level V"
+ feature_spaceport_level_5_desc:0 "The Spaceport can be upgraded to support §Y5§! modules and allow the construction of Strike Cruisers."
+ feature_spaceport_level_6:0 "Spaceport Level VI"
+ feature_spaceport_level_6_desc:0 "The Spaceport can be upgraded to support §Y6§! modules and allow the construction of Battlecruisers."
+
+ tech_light_carrier_1:0 "Light Carrier"
+ tech_light_carrier_1_desc:0 "New facilities and construction techniques allow us to now build Light Carrier-class military vessels."
+ tech_battleship_1:0 "Battleship"
+ tech_battleship_1_desc:0 "New facilities and construction techniques allow us to now build Battleship-class military vessels."
+ tech_carrier_1:0 "Carrier"
+ tech_carrier_1_desc:0 "New facilities and construction techniques allow us to now build Carrier-class military vessels."
+ tech_dreadnought_1:0 "Dreadnought"
+ tech_dreadnought_1_desc:0 "New facilities and construction techniques allow us to now build Dreadnought-class military vessels."
+ tech_superdreadnought_1:0 "Superdreadnought"
+ tech_superdreadnought_1_desc:0 "After decades of combat and engineering experience, we now have the capability to build Superdreadnought-class military vessels."
+ tech_flagship_1:0 "The Flagship"
+ tech_flagship_1_desc:0 "After many decades of combat and engineering experience, we now have the capability to build one massive and unique Flagship to represent our Empire."
+
+ TECH_UNLOCK_CRUISER_CONSTRUCTION_TITLE:0 "§HUnlocks Ship Type:§! Strike Cruiser"
+ TECH_UNLOCK_CRUISER_CONSTRUCTION_DESC:0 "§HStrike Cruiser§!\nThis ship is a quick, agile variant of the Cruiser meant to charge into enemy ranks and interdict enemy fleets, with a weaponry loadout and upgraded utility to match."
+ TECH_UNLOCK_BATTLESHIP_CONSTRUCTION_TITLE:0 "§HUnlocks Ship Type:§! Battlecruiser"
+ TECH_UNLOCK_BATTLESHIP_CONSTRUCTION_DESC:0 "§HBattlecruiser§!\nThis larger, more powerful version of the cruiser features heavier shields and more weapons."
+ TECH_UNLOCK_LIGHT_CARRIER_CONSTRUCTION_TITLE:0 "§HUnlocks Ship Type:§! Light Carrier"
+ TECH_UNLOCK_LIGHT_CARRIER_CONSTRUCTION_DESC:0 "§HLight Carrier§!\nThe cruiser-sized Light Carrier brings a few squadrons of fighters into battle quickly and efficiently."
+ TECH_UNLOCK_BATTLESHIP2_CONSTRUCTION_TITLE:0 "§HUnlocks Ship Type:§! Battleship"
+ TECH_UNLOCK_BATTLESHIP2_CONSTRUCTION_DESC:0 "§HBattleship§!\nThe largest hull configuration available, the Battleship carries unmatched power into battle at even greater cost and reduced maneuverability."
+ TECH_UNLOCK_CARRIER_CONSTRUCTION_TITLE:0 "§HUnlocks Ship Type:§! Carrier"
+ TECH_UNLOCK_CARRIER_CONSTRUCTION_DESC:0 "§HCarrier§!\nA huge hull configuration, the Carrier brings multiple squadrons of fighters into battle at great cost and at severely reduced maneuverability."
+ TECH_UNLOCK_DREADNOUGHT_CONSTRUCTION_TITLE:0 "§HUnlocks Ship Type:§! Dreadnought"
+ TECH_UNLOCK_DREADNOUGHT_CONSTRUCTION_DESC:0 "§HDreadnought§!\nA huge hull configuration, the Dreadnought can host truly absurd firepower at a massive cost with severely reduced maneuverability."
+ TECH_UNLOCK_SUPERDREADNOUGHT_CONSTRUCTION_TITLE:0 "§HUnlocks Ship Type:§! Superdreadnought"
+ TECH_UNLOCK_SUPERDREADNOUGHT_CONSTRUCTION_DESC:0 "§HSuperdreadnought§!\nUpgraded Dreadnoughts to basically act as command ships of the fleet, these ships hold the truly absurd firepower and utility of a Dreadnought along with specialized auras to assist a fleet in battle."
+ TECH_UNLOCK_FLAGSHIP_CONSTRUCTION_TITLE:0 "§HUnlocks Ship Type:§! Flagship"
+ TECH_UNLOCK_FLAGSHIP_CONSTRUCTION_DESC:0 "§HFlagship§!\nThe largest ship design ever conceived, the Flagship boasts a massive amount of firepower and armor, provides extensive bonuses, and costs a significant amount of an empire's total resources to build and maintain."
+
+ TECH_UNLOCK_SCIENCECRUISER_CONSTRUCTION_TITLE:0 "§HUnlocks Ship Type:§! Science Cruiser"
+ TECH_UNLOCK_SCIENCECRUISER_CONSTRUCTION_DESC:0 "§HScience Cruiser§!\nInspired by advanced technology discovered among the stars, this ship is an upgraded version of the science ship with faster engines, heavier defenses, and several science related bonuses."
+ TECH_UNLOCK_CONSTRUCTIONCRUISER_CONSTRUCTION_TITLE:0 "§HUnlocks Ship Type:§! Construction Cruiser"
+ TECH_UNLOCK_CONSTRUCTIONCRUISER_CONSTRUCTION_DESC:0 "§HConstruction Cruiser§!\nInspired by advanced technology discovered among the stars, this ship is an upgraded version of the construction ship with faster engines, heavier defenses, and several constructor related bonuses."
+ TECH_UNLOCK_SENSORSTATION_CONSTRUCTION_TITLE:0 "§HUnlocks Ship Type:§! Sensor Station"
+ TECH_UNLOCK_SENSORSTATION_CONSTRUCTION_DESC:0 "§HSensor Station§!\nA small, unique station primarily used to equip the EWAR sensor and be placed along your borders to monitor neighboring empires."
+ TECH_UNLOCK_MININGBASE_CONSTRUCTION_TITLE:0 "§HUnlocks Ship Type:§! Mining Base"
+ TECH_UNLOCK_MININGBASE_CONSTRUCTION_DESC:0 "§Mining Base§!\nA large and expensive base made out of asteriods joined together. Provides large bonuses to mineral production and storage."
+ TECH_UNLOCK_POWERSTATION_CONSTRUCTION_TITLE:0 "§HUnlocks Ship Type:§! Power Station"
+ TECH_UNLOCK_POWERSTATION_CONSTRUCTION_DESC:0 "§HPower Station§!\nA large and expensive base designed to collect solar energy. Provides large bonuses to energy production and storage."
+ TECH_UNLOCK_HEADQUARTERS_CONSTRUCTION_TITLE:0 "§HUnlocks Ship Type:§! Headquarters Station"
+ TECH_UNLOCK_HEADQUARTERS_CONSTRUCTION_DESC:0 "§HHeadquarters Station§!\nA large and expensive command base providing extentive bonuses."
+
+ TECH_UNLOCK_FRONTIER_OUTPOST_2_CONSTRUCTION_TITLE:0 "§HUnlocks Segment Type:§! Frontier Outpost (Tier 2)"
+ TECH_UNLOCK_FRONTIER_OUTPOST_2_CONSTRUCTION_DESC:0 "§HFrontier Outpost (Tier 2)§!\nLearning from the initial efforts of the Tier 1 Frontier Outpost, the Tier 2 Outpost has improved weaponry and defenses for protecting our boarders."
+ TECH_UNLOCK_FRONTIER_OUTPOST_3_CONSTRUCTION_TITLE:0 "§HUnlocks Segment Type:§! Frontier Outpost (Tier 3)"
+ TECH_UNLOCK_FRONTIER_OUTPOST_3_CONSTRUCTION_DESC:0 "§HFrontier Outpost (Tier 3)§!\nWith experiance and failure, we have learned new techniques to improve our Frontier Outpost's ability to protect our boarders."
+ TECH_UNLOCK_FRONTIER_OUTPOST_4_CONSTRUCTION_TITLE:0 "§HUnlocks Segment Type:§! Frontier Outpost (Tier 4)"
+ TECH_UNLOCK_FRONTIER_OUTPOST_4_CONSTRUCTION_DESC:0 "§HFrontier Outpost (Tier 4)§!\nAfter years of experiance, trials, errors, and failures, we have learned much, and now can construction a mighty Frontier Outpost that will make people think twice about what they send to scout our boarders."
+
+ TECH_UNLOCK_CAPITAL_SHIPS_CONSTRUCTION_TITLE:0 "§HUnlocks Ship Type:§! Capital Ships"
+ TECH_UNLOCK_CAPITAL_SHIPS_CONSTRUCTION_DESC:0 "§HCapital Ships§!\nThe most powerful ship designs available, the Capital Ships are the pride of any Empire's Fleet."
+ 
+ tech_ewar_1:0 "EWAR (Early Warning And Reconnaissance) Sensor Array"
+ tech_ewar_1_desc:0 "A very powerful sensor array that can be used to spot enemies at great distances or spy on neighboring empires."
+ EWAR_sensor_components_DESC:0 "A very powerful sensor array that can be used to spot enemies at great distances or spy on neighboring empires."
+ tech_sciencecruiser_1:0 "Science Cruisers"
+ tech_sciencecruiser_1_desc:0 "Expanded dry-docks allow for the construction of Science Cruiser-class science vessels."
+ tech_constructioncruiser_1:0 "Construction Cruisers"
+ tech_constructioncruiser_1_desc:0 "Expanded dry-docks allow for the construction of Construction Cruiser-class constructor vessels."
+ tech_sensorstation_1:0 "Sensor Station"
+ tech_sensorstation_1_desc:0 "This will allow construction of sensor stations to assist in monitoring our borders."
+ tech_miningbase_1:0 "Mining Base"
+ tech_miningbase_1_desc:0 "This will allow construction of mining bases to boost mineral production and storage."
+ tech_powerstation_1:0 "Power Station"
+ tech_powerstation_1_desc:0 "This will allow construction of power stations to boost energy production and storage."
+ tech_headquarters_1:0 "Headquarters Station"
+ tech_headquarters_1_desc:0 "This will allow the construction of the Headquarters Station."
+ tech_frontier_outpost_1:0 "Frontier Outpost (Tier 2)"
+ tech_frontier_outpost_1_desc:0 "Thanks to the learning experiances of the initial Frontier Outpost, our scientists and engineers have found a way to improve the station and increase the weaponry capacity."
+ tech_frontier_outpost_2:0 "Frontier Outpost (Tier 3)"
+ tech_frontier_outpost_2_desc:0 "After years of experiance with our Frontier Outposts, we have found new means of upgrading and improving the design and weaponry loadout of the Outpost."
+ tech_frontier_outpost_3:0 "Frontier Outpost (Tier 4)"
+ tech_frontier_outpost_3_desc:0 "After Decades of experiance, trials, and errors, we have developed a grand Frontier Outpost, equipped with the best weaponry loudout we have."
+ tech_advanced_warship_components_1: "Advanced Warship Components (Tier 1)"
+ tech_advanced_warship_components_1_desc: "Unlocks a new set of ship modules allowing for the enhancement and further specialization of ship classes with a unique bonus."
+ tech_advanced_warship_components_2: "Advanced Warship Components (Tier 2)"
+ tech_advanced_warship_components_2_desc: "Unlocks a new set of ship modules allowing for the enhancement and further specialization of ship classes with a unique bonus."
+
+ tech_adv_zero_point_power:0 "Advanced Zero Point Reactor"
+ tech_adv_zero_point_power_desc:0 "These generators extract vacuum energy, providing an almost limitless supply of power. There is no more efficient way to generate energy.\n\n"
+
+ ADV_ZERO_POINT_REACTOR:0 "Advanced Zero Point Reactor"
+ ADV_ZERO_POINT_REACTOR_DESC:0 "These reactors extract vacuum energy, providing an almost limitless supply of power. There is no more efficient way to generate energy."
+ ADV_ZERO_POINT_REACTOR_S:0 "Small Advanced Zero Point Reactor"
+ ADV_ZERO_POINT_REACTOR_S_DESC:0 "These reactors extract vacuum energy, providing an almost limitless supply of power. There is no more efficient way to generate energy."
+ ADV_ZERO_POINT_REACTOR_M:0 "Medium Advanced Zero Point Reactor"
+ ADV_ZERO_POINT_REACTOR_M_DESC:0 "These reactors extract vacuum energy, providing an almost limitless supply of power. There is no more efficient way to generate energy."
+ ADV_ZERO_POINT_REACTOR_L:0 "Large Advanced Zero Point Reactor"
+ ADV_ZERO_POINT_REACTOR_L_DESC:0 "These reactors extract vacuum energy, providing an almost limitless supply of power. There is no more efficient way to generate energy."
+
+ tech_repeatable_improved_orbital_station_health:0 "Fortified Core Layers - Spaceports"
+ tech_repeatable_improved_orbital_station_health_desc:0 "Additional layers of armor plating within the structure itself improves the resilience of Spaceports.\n\n"
+
+ tech_integrated_research_paradigm:0 "Integrated Research Paradigm"
+ tech_integrated_research_paradigm_desc:0 "This statecraft mandate allows the Empire to form a collaboration between all research departments, granting access to a specialized research center building chain and many research bonuses."
+
+ TECH_UNLOCK_BUILDING_SCIENCE_CENTER_1_CONSTRUCTION_TITLE:0 "§HUnlocks Building:§! Research Initiative Center"
+ TECH_UNLOCK_BUILDING_SCIENCE_CENTER_1_CONSTRUCTION_DESC:0 "§HResearch Initiative Center§!\nFirst building in research collaboration allowing faster research and more research options."
+
+ TECH_UNLOCK_SPECIAL_COMPONENTS_1_TITLE: ""§HUnlocks Component Set:§! Advanced Warship Components (Tier 1)"
+ TECH_UNLOCK_SPECIAL_COMPONENTS_1_DESC: "§HAdvanced Warship Components (Tier 1)§!\nSpecialized Component Modules to enhance a ship's capabilities in many different ways."
+ TECH_UNLOCK_SPECIAL_COMPONENTS_2_TITLE: ""§HUnlocks Component Set:§! Advanced Warship Components (Tier 2)"
+ TECH_UNLOCK_SPECIAL_COMPONENTS_2_DESC: "§HAdvanced Warship Components (Tier 2)§!\nSpecialized Component Modules to enhance a ship's capabilities in many different ways."
+ special_ship_slot_DESC: "Unlocks new, unique modules to enhance your ship in specific ways."
+
+ 
+ ####################################
+ # BUILDINGS
+ ####################################
+ 
+ 
+ building_governors_mansion:0 "Governor's Mansion"
+ building_governors_mansion_desc:1 "An extremely luxurious and expensive mansion for your planetary Governor."
+
+ building_science_center_1:0 "Research Initiative Center"
+ building_science_center_1_desc:1 "A newly developed research center to bring together the brightest minds of the Empire in order to develop our research faster."
+ building_science_center_2:0 "Education & Learning Center"
+ building_science_center_2_desc:1 "After learning much from the initial trials and errors of the original center, this learning center has been upgraded with better management and more space, allowing for faster research speeds and more tech alternatives."
+ building_science_center_3:0 "Research & Development Center"
+ building_science_center_3_desc:1 "After many years of learning experiances, the new R&D Center is now more specialized towards research collaboration and sharing of knowledge, making research times even faster, along with even more options."
+ building_science_center_4:0 "Science & Technology Center"
+ building_science_center_4_desc:1 "After decades of collaborations, trials, errors, and successes, this state-of-the-art, ultra specialized building allows for the most cooperation between all research departments with more access and resources than ever before, giving you the most research alteratives and excellent research times."
+
+ 
+ ####################################
+ # AURAS / COMPONENTS / SPECIAL SLOTS
+ ####################################
+
+ 
+ SHIP_AURA_SHIELDS:0 "Shield Recharge Field"
+ SHIP_AURA_FIRING:0 "Integrated Fleet Network"
+ SHIP_AURA_DAMAGE:0 "Enhanced Targeting Field"
+
+ SHIP_SENSOR_5:0 "EWAR Sensor Array"
+ STATION_SENSOR_5:0 "EWAR Sensor Array"
+ SHIP_SENSOR_EMPTY:0 "Empty Slot"
+
+ SC_DEFENSE_AURA:0 "Automated Defense System"
+ STATION_REPAIR_AURA:0 "Automated Ship Repair System"
+
+ NSC_AURA_EMPTY:0 "Empty Slot"
+ SC_DEFENSE_AURA_EMPTY:0 "Empty Slot"
+ SPECIAL_SLOT_EMPTY:0 "Empty Slot"
+ special_ship_slot:0 "Special Component"
+ special_ship_slot_desc:0 "A special component slot."
+
+ SPECIAL_SLOT_MULTIPHASIC_SENSORS:0 "Multiphasic Sensors"
+ SPECIAL_SLOT_MULTIPHASIC_SENSORS_DESC:0 "Increases sensor range using multiphasic generators."
+ SPECIAL_SLOT_DAMAGE_CONTROL:0 "Damage Control Teams"
+ SPECIAL_SLOT_DAMAGE_CONTROL_DESC:0 "Teams specially trained in rapid ship repair."
+ SPECIAL_SLOT_READY_ROOM:0 "Captain's Ready Room"
+ SPECIAL_SLOT_READY_ROOM_DESC:0 "A place for the Captain to relax but still be available on a moment's notice."
+ SPECIAL_SLOT_CREW_LOUNGE:0 "Crew Lounge"
+ SPECIAL_SLOT_CREW_LOUNGE_DESC:0 "A place for the ship's crew to relax and unwind."
+ SPECIAL_SLOT_FIRE_CONTROL:0 "Fire Control System"
+ SPECIAL_SLOT_FIRE_CONTROL_DESC:0 "An advanced targeting system that increases weapon speed and accuracy."
+ SPECIAL_SLOT_STRUCTURAL_INTEGRITY:0 "Structural Integrity Field"
+ SPECIAL_SLOT_STRUCTURAL_INTEGRITY_DESC:0 "An advanced system of forcefields that strengthen the ship's hull structure."
+ SPECIAL_SLOT_AUXILIARY_SHIELDS:0 "Auxiliary Shield System"
+ SPECIAL_SLOT_AUXILIARY_SHIELDS_DESC:0 "A secondary series of backup shield generators."
+ SPECIAL_SLOT_QUANTUM_THRUSTERS:0 "Quantum Thrusters"
+ SPECIAL_SLOT_QUANTUM_THRUSTERS_DESC:0 "An advanced set of ship thrusters to augment speed and maneuverability."
+ SPECIAL_SLOT_DEFLECTOR_ARRAY:0 "Deflector Array"
+ SPECIAL_SLOT_DEFLECTOR_ARRAY_DESC:0 "A large array that is designed to provide additional protection for the ship."
+
+ KITCHEN_SINK:0 "Kitchen Sink"
+ KITCHEN_SINK_DESC:0 "A clean crew is a happy crew."
+ STELLAR_CARTOGRAPHY:0 "Stellar Cartography"
+ STELLAR_CARTOGRAPHY_DESC:0 "A large system used for mapping surrounding space."
+ NAVIGATIONAL_ARRAY:0 "Navigational Array"
+ NAVIGATIONAL_ARRAY_DESC:0 "An advanced 3D navigational system."
+
+ SPECIAL_SLOT_KITCHEN_SINK:0 "Kitchen Sink"
+ SPECIAL_SLOT_KITCHEN_SINK_DESC:0 "A clean crew is a happy crew."
+ SPECIAL_SLOT_STELLAR_CARTOGRAPHY:0 "Stellar Cartography"
+ SPECIAL_SLOT_STELLAR_CARTOGRAPHY_DESC:0 "A large system used for mapping surrounding space."
+ SPECIAL_SLOT_NAVIGATIONAL_ARRAY:0 "Navigational Array"
+ SPECIAL_SLOT_NAVIGATIONAL_ARRAY_DESC:0 "An advanced 3D navigational system."
+
+ EWAR_sensor_components:0 "EWAR (Early Warning And Reconnaissance) Sensor Array"
+ EWAR_sensor_components_desc:0 "A very powerful sensor array that can be used to spot enemies at great distances or spy on neighboring empires."
+
+ STRIKE_CRUISER_AURA_EMPTY:0 "Empty Slot"
+ STRIKE_CRUISER_AURA_SUBSPACE_SNARE:0 "Subspace Snare"
+
+ # Slot Name
+ nsc_hq_auras: "Headquarters Subspace Manipulators"
+ # Component name
+ NSC_HQ_AURA: "Headquarters Subspace Manipulator"
+ # Tooltip description
+ nsc_hq_aura_everything: "Combined Aura"
+
+ 
+ ####################################
+ #MISCELLANEOUS
+ ####################################
+
+ 
+ UNDERSTOOD:0 "Understood."
+
+ sm_customs_office:0 "Customs Office"
+ sm_customs_office_desc:0 "\n\n The Customs Office provides better protection and control of your empire's borders, while slowing down migration and having a suspiciously high maintenance bill.\n\n"
+
+ shipclass_orbital_station_hit_points_mult:0 "Spaceport Hit Points"
+ shipsize_military_station_xlarge_upkeep_mult:0 "Battle Fortress Upkeep"
+
+ shipsize_MiningBase_upkeep_mult:0 "Mining Base Upkeep"
+ shipsize_PowerStation_upkeep_mult:0 "Power Station Upkeep"
+
+ budget_group_country_modifier:0 "Mining Base Upkeep"
+ miningbase_bonus_planet:0 "Mining Base Bonus"
+ powerstation_bonus_planet:0 "Power Station Bonus"
+
+ 
+ ####################################
+ #NEW TRAIT RULER ENTRIES
+ ####################################
+
+ trait_ruler_frigate_focus:0 "Frigate Focus"
+ trait_ruler_frigate_focus_desc:1 "This leader is intent on promoting the construction of Frigates."
+
+ trait_ruler_StrikeCruiser_focus:0 "Strike Cruiser Focus"
+ trait_ruler_StrikeCruiser_focus_desc:1 "This leader is intent on promoting the construction of Strike Cruisers."
+
+ trait_ruler_Battlecruiser_focus:0 "Battlecruiser Focus"
+ trait_ruler_Battlecruiser_focus_desc:1 "This leader is intent on promoting the construction of Battlecruisers."
+
+ trait_ruler_LightCarrier_focus:0 "Light Carrier Focus"
+ trait_ruler_LightCarrier_focus_desc:1 "This leader is intent on promoting the construction of Light Carriers."
+
+ trait_ruler_Carrier_focus:0 "Carrier Focus"
+ trait_ruler_Carrier_focus_desc:1 "This leader is intent on promoting the construction of Carriers."
+
+ trait_ruler_Dreadnought_focus:0 "Dreadnought Focus"
+ trait_ruler_Dreadnought_focus_desc:1 "This leader is intent on promoting the construction of Dreadnoughts."
+
+ trait_ruler_Superdreadnought_focus:0 "Superdreadnought Focus"
+ trait_ruler_Superdreadnought_focus_desc:1 "This leader is intent on promoting the construction of Superdreadnoughts."
+
+ trait_ruler_Flagship_focus:0 "Flagship Focus"
+ trait_ruler_Flagship_focus_desc:1 "This leader is intent on promoting the rebuilding of Flagships."
+
+
+ ####################################
+ # Advanced Construction Techniques
+ ####################################
+
+ 
+ tech_advanced_construction_techniques_frigate:0 "Advanced Construction Techniques (Frigate)"
+ tech_advanced_construction_techniques_frigate_desc:0 "Experience, new facilities, and advancements in construction techniques now allow us to build Frigates faster and cheaper than ever before."
+ tech_advanced_construction_techniques_strike_cruiser:0 "Advanced Construction Techniques (Strike Cruiser)"
+ tech_advanced_construction_techniques_strike_cruiser_desc:0 "Experience, new facilities, and advancements in construction techniques now allow us to build Strike Cruisers faster and cheaper than ever before."
+ tech_advanced_construction_techniques_battlecruiser:0 "Advanced Construction Techniques (Battlecruiser)"
+ tech_advanced_construction_techniques_battlecruiser_desc:0 "Experience, new facilities, and advancements in construction techniques now allow us to build Battlecruisers faster and cheaper than ever before."
+ tech_advanced_construction_techniques_light_carrier:0 "Advanced Construction Techniques (Light Carrier)"
+ tech_advanced_construction_techniques_light_carrier_desc:0 "Experience, new facilities, and advancements in construction techniques now allow us to build Light Carriers faster and cheaper than ever before."
+ tech_advanced_construction_techniques_carrier:0 "Advanced Construction Techniques (Carrier)"
+ tech_advanced_construction_techniques_carrier_desc:0 "Experience, new facilities, and advancements in construction techniques now allow us to build Carriers faster and cheaper than ever before."
+ tech_advanced_construction_techniques_dreadnought:0 "Advanced Construction Techniques (Dreadnought)"
+ tech_advanced_construction_techniques_dreadnought_desc:0 "Experience, new facilities, and advancements in construction techniques now allow us to build Dreadnoughts faster and cheaper than ever before."
+ tech_advanced_construction_techniques_superdreadnought:0 "Advanced Construction Techniques (Superdreadnought)"
+ tech_advanced_construction_techniques_superdreadnought_desc:0 "All of our Empire's experience, best facilities, and advancements in construction techniques now finally allow us to rebuild our Superdreadnoughts faster and cheaper than ever before."
+ tech_advanced_construction_techniques_flagship:0 "Advanced Construction Techniques (Flagship)"
+ tech_advanced_construction_techniques_flagship_desc:0 "All of our Empire's experience, best facilities, and advancements in construction techniques now finally allow us to rebuild our Flagship faster and cheaper than ever before."
+ tech_advanced_construction_techniques_military_stations:0 "Advanced Construction Techniques (Military Stations)"
+ tech_advanced_construction_techniques_military_stations_desc:0 "Experience, new facilities, and advancements in construction techniques now allow us to build our Military Stations faster and cheaper than ever before."
+ tech_advanced_construction_techniques_battle_fortress:0 "Advanced Construction Techniques (Battle Fortress)"
+ tech_advanced_construction_techniques_battle_fortress_desc:0 "Experience, new facilities, and advancements in construction techniques now allow us to build our Battle Fortresses faster and cheaper than ever before."
+ tech_advanced_construction_techniques_hq_station:0 "Advanced Construction Techniques (HQ Station)"
+ tech_advanced_construction_techniques_hq_station_desc:0 "All of our Empire's experience, best facilities, and advancements in construction techniques now finally allow us to rebuild our HQ Stations faster and cheaper than ever before."
+ tech_advanced_construction_techniques_colony_ship:0 "Advanced Construction Techniques (Colony Ship)"
+ tech_advanced_construction_techniques_colony_ship_desc:0 "Experience, new facilities, and advancements in construction techniques now allow us to build Colony Ships faster and cheaper than ever before."
+
+
+ ###################################
+ # Hull Specific Battle Computers
+ ###################################
+
+ 
+ Frigate_COMBAT_COMPUTER_1:0 "Basic Combat Computer (Frigate)"
+ Frigate_COMBAT_COMPUTER_2:0 "Intermediate Combat Computer (Frigate)"
+ Frigate_COMBAT_COMPUTER_3:0 "Advanced Combat Computer (Frigate)"
+ Frigate_COMBAT_COMPUTER_4:0 "Sentient Combat Computer (Frigate)"
+ Frigate_COMBAT_COMPUTER_PRECOG:0 "Precognitive Interface (Frigate)"
+
+ Battlecruiser_COMBAT_COMPUTER_1:0 "Basic Combat Computer (Battlecruiser)"
+ Battlecruiser_COMBAT_COMPUTER_2:0 "Intermediate Combat Computer (Battlecruiser)"
+ Battlecruiser_COMBAT_COMPUTER_3:0 "Advanced Combat Computer (Battlecruiser)"
+ Battlecruiser_COMBAT_COMPUTER_4:0 "Sentient Combat Computer (Battlecruiser)"
+ Battlecruiser_COMBAT_COMPUTER_PRECOG:0 "Precognitive Interface (Battlecruiser)"
+
+ StrikeCruiser_COMBAT_COMPUTER_1:0 "Basic Combat Computer (Strike Cruiser)"
+ StrikeCruiser_COMBAT_COMPUTER_2:0 "Intermediate Combat Computer (Strike Cruiser)"
+ StrikeCruiser_COMBAT_COMPUTER_3:0 "Advanced Combat Computer (Strike Cruiser)"
+ StrikeCruiser_COMBAT_COMPUTER_4:0 "Sentient Combat Computer (Strike Cruiser)"
+ StrikeCruiser_COMBAT_COMPUTER_PRECOG:0 "Precognitive Interface (Strike Cruiser)"
+
+ LightCarrier_COMBAT_COMPUTER_1:0 "Basic Combat Computer (Light Carrier)"
+ LightCarrier_COMBAT_COMPUTER_2:0 "Intermediate Combat Computer (Light Carrier)"
+ LightCarrier_COMBAT_COMPUTER_3:0 "Advanced Combat Computer (Light Carrier)"
+ LightCarrier_COMBAT_COMPUTER_4:0 "Sentient Combat Computer (Light Carrier)"
+ LightCarrier_COMBAT_COMPUTER_PRECOG:0 "Precognitive Interface (Light Carrier)"
+
+ Carrier_COMBAT_COMPUTER_1:0 "Basic Combat Computer (Carrier)"
+ Carrier_COMBAT_COMPUTER_2:0 "Intermediate Combat Computer (Carrier)"
+ Carrier_COMBAT_COMPUTER_3:0 "Advanced Combat Computer (Carrier)"
+ Carrier_COMBAT_COMPUTER_4:0 "Sentient Combat Computer (Carrier)"
+ Carrier_COMBAT_COMPUTER_PRECOG:0 "Precognitive Interface (Carrier)"
+
+ Dreadnought_COMBAT_COMPUTER_1:0 "Basic Combat Computer (Dreadnought)"
+ Dreadnought_COMBAT_COMPUTER_2:0 "Intermediate Combat Computer (Dreadnought)"
+ Dreadnought_COMBAT_COMPUTER_3:0 "Advanced Combat Computer (Dreadnought)"
+ Dreadnought_COMBAT_COMPUTER_4:0 "Sentient Combat Computer (Dreadnought)"
+ Dreadnought_COMBAT_COMPUTER_PRECOG:0 "Precognitive Interface (Dreadnought)"
+
+ Superdreadnought_COMBAT_COMPUTER_1:0 "Basic Combat Computer (Superdreadnought)"
+ Superdreadnought_COMBAT_COMPUTER_2:0 "Intermediate Combat Computer (Superdreadnought)"
+ Superdreadnought_COMBAT_COMPUTER_3:0 "Advanced Combat Computer (Superdreadnought)"
+ Superdreadnought_COMBAT_COMPUTER_4:0 "Sentient Combat Computer (Superdreadnought)"
+ Superdreadnought_COMBAT_COMPUTER_PRECOG:0 "Precognitive Interface (Superdreadnought)"
+
+ Flagship_COMBAT_COMPUTER_1:0 "Basic Combat Computer (Flagship)"
+ Flagship_COMBAT_COMPUTER_2:0 "Intermediate Combat Computer (Flagship)"
+ Flagship_COMBAT_COMPUTER_3:0 "Advanced Combat Computer (Flagship)"
+ Flagship_COMBAT_COMPUTER_4:0 "Sentient Combat Computer (Flagship)"
+ Flagship_COMBAT_COMPUTER_PRECOG:0 "Precognitive Interface (Flagship)"
+
+ Headquarters_COMBAT_COMPUTER_1:0 "Basic Combat Computer (Headquarters Station)"
+ Headquarters_COMBAT_COMPUTER_2:0 "Intermediate Combat Computer (Headquarters Station)"
+ Headquarters_COMBAT_COMPUTER_3:0 "Advanced Combat Computer (Headquarters Station)"
+ Headquarters_COMBAT_COMPUTER_4:0 "Sentient Combat Computer (Headquarters Station)"
+ Headquarters_COMBAT_COMPUTER_PRECOG:0 "Precognitive Interface (Headquarters Station)"
+
+ CAPITAL_BOMBARDMENT_BEHAVIOR_DESC:0 "Capital Bombardment: This ship will move slowly to the center of the battlefield and lay down its firepower relentlessly."
+
+ # Combat computer for the automated defense HQ fleet
+ NSC_AUTOMATED_DEFENSE_COMPUTER: "Automated Defense Computer"
+
+ 
+ ###################################
+ # New Weapons
+ ###################################
+
+ 
+ LARGE_ENERGY_LANCE_HQ:0 "HQ Energy Lance"
+ LARGE_ENERGY_LANCE_HQ_DESC:0 "A special energy lance specifically designed for the Headquarters station."
+
+ LARGE_ARC_EMITTER_HQ:0 "HQ Arc Emitter"
+ LARGE_ARC_EMITTER_HQ_DESC:0 "A special arc emitter specifically designed for the Headquarters station."
+
+ LARGE_MASS_ACCELERATOR_HQ:0 "HQ Giga Cannon"
+ LARGE_MASS_ACCELERATOR_HQ_DESC:0 "A special giga cannon specifically designed for the Headquarters station."
+
+ ENERGY_LANCE_HQ:0 "HQ Energy Lance"
+ ENERGY_LANCE_HQ_DESC:0 "A special energy lance specifically designed for the Headquarters station."
+
+ ARC_EMITTER_HQ:0 "HQ Arc Emitter"
+ ARC_EMITTER_HQ_DESC:0 "A special arc emitter specifically designed for the Headquarters station."
+
+ MASS_ACCELERATOR_HQ:0 "HQ Giga Cannon"
+ MASS_ACCELERATOR_HQ_DESC:0 "A special giga cannon specifically designed for the Headquarters station."

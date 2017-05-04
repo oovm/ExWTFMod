@@ -1,6 +1,0 @@
-# Triggers when the tech is researched
-on_tech_increased = {
-	events = {
-		tfw.01
-	}
-}

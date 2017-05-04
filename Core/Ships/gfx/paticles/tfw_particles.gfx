@@ -1,0 +1,667 @@
+objectTypes = {
+
+#####MISC#########
+	pdxparticle = {
+		name = "tfw_negative_effect"
+		type = "tfw_negative_effect_file"
+		
+		scale = 1.0
+	}
+
+####DARKMATTER_EMITTER####
+####HITS
+
+	pdxparticle = {
+		name = "darkmatter_emitter_medium_hit_effect"
+		type = "darkmatter_emitter_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "darkmatter_emitter_large_hit_effect"
+		type = "darkmatter_emitter_hit_effect"
+		
+		scale = 1.5
+	}
+	
+####MUZZLES
+
+	pdxparticle = {
+		name = "darkmatter_emitter_medium_muzzle_particle"
+		type = "darkmatter_emitter_muzzle_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "darkmatter_emitter_large_muzzle_particle"
+		type = "darkmatter_emitter_muzzle_file"
+		
+		scale = 1.25
+	}
+	
+####DARKMATTER_TORPEDOES###
+####HITS
+	
+	pdxparticle = {
+		name = "darkmatter_torpedoes_hit_effect"		#linked to \gfx\particles\combat\darkmatter_torpedoes_hit_effect.asset
+		type = "darkmatter_torpedoes_hit_effect"
+		
+		scale = 1.0
+	}	
+
+####MUZZLES
+	
+	pdxparticle = {
+		name = "darkmatter_torpedoes_muzzle_particle"
+		type = "darkmatter_torpedoes_file"
+		
+		scale = 1.0
+	}
+
+
+####FLYING EFFECTS
+	
+	pdxparticle = {
+		name = "darkmatter_torpedoes_idle_particle"
+		type = "darkmatter_torpedoes_idle_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "darkmatter_torpedoes_idle_trail_particle"
+		type = "darkmatter_torpedoes_idle_trail_file"
+		
+		scale = 1.0
+	}
+
+####KINETIC_ARTILLERY_3###
+####MUZZLES
+	pdxparticle = {
+		name = "kinetic_artillery_3_muzzle_particle"
+		type = "kinetic_artillery_3_file"
+		
+		scale = 2.0
+	}
+	
+####FLYING EFFECTS
+	pdxparticle = {
+		name = "kinetic_artillery_3_hit_effect"
+		type = "kinetic_artillery_3_hit_effect"
+		
+		scale = 1.5
+	}	
+
+####LASERSTORM###
+####FLYING EFFECTS	
+	pdxparticle = {
+		name = "laserstorm_hit_effect"
+		type = "laserstorm_hit_effect"
+		
+		scale = 1.5
+	}
+	
+####MUZZLES	
+	pdxparticle = {
+		name = "laserstorm_muzzle_file"
+		type = "laserstorm_muzzle_file"
+		
+		scale = 1.25
+	}
+
+####ADV_LASERSTORM###
+####FLYING EFFECTS	
+	pdxparticle = {
+		name = "adv_laserstorm_hit_effect"
+		type = "adv_laserstorm_hit_effect"
+		
+		scale = 1.5
+	}
+	
+####MUZZLES	
+	pdxparticle = {
+		name = "adv_laserstorm_muzzle_file"
+		type = "adv_laserstorm_muzzle_file"
+		
+		scale = 1.25
+	}
+	
+####GAUSS_MORTAR###
+####MUZZLES	
+	pdxparticle = {
+		name = "gauss_mortar_large_muzzle_particle"
+		type = "gauss_mortar_muzzle"
+		
+		scale = 1.6
+	}
+	
+	pdxparticle = {
+		name = "gauss_mortar_medium_muzzle_particle"
+		type = "gauss_mortar_muzzle"
+		
+		scale = 1.1
+	}
+	
+	pdxparticle = {
+		name = "gauss_mortar_small_muzzle_particle"
+		type = "gauss_mortar_muzzle"
+		
+		scale = 0.85
+	}
+####GAUSS_HOWITZER###
+####MUZZLES	
+	pdxparticle = {
+		name = "gauss_howitzer_large_muzzle_particle"
+		type = "gauss_howitzer_muzzle"
+		
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "gauss_howitzer_medium_muzzle_particle"
+		type = "gauss_howitzer_muzzle"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "gauss_howitzer_small_muzzle_particle"
+		type = "gauss_howitzer_muzzle"
+		
+		scale = 1.0
+	}
+
+################BIOCANNON######################
+####MUZZLES	
+	pdxparticle = {
+		name = "biocannon_large"
+		type = "biocannon_muzzle"
+		
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "biocannon_medium"
+		type = "biocannon_muzzle"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "biocannon_small"
+		type = "biocannon_muzzle"
+		
+		scale = 1.0
+	}
+####FLYING EFFECTS
+	pdxparticle = {
+		name = "large_biocannon_idle_particle"
+		type = "biocannon_idle_file"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "large_biocannon_idle_drops_particle"
+		type = "biocannon_idle_drops_file"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "medium_biocannon_idle_particle"
+		type = "biocannon_idle_file"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "medium_biocannon_idle_drops_particle"
+		type = "biocannon_idle_drops_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "small_biocannon_idle_particle"
+		type = "biocannon_idle_file"
+		
+		scale = 0.5
+	}
+	pdxparticle = {
+		name = "small_biocannon_idle_drops_particle"
+		type = "biocannon_idle_drops_file"
+		
+		scale = 1.0
+	}
+##################
+# HIT EFFECTS
+##################
+	pdxparticle = {
+		name = "biocannon_small_hit_effect"
+		type = "biocannon_hit_effect"
+		
+		scale = 0.35
+	}
+	
+	pdxparticle = {
+		name = "biocannon_medium_hit_effect"
+		type = "biocannon_hit_effect"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "biocannon_large_hit_effect"
+		type = "biocannon_hit_effect"
+		
+		scale = 0.8
+	}
+
+################PSICANNON######################
+####MUZZLES	
+	pdxparticle = {
+		name = "psicannon_large"
+		type = "psicannon_muzzle"
+		
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "psicannon_medium"
+		type = "psicannon_muzzle"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "psicannon_small"
+		type = "psicannon_muzzle"
+		
+		scale = 1.0
+	}
+####FLYING EFFECTS
+	pdxparticle = {
+		name = "large_psicannon_idle_particle"
+		type = "psicannon_idle_file"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "large_psicannon_idle_drops_particle"
+		type = "psicannon_idle_drops_file"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "medium_psicannon_idle_particle"
+		type = "psicannon_idle_file"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "medium_psicannon_idle_drops_particle"
+		type = "psicannon_idle_drops_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "small_psicannon_idle_particle"
+		type = "psicannon_idle_file"
+		
+		scale = 0.5
+	}
+	pdxparticle = {
+		name = "small_psicannon_idle_drops_particle"
+		type = "psicannon_idle_drops_file"
+		
+		scale = 1.0
+	}
+##################
+# HIT EFFECTS
+##################
+	pdxparticle = {
+		name = "psicannon_small_hit_effect"
+		type = "psicannon_hit_effect"
+		
+		scale = 0.35
+	}
+	
+	pdxparticle = {
+		name = "psicannon_medium_hit_effect"
+		type = "psicannon_hit_effect"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "psicannon_large_hit_effect"
+		type = "psicannon_hit_effect"
+		
+		scale = 0.8
+	}
+
+################GRAVICANNON######################
+####MUZZLES	
+	pdxparticle = {
+		name = "gravicannon_large"
+		type = "gravicannon_muzzle"
+		
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "gravicannon_medium"
+		type = "gravicannon_muzzle"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "gravicannon_small"
+		type = "gravicannon_muzzle"
+		
+		scale = 1.0
+	}
+####FLYING EFFECTS
+	pdxparticle = {
+		name = "large_gravicannon_idle_particle"
+		type = "gravicannon_idle_file"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "large_gravicannon_idle_drops_particle"
+		type = "gravicannon_idle_drops_file"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "medium_gravicannon_idle_particle"
+		type = "gravicannon_idle_file"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "medium_gravicannon_idle_drops_particle"
+		type = "gravicannon_idle_drops_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "small_gravicannon_idle_particle"
+		type = "gravicannon_idle_file"
+		
+		scale = 0.5
+	}
+	pdxparticle = {
+		name = "small_gravicannon_idle_drops_particle"
+		type = "gravicannon_idle_drops_file"
+		
+		scale = 1.0
+	}
+##################
+# HIT EFFECTS
+##################
+	pdxparticle = {
+		name = "gravicannon_small_hit_effect"
+		type = "gravicannon_hit_effect"
+		
+		scale = 0.35
+	}
+	
+	pdxparticle = {
+		name = "gravicannon_medium_hit_effect"
+		type = "gravicannon_hit_effect"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "gravicannon_large_hit_effect"
+		type = "gravicannon_hit_effect"
+		
+		scale = 0.8
+	}
+	
+###############NEXT TIERS############	
+####################PSILANCE#########################
+####HITS
+	pdxparticle = {
+		name = "psilance_hit_effect"
+		type = "psilance_hit_file"
+		
+		scale = 1.5
+	}
+	
+		pdxparticle = {
+		name = "psilance_shield_hit_effect"
+		type = "psilance_shield_hit_file"
+		
+		scale = 1.5
+	}
+####MUZZLES
+	pdxparticle = {
+		name = "psilance_muzzle_particle"
+		type = "psilance_muzzle_file"
+		
+		scale = 1.25
+	}
+	
+####################GRAVILANCE#########################
+####HITS
+	pdxparticle = {
+		name = "gravilance_hit_effect"
+		type = "gravilance_hit_file"
+		
+		scale = 1.5
+	}
+	
+		pdxparticle = {
+		name = "gravilance_shield_hit_effect"
+		type = "gravilance_shield_hit_file"
+		
+		scale = 1.5
+	}
+####MUZZLES
+	pdxparticle = {
+		name = "gravilance_muzzle_particle"
+		type = "gravilance_muzzle_file"
+		
+		scale = 1.25
+	}
+####################SPICEKEEPER#########################
+####HITS
+	pdxparticle = {
+		name = "tfw_peacekeeper_hit_effect"
+		type = "tfw_peacekeeper_hit_file"
+		
+		scale = 1.0
+	}
+	
+		pdxparticle = {
+		name = "tfw_peacekeeper_idle_particle"
+		type = "tfw_peacekeeper_idle_file"
+		
+		scale = 1.0
+	}
+####MUZZLES
+	pdxparticle = {
+		name = "tfw_peacekeeper_muzzle_particle"
+		type = "tfw_peacekeeper_muzzle_file"
+		
+		scale = 1.0
+	}
+	
+####################KINETIC_HAMMER#########################
+####HITS
+	pdxparticle = {
+		name = "tfw_hammer_hit_effect"
+		type = "tfw_hammer_hit_file"
+		
+		scale = 1.5
+	}
+	
+####MUZZLES
+	pdxparticle = {
+		name = "tfw_hammer_muzzle_particle"
+		type = "tfw_hammer_muzzle_file"
+		
+		scale = 1.25
+	}
+	
+############################PHASER#########################
+######MUZZLE	
+#WINDUP
+	pdxparticle = {
+		name = "tfw_phaser_1_muzzle_windup_effect"
+		type = "tfw_phaser_1_muzzle_windup_file"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "tfw_phaser_2_muzzle_windup_effect"
+		type = "tfw_phaser_2_muzzle_windup_file"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "tfw_phaser_3_muzzle_windup_effect"
+		type = "tfw_phaser_3_muzzle_windup_file"
+		
+		scale = 1.0
+	}
+#	
+	pdxparticle = {
+		name = "tfw_phaser_1_small_muzzle_particle"
+		type = "tfw_phaser_1_muzzle_file"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "tfw_phaser_1_medium_muzzle_particle"
+		type = "tfw_phaser_1_muzzle_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "tfw_phaser_1_large_muzzle_particle"
+		type = "tfw_phaser_1_muzzle_file"
+		
+		scale = 1.25
+	}
+	
+	pdxparticle = {
+		name = "tfw_phaser_2_small_muzzle_particle"
+		type = "tfw_phaser_2_muzzle_file"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "tfw_phaser_2_medium_muzzle_particle"
+		type = "tfw_phaser_2_muzzle_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "tfw_phaser_2_large_muzzle_particle"
+		type = "tfw_phaser_2_muzzle_file"
+		
+		scale = 1.25
+	}
+	
+	pdxparticle = {
+		name = "tfw_phaser_3_small_muzzle_particle"
+		type = "tfw_phaser_3_muzzle_file"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "tfw_phaser_3_medium_muzzle_particle"
+		type = "tfw_phaser_3_muzzle_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "tfw_phaser_3_large_muzzle_particle"
+		type = "tfw_phaser_3_muzzle_file"
+		
+		scale = 1.25
+	}			
+
+##########HITS
+	pdxparticle = {
+		name = "tfw_phaser_1_small_hit_effect"
+		type = "tfw_phaser_1_hit_effect"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "tfw_phaser_1_medium_hit_effect"
+		type = "tfw_phaser_1_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "tfw_phaser_1_large_hit_effect"
+		type = "tfw_phaser_1_hit_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "tfw_phaser_2_small_hit_effect"
+		type = "tfw_phaser_2_hit_effect"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "tfw_phaser_2_medium_hit_effect"
+		type = "tfw_phaser_2_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "tfw_phaser_2_large_hit_effect"
+		type = "tfw_phaser_2_hit_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "tfw_phaser_3_small_hit_effect"
+		type = "tfw_phaser_3_hit_effect"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "tfw_phaser_3_medium_hit_effect"
+		type = "tfw_phaser_3_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "tfw_phaser_3_large_hit_effect"
+		type = "tfw_phaser_3_hit_effect"
+		
+		scale = 1.5
+	}
+	
+######DON'T LOOSE THE END OF THE FILE } BELOW	
+}

@@ -1,0 +1,36 @@
+@drone_scale = 3.0
+@corvette_scale = 6.0
+@destroyer_scale = 7.0
+@cruiser_scale = 10.0
+@battleship_scale = 12.0
+@Battlecruiser_scale = 13.0
+@LightCarrier_scale = 15.0
+@Carrier_scale = 17.0
+@military_station_large = 20.0
+@Dreadnought_scale = 20.0
+@Superdreadnought_scale = 25.0
+@Flagship_scale = 30.0
+
+
+###################            COMBAT DRONE             ########################
+
+# FRAME
+
+entity = {
+	name = "mammalian_01_CombatDrone_entity"
+	pdxmesh = "mammalian_01_fighter_mesh"
+	
+    scale = 3.0
+	
+	game_data = {
+		size = @drone_scale
+	}
+}
+
+# BOW
+
+entity = {
+	name = "mammalian_01_CombatDrone_main_entity"
+	pdxmesh = "mammalian_01_fighter_mesh"
+	scale = 0.0
+}

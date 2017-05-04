@@ -1,0 +1,86 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ship_part_ewars"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_ewars.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_spaceport_module_customs_office"
+		textureFile = "gfx/interface/icons/modules/spaceport_module_customs_office.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_special_slot_stellar_cartography"
+		textureFile = "gfx/interface/icons/ship_parts/special_stellar_cartography.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_special_slot_multiphasic_sensors"
+		textureFile = "gfx/interface/icons/ship_parts/special_multiphasic_sensors.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_special_slot_damage_control"
+		textureFile = "gfx/interface/icons/ship_parts/special_damage_control.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_special_slot_ready_room"
+		textureFile = "gfx/interface/icons/ship_parts/special_ready_room.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_special_slot_crew_lounge"
+		textureFile = "gfx/interface/icons/ship_parts/special_crew_lounge.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_special_slot_fire_control"
+		textureFile = "gfx/interface/icons/ship_parts/special_fire_control.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_special_slot_structural_integrity"
+		textureFile = "gfx/interface/icons/ship_parts/special_structural_integrity.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_special_slot_auxiliary_shields"
+		textureFile = "gfx/interface/icons/ship_parts/special_auxiliary_shields.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_special_slot_quantum_thrusters"
+		textureFile = "gfx/interface/icons/ship_parts/special_quantum_thrusters.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_special_slot_deflector_array"
+		textureFile = "gfx/interface/icons/ship_parts/special_deflector_array.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_special_slot_navigational_array"
+		textureFile = "gfx/interface/icons/ship_parts/special_navigational_array.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_special_slot_kitchen_sink"
+		textureFile = "gfx/interface/icons/ship_parts/special_kitchen_sink.dds"
+		noOfFrames = 1
+	}
+}

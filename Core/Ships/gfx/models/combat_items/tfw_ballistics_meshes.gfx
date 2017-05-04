@@ -1,0 +1,45 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "gauss_mortar_tracer_round_mesh"
+		file = "gfx/models/combat_items/tracer_round.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			texture_diffuse = "tracer_round_mortar.dds"
+			shader = "PdxMeshAlphaAdditive"
+		}	
+	}
+	pdxmesh = {
+		name = "gauss_howitz_tracer_round_mesh"
+		file = "gfx/models/combat_items/tracer_round.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			texture_diffuse = "tracer_round_howitz.dds"
+			shader = "PdxMeshAlphaAdditive"
+		}	
+	}	
+	
+	pdxmesh = {
+		name = "peacekeeper_mesh"
+		file = "gfx/models/combat_items/peacekeeper.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			texture_diffuse = "peacekeeper_diffuse.dds"
+			shader = "PdxMeshAlphaAdditive"
+		}	
+	}
+	
+	pdxmesh = {
+		name = "tfw_kinetic_hammer_tracer_round_mesh"
+		file = "gfx/models/combat_items/adv_kinetic_artillery_tracer_round.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			texture_diffuse = "tfw_kinetic_hammer_diffuse.dds"
+			shader = "PdxMeshAlphaAdditive"
+		}	
+	}
+}

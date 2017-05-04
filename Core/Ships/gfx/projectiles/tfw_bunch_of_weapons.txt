@@ -1,0 +1,1788 @@
+#############PHASE SPEAR########################
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "darkmatter_emitter_medium"
+	color = { 0.64 		0.0		0.0 	1.0 }
+	hit_entity = "darkmatter_emitter_medium_hit_entity"							#linked with \gfx\models\combat_items\added_combat_items_entities.asset
+	shield_hit_entity = "darkmatter_emitter_medium_shield_hit_entity"
+	muzzle_flash_entity = "darkmatter_emitter_medium_muzzle_entity"
+	
+	#beam specific data
+	width = 9
+	texture_scroll_speed = 5.0
+	stretch_to_fit = no
+	texture_tiling = 2.0	
+	hit = {
+		alpha_curve = { 
+			0.0  	0.0	
+			0.25 	15.0 
+			0.5 	10.0 
+			0.55	0.0
+			1.0  	0.0
+		}
+		duration = 2.0
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  	0.0	
+			0.25 	12.0 
+			0.5 	1.0 
+			0.55	0.0
+			1.0  	0.0
+		}
+		duration = 1.0
+
+	}
+	texture = "gfx/models/combat_items/darkmatter_diffuse.dds"
+	
+	shield_impact = {
+		size = medium
+		loop_duration = 2.0
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "darkmatter_emitter_large"
+	color = { 0.79 		0.0		0.09 	1.0 }
+	hit_entity = "darkmatter_emitter_large_hit_entity"
+	shield_hit_entity = "darkmatter_emitter_large_shield_hit_entity"
+	muzzle_flash_entity = "darkmatter_emitter_large_muzzle_entity"
+	
+	#beam specific data
+	width = 14
+	texture_scroll_speed = 1.0
+	stretch_to_fit = no
+	texture_tiling = 2.0	
+	hit = {
+		alpha_curve = { 
+			0.0  	0.0	
+			0.25 	18.0 
+			0.5 	10.0 
+			0.55	0.0
+			1.0  	0.0
+		}
+		duration = 2.0
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  	0.0	
+			0.25 	12.0 
+			0.5 	2.0 
+			0.55	0.0
+			1.0  	0.0
+		}
+		duration = 1.0
+
+	}
+	texture = "gfx/models/combat_items/darkmatter_diffuse.dds"
+	
+	shield_impact = {
+		size = medium
+		loop_duration = 2.0
+		delay = 0.1
+	}
+}
+
+##############ENERGY_TORPEDOES_III###############################
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "darkmatter_torpedoes"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "darkmatter_torpedoes_hit_entity"
+	shield_hit_entity = "darkmatter_torpedoes_shield_hit_entity"
+	muzzle_flash_entity = "darkmatter_torpedoes_muzzle_entity"
+	
+	#ballistic specific
+	entity = "darkmatter_torpedoes_entity"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+##############KINETIC_ARTILLERY_III###############################
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "kinetic_artillery_3"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "kinetic_artillery_3_hit_entity"
+	shield_hit_entity = "kinetic_artillery_3_shield_hit_entity"
+	muzzle_flash_entity = "kinetic_artillery_3_muzzle_entity"
+	
+	#ballistic specific
+	entity = "kinetic_artillery_3_entity"
+	speed = 350.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+		
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+#############LASERSTORM########################
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "laserstorm_small"
+	color = { 0.0 		0.49		0.5 	0.8 }
+	hit_entity = "laserstorm_hit_entity"									#linked with \gfx\models\combat_items\added_combat_items_entities.asset
+	shield_hit_entity = "laserstorm_shield_hit_entity"
+	muzzle_flash_entity = "laserstorm_muzzle_file"
+	
+	#beam specific data
+	width = 8
+	texture_scroll_speed = 10.0
+	stretch_to_fit = yes
+	texture_tiling = 3.0	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0	
+			0.1  10.0 
+			0.25 10.0 
+			0.5  8.0		
+			1.0  0.0
+		}
+		duration = 1.6
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0	
+			0.1  10.0 
+			0.25 10.0 
+			0.5  8.0		
+			1.0  0.0
+		}
+		duration = 1.5
+
+	}
+	texture = "gfx/models/combat_items/laserstorm_small_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 2.0
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "laserstorm_medium"
+	color = { 0.0 		0.49		0.5 	0.8 }
+	hit_entity = "laserstorm_hit_entity"									#linked with \gfx\models\combat_items\added_combat_items_entities.asset
+	shield_hit_entity = "laserstorm_shield_hit_entity"
+	muzzle_flash_entity = "laserstorm_muzzle_file"
+	
+	#beam specific data
+	width = 8
+	texture_scroll_speed = 10.0
+	stretch_to_fit = yes
+	texture_tiling = 3.0	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0	
+			0.1  10.0 
+			0.25 10.0 
+			0.5  8.0		
+			1.0  0.0
+		}
+		duration = 1.6
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0	
+			0.1  10.0 
+			0.25 10.0 
+			0.5  8.0		
+			1.0  0.0
+		}
+		duration = 1.5
+
+	}
+	texture = "gfx/models/combat_items/laserstorm_diffuse.dds"
+	
+	shield_impact = {
+		size = medium
+		loop_duration = 2.0
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "laserstorm_large"
+	color = { 0.0 		0.49		0.5 	0.8 }
+	hit_entity = "laserstorm_hit_entity"									#linked with \gfx\models\combat_items\added_combat_items_entities.asset
+	shield_hit_entity = "laserstorm_shield_hit_entity"
+	muzzle_flash_entity = "laserstorm_muzzle_file"
+	
+	#beam specific data
+	width = 12
+	texture_scroll_speed = 20.0
+	stretch_to_fit = yes
+	texture_tiling = 3.0	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0	
+			0.1  10.0 
+			0.25 10.0 
+			0.5  8.0		
+			1.0  0.0
+		}
+		duration = 1.6
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0	
+			0.1  10.0 
+			0.25 10.0 
+			0.5  8.0		
+			1.0  0.0
+		}
+		duration = 1.5
+
+	}
+	texture = "gfx/models/combat_items/laserstorm_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 2.0
+		delay = 0.1
+	}
+}
+
+#############ADV_LASERSTORM########################
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "adv_laserstorm_small"
+	color = { 1.0 		0.5		0.0 	0.8 }
+	hit_entity = "adv_laserstorm_hit_entity"
+	shield_hit_entity = "adv_laserstorm_shield_hit_entity"
+	muzzle_flash_entity = "adv_laserstorm_muzzle_file"
+	
+	#beam specific data
+	width = 8
+	texture_scroll_speed = 20.0
+	stretch_to_fit = yes
+	texture_tiling = 3.0	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0	
+			0.1  10.0 
+			0.25 10.0 
+			0.5  8.0		
+			1.0  0.0
+		}
+		duration = 1.6
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0	
+			0.1  10.0 
+			0.25 10.0 
+			0.5  8.0		
+			1.0  0.0
+		}
+		duration = 1.5
+
+	}
+	texture = "gfx/models/combat_items/laserstorm_small_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 2.0
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "adv_laserstorm_medium"
+	color = { 1.0 		0.5		0.0 	0.8 }
+	hit_entity = "adv_laserstorm_hit_entity"
+	shield_hit_entity = "adv_laserstorm_shield_hit_entity"
+	muzzle_flash_entity = "adv_laserstorm_muzzle_file"
+	
+	#beam specific data
+	width = 8
+	texture_scroll_speed = 10.0
+	stretch_to_fit = yes
+	texture_tiling = 3.0	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0	
+			0.1  10.0 
+			0.25 10.0 
+			0.5  8.0		
+			1.0  0.0
+		}
+		duration = 1.6
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0	
+			0.1  10.0 
+			0.25 10.0 
+			0.5  8.0		
+			1.0  0.0
+		}
+		duration = 1.5
+
+	}
+	texture = "gfx/models/combat_items/laserstorm_diffuse.dds"
+	
+	shield_impact = {
+		size = medium
+		loop_duration = 2.0
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "adv_laserstorm_large"
+	color = { 1.0 		0.5		0.0 	0.9 }
+	hit_entity = "adv_laserstorm_hit_entity"
+	shield_hit_entity = "adv_laserstorm_shield_hit_entity"
+	muzzle_flash_entity = "adv_laserstorm_muzzle_file"
+	
+	#beam specific data
+	width = 12
+	texture_scroll_speed = 10.0
+	stretch_to_fit = yes
+	texture_tiling = 3.0	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0	
+			0.1  10.0 
+			0.25 10.0 
+			0.5  8.0		
+			1.0  0.0
+		}
+		duration = 1.6
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0	
+			0.1  10.0 
+			0.25 10.0 
+			0.5  8.0		
+			1.0  0.0
+		}
+		duration = 1.5
+
+	}
+	texture = "gfx/models/combat_items/laserstorm_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 2.0
+		delay = 0.1
+	}
+}
+
+#############GAUSS_MORTAR########################
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tfw_gauss_6_small"
+	color = { 1.0 	1.0 	0.13	1.0 }
+	hit_entity = "advanced_railgun_small_hit_entity"
+	shield_hit_entity = "advanced_railgun_small_shield_hit_entity"
+	muzzle_flash_entity = "gauss_mortar_small_muzzle_entity"
+	
+	#ballistic specific
+	entity = "gauss_mortar_tracer_round_small_entity"
+	speed = 600.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tfw_gauss_6_medium"
+	color = { 1.0 	1.0 	0.13	1.0 }
+	hit_entity = "advanced_railgun_medium_hit_entity"
+	shield_hit_entity = "advanced_railgun_medium_shield_hit_entity"
+	muzzle_flash_entity = "gauss_mortar_medium_muzzle_entity"
+	
+	#ballistic specific
+	entity = "gauss_mortar_tracer_round_medium_entity"
+	speed = 600.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tfw_gauss_6_large"
+	color = { 1.0 	1.0 	0.13	1.0 }
+	hit_entity = "advanced_railgun_large_hit_entity"
+	shield_hit_entity = "advanced_railgun_large_shield_hit_entity"
+	muzzle_flash_entity = "gauss_mortar_large_muzzle_entity"
+	
+	#ballistic specific
+	entity = "gauss_mortar_tracer_round_large_entity"
+	speed = 600.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+#############GAUSS_HOWITZER########################
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tfw_gauss_7_small"
+	color = { 1.0 	0.5 	0.5	1.0 }
+	hit_entity = "advanced_railgun_small_hit_entity"
+	shield_hit_entity = "advanced_railgun_small_shield_hit_entity"
+	muzzle_flash_entity = "gauss_howitzer_small_muzzle_entity"
+	
+	#ballistic specific
+	entity = "gauss_howitzer_tracer_round_small_entity"
+	speed = 650.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tfw_gauss_7_medium"
+	color = { 1.0 	0.5	   0.5	1.0 }
+	hit_entity = "advanced_railgun_medium_hit_entity"
+	shield_hit_entity = "advanced_railgun_medium_shield_hit_entity"
+	muzzle_flash_entity = "gauss_howitzer_medium_muzzle_entity"
+	
+	#ballistic specific
+	entity = "gauss_howitzer_tracer_round_medium_entity"
+	speed = 650.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tfw_gauss_7_large"
+	color = { 1.0 	0.5 	0.5	1.0 }
+	hit_entity = "advanced_railgun_large_hit_entity"
+	shield_hit_entity = "advanced_railgun_large_shield_hit_entity"
+	muzzle_flash_entity = "gauss_howitzer_large_muzzle_entity"
+	
+	#ballistic specific
+	entity = "gauss_howitzer_tracer_round_large_entity"
+	speed = 650.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+# ##################
+# MISSILES
+# ##################
+
+#A-S
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "small_missile_tfw_as"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "tfw_missile_small_hit_entity_as"
+	shield_hit_entity = "tfw_missile_small_shield_hit_entity_as"
+	muzzle_flash_entity = "missile_small_muzzle_flash_entity"
+	
+	#missile specific data
+	entity = "as_missile_small_entity"
+	
+	shield_impact = {
+		size = small
+		delay = 0.5
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "medium_missile_tfw_as"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "tfw_missile_medium_hit_entity_as"
+	shield_hit_entity = "tfw_missile_medium_shield_hit_entity_as"
+	muzzle_flash_entity = "missile_medium_muzzle_flash_entity"
+	
+	#missile specific data
+	entity = "as_missile_medium_entity"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.5
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "large_missile_tfw_as"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "tfw_missile_large_hit_entity_as"
+	shield_hit_entity = "tfw_missile_large_shield_hit_entity_as"
+	muzzle_flash_entity = "missile_large_muzzle_flash_entity"
+	
+	#missile specific data
+	entity = "as_missile_large_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.5
+	}
+}
+
+#A-A
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "small_missile_tfw_aa"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "tfw_missile_small_hit_entity_aa"
+	shield_hit_entity = "tfw_missile_small_shield_hit_entity_aa"
+	muzzle_flash_entity = "missile_small_muzzle_flash_entity"
+	
+	#missile specific data
+	entity = "missile_small_entity"
+	
+	shield_impact = {
+		size = small
+		delay = 0.5
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "medium_missile_tfw_aa"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "tfw_missile_medium_hit_entity_aa"
+	shield_hit_entity = "tfw_missile_medium_shield_hit_entity_aa"
+	muzzle_flash_entity = "missile_medium_muzzle_flash_entity"
+	
+	#missile specific data
+	entity = "missile_medium_entity"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.5
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "large_missile_tfw_aa"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "tfw_missile_large_hit_entity_aa"
+	shield_hit_entity = "tfw_missile_large_shield_hit_entity_aa"
+	muzzle_flash_entity = "missile_large_muzzle_flash_entity"
+	
+	#missile specific data
+	entity = "missile_large_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.5
+	}
+}
+
+#PLASMA_TORPEDOES
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "tfw_pt1_small"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "tfw_pt1_hit_entity_small"
+	shield_hit_entity = "missile_small_shield_hit_entity"
+	muzzle_flash_entity = "tfw_pt1_muzzle_flash_entity_small"
+	
+	#missile specific data
+	entity = "tfw_pt1_entity_small"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "tfw_pt1_medium"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "tfw_pt1_hit_entity_medium"
+	shield_hit_entity = "missile_medium_shield_hit_entity"
+	muzzle_flash_entity = "tfw_pt1_muzzle_flash_entity_medium"
+	
+	#missile specific data
+	entity = "tfw_pt1_entity_medium"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "tfw_pt1_large"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "tfw_pt1_hit_entity_large"
+	shield_hit_entity = "missile_large_shield_hit_entity"
+	muzzle_flash_entity = "tfw_pt1_muzzle_flash_entity_large"
+	
+	#missile specific data
+	entity = "tfw_pt1_entity_large"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+#ADV_PLASMA_TORPEDOES
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "tfw_pt2_small"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "tfw_pt2_hit_entity_small"
+	shield_hit_entity = "missile_small_shield_hit_entity"
+	muzzle_flash_entity = "tfw_pt2_muzzle_flash_entity_small"
+	
+	#missile specific data
+	entity = "tfw_pt2_entity_small"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "tfw_pt2_medium"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "tfw_pt2_hit_entity_medium"
+	shield_hit_entity = "missile_medium_shield_hit_entity"
+	muzzle_flash_entity = "tfw_pt2_muzzle_flash_entity_medium"
+	
+	#missile specific data
+	entity = "tfw_pt2_entity_medium"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "tfw_pt2_large"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "tfw_pt2_hit_entity_large"
+	shield_hit_entity = "missile_large_shield_hit_entity"
+	muzzle_flash_entity = "tfw_pt2_muzzle_flash_entity_large"
+	
+	#missile specific data
+	entity = "tfw_pt2_entity_large"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+#######SWARMER
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "tfw_swarmer_missiles_03"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "swarmer_missiles_03_hit_entity"
+	shield_hit_entity = "swarmer_missiles_03_shield_hit_entity"
+	muzzle_flash_entity = "swarmer_missiles_muzzle_flash_entity"
+	
+	#missile specific data
+	entity = "swarmer_missiles_03_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+#####STRIKE CRAFT
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "fighter_4_weapon"
+	color = { 1.0 		0.45		0.15 	0.2 }
+	hit_entity = "gamma_laser_small_hit_entity"
+	shield_hit_entity = "gamma_laser_small_shield_hit_entity"
+	muzzle_flash_entity = "gamma_laser_small_muzzle_entity"
+	
+	#beam specific data
+	width = 0.3
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.8
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.5
+
+	}
+	texture = "gfx/models/combat_items/fighter_4_weapon.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "bomber_4_weapon"
+	color = { 1.0 		0.45		0.15 	0.2 }
+	hit_entity = "gamma_laser_small_hit_entity"
+	shield_hit_entity = "gamma_laser_small_shield_hit_entity"
+	muzzle_flash_entity = "gamma_laser_small_muzzle_entity"
+	
+	#beam specific data
+	width = 0.3
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.8
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.5
+
+	}
+	texture = "gfx/models/combat_items/bomber_4_weapon.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "fighter_4_drone_weapon"
+	color = { 0.4 		1.0		0.4 	0.2 }
+	hit_entity = "xray_laser_small_hit_entity"
+	shield_hit_entity = "xray_laser_small_shield_hit_entity"
+	muzzle_flash_entity = "xray_laser_small_muzzle_entity"
+	
+	#beam specific data
+	width = 0.3
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.8
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.5
+	}
+	texture = "gfx/models/combat_items/fighter_4_weapon.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "bomber_4_drone_weapon"
+	color = { 0.4 		1.0		0.4 	0.2 }
+	hit_entity = "xray_laser_small_hit_entity"
+	shield_hit_entity = "xray_laser_small_shield_hit_entity"
+	muzzle_flash_entity = "xray_laser_small_muzzle_entity"
+	
+	#beam specific data
+	width = 0.3
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.8
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.5
+	}
+	texture = "gfx/models/combat_items/bomber_4_weapon.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "fighter_4_psi_weapon"
+	color = { 0.6 		0.3 	1.0 	0.2 }
+	hit_entity = "uv_laser_small_hit_entity"
+	shield_hit_entity = "uv_laser_small_shield_hit_entity"
+	muzzle_flash_entity = "uv_laser_small_muzzle_entity"
+	
+	#beam specific data
+	width = 0.3
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.8
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.5
+	}
+	texture = "gfx/models/combat_items/fighter_4_weapon.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "bomber_4_psi_weapon"
+	color = { 0.6 		0.3 	1.0 	0.2 }
+	hit_entity = "uv_laser_small_hit_entity"
+	shield_hit_entity = "uv_laser_small_shield_hit_entity"
+	muzzle_flash_entity = "uv_laser_small_muzzle_entity"
+	
+	#beam specific data
+	width = 0.3
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.8
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.5
+	}
+	texture = "gfx/models/combat_items/bomber_4_weapon.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+########BIOCANNON
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tfw_biocannon_small"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "biocannon_small_hit_entity"
+	shield_hit_entity = "biocannon_small_shield_hit_entity"
+	muzzle_flash_entity = "biocannon_small_muzzle_flash_entity"
+	
+	#ballistic specific
+	entity = "biocannon_small_entity"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tfw_biocannon_medium"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "biocannon_medium_hit_entity"
+	shield_hit_entity = "biocannon_medium_shield_hit_entity"
+	muzzle_flash_entity = "biocannon_medium_muzzle_flash_entity"
+	
+	#ballistic specific
+	entity = "biocannon_medium_entity"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tfw_biocannon_large"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "biocannon_large_hit_entity"
+	shield_hit_entity = "biocannon_large_shield_hit_entity"
+	muzzle_flash_entity = "biocannon_large_muzzle_flash_entity"
+	
+	#ballistic specific
+	entity = "biocannon_large_entity"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+########PSICANNON
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tfw_psicannon_small"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "psicannon_small_hit_entity"
+	shield_hit_entity = "psicannon_small_shield_hit_entity"
+	muzzle_flash_entity = "psicannon_small_muzzle_flash_entity"
+	
+	#ballistic specific
+	entity = "psicannon_small_entity"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tfw_psicannon_medium"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "psicannon_medium_hit_entity"
+	shield_hit_entity = "psicannon_medium_shield_hit_entity"
+	muzzle_flash_entity = "psicannon_medium_muzzle_flash_entity"
+	
+	#ballistic specific
+	entity = "psicannon_medium_entity"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tfw_psicannon_large"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "psicannon_large_hit_entity"
+	shield_hit_entity = "psicannon_large_shield_hit_entity"
+	muzzle_flash_entity = "psicannon_large_muzzle_flash_entity"
+	
+	#ballistic specific
+	entity = "psicannon_large_entity"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+########GRAVICANNON
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tfw_gravicannon_small"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "gravicannon_small_hit_entity"
+	shield_hit_entity = "gravicannon_small_shield_hit_entity"
+	muzzle_flash_entity = "gravicannon_small_muzzle_flash_entity"
+	
+	#ballistic specific
+	entity = "gravicannon_small_entity"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tfw_gravicannon_medium"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "gravicannon_medium_hit_entity"
+	shield_hit_entity = "gravicannon_medium_shield_hit_entity"
+	muzzle_flash_entity = "gravicannon_medium_muzzle_flash_entity"
+	
+	#ballistic specific
+	entity = "gravicannon_medium_entity"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tfw_gravicannon_large"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "gravicannon_large_hit_entity"
+	shield_hit_entity = "gravicannon_large_shield_hit_entity"
+	muzzle_flash_entity = "gravicannon_large_muzzle_flash_entity"
+	
+	#ballistic specific
+	entity = "gravicannon_large_entity"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+############################NEXT TIER####################################################
+########INFECTOR
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "tfw_infector_medium"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "infector_medium_hit_entity"
+	shield_hit_entity = "infector_medium_shield_hit_entity"
+	muzzle_flash_entity = "infector_medium_muzzle_entity"
+	
+	#missile specific data
+	entity = "infector_medium_entity"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "tfw_infector_large"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "infector_large_hit_entity"
+	shield_hit_entity = "infector_large_shield_hit_entity"
+	muzzle_flash_entity = "infector_large_muzzle_entity"
+	
+	#missile specific data
+	entity = "infector_large_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+########PSILANCE
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "tfw_psilance_large"
+	color = { 0.54	0.17	0.89	1.0 }
+	hit_entity = "psilance_hit_entity"
+	shield_hit_entity = "psilance_shield_hit_entity"
+	muzzle_flash_entity = "psilance_muzzle_entity"
+	
+	#beam specific data
+	width = 1.8
+	texture_scroll_speed = 4.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.2		2.0
+			0.4		15.0
+			0.6		2.0
+			0.8		30.0
+			0.9		2.0			
+			1.0 	0.0
+		}
+		duration = 3.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	5.0
+			0.1		20.0
+			0.4		1.0
+			0.6		1.0
+			1.0 	0.0
+		}
+		duration = 3.5
+	}
+	texture = "gfx/models/combat_items/psilance_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 4.0
+		delay = 0.0
+	}
+}
+
+########GRAVILANCE
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "tfw_gravilance_large"
+	color = { 1.0	0.70	0.05		1.0 }
+	hit_entity = "gravilance_hit_entity"
+	shield_hit_entity = "gravilance_shield_hit_entity"
+	muzzle_flash_entity = "gravilance_muzzle_entity"
+	
+	#beam specific data
+	width = 1.7
+	texture_scroll_speed = 3.5
+	texture_tiling = 2.0
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	3.0
+			0.1		7.0
+			0.4		20.0
+			0.6		1.0
+			1.0 	0.0
+		}
+		duration = 3.5
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	3.0
+			0.1		7.0
+			0.4		15.0
+			0.6		1.0
+			1.0 	0.0
+		}
+		duration = 3.5
+	}
+	texture = "gfx/models/combat_items/gravilance_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 4.0
+		delay = 0.0
+	}
+}
+
+########PEACEKEEPER
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tfw_peacekeeper_small"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "tfw_peacekeeper_hit_entity"
+	muzzle_flash_entity = "tfw_peacekeeper_muzzle_entity"
+	
+	#ballistic specific
+	entity = "tfw_peacekeeper_entity"
+	speed = 150.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+########KAMIKAZE
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "tfw_kamikaze_medium"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "tfw_kamikaze_medium_hit_entity"
+	shield_hit_entity = "tfw_kamikaze_medium_shield_hit_entity"
+	muzzle_flash_entity = "tfw_kamikaze_medium_muzzle_entity"
+	
+	#missile specific data
+	entity = "tfw_kamikaze_medium_entity"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "tfw_kamikaze_large"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "tfw_kamikaze_large_hit_entity"
+	shield_hit_entity = "tfw_kamikaze_large_shield_hit_entity"
+	muzzle_flash_entity = "tfw_kamikaze_large_muzzle_entity"
+	
+	#missile specific data
+	entity = "tfw_kamikaze_large_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+########PHASER_1
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "tfw_phaser_1_small"
+	color = { 0.46	1.0	0.44	0.4 }
+	hit_entity = "tfw_phaser_1_small_hit_entity"
+	shield_hit_entity = "tfw_phaser_1_small_shield_hit_entity"
+	muzzle_flash_entity = "tfw_phaser_1_small_muzzle_entity"
+	windup_entity = "tfw_phaser_1_windup_entity"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 10.0
+	stretch_to_fit = yes
+	texture_tiling = 15
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.1
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.1
+	}
+	texture = "gfx/models/combat_items/tfw_phaser_1_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.0
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "tfw_phaser_1_medium"
+	color = { 0.46	1.0	0.44	0.4 }
+	hit_entity = "tfw_phaser_1_medium_hit_entity"
+	shield_hit_entity = "tfw_phaser_1_medium_shield_hit_entity"
+	muzzle_flash_entity = "tfw_phaser_1_medium_muzzle_entity"
+	windup_entity = "tfw_phaser_1_windup_entity"
+	
+	#beam specific data
+	width = 0.75
+	texture_scroll_speed = 10.0
+	stretch_to_fit = yes
+	texture_tiling = 15
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.1
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.1
+	}
+	texture = "gfx/models/combat_items/tfw_phaser_1_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.0
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "tfw_phaser_1_large"
+	color = { 0.46	1.0	0.44	0.4 }
+	hit_entity = "tfw_phaser_1_large_hit_entity"
+	shield_hit_entity = "tfw_phaser_1_large_shield_hit_entity"
+	muzzle_flash_entity = "tfw_phaser_1_large_muzzle_entity"
+	windup_entity = "tfw_phaser_1_windup_entity"
+	
+	#beam specific data
+	width = 1.0
+	texture_scroll_speed = 10.0
+	stretch_to_fit = yes
+	texture_tiling = 15
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.1
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.1
+	}
+	texture = "gfx/models/combat_items/tfw_phaser_1_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.0
+		delay = 0.0
+	}
+}
+
+########PHASER_2
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "tfw_phaser_2_small"
+	color = { 0.94	0.88	0.19		0.4 }
+	hit_entity = "tfw_phaser_2_small_hit_entity"
+	shield_hit_entity = "tfw_phaser_2_small_shield_hit_entity"
+	muzzle_flash_entity = "tfw_phaser_2_small_muzzle_entity"
+	windup_entity = "tfw_phaser_2_windup_entity"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 10.0
+	stretch_to_fit = no
+	texture_tiling = 15
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.1
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.1
+	}
+	texture = "gfx/models/combat_items/tfw_phaser_1_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.0
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "tfw_phaser_2_medium"
+	color = { 0.94	0.88	0.19	0.4 }
+	hit_entity = "tfw_phaser_2_medium_hit_entity"
+	shield_hit_entity = "tfw_phaser_2_medium_shield_hit_entity"
+	muzzle_flash_entity = "tfw_phaser_2_medium_muzzle_entity"
+	windup_entity = "tfw_phaser_2_windup_entity"
+	
+	#beam specific data
+	width = 0.75
+	texture_scroll_speed = 10.0
+	stretch_to_fit = no
+	texture_tiling = 15
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.1
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.1
+	}
+	texture = "gfx/models/combat_items/tfw_phaser_1_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.0
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "tfw_phaser_2_large"
+	color = { 0.94	0.88	0.19		0.4 }
+	hit_entity = "tfw_phaser_2_large_hit_entity"
+	shield_hit_entity = "tfw_phaser_2_large_shield_hit_entity"
+	muzzle_flash_entity = "tfw_phaser_2_large_muzzle_entity"
+	windup_entity = "tfw_phaser_2_windup_entity"
+	
+	#beam specific data
+	width = 1.0
+	texture_scroll_speed = 10.0
+	stretch_to_fit = no
+	texture_tiling = 15
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.1
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.1
+	}
+	texture = "gfx/models/combat_items/tfw_phaser_1_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.0
+		delay = 0.0
+	}
+}
+
+########PHASER_3
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "tfw_phaser_3_small"
+	color = { 0.36	0.57	0.9		0.4 }
+	hit_entity = "tfw_phaser_3_small_hit_entity"
+	shield_hit_entity = "tfw_phaser_3_small_shield_hit_entity"
+	muzzle_flash_entity = "tfw_phaser_3_small_muzzle_entity"
+	windup_entity = "tfw_phaser_3_windup_entity"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 10.0
+	stretch_to_fit = no
+	texture_tiling = 15
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.1
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.1
+	}
+	texture = "gfx/models/combat_items/tfw_phaser_1_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.0
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "tfw_phaser_3_medium"
+	color = { 0.36	0.57	0.9		0.4 }
+	hit_entity = "tfw_phaser_3_medium_hit_entity"
+	shield_hit_entity = "tfw_phaser_3_medium_shield_hit_entity"
+	muzzle_flash_entity = "tfw_phaser_3_medium_muzzle_entity"
+	windup_entity = "tfw_phaser_3_windup_entity"
+	
+	#beam specific data
+	width = 0.75
+	texture_scroll_speed = 10.0
+	stretch_to_fit = no
+	texture_tiling = 15
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.0
+	}
+	texture = "gfx/models/combat_items/tfw_phaser_1_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.0
+		delay = 0.0
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "tfw_phaser_3_large"
+	color = { 0.36	0.57	0.9		0.4 }
+	hit_entity = "tfw_phaser_3_large_hit_entity"
+	shield_hit_entity = "tfw_phaser_3_large_shield_hit_entity"
+	muzzle_flash_entity = "tfw_phaser_3_large_muzzle_entity"
+	windup_entity = "tfw_phaser_3_windup_entity"
+	
+	#beam specific data
+	width = 1.0
+	texture_scroll_speed = 10.0
+	stretch_to_fit = no
+	texture_tiling = 15
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.6		8.0
+			0.9		0.0
+			1.0 	0.0
+		}
+		duration = 1.0
+	}
+	texture = "gfx/models/combat_items/tfw_phaser_1_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.0
+		delay = 0.0
+	}
+}
+###############CONV_TORPEDOES########################################
+#4
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "large_tfw_torpedo_04"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "tfw_torpedo_04_large_hit_entity"
+	shield_hit_entity = "missile_large_shield_hit_entity"
+	muzzle_flash_entity = "torpedo_large_muzzle_entity"
+	
+	#torpedo specific data
+	entity = "torpedo_03_large_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+#5
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "large_tfw_torpedo_05"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "tfw_torpedo_05_large_hit_entity"
+	shield_hit_entity = "missile_large_shield_hit_entity"
+	muzzle_flash_entity = "torpedo_large_muzzle_entity"
+	
+	#torpedo specific data
+	entity = "torpedo_03_large_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+#######################KINETIC_HAMMER#################################
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "tfw_kinetic_hammer"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "tfw_kinetic_hammer_hit_entity"
+	shield_hit_entity = "tfw_kinetic_hammer_shield_hit_entity"
+	muzzle_flash_entity = "tfw_kinetic_hammer_muzzle_entity"
+	#windup_entity = "tfw_kinetic_hammer_windup_entity"
+	
+	#ballistic specific
+	entity = "tfw_kinetic_hammer_entity"
+	speed = 500.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}

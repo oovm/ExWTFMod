@@ -1,0 +1,16 @@
+objectTypes = {
+	pdxmesh = {
+		name = "plantoid_01_MiningBase_mesh"
+		file = "gfx/models/ships/plantoid_01/plantoid_01_MiningBase.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "|energy_station|energy_station"
+			index = 0
+			texture_diffuse = "plantoid_01_MiningBase_diffuse.dds"
+			texture_normal = "plantoid_01_MiningBase_normal.dds"
+			texture_specular = "plantoid_01_MiningBase_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

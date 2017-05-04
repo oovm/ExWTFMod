@@ -1,0 +1,15 @@
+objectTypes = {
+	pdxmesh = {
+		name = "fungoid_01_headquarters_frame_mesh"
+		file = "gfx/models/ships/fungoid_01/fungoid_01_headquarters_frame.mesh"
+
+		meshsettings = {
+			name = "|mammalian_01_headquarters|mammalian_01_headquarters"
+			index = 0
+			texture_diffuse = "fungoid_01_headquarters_diffuse.dds"
+			texture_normal = "fungoid_01_headquarters_normal.dds"
+			texture_specular = "fungoid_01_headquarters_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

@@ -1,9 +1,0 @@
-# Triggers when the game starts
-on_game_start = {
-	events = {
-		mrevil_multiplanet.1
-		mrevil_multiplanet.2
-		mrevil_multiplanet.3
-		mrevil_multiplanet.4
-	}
-}

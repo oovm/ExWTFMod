@@ -1,0 +1,262 @@
+@attack_range = 8
+@launch_time = 1.5
+@fighter_speed = 3.5
+@bomber_speed = 3
+@count = 8
+@regen = 0.13
+
+#STANDART_IV
+strike_craft_component_template = {
+	key = "TFW_FIGHTER_4"
+	size = LARGE
+	entity = "fighter_entity"
+	
+	weapon_type = point_defence
+	projectile_gfx = "fighter_4_weapon"
+	power = -60
+	cost = 60
+	
+	count = @count
+	regeneration_per_day = 0.13
+	launch_time = @launch_time
+	
+	damage = { min = 6 max = 10 }
+	cooldown = 2.5
+	range = 10
+	accuracy = 1.0
+	
+	health = 11
+	armor = 2
+	shield = 0
+	tracking = 0.40
+	
+	speed = 3.6
+	rotation_speed = 0.1
+	acceleration = 0.6
+	evasion = 0.50
+	
+	shield_damage = 1.0
+	shield_penetration = 0
+	armor_penetration = 0
+	
+	ship_behavior = "fighters_behavior"
+	
+	icon = "GFX_tfw_fighter_4"
+	icon_frame = 1
+	component_set = "TFW_FIGHTER_4"
+	prerequisites = { "tfw_strike_craft_4" }
+	tags = { weapon_type_strike_craft }
+}
+
+#####S_C_DRONE
+strike_craft_component_template = {
+	key = "TFW_DRONE_FIGHTER"
+	size = LARGE
+	entity = "fighter_entity"
+	
+	weapon_type = point_defence
+	projectile_gfx = "fighter_4_drone_weapon"
+	power = -70
+	cost = 70
+	
+	count = @count
+	regeneration_per_day = 0.15
+	launch_time = @launch_time
+	
+	damage = { min = 6 max = 10 }
+	cooldown = 2.5
+	range = 10
+	accuracy = 1.0
+	tracking = 0.40
+	
+	health = 11
+	armor = 3
+	shield = 0
+	evasion = 0.50
+	
+	speed = 3.3
+	rotation_speed = 0.1
+	acceleration = 0.6
+	
+	shield_damage = 1.0
+	shield_penetration = 0
+	armor_penetration = 0
+	
+	ship_behavior = "fighters_behavior"
+	
+	icon = "GFX_tfw_drone_fighter"
+	icon_frame = 1
+	component_set = "TFW_DRONE_FIGHTER"
+	prerequisites = { "tfw_strike_drone" }
+	tags = { weapon_type_strike_craft }
+}
+
+######S_C_PSI
+strike_craft_component_template = {
+	key = "TFW_PSI_FIGHTER"
+	size = LARGE
+	entity = "fighter_entity"
+	
+	weapon_type = point_defence
+	projectile_gfx = "fighter_4_psi_weapon"
+	power = -40
+	cost = 40
+	
+	count = @count
+	regeneration_per_day = 0.10
+	launch_time = @launch_time
+	
+	damage = { min = 6 max = 10 }
+	cooldown = 2.5
+	range = 10
+	accuracy = 1.0
+	tracking = 0.40
+	
+	health = 11
+	armor = 1
+	shield = 0
+	evasion = 0.50
+	
+	speed = 3.5
+	rotation_speed = 0.1
+	acceleration = 0.6
+	
+	shield_damage = 1.0
+	shield_penetration = 0
+	armor_penetration = 0
+	
+	ship_behavior = "fighters_behavior"
+	
+	icon = "GFX_tfw_psi_fighter"
+	icon_frame = 1
+	component_set = "TFW_PSI_FIGHTER"
+	prerequisites = { "tfw_psi_strike_craft" }
+	tags = { weapon_type_strike_craft }
+}
+
+####################BOMBERS#####################
+#STANDART_IV
+strike_craft_component_template = {
+	key = "TFW_BOMBER_4"
+	size = LARGE
+	entity = "bomber_entity"
+	power = -60
+	cost = 60
+		
+	count = @count
+	regeneration_per_day = 0.13
+	launch_time = @launch_time
+	
+	damage = { min = 30 max = 44 }
+	cooldown = 10
+	range = 10
+	accuracy = 1.0
+	
+	health = 12
+	armor = 2
+	shield = 0
+	evasion = 0.40
+	
+	speed = 3.3
+	rotation_speed = 0.1
+	acceleration = 0.6
+	
+	shield_damage = 1.0
+	shield_penetration = 1
+	armor_penetration = 0.5
+	
+	ship_behavior = "bombers_behavior"
+	
+	weapon_type = instant
+	projectile_gfx = "bomber_4_weapon"
+	
+	icon = "GFX_tfw_bomber_4"
+	icon_frame = 1
+	component_set = "TFW_BOMBER_4"
+	prerequisites = { "tfw_strike_craft_4" }
+	tags = { weapon_type_strike_craft }
+}
+
+#####S_C_DRONE
+strike_craft_component_template = {
+	key = "TFW_DRONE_BOMBER"
+	size = LARGE
+	entity = "bomber_entity"
+	power = -70
+	cost = 70
+		
+	count = @count
+	regeneration_per_day = 0.15
+	launch_time = @launch_time
+	
+	damage = { min = 30 max = 44 }
+	cooldown = 10
+	range = 10
+	accuracy = 1.0
+	
+	health = 12
+	armor = 4
+	shield = 0
+	evasion = 0.4
+	
+	speed = 3.0
+	rotation_speed = 0.1
+	acceleration = 0.5
+	
+	shield_damage = 1.0
+	shield_penetration = 1
+	armor_penetration = 0.5
+	
+	ship_behavior = "bombers_behavior"
+	
+	weapon_type = instant
+	projectile_gfx = "bomber_4_drone_weapon"
+	
+	icon = "GFX_tfw_drone_bomber"
+	icon_frame = 1
+	component_set = "TFW_DRONE_BOMBER"
+	prerequisites = { "tfw_strike_drone" }
+	tags = { weapon_type_strike_craft }
+}
+
+######S_C_PSI
+strike_craft_component_template = {
+	key = "TFW_PSI_BOMBER"
+	size = LARGE
+	entity = "bomber_entity"
+	power = -40
+	cost = 40
+		
+	count = @count
+	regeneration_per_day = 0.10
+	launch_time = @launch_time
+	
+	damage = { min = 30 max = 44 }
+	cooldown = 10
+	range = 10
+	accuracy = 1.0
+	
+	health = 12
+	armor = 1
+	shield = 0
+	evasion = 0.40
+	
+	speed = 3.2
+	rotation_speed = 0.1
+	acceleration = 0.5
+	
+	shield_damage = 1.0
+	shield_penetration = 1
+	armor_penetration = 0.5
+	
+	ship_behavior = "bombers_behavior"
+	
+	weapon_type = instant
+	projectile_gfx = "bomber_4_psi_weapon"
+	
+	icon = "GFX_tfw_psi_bomber"
+	icon_frame = 1
+	component_set = "TFW_PSI_BOMBER"
+	prerequisites = { "tfw_psi_strike_craft" }
+	tags = { weapon_type_strike_craft }
+}

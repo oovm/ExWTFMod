@@ -1,0 +1,34 @@
+ship_section_template = {
+	key = "COMBATDRONE_SECTION"
+	ship_size = CombatDrone
+	fits_on_slot = mid
+	entity = "mammalian_01_CombatDrone_main_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_03"
+	}
+	
+	small_utility_slots = 4
+	medium_utility_slots = 3
+	aux_utility_slots = 1
+	
+	cost = 0
+}

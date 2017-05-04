@@ -1,0 +1,179 @@
+###WEAPONS###
+
+component_set = {
+	key = "TFW_PHASER_1"  #localisation and link to component_templates
+	icon = "GFX_tfw_phaser_1"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_PHASER_2"  #localisation and link to component_templates
+	icon = "GFX_tfw_phaser_2"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_PHASER_3"  #localisation and link to component_templates
+	icon = "GFX_tfw_phaser_3"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_DARKMATTER_EMITTER"  #localisation and link to component_templates
+	icon = "GFX_darkmatter_emitter"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_LASERSTORM"  #localisation and link to component_templates
+	icon = "GFX_laserstorm"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_ADV_LASERSTORM"  #localisation and link to component_templates
+	icon = "GFX_adv_laserstorm"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_KINETIC_ARTILLERY_3"  #localisation and link to component_templates
+	icon = "GFX_kinetic_artillery_3"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_GAUSS_MORTAR"  #localisation and link to component_templates
+	icon = "GFX_tfw_gauss_6"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_GAUSS_HOWITZER"  #localisation and link to component_templates
+	icon = "GFX_tfw_gauss_7"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_AS_MISSILE_1"  #localisation and link to component_templates
+	icon = "GFX_tfw_missile_as_1"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_AS_MISSILE_2"  #localisation and link to component_templates
+	icon = "GFX_tfw_missile_as_2"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_AA_MISSILE_1"  #localisation and link to component_templates
+	icon = "GFX_tfw_missile_aa_1"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_AA_MISSILE_2"  #localisation and link to component_templates
+	icon = "GFX_tfw_missile_aa_2"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_TORPEDO_4"  #localisation and link to component_templates
+	icon = "GFX_tfw_torpedo_4"    #linked to icon with */interface
+	icon_frame = 1	
+}
+component_set = {
+	key = "TFW_TORPEDO_5"  #localisation and link to component_templates
+	icon = "GFX_tfw_torpedo_5"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_ENERGY_TORPEDO_3"  #localisation and link to component_templates
+	icon = "GFX_energy_torpedo_3"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_P_T1"  #localisation and link to component_templates
+	icon = "GFX_tfw_pt1"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_P_T2"  #localisation and link to component_templates
+	icon = "GFX_tfw_pt2"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_SWARMER_MISSILE_3"  #localisation and link to component_templates
+	icon = "GFX_tfw_swarmer_missile_3"    #linked to icon with */interface
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_BIOCANNON" 
+	icon = "GFX_biocannon"   
+	icon_frame = 1	
+}
+component_set = {
+	key = "TFW_PSICANNON"  
+	icon = "GFX_psicannon" 
+	icon_frame = 1	
+}
+component_set = {
+	key = "TFW_GRAVICANNON" 
+	icon = "GFX_gravicannon" 
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_INFECTOR" 
+	icon = "GFX_infector" 
+	icon_frame = 1	
+}
+component_set = {
+	key = "TFW_PSILANCE"
+	icon = "GFX_psilance"   
+	icon_frame = 1	
+}
+component_set = {
+	key = "TFW_GRAVILANCE" 
+	icon = "GFX_gravilance"  
+	icon_frame = 1	
+}
+component_set = {
+	key = "TFW_KINETIC_HAMMER" 
+	icon = "GFX_tfw_kinetic_hammer"  
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_KAMIKAZE"  
+	icon = "GFX_tfw_kamikaze"  
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "TFW_FLAK_3"  
+	icon = "GFX_tfw_flak_batteries_3"   
+	icon_frame = 1	
+}
+component_set = {
+	key = "TFW_STORMFIRE_PD"  
+	icon = "GFX_tfw_stormfire_pd"   
+	icon_frame = 1	
+}
+component_set = {
+	key = "TFW_PEACEKEEPER"  
+	icon = "GFX_tfw_peacekeeper"    
+	icon_frame = 1	
+}
+component_set = {
+	key = "TFW_JAMMER"
+	
+	icon = "GFX_tfw_jammer"
+	icon_frame = 1	
+}

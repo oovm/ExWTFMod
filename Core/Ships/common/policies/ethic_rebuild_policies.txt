@@ -1,0 +1,3672 @@
+##########################################################################
+# Empire Policies
+# 
+# #####
+#
+# AI:
+# Base AI-weight is 100, if unchanged
+# AI will grab whatever policy-option has the highest weight
+#
+# #####
+# 
+##########################################################################
+
+economy = {
+
+	potential = {
+		always = yes   # only normal Empires should have this policy
+	}
+	
+	
+	option = {
+		name = "mixed_economy"
+		
+		policy_flags = {
+			mixed_economy
+		}
+		
+		modifier = {
+		             tile_resource_energy_mult = 0.02
+					 tile_resource_minerals_mult = 0.02
+					 tile_resource_food_mult = 0.02
+
+		}
+		
+		
+        pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.05
+			  OR = {			  
+			  pop_has_ethic = "ethic_fanatic_capitalism"
+			  pop_has_ethic = "ethic_fanatic_socialism"
+			  }	
+				
+			}					
+	    }
+		
+		
+	}
+	
+	option = {
+		name = "left_economy"
+		
+		valid = {	
+		}		
+		
+		policy_flags = {
+			left_economy
+		}
+		
+		modifier = {
+		             tile_resource_food_mult = 0.03
+					 tile_resource_minerals_mult = 0.03
+					 
+
+		}		
+		
+       pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.15
+			  OR = {			  
+			  pop_has_ethic = "ethic_fanatic_capitalism"
+			  }	
+				
+			}			
+            modifier = {
+				add = -0.05
+			  OR = {			  
+			  pop_has_ethic = "ethic_capitalism"
+			  }	
+				
+			}								
+	    }		
+				
+	
+	}	
+
+	option = {
+		name = "right_economy"
+		
+		valid = {	
+		}		
+		
+		policy_flags = {
+			right_economy
+		}
+		
+		modifier = {
+		
+		             tile_resource_energy_mult = 0.03
+					 tile_resource_minerals_mult = 0.03
+
+		}	
+
+    pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.15			  
+			  pop_has_ethic = "ethic_fanatic_socialism"		
+			}	
+
+          modifier = {
+				add = -0.05		  
+			  pop_has_ethic = "ethic_socialism"
+	
+			}						
+
+			
+	    }				
+				
+	
+	}		
+	
+	option = {
+		name = "capitalism_economy"
+		
+		valid = {
+			OR = {
+				has_ethic = "ethic_capitalism"
+				has_ethic = "ethic_fanatic_capitalism"
+				has_ethic = "ethic_socialism"
+			}		
+		}		
+		
+		policy_flags = {
+			capitalism_economy
+		}
+		
+		modifier = {
+		
+		             tile_resource_energy_mult = 0.08
+					 tile_resource_minerals_mult = 0.05
+
+		}	
+
+        AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+				has_ethic = "ethic_capitalism"
+				has_ethic = "ethic_fanatic_capitalism"
+			    }	
+			           }			
+		}		
+			
+
+  pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.1		  
+			    pop_has_ethic = "ethic_socialism"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_socialism"						
+			}	
+
+			
+	    }			
+	
+	}	
+
+	option = {
+		name = "fan_capitalism_economy"
+		
+		valid = {
+			  
+				has_ethic = "ethic_fanatic_capitalism"
+              }				
+              
+
+		
+		policy_flags = {
+			fan_capitalism_economy
+		}
+		
+		modifier = {
+		
+		             tile_resource_energy_mult = 0.15
+					 tile_resource_minerals_mult = 0.1
+					 pop_growth_req_mult = 0.15
+
+		}	
+
+      AI_weight = {
+			modifier = {
+				factor = 20
+				has_ethic = "ethic_fanatic_capitalism"
+			           }			
+		}	
+
+
+
+ pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_socialism"						
+			}	
+
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_fanatic_socialism"						
+			}	
+
+			
+	    }	
+
+		
+			
+    }
+	
+	
+
+
+	option = {
+		name = "socialism_economy"
+		
+		valid = {
+			OR = {
+				has_ethic = "ethic_socialism"
+				has_ethic = "ethic_fanatic_socialism"
+				has_ethic = "ethic_capitalism"
+			}		
+		}		
+		
+		policy_flags = {
+			socialism_economy
+		}
+		
+		modifier = {
+		
+		             pop_growth_req_mult = -0.15
+
+		}		
+		
+      AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+				has_ethic = "ethic_socialism"
+				has_ethic = "ethic_fanatic_socialism"
+			    }	
+			           }			
+		}		
+		
+
+ pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.1			  
+			    pop_has_ethic = "ethic_capitalism"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_capitalism"						
+			}	
+
+			
+	    }									
+	
+	}			
+
+	option = {
+		name = "fan_socialism_economy"
+		
+		valid = {
+				 
+				has_ethic = "ethic_fanatic_socialism"
+				
+		           }	
+				
+
+		
+		policy_flags = {
+			fan_socialism_economy
+		}
+		
+		modifier = {
+		
+		             pop_growth_req_mult = -0.3
+					 tile_resource_energy_mult = -0.04
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 20
+				has_ethic = "ethic_fanatic_socialism"
+			           }			
+		        }
+
+				
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_capitalism"						
+			}	
+
+			modifier = {
+				add = -0.2		  
+			    pop_has_ethic = "ethic_fanatic_capitalism"						
+			}	
+
+			
+	    }							    
+
+
+		
+              }				
+				
+	option = {
+		name = "free_market_1_economy"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+				}
+			OR = {	
+		        has_ethic = "ethic_capitalism"
+				has_ethic = "ethic_fanatic_capitalism"
+				}
+		}	
+		
+		policy_flags = {
+			free_market_1_economy
+		}
+		
+		modifier = {
+		             tile_resource_energy_mult = 0.18
+					 tile_resource_minerals_mult = 0.14
+					 planet_building_cost_mult = -0.05
+					 spaceport_ship_build_cost_mult = -0.05
+					 all_technology_research_speed = 0.03
+		             pop_growth_req_mult = 0.3
+					 pop_ethic_shift = 0.07 
+					 pop_happiness = -0.03
+					 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 30
+				 OR = {
+		        has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+				 }
+				 OR = {
+		        has_ethic = "ethic_capitalism"
+				has_ethic = "ethic_fanatic_capitalism"
+				      }
+			           }			
+		        }								
+							
+
+ pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.1			  
+			    pop_has_ethic = "ethic_collectivist"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_collectivist"						
+			}	
+
+			
+	    }	
+
+		
+		prerequisites = { tech_free_market }
+		
+	
+	}	
+
+	option = {
+		name = "free_market_2_economy"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+				}
+		        has_ethic = "ethic_fanatic_capitalism"
+		}	
+		
+		policy_flags = {
+			free_market_2_economy
+		}
+		
+		modifier = {
+		             tile_resource_energy_mult = 0.23
+					 tile_resource_minerals_mult = 0.18
+					 planet_building_cost_mult = -0.08
+					 spaceport_ship_build_cost_mult = -0.08
+					 all_technology_research_speed = 0.05
+		             pop_growth_req_mult = 0.5
+					 pop_ethic_shift = 0.1
+					 pop_happiness = -0.05
+				 
+					 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 40
+				 OR = {
+		        has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+				 }
+		        has_ethic = "ethic_fanatic_capitalism"
+			           }			
+		        }								
+
+
+ pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_collectivist"						
+			}	
+
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_fanatic_collectivist"						
+			}	
+
+			
+	    }					
+			
+
+     prerequisites = { tech_free_market }			
+	
+	}						
+	
+	option = {
+		name = "planned_1_economy"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_collectivist"
+				}
+			OR = {	
+		        has_ethic = "ethic_socialism"
+				has_ethic = "ethic_fanatic_socialism"
+				}
+		}	
+		
+		policy_flags = {
+			planned_1_economy
+		}
+		
+		modifier = {
+		             pop_growth_req_mult = -0.35
+					 building_time_mult = -0.15
+		             spaceport_ship_build_time_mult = -0.15
+					 pop_ethic_shift = -0.05
+		             tile_resource_energy_mult = -0.1		 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 30
+		   OR = {
+		        has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_collectivist"
+				}	
+			OR = {	
+		        has_ethic = "ethic_socialism"
+				has_ethic = "ethic_fanatic_socialism"
+				 }
+    
+			           }			
+		        }								
+	
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.1			  
+			    pop_has_ethic = "ethic_individualist"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_individualist"						
+			}	
+
+			
+	    }						
+
+     prerequisites = { tech_planned_economy }		
+	
+	}						
+	
+	option = {
+		name = "planned_2_economy"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_collectivist"
+				}
+			OR = {	
+		        has_ethic = "ethic_fanatic_socialism"
+				}
+		}	
+		
+		policy_flags = {
+			planned_2_economy
+		}
+		
+		modifier = {
+		             pop_growth_req_mult = -0.45
+					 building_time_mult = -0.2
+		             spaceport_ship_build_time_mult = -0.2
+					 pop_ethic_shift = -0.1
+		             tile_resource_energy_mult = -0.15		 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 40
+		   OR = {
+		        has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_collectivist"
+				}	
+		        has_ethic = "ethic_fanatic_socialism"
+
+			           }			
+		        }								
+							
+		
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_individualist"						
+			}	
+
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_fanatic_individualist"						
+			}	
+
+			
+	    }	
+
+     prerequisites = { tech_planned_economy }			
+	
+	}							
+	
+	
+	
+	
+	
+	option = {
+		name = "military_communism"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_collectivist"
+				}
+			OR = {	
+			    has_ethic = "ethic_socialism"
+		        has_ethic = "ethic_fanatic_socialism"
+				}
+				
+			NOT = {	
+			    has_ethic = "ethic_pacifist"
+		        has_ethic = "ethic_fanatic_pacifist"
+				}				
+		}	
+		
+		policy_flags = {
+			military_communism
+		}
+		
+		modifier = {
+		             pop_food_req_mult = -0.2
+                     spaceport_ship_build_cost_mult = -0.15
+		             spaceport_ship_build_time_mult = -0.15
+					 planet_army_build_cost_mult = -0.15
+					 planet_army_build_speed_mult = 0.15
+		             tile_resource_energy_mult = -0.15	
+                     pop_happiness = -0.05					 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 30
+		   OR = {
+		        has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_collectivist"
+				}
+				
+			OR = {	
+			    has_ethic = "ethic_militarist"
+		        has_ethic = "ethic_fanatic_militarist"
+				}	
+						
+
+			           }			
+		        }								
+							
+		
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_individualist"						
+			}	
+
+			modifier = {
+				add = -0.25			  
+			    pop_has_ethic = "ethic_fanatic_individualist"						
+			}	
+
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_capitalism"						
+			}	
+
+			modifier = {
+				add = -0.25			  
+			    pop_has_ethic = "ethic_fanatic_capitalism"						
+			}	
+			
+	    }	
+
+     prerequisites = { tech_military_communism }			
+	
+	}		
+
+
+
+
+
+	option = {
+		name = "capitalism_utopia"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+				}
+			OR = {	
+			    has_ethic = "ethic_capitalism"
+		        has_ethic = "ethic_fanatic_capitalism"
+				}
+				
+			NOT = {	
+			    has_ethic = "ethic_militarist"
+		        has_ethic = "ethic_fanatic_militarist"
+				}				
+		}	
+		
+		policy_flags = {
+			capitalism_utopia
+		}
+		
+		modifier = {
+
+		             tile_resource_energy_mult = 0.12
+					 tile_resource_minerals_mult = 0.15
+					 tile_resource_food_mult = 0.15
+                     pop_peace_happiness = 0.07		
+                     navy_size_mult = -0.1
+					 pop_war_happiness = -0.1
+					 army_morale = -0.1
+					 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 30
+		   OR = {
+		        has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+				}
+			OR = {	
+			    has_ethic = "ethic_capitalism"
+		        has_ethic = "ethic_fanatic_capitalism"
+				}
+
+			           }			
+		        }								
+
+
+    pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_collectivist"						
+			}	
+
+			modifier = {
+				add = -0.25			  
+			    pop_has_ethic = "ethic_fanatic_collectivist"						
+			}	
+
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_socialism"						
+			}	
+
+			modifier = {
+				add = -0.25			  
+			    pop_has_ethic = "ethic_fanatic_socialism"						
+			}	
+			
+	    }	
+		
+     prerequisites = { tech_capitalism_utopia }							
+	
+	}								
+	
+	
+	
+
+	option = {
+		name = "no_property"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+				}
+			OR = {	
+			    has_ethic = "ethic_socialism"
+		        has_ethic = "ethic_fanatic_socialism"
+				}
+							
+		}	
+		
+		policy_flags = {
+			no_property
+		}
+		
+		modifier = {
+		              tile_resource_food_mult = 0.15
+                      tile_resource_minerals_mult = 0.07
+					  pop_happiness = 0.04
+					  pop_environment_tolerance = 0.04					  
+                      country_society_tech_research_speed = 0.15
+					  tile_resource_energy_mult = -0.12
+                      						  
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 30
+		   OR = {
+		        has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+				}
+			OR = {	
+			    has_ethic = "ethic_socialism"
+		        has_ethic = "ethic_fanatic_socialism"
+				}
+
+			           }			
+		        }								
+
+
+    pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.1			  
+			    pop_has_ethic = "ethic_collectivist"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_collectivist"						
+			}	
+
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_capitalism"						
+			}	
+
+			modifier = {
+				add = -0.25			  
+			    pop_has_ethic = "ethic_fanatic_capitalism"						
+			}	
+			
+	    }					
+						
+	
+     prerequisites = { tech_socialistic }	
+	 
+	}									
+	
+	
+	
+	
+	option = {
+		name = "innov_economics"
+		
+		valid = {
+
+			OR = {	
+			    has_ethic = "ethic_capitalism"
+		        has_ethic = "ethic_fanatic_capitalism"
+				}
+				
+			OR = {	
+			    has_ethic = "ethic_materialist"
+		        has_ethic = "ethic_fanatic_materialist"
+				}				
+		}	
+		
+		policy_flags = {
+			innov_economics
+		}
+		
+		modifier = {
+
+		             tile_resource_energy_mult = 0.12
+					 num_tech_alternatives_add = 1
+					 building_time_mult = -0.1
+		             spaceport_ship_build_time_mult = -0.1
+					 pop_robot_production_output = 0.2
+					 tile_resource_food_mult = -0.2
+					 pop_ethic_shift = 0.08
+					 
+
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 30
+
+			OR = {	
+			    has_ethic = "ethic_capitalism"
+		        has_ethic = "ethic_fanatic_capitalism"
+				}
+				
+			OR = {	
+			    has_ethic = "ethic_materialist"
+		        has_ethic = "ethic_fanatic_materialist"
+				}	
+
+			           }			
+		        }								
+							
+				
+
+
+    pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_spiritualist"						
+			}	
+
+			modifier = {
+				add = -0.25			  
+			    pop_has_ethic = "ethic_fanatic_spiritualist"						
+			}	
+
+			
+	    }					
+
+     prerequisites = { tech_innovation_economy }			
+	
+	}									
+	
+
+	
+	
+	
+	option = {
+		name = "universal_welfare"
+		
+		valid = {
+
+			OR = {	
+			    has_ethic = "ethic_socialism"
+		        has_ethic = "ethic_fanatic_socialism"
+				}
+				
+			OR = {	
+			    has_ethic = "ethic_spiritualist"
+		        has_ethic = "ethic_fanatic_spiritualist"
+				}				
+		}	
+		
+		policy_flags = {
+			universal_welfare
+		}
+		
+		modifier = {
+		             pop_happiness = 0.05
+					 pop_growth_req_mult = -0.15
+                     pop_food_req_mult = -0.15
+					 pop_ethic_shift = -0.15					 
+					 pop_environment_tolerance = 0.03
+					 tile_resource_energy_mult = -0.07
+					 tile_resource_minerals_mult = -0.07
+			 
+
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 30
+
+			OR = {	
+			    has_ethic = "ethic_socialism"
+		        has_ethic = "ethic_fanatic_socialism"
+				}
+				
+			OR = {	
+			    has_ethic = "ethic_spiritualist"
+		        has_ethic = "ethic_fanatic_spiritualist"
+				}	
+
+			           }			
+		        }								
+							
+	
+
+   pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_capitalism"						
+			}	
+
+			modifier = {
+				add = -0.25			  
+			    pop_has_ethic = "ethic_fanatic_capitalism"						
+			}	
+
+			
+	    }	
+
+     prerequisites = { tech_universal_welfare }		
+	
+	}			
+
+
+
+	option = {
+		name = "slaver_economy"
+		
+		valid = {
+
+		OR = { 
+		
+         AND = {		
+			OR = {	
+			    has_ethic = "ethic_collectivist"
+		        has_ethic = "ethic_fanatic_collectivist"
+				}
+				
+			OR = {	
+			    has_ethic = "ethic_capitalism"
+		        has_ethic = "ethic_fanatic_capitalism"
+				}	
+				
+			}
+
+            OR = {	
+			    has_government = "xen_aristocracy"
+		        has_government = "adv_xen_aristocracy"
+				} 			
+				
+			}
+        			
+				
+		}	
+		
+		policy_flags = {
+			slaver_economy
+		}
+		
+		modifier = {
+		             tile_resource_energy_mult = 0.08
+					 slave_production_output = 0.25
+                     slave_food_output = 0.25
+					 pop_slavery_tolerance = 0.33
+		             all_technology_research_speed = -0.05				 
+
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 30
+
+			OR = {	
+			    has_ethic = "ethic_collectivist"
+		        has_ethic = "ethic_fanatic_collectivist"
+				}
+				
+			OR = {	
+			    has_ethic = "ethic_capitalism"
+		        has_ethic = "ethic_fanatic_capitalism"
+				}
+
+			           }			
+		        }								
+							
+	
+
+   pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_individualist"						
+			}	
+
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_fanatic_individualist"						
+			}	
+
+			modifier = {
+				add = -0.1		  
+			    pop_has_ethic = "ethic_socialism"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_socialism"						
+			}
+			
+	    }	
+
+     prerequisites = { tech_slaver_economy }			
+	
+	}						
+
+
+}	
+
+
+
+
+
+
+ecology = {
+
+	potential = {
+		always = yes   # only normal Empires should have this policy
+	}
+	
+	
+	option = {
+		name = "none_ecology"
+		
+		policy_flags = {
+			none_ecology
+		}
+		
+		modifier = {
+
+		}
+			
+	}
+	
+	option = {
+		name = "eco_market"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				}
+			OR = {	
+			    has_ethic = "ethic_capitalism"
+		        has_ethic = "ethic_fanatic_capitalism"
+				}
+		}	
+		
+		policy_flags = {
+			eco_market
+		}
+		
+		modifier = {
+
+			 tile_resource_food_mult = 0.2
+			 tile_resource_minerals_mult = -0.1				 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				}
+			OR = {	
+			    has_ethic = "ethic_capitalism"
+		        has_ethic = "ethic_fanatic_capitalism"
+				}
+
+			           }			
+		        }								
+			
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_industrial"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_industrial"						
+			}	
+
+			
+	    }				
+						
+	
+	}	
+
+
+
+	option = {
+		name = "eco_planned"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				}
+			OR = {	
+			    has_ethic = "ethic_socialism"
+		        has_ethic = "ethic_fanatic_socialism"
+				}
+		}	
+		
+		policy_flags = {
+			eco_planned
+		}
+		
+		modifier = {
+
+                     pop_environment_tolerance = 0.04	
+					 building_time_mult = 0.05
+		             spaceport_ship_build_time_mult = 0.05
+					 
+					 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				}
+			OR = {	
+			    has_ethic = "ethic_socialism"
+		        has_ethic = "ethic_fanatic_socialism"
+				}
+
+			           }			
+		        }								
+							
+	
+
+     pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_capitalism"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_capitalism"						
+			}	
+
+			
+	    }					
+	
+	}
+
+
+
+
+	option = {
+		name = "industry_market"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_industrial"
+				has_ethic = "ethic_fanatic_industrial"
+				}
+			OR = {	
+			    has_ethic = "ethic_capitalism"
+		        has_ethic = "ethic_fanatic_capitalism"
+				}
+		}	
+		
+		policy_flags = {
+			industry_market
+		}
+		
+		modifier = {
+
+		             tile_resource_minerals_mult = 0.2
+                     pop_environment_tolerance = -0.04
+					 
+					 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_industrial"
+				has_ethic = "ethic_fanatic_industrial"
+				}
+			OR = {	
+			    has_ethic = "ethic_capitalism"
+		        has_ethic = "ethic_fanatic_capitalism"
+				}
+
+			           }			
+		        }								
+		
+
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_socialism"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_socialism"						
+			}	
+
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_green"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_green"						
+			}	
+
+			
+	    }							
+	
+	}		
+
+
+	option = {
+		name = "industry_planned"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_industrial"
+				has_ethic = "ethic_fanatic_industrial"
+				}
+			OR = {	
+			    has_ethic = "ethic_socialism"
+		        has_ethic = "ethic_fanatic_socialism"
+				}
+		}	
+		
+		policy_flags = {
+			industry_planned
+		}
+		
+		modifier = {
+
+		             building_time_mult = -0.1
+		             spaceport_ship_build_time_mult = -0.1
+		             tile_resource_energy_mult = -0.03
+	
+					 
+					 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_industrial"
+				has_ethic = "ethic_fanatic_industrial"
+				}
+			OR = {	
+			    has_ethic = "ethic_socialism"
+		        has_ethic = "ethic_fanatic_socialism"
+				}
+
+			           }			
+		        }								
+	
+
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_capitalism"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_capitalism"						
+			}	
+
+			
+	    }	
+
+		
+	
+	}				
+	
+	
+	
+}	
+
+
+
+
+
+production_focus = {
+
+	potential = {
+		always = yes   # only normal Empires should have this policy
+	}
+	
+	
+	option = {
+		name = "none_production"
+		
+		policy_flags = {
+			none_production
+		}
+		
+		modifier = {
+
+		}
+			
+	}
+	
+	
+	option = {
+		name = "recycle_focus"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				}
+		}	
+		
+		policy_flags = {
+			recycle_focus
+		}
+		
+		modifier = {
+
+				 pop_environment_tolerance = 0.04
+				 planet_building_cost_mult = -0.1
+                 spaceport_ship_build_cost_mult = -0.1
+				 tile_resource_energy_mult = 0.03
+				 building_time_mult = 0.08
+		         spaceport_ship_build_time_mult = 0.08			 
+					 
+					 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				}
+
+			           }			
+		        }								
+		
+
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_industrial"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_industrial"						
+			}	
+	
+
+			
+	    }	
+
+     prerequisites = { tech_recycle_economy }			
+	
+	}		
+	
+	
+	option = {
+		name = "recycle_focus_adv"
+		
+		valid = {
+				has_ethic = "ethic_fanatic_green"
+
+		}	
+		
+		policy_flags = {
+			recycle_focus_adv
+		}
+		
+		modifier = {
+
+				 pop_environment_tolerance = 0.07
+				 planet_building_cost_mult = -0.15
+                 spaceport_ship_build_cost_mult = -0.15
+				 tile_resource_energy_mult = 0.05
+				 building_time_mult = 0.12
+		         spaceport_ship_build_time_mult = 0.12			 
+					 
+					 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				}
+
+			           }			
+		        }								
+		
+
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_industrial"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_industrial"						
+			}	
+	
+
+			
+	    }	
+
+     prerequisites = { tech_recycle_economy }			
+	
+	}		
+
+	
+	
+	option = {
+		name = "mining_focus"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_industrial"
+				has_ethic = "ethic_fanatic_industrial"
+				}
+		}	
+		
+		policy_flags = {
+			mining_focus
+		}
+		
+		modifier = {
+
+                      tile_resource_minerals_mult = 0.2
+                      building_mining_network_1_build_cost_mult = -0.2			  
+                      category_industry_research_speed_mult = 0.15
+                      category_materials_research_speed_mult = 0.15
+					  pop_environment_tolerance = -0.05
+					  tile_resource_food_mult = -0.2
+		             
+	
+					 
+					 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_industrial"
+				has_ethic = "ethic_fanatic_industrial"
+				}
+
+			           }			
+		        }								
+	
+
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_green"						
+			}	
+
+			modifier = {
+				add = -0.2		  
+			    pop_has_ethic = "ethic_fanatic_green"						
+			}	
+
+			
+	    }	
+
+     prerequisites = { tech_mining_economy }			
+	
+	}			
+	
+
+	option = {
+		name = "mining_focus_adv"
+		
+		valid = {
+				has_ethic = "ethic_fanatic_industrial"
+		}	
+		
+		policy_flags = {
+			mining_focus_adv
+		}
+		
+		modifier = {
+
+                      tile_resource_minerals_mult = 0.25
+                      building_mining_network_1_build_cost_mult = -0.25				  
+                      category_industry_research_speed_mult = 0.25
+                      category_materials_research_speed_mult = 0.25
+					  pop_environment_tolerance = -0.1
+					  tile_resource_food_mult = -0.25
+		             
+	
+					 
+					 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_industrial"
+				has_ethic = "ethic_fanatic_industrial"
+				}
+
+			           }			
+		        }								
+	
+
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_green"						
+			}	
+
+			modifier = {
+				add = -0.2		  
+			    pop_has_ethic = "ethic_fanatic_green"						
+			}	
+
+			
+	    }	
+
+     prerequisites = { tech_mining_economy }			
+	
+	}		
+
+
+
+	option = {
+		name = "agri_focus"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				}
+			NOT = {	
+			    has_ethic = "ethic_militarist"
+		        has_ethic = "ethic_fanatic_militarist"
+				}
+		}	
+		
+		policy_flags = {
+			agri_focus
+		}
+		
+		modifier = {
+
+			          tile_resource_food_mult = 0.25
+			          building_hydroponics_farm_1_build_cost_mult = -0.25                                         
+					  pop_environment_tolerance = 0.03
+					  pop_peace_happiness = 0.03
+					  category_biology_research_speed_mult = 0.33
+					  tile_resource_minerals_mult = -0.08
+					  building_mining_network_1_build_cost_mult = 0.15
+					  
+			 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				}
+
+			           }			
+		        }								
+			
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_industrial"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_industrial"						
+			}	
+
+			
+	    }				
+						
+     prerequisites = { tech_spirit_agri }	
+	 
+	}	
+
+
+
+	
+	
+	option = {
+		name = "agri_focus_adv"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				}
+			OR = {	
+			    has_ethic = "ethic_pacifist"
+		        has_ethic = "ethic_fanatic_pacifist"
+				}
+		}	
+		
+		policy_flags = {
+			agri_focus_adv
+		}
+		
+		modifier = {
+
+			          tile_resource_food_mult = 0.33
+			          building_hydroponics_farm_1_build_cost_mult = -0.33                                         
+					  pop_environment_tolerance = 0.05
+					  pop_peace_happiness = 0.05
+					  category_biology_research_speed_mult = 0.5
+					  tile_resource_minerals_mult = -0.12
+					  building_mining_network_1_build_cost_mult = 0.2
+					  
+			 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				}
+			OR = {	
+			    has_ethic = "ethic_pacifist"
+		        has_ethic = "ethic_fanatic_pacifist"
+				}
+
+			           }			
+		        }								
+			
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_industrial"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_industrial"						
+			}	
+
+			
+	    }	
+		
+	     prerequisites = { tech_spirit_agri }						
+	
+	}	
+
+	
+	
+	
+	option = {
+		name = "milind_focus"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_industrial"
+				has_ethic = "ethic_fanatic_industrial"
+				}
+			NOT = {	
+			    has_ethic = "ethic_pacifist"
+		        has_ethic = "ethic_fanatic_pacifist"
+				}
+		}	
+		
+		policy_flags = {
+			milind_focus
+		}
+		
+		modifier = {
+
+	                  spaceport_ship_build_time_mult = -0.07
+                      spaceport_ship_build_cost_mult = -0.1
+		              shipclass_military_station_build_cost_mult = -0.1
+					  ship_reparation_cost_mult = -0.2
+					  ship_reparation_speed_mult = 0.2
+					  country_ship_upgrade_cost_mult = -0.2
+					  category_rocketry_research_speed_mult = 0.15
+                      category_materials_research_speed_mult = 0.15
+					  pop_environment_tolerance = -0.1
+					  country_trust_growth = -0.25
+					 
+					 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_industrial"
+				has_ethic = "ethic_fanatic_industrial"
+				}
+
+			           }			
+		        }								
+							
+	
+
+     pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_pacifist"						
+			}	
+
+			modifier = {
+				add = -0.20			  
+			    pop_has_ethic = "ethic_fanatic_pacifist"						
+			}	
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_green"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_green"						
+			}	
+			
+	    }					
+	
+     prerequisites = { tech_milind_economy }	
+	 
+	}
+	
+
+
+	option = {
+		name = "milind_focus_adv"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_industrial"
+				has_ethic = "ethic_fanatic_industrial"
+				}
+			OR = {	
+			    has_ethic = "ethic_militarist"
+		        has_ethic = "ethic_fanatic_militarist"
+				}
+		}	
+		
+		policy_flags = {
+			milind_focus_adv
+		}
+		
+		modifier = {
+
+	                  spaceport_ship_build_time_mult = -0.1
+                      spaceport_ship_build_cost_mult = -0.15
+		              shipclass_military_station_build_cost_mult = -0.15
+					  ship_reparation_cost_mult = -0.25
+					  ship_reparation_speed_mult = 0.25
+					  country_ship_upgrade_cost_mult = -0.25
+					  category_rocketry_research_speed_mult = 0.2
+                      category_materials_research_speed_mult = 0.2
+					  pop_environment_tolerance = -0.15
+					  country_trust_growth = -0.33
+					 
+					 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_industrial"
+				has_ethic = "ethic_fanatic_industrial"
+				}
+			OR = {	
+			    has_ethic = "ethic_militarist"
+		        has_ethic = "ethic_fanatic_militarist"
+				}
+
+			           }			
+		        }								
+							
+	
+
+     pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_pacifist"						
+			}	
+
+			modifier = {
+				add = -0.20			  
+			    pop_has_ethic = "ethic_fanatic_pacifist"						
+			}	
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_green"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_green"						
+			}	
+			
+	    }	
+
+     prerequisites = { tech_milind_economy }		
+	
+	}
+
+
+
+	
+	
+	
+	
+	
+	
+	option = {
+		name = "energy_focus"
+		
+		valid = {
+		}	
+		
+		policy_flags = {
+			energy_focus
+		}
+		
+		modifier = {
+
+	                  tile_resource_energy_mult = 0.15
+					  max_energy = 1500
+		              building_power_plant_1_build_cost_mult = -0.25
+					  tile_resource_food_mult = -0.1
+					  tile_resource_minerals_mult = -0.1
+					 
+					 
+
+		}	
+
+    AI_weight = {		
+		        }								
+							
+	
+
+     pop_happiness = {
+			base = 0
+			
+	    }					
+	
+     prerequisites = { tech_energy_economy }	
+	 
+	}	
+
+
+
+	
+	
+	option = {
+		name = "energy_focus_green"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				}
+		}	
+		
+		policy_flags = {
+			energy_focus_green
+		}
+		
+		modifier = {
+
+	                  tile_resource_energy_mult = 0.1
+					  pop_happiness = 0.03	
+                      pop_environment_tolerance = 0.03					  
+					  max_energy = 3000
+		              building_power_plant_1_build_cost_mult = -0.25
+					  tile_resource_minerals_mult = -0.15
+					  building_time_mult = 0.1
+		              spaceport_ship_build_time_mult = 0.1		
+					  
+
+					 
+					 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				}
+
+			           }			
+		        }								
+							
+	
+
+     pop_happiness = {
+			base = 0
+
+			modifier = {
+				add = -0.05			  
+			    pop_has_ethic = "ethic_industrial"						
+			}	
+
+			modifier = {
+				add = -0.1		  
+			    pop_has_ethic = "ethic_fanatic_industrial"						
+			}	
+			
+	    }	
+
+     prerequisites = { tech_energy_economy }		
+	
+	}	
+	
+	
+	
+	
+option = {
+		name = "energy_focus_green_adv"
+		
+		valid = {
+				has_ethic = "ethic_fanatic_green"
+		}	
+		
+		policy_flags = {
+			energy_focus_green_adv
+		}
+		
+		modifier = {
+
+	                  tile_resource_energy_mult = 0.15
+					  pop_happiness = 0.05	
+                      pop_environment_tolerance = 0.05					  
+					  max_energy = 4000
+		              building_power_plant_1_build_cost_mult = -0.25
+					  tile_resource_minerals_mult = -0.2
+					  building_time_mult = 0.15
+		              spaceport_ship_build_time_mult = 0.15	
+
+					 
+					 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+				has_ethic = "ethic_fanatic_green"
+
+			           }			
+		        }								
+							
+	
+
+     pop_happiness = {
+			base = 0
+
+			modifier = {
+				add = -0.1			  
+			    pop_has_ethic = "ethic_industrial"						
+			}	
+
+			modifier = {
+				add = -0.15		  
+			    pop_has_ethic = "ethic_fanatic_industrial"						
+			}	
+			
+	    }	
+
+     prerequisites = { tech_energy_economy }		
+	
+	}		
+	
+	
+	
+
+option = {
+		name = "energy_focus_fossil"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_industrial"
+				has_ethic = "ethic_fanatic_industrial"
+				}
+		}	
+		
+		policy_flags = {
+			energy_focus_fossil
+		}
+		
+		modifier = {
+
+	                  tile_resource_energy_mult = 0.2		
+                      building_time_mult = -0.1
+		              spaceport_ship_build_time_mult = -0.1						  
+					  max_energy = 1500
+		              building_power_plant_1_build_cost_mult = -0.25
+					  pop_environment_tolerance = -0.1					  
+					  tile_resource_food_mult = -0.2
+					 
+					 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_industrial"
+				has_ethic = "ethic_fanatic_industrial"
+				}
+
+			           }			
+		        }								
+							
+	
+
+     pop_happiness = {
+			base = 0
+
+			modifier = {
+				add = -0.05			  
+			    pop_has_ethic = "ethic_green"						
+			}	
+
+			modifier = {
+				add = -0.1		  
+			    pop_has_ethic = "ethic_fanatic_green"						
+			}	
+			
+	    }	
+
+     prerequisites = { tech_energy_economy }		
+	
+	}		
+	
+	
+	
+	
+	
+option = {
+		name = "energy_focus_fossil_adv"
+		
+		valid = {
+				has_ethic = "ethic_fanatic_industrial"
+		}	
+		
+		policy_flags = {
+			energy_focus_fossil_adv
+		}
+		
+		modifier = {
+
+	                  tile_resource_energy_mult = 0.25		
+                      building_time_mult = -0.15
+		              spaceport_ship_build_time_mult = -0.15						  
+					  max_energy = 2000
+		              building_power_plant_1_build_cost_mult = -0.25
+					  pop_environment_tolerance = -0.15				  
+					  tile_resource_food_mult = -0.3
+					 
+					 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+
+				has_ethic = "ethic_fanatic_industrial"
+
+			           }			
+		        }								
+							
+	
+
+     pop_happiness = {
+			base = 0
+
+			modifier = {
+				add = -0.1			  
+			    pop_has_ethic = "ethic_green"						
+			}	
+
+			modifier = {
+				add = -0.15		  
+			    pop_has_ethic = "ethic_fanatic_green"						
+			}	
+			
+	    }	
+
+     prerequisites = { tech_energy_economy }		
+	
+	}			
+	
+	
+	
+	
+}	
+
+
+
+
+
+bureaucracy = {
+
+	potential = {
+		always = yes   # only normal Empires should have this policy
+	}
+	
+	
+	option = {
+		name = "none_bureaucracy"
+		
+		policy_flags = {
+			none_bureaucracy
+		}
+		
+		modifier = {
+
+		}
+			
+	}
+	
+	option = {
+		name = "empire_bureaucracy"
+		
+		valid = {
+		   OR = {
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_collectivist"
+				}
+
+		}	
+		
+		policy_flags = {
+			empire_bureaucracy
+		}
+		
+		modifier = {
+ 
+             influence_gain_mult = 0.2
+			 edict_length_mult = 0.25
+			 country_leader_cap = 3
+			 country_sector_cap_add = 3				
+			 tile_resource_energy_mult = -0.12
+			 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_collectivist"
+				}
+
+			           }			
+		        }								
+							
+		
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_individualist"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_individualist"						
+			}	
+
+			
+	    }			
+	
+	}	
+
+
+
+option = {
+		name = "eff_bureaucracy"
+		
+		
+		valid = {
+		
+		   OR = {
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+				}
+
+		}	
+		
+		policy_flags = {
+			eff_bureaucracy
+		}
+		
+		modifier = {
+		
+             country_core_sector_system_cap = 1
+			 all_technology_research_speed = 0.08
+			 pop_migration_speed = 0.33
+			 influence_gain_mult = -0.2
+
+
+	 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+				}
+
+			           }			
+		        }								
+							
+
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_collectivist"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_collectivist"						
+			}	
+
+			
+	    }	
+
+		
+	
+	}	
+
+
+	
+	
+	
+}	
+
+
+
+
+
+
+
+ideology = {
+
+	potential = {
+		always = yes   # only normal Empires should have this policy
+	}
+	
+	
+	option = {
+		name = "none_ideology"
+		
+		policy_flags = {
+			none_ideology
+		}
+		
+		modifier = {
+
+		}
+			
+	}
+	
+	option = {
+		name = "scientific_pragmatism"
+		
+		valid = {
+		   OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+				}
+
+		}	
+		
+		policy_flags = {
+			scientific_pragmatism
+		}
+		
+		modifier = {
+
+			 all_technology_research_speed = 0.08
+			 science_ship_survey_speed = 0.15
+		     building_basic_science_lab_1_build_cost_mult = -0.25 
+             shipsize_research_station_build_cost_mult = -0.25	
+			 pop_happiness = -0.07
+			 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 20
+		   OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+				}
+
+			           }			
+		        }								
+							
+		
+
+   pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_spiritualist"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_spiritualist"						
+			}	
+
+			
+	    }			
+	
+	}	
+
+	
+	
+	option = {
+		name = "scientific_liberal"
+		
+		valid = {
+		   OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+				has_ethic = "ethic_education"
+				}
+				
+		   OR = {
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+				
+				}	
+
+            NOR = {			
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"					
+			      }				
+
+		}	
+		
+		policy_flags = {
+			scientific_liberal
+		}
+		
+		modifier = {
+ 
+             pop_happiness = 0.05
+			 all_technology_research_speed = 0.15
+			 num_tech_alternatives_add = 1
+			 pop_ethic_shift = 0.15
+	
+			 
+			 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+				}
+		   OR = {
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+				}					
+
+			           }			
+		        }								
+							
+		
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_spiritualist"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_spiritualist"						
+			}	
+
+			
+	    }			
+	
+	}		
+
+
+option = {
+		name = "fundamentalism"
+		
+		
+		valid = {
+		
+		   OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				}
+
+		}	
+		
+		policy_flags = {
+			fundamentalism
+		}
+		
+		modifier = {
+		
+             pop_ethic_shift = -0.10
+			 pop_food_req_mult = -0.2
+			 army_morale = 0.2
+			 category_psionics_research_speed_mult = 1
+			 all_technology_research_speed = -0.07
+
+
+	 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 20
+		   OR = {
+
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				}
+
+			           }			
+		        }								
+							
+
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_materialist"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_materialist"						
+			}	
+
+			
+	    }	
+
+		
+	
+	}	
+
+	
+	
+option = {
+		name = "divine_right"
+		
+		
+		valid = {
+		
+		   OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				}
+				
+		   OR = {
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_collectivist"
+				}				
+
+		}	
+		
+		policy_flags = {
+			divine_right
+		}
+		
+		modifier = {
+		
+             pop_ethic_shift = -0.25
+			 influence_gain_mult = 0.33			 
+			 edict_length_mult = 0.33
+			 all_technology_research_speed = -0.15
+
+
+	 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+				
+		   OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				}
+				
+		   OR = {
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_collectivist"
+				}					
+
+			           }			
+		        }								
+							
+
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_materialist"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_materialist"						
+			}	
+
+			
+	    }	
+
+		
+	
+	}		
+
+	
+	option = {
+		name = "nationalism"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_elitist"
+				has_ethic = "ethic_fanatic_elitist"
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_collectivist"
+				}
+			OR = {	
+			    has_ethic = "ethic_xenophobe"
+		        has_ethic = "ethic_fanatic_xenophobe"
+				}
+		}	
+		
+		policy_flags = {
+			nationalism
+		}
+		
+		modifier = {
+
+			 pop_ethic_shift = -0.15
+			 rivalry_influence_gain = 0.5
+             army_defense_morale_mult = 0.5
+             army_defense_damage_mult = 0.5	
+             pop_xenophobia = 0.15	
+             diplomacy_influence_cost = 0.5
+             planet_migration_xeno_pull = -0.33				 
+	 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 15
+		   OR = {
+		        has_ethic = "ethic_elitist"
+				has_ethic = "ethic_fanatic_elitist"
+				has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_collectivist"
+				}
+			OR = {	
+			    has_ethic = "ethic_xenophobe"
+		        has_ethic = "ethic_fanatic_xenophobe"
+				}
+
+			           }			
+		        }								
+							
+		
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_xenophile"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_xenophile"						
+			}	
+
+			
+	    }			
+	
+	}	
+
+
+
+option = {
+		name = "multiculti"
+		
+	potential = {
+	
+		has_policy_flag = leadership_allow_xeno
+
+	}	
+		
+		valid = {
+		
+		   OR = {
+		        has_ethic = "ethic_pluralist"
+				has_ethic = "ethic_fanatic_pluralist"
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+				}
+			OR = {	
+			    has_ethic = "ethic_xenophile"
+		        has_ethic = "ethic_fanatic_xenophile"
+				}
+		}	
+		
+		policy_flags = {
+			multiculti
+		}
+		
+		modifier = {
+		
+             pop_xenophobia = -0.15	
+			 planet_migration_xeno_pull = 0.33
+			 country_leader_pool_size = 1
+			 country_trust_growth = 0.25
+			 all_technology_research_speed = 0.04	
+			 pop_happiness = 0.04
+			 pop_ethic_shift = 0.1
+
+
+	 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 15
+		   OR = {
+		        has_ethic = "ethic_pluralist"
+				has_ethic = "ethic_fanatic_pluralist"
+				has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+				}
+			OR = {	
+			    has_ethic = "ethic_xenophile"
+		        has_ethic = "ethic_fanatic_xenophile"
+				}
+
+			           }			
+		        }								
+							
+
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.10			  
+			    pop_has_ethic = "ethic_xenophobe"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_xenophobe"						
+			}	
+
+			
+	    }	
+
+		
+	
+	}		
+	
+	
+	
+}	
+
+
+
+
+
+
+
+foreign_policy = {
+
+	potential = {
+		always = yes   # only normal Empires should have this policy
+	}
+	
+	
+	option = {
+		name = "none_foreign"
+		
+		policy_flags = {
+			none_foreign
+		}
+		
+		modifier = {
+
+		}
+			
+	}
+	
+	option = {
+		name = "for_aggressive"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+				}
+			OR = {	
+			    has_ethic = "ethic_xenophobe"
+		        has_ethic = "ethic_fanatic_xenophobe"
+				}
+		}	
+		
+		policy_flags = {
+			for_aggressive
+		}
+		
+		modifier = {
+
+	         max_rivalries = 2
+			 pop_war_happiness = 0.1
+			 navy_size_mult = 0.2
+             army_attack_morale_mult = 0.2
+             army_attack_damage_mult = 0.2	
+             pop_xenophobia = 0.25	
+			 pop_peace_happiness = -0.1
+			 country_trust_growth = -1 
+			 planet_migration_xeno_pull = -0.5
+		 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+				}
+			OR = {	
+			    has_ethic = "ethic_xenophobe"
+		        has_ethic = "ethic_fanatic_xenophobe"
+				}
+
+			           }			
+		        }								
+			
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_xenophile"						
+			}	
+
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_fanatic_xenophile"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_pacifist"						
+			}	
+
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_fanatic_pacifist"						
+			}	
+			
+			
+	    }			
+						
+	
+	}	
+
+
+
+option = {
+		name = "for_peaceful"
+		
+		valid = {
+		
+		   OR = {
+		        has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+				}
+			OR = {	
+			    has_ethic = "ethic_xenophile"
+		        has_ethic = "ethic_fanatic_xenophile"
+				}
+		}	
+		
+		policy_flags = {
+			for_peaceful
+		}
+		
+		modifier = {
+		
+             pop_xenophobia = -0.33	
+			 country_trust_growth = 0.33
+             diplomacy_influence_cost = -0.15
+			 country_trade_attractiveness = 0.2
+             pop_peace_happiness = 0.15
+             pop_war_happiness = -0.05
+             rivalry_influence_gain = -0.33
+             navy_size_mult = -0.15			 
+
+
+
+	 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+				}
+			OR = {	
+			    has_ethic = "ethic_xenophile"
+		        has_ethic = "ethic_fanatic_xenophile"
+				}
+
+			           }			
+		        }								
+			
+
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_xenophobe"						
+			}	
+
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_fanatic_xenophobe"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_militarist"						
+			}	
+
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_fanatic_militarist"						
+			}	
+			
+			
+	    }						
+						
+	
+	}	
+
+	
+	
+	option = {
+		name = "for_isolatia"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+				}
+			OR = {	
+			    has_ethic = "ethic_isolationist"
+		        has_ethic = "ethic_fanatic_isolationist"
+				}
+		}	
+		
+		policy_flags = {
+			for_isolatia
+		}
+		
+		modifier = {
+
+		       shipclass_military_station_build_cost_mult = -0.25
+		       shipsize_military_station_small_upkeep_mult = -0.2
+		       shipsize_military_station_medium_upkeep_mult = -0.2
+		       shipsize_military_station_large_upkeep_mult = -0.2
+			   planet_fortification_strength = 0.25
+			   garrison_health = 0.50
+			   shipsize_outpost_station_build_cost_mult = 0.25
+			   diplomacy_influence_cost = 0.3
+		 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+				}
+			OR = {	
+			    has_ethic = "ethic_isolationist"
+		        has_ethic = "ethic_fanatic_isolationist"
+				}
+
+			           }			
+		        }								
+							
+						
+	
+	}		
+	
+	
+	
+	
+	
+	
+	option = {
+		name = "for_expansia"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+				}
+			OR = {	
+			    has_ethic = "ethic_expansionist"
+		        has_ethic = "ethic_fanatic_expansionist"
+				}
+		}	
+		
+		policy_flags = {
+			for_expansia
+		}
+		
+		modifier = {
+
+			   shipsize_outpost_station_build_cost_mult = -0.2
+			   shipsize_colonizer_construction_speed_mult = 0.2
+		       shipsize_colonizer_build_cost_mult = -0.2
+		       planet_colony_development_speed_mult = 0.2
+			   colony_influence_cost = -0.2
+			   country_trade_attractiveness = 0.33
+		       category_new_worlds_research_speed_mult = 0.33
+			   shipclass_military_station_build_cost_mult = 0.25
+		       shipsize_military_station_small_upkeep_mult = 0.25
+		       shipsize_military_station_medium_upkeep_mult = 0.25
+		       shipsize_military_station_large_upkeep_mult = 0.25
+			   navy_size_mult = -0.15
+
+
+
+		 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+				}
+			OR = {	
+			    has_ethic = "ethic_expansionist"
+		        has_ethic = "ethic_fanatic_expansionist"
+				}
+
+			           }			
+		        }								
+							
+						
+	
+	}			
+	
+
+	
+	
+	
+}	
+
+
+
+
+
+
+social_values = {
+
+	potential = {
+		always = yes   # only normal Empires should have this policy
+	}
+	
+	
+	option = {
+		name = "none_social"
+		
+		policy_flags = {
+			none_social
+		}
+		
+		modifier = {
+
+		}
+			
+	}
+	
+	option = {
+		name = "elite_rule"
+		
+		valid = {
+		   OR = {
+		        has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_collectivist"
+				}
+			OR = {	
+			    has_ethic = "ethic_elitist"
+		        has_ethic = "ethic_fanatic_elitist"
+				}
+		}	
+		
+		policy_flags = {
+			elite_rule
+		}
+		
+		modifier = {
+
+				pop_ethic_shift = -0.15
+				edict_influence_cost = -0.25
+				faction_surpression_cost = -0.25
+				country_resettlement_cost_mult = -0.25
+				pop_happiness = -0.07
+				country_leader_pool_size = -1
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_collectivist"
+				has_ethic = "ethic_fanatic_collectivist"
+				}
+			OR = {	
+			    has_ethic = "ethic_elitist"
+		        has_ethic = "ethic_fanatic_elitist"
+				}
+
+			           }			
+		        }								
+		
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_individualist"						
+			}	
+
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_fanatic_individualist"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_pluralist"						
+			}	
+
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_fanatic_pluralist"						
+			}	
+			
+			
+	    }								
+						
+	
+	}	
+
+
+
+option = {
+		name = "people_rule"
+		
+		valid = {
+		
+		   OR = {
+		        has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+				
+				}
+			OR = {	
+			    has_ethic = "ethic_pluralist"
+		        has_ethic = "ethic_fanatic_pluralist"
+				}
+		}	
+		
+		policy_flags = {
+			people_rule
+		}
+		
+		modifier = {
+		      
+			 pop_happiness = 0.05 
+			 country_core_sector_system_cap = 1			 
+			 leader_influence_cost = -0.15
+			 species_leader_exp_gain = 0.25
+			 country_leader_pool_size = 1
+			 pop_ethic_shift = 0.05
+			 influence_gain_mult = -0.15
+			 
+
+
+
+	 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+		        has_ethic = "ethic_individualist"
+				has_ethic = "ethic_fanatic_individualist"
+				}
+			OR = {	
+			    has_ethic = "ethic_pluralist"
+		        has_ethic = "ethic_fanatic_pluralist"
+				}
+
+			           }			
+		        }								
+							
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_collectivist"						
+			}	
+
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_fanatic_collectivist"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_elitist"						
+			}	
+
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_fanatic_elitist"						
+			}	
+			
+			
+	    }								
+
+		
+	
+	}	
+
+
+	
+	
+	
+}	
+
+
+
+
+
+
+
+
+doctrine = {
+
+	potential = {
+		always = yes   # only normal Empires should have this policy
+	}
+	
+	
+	option = {
+		name = "none_doctrine"
+		
+		policy_flags = {
+			none_doctrine
+		}
+		
+		modifier = {
+
+		}
+			
+	}
+	
+	option = {
+		name = "spiritual_harmony"
+		
+		valid = {
+		   OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				}
+				
+		   OR = {
+				has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				}				
+
+		}	
+		
+		policy_flags = {
+			spiritual_harmony
+		}
+		
+		modifier = {
+
+			 pop_happiness = 0.05
+			 pop_food_req_mult = -0.12
+			 species_leader_exp_gain = 0.25
+			 leader_age = 33
+			 tile_resource_minerals_mult = -0.1
+             country_engineering_tech_research_speed = -0.15
+			 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				}
+				
+		   OR = {
+				has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				}
+
+			           }			
+		        }								
+							
+		
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_industrial"						
+			}	
+
+			modifier = {
+				add = -0.2			  
+			    pop_has_ethic = "ethic_fanatic_industrial"						
+			}	
+
+			
+	    }			
+	
+	}	
+
+
+
+option = {
+		name = "faith_def"
+		
+		
+		valid = {
+		
+		   OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				}
+				
+		   OR = {
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+				}				
+
+		}	
+		
+		policy_flags = {
+			faith_def
+		}
+		
+		modifier = {
+		
+             pop_ethic_shift = -0.07
+			 pop_war_happiness = 0.07
+			 army_morale = 0.25
+			 army_health = 0.25
+			 army_damage_mult = 0.25
+			 army_morale_damage_mult = 0.25			 
+			 all_technology_research_speed = -0.05
+			 pop_peace_happiness = -0.1
+
+
+	 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+				}
+				
+		   OR = {
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+				}					
+
+			           }			
+		        }								
+							
+
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.1			  
+			    pop_has_ethic = "ethic_materialist"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_materialist"						
+			}	
+			
+			modifier = {
+				add = -0.1			  
+			    pop_has_ethic = "ethic_pacifist"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_pacifist"						
+			}				
+
+			
+	    }	
+
+		
+	
+	}	
+
+	
+	
+	
+
+
+option = {
+		name = "exploration"
+		
+		
+		valid = {
+		
+		   OR = {
+				has_ethic = "ethic_expansionist"
+				has_ethic = "ethic_fanatic_expansionist"
+				}			
+		
+		   OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+				}
+				
+			
+
+		}	
+		
+		policy_flags = {
+			exploration
+		}
+		
+		modifier = {
+		
+                ship_sensor_range_mult = 0.5
+		        science_ship_survey_speed = 0.33
+				ship_anomaly_research_speed_mult = 0.33
+				shipsize_science_build_cost_mult = -0.5
+				shipsize_science_construction_speed_mult = 0.5
+                ship_ftl_wormhole_range_mult = 0.33
+				ship_ftl_warp_range_mult = 0.33
+				navy_size_mult = -0.15
+
+
+	 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+				
+		   OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+				}
+				
+		   OR = {
+				has_ethic = "ethic_expansionist"
+				has_ethic = "ethic_fanatic_expansionist"
+				}					
+
+			           }			
+		        }								
+							
+
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.1			  
+			    pop_has_ethic = "ethic_spiritualist"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_spiritualist"						
+			}	
+			
+			
+
+			
+	    }	
+
+		
+	
+	}		
+
+	
+	
+	
+	
+	
+	
+
+option = {
+		name = "terraforming"
+		
+		
+		valid = {
+		
+		   OR = {
+				has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				}	
+				
+		   OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+				}
+				
+			
+
+		}	
+		
+		policy_flags = {
+			terraforming
+		}
+		
+		modifier = {
+		        pop_environment_tolerance = 0.05
+				terraforming_cost_mult = -0.4
+                planet_clear_blocker_time_mult = -0.4
+                planet_clear_blocker_cost_mult = -0.4				
+		        category_new_worlds_research_speed_mult = 0.5
+				country_engineering_tech_research_speed = -0.15
+				
+
+
+
+	 
+
+		}	
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+				
+		   OR = {
+				has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				}	
+				
+		   OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+				}				
+
+			           }			
+		        }								
+							
+
+
+pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.1			  
+			    pop_has_ethic = "ethic_industrial"						
+			}	
+
+			modifier = {
+				add = -0.15			  
+			    pop_has_ethic = "ethic_fanatic_industrial"						
+			}	
+			
+			
+
+			
+	    }	
+
+		
+	
+	}			
+	
+	
+	
+}	
+
+

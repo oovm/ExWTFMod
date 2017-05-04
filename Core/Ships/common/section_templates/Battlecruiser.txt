@@ -1,0 +1,762 @@
+#BOW
+
+
+ship_section_template = {
+	key = "Battlecruiser_BOW_L1_1"
+	ship_size = Battlecruiser
+	fits_on_slot = bow
+	entity = "Battlecruiser_bow_L1_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+	
+	medium_utility_slots = 2
+	large_utility_slots = 2
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "Battlecruiser_BOW_L1_2"
+	ship_size = Battlecruiser
+	fits_on_slot = bow
+	entity = "Battlecruiser_bow_L1_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+	
+	medium_utility_slots = 2
+	large_utility_slots = 2
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "Battlecruiser_BOW_M2"
+	ship_size = Battlecruiser
+	fits_on_slot = bow
+	entity = "Battlecruiser_bow_M2_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+	
+	medium_utility_slots = 2
+	large_utility_slots = 2
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "Battlecruiser_BOW_M1S2_1"
+	ship_size = Battlecruiser
+	fits_on_slot = bow
+	entity = "Battlecruiser_bow_M1S2_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 2
+	large_utility_slots = 2
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "Battlecruiser_BOW_M1S2_2"
+	ship_size = Battlecruiser
+	fits_on_slot = bow
+	entity = "Battlecruiser_bow_M1S2_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	prerequisites = { tech_pd_tracking_1 tech_torpedoes_1 tech_energy_torpedoes_1 }
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 2
+	large_utility_slots = 2
+	
+	cost = 0
+}
+
+
+#MID1
+
+
+ship_section_template = {
+	key = "Battlecruiser_MID1_L1M1_1"
+	ship_size = Battlecruiser
+	fits_on_slot = mid1
+	entity = "Battlecruiser_mid1_L1M1_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	medium_utility_slots = 1
+	large_utility_slots = 1
+	aux_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "Battlecruiser_MID1_L1M1_2"
+	ship_size = Battlecruiser
+	fits_on_slot = mid1
+	entity = "Battlecruiser_mid1_L1M1_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_torpedoes_1 tech_energy_torpedoes_1 }
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+	
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	medium_utility_slots = 1
+	large_utility_slots = 1
+	aux_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "Battlecruiser_MID1_M3_1"
+	ship_size = Battlecruiser
+	fits_on_slot = mid1
+	entity = "Battlecruiser_mid1_M3_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_03"
+	}
+
+	
+	medium_utility_slots = 1
+	large_utility_slots = 1
+	aux_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "Battlecruiser_MID1_M3_2"
+	ship_size = Battlecruiser
+	fits_on_slot = mid1
+	entity = "Battlecruiser_mid1_M3_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_torpedoes_1 tech_energy_torpedoes_1 }
+	
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "TORPEDO_02"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+	
+	component_slot = {
+		name = "TORPEDO_03"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_03"
+	}
+
+	medium_utility_slots = 1
+	large_utility_slots = 1
+	aux_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "Battlecruiser_MID1_M2S2_1"
+	ship_size = Battlecruiser
+	fits_on_slot = mid1
+	entity = "Battlecruiser_mid1_M2S2_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 1
+	large_utility_slots = 1
+	aux_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "Battlecruiser_MID1_M2S2_2"
+	ship_size = Battlecruiser
+	fits_on_slot = mid1
+	entity = "Battlecruiser_mid1_M2S2_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_torpedoes_1 tech_energy_torpedoes_1 }
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 1
+	large_utility_slots = 1
+	aux_utility_slots = 1
+	
+	cost = 0
+}
+
+
+#MID2
+
+
+ship_section_template = {
+	key = "Battlecruiser_MID2_L1M1_1"
+	ship_size = Battlecruiser
+	fits_on_slot = mid2
+	entity = "Battlecruiser_mid2_L1M1_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	medium_utility_slots = 1
+	large_utility_slots = 1
+	aux_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "Battlecruiser_MID2_L1M1_2"
+	ship_size = Battlecruiser
+	fits_on_slot = mid2
+	entity = "Battlecruiser_mid2_L1M1_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_torpedoes_1 tech_energy_torpedoes_1 }
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+	
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	medium_utility_slots = 1
+	large_utility_slots = 1
+	aux_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "Battlecruiser_MID2_M3_1"
+	ship_size = Battlecruiser
+	fits_on_slot = mid2
+	entity = "Battlecruiser_mid2_M3_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_03"
+	}
+
+	
+	medium_utility_slots = 1
+	large_utility_slots = 1
+	aux_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "Battlecruiser_MID2_M3_2"
+	ship_size = Battlecruiser
+	fits_on_slot = mid2
+	entity = "Battlecruiser_mid2_M3_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_torpedoes_1 tech_energy_torpedoes_1 }
+	
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "TORPEDO_02"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+	
+	component_slot = {
+		name = "TORPEDO_03"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_03"
+	}
+
+	medium_utility_slots = 1
+	large_utility_slots = 1
+	aux_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "Battlecruiser_MID2_M2S2_1"
+	ship_size = Battlecruiser
+	fits_on_slot = mid2
+	entity = "Battlecruiser_mid2_M2S2_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 1
+	large_utility_slots = 1
+	aux_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "Battlecruiser_MID2_M2S2_2"
+	ship_size = Battlecruiser
+	fits_on_slot = mid2
+	entity = "Battlecruiser_mid2_M2S2_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_torpedoes_1 tech_energy_torpedoes_1 }
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 1
+	large_utility_slots = 1
+	aux_utility_slots = 1
+	
+	cost = 0
+}
+
+
+#STERN
+
+
+ship_section_template = {
+	key = "Battlecruiser_STERN_M1_1"
+	ship_size = Battlecruiser
+	fits_on_slot = stern
+	entity = "Battlecruiser_stern_M1_entity"
+	icon = "GFX_ship_part_core_stern"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	
+	medium_utility_slots = 1
+	large_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "Battlecruiser_STERN_M1_2"
+	ship_size = Battlecruiser
+	fits_on_slot = stern
+	entity = "Battlecruiser_stern_M1_entity"
+	icon = "GFX_ship_part_core_stern"
+	
+	prerequisites = { tech_torpedoes_1 tech_energy_torpedoes_1 }
+
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	
+	medium_utility_slots = 1
+	large_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "Battlecruiser_STERN_S2_1"
+	ship_size = Battlecruiser
+	fits_on_slot = stern
+	entity = "Battlecruiser_stern_S2_entity"
+	icon = "GFX_ship_part_core_stern"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 1
+	large_utility_slots = 1
+	
+	cost = 0
+}
+
+ship_section_template = {
+	key = "Battlecruiser_STERN_S2_2"
+	ship_size = Battlecruiser
+	fits_on_slot = stern
+	entity = "Battlecruiser_stern_S2_entity"
+	icon = "GFX_ship_part_core_stern"
+	
+	prerequisites = { tech_pd_tracking_1 }
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+	
+	medium_utility_slots = 1
+	large_utility_slots = 1
+	
+	cost = 0
+}

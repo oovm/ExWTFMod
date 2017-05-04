@@ -1,0 +1,16 @@
+objectTypes = {
+	pdxmesh = {
+		name = "avian_01_drydock_mesh"
+		file = "gfx/models/ships/avian_01/avian_01_drydock.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "|Telgorn|Telgorn"
+			index = 0
+			texture_diffuse = "avian_01_drydock_diffuse.dds"
+			texture_normal = "avian_01_drydock_normal.dds"
+			texture_specular = "avian_01_drydock_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

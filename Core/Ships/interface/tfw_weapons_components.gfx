@@ -1,0 +1,210 @@
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_phaser_1"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_phaser_1.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_phaser_2"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_phaser_2.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_phaser_3"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_phaser_3.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_darkmatter_emitter"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_darkmatter_emitter.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_energy_torpedo_3"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_energy_torpedo_3.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_kinetic_artillery_3"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_kinetic_artillery_3.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_laserstorm"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_laserstorm.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_adv_laserstorm"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_adv_laserstorm.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_gauss_6"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_gauss_6.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_gauss_7"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_gauss_7.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_missile_as_1"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_missile_as_1.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_missile_as_2"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_missile_as_2.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_missile_aa_1"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_missile_aa_1.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_missile_aa_2"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_missile_aa_2.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_pt1"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_pt1.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_pt2"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_pt2.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_swarmer_missile_3"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_swarmer_missile_3.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_torpedo_4"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_torpedo_4.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_torpedo_5"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_torpedo_5.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_biocannon"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_biocannon.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_psicannon"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_psicannon.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_gravicannon"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_gravicannon.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_infector"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_infector.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_psilance"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_psilance.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_gravilance"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_gravilance.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_kinetic_hammer"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_kinetic_hammer.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_kamikaze"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_kamikaze.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_stormfire_pd"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_stormfire_pd.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_flak_batteries_3"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_flak_3.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_peacekeeper"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_peacekeeper.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_jammer"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_aura_jammer.dds"
+	}
+}

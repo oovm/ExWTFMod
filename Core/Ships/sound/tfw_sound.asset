@@ -1,0 +1,892 @@
+##########WEAPONS FIRE & HIT & DEATH############
+
+##### CLOSE ############################################
+sound = 
+{
+	name = "darkmatter_fire_01"
+	file = "weapons/darkmatter_fire_01.wav"
+	always_load = no
+}
+sound = 
+{
+	name = "darkmatter_fire_02"
+	file = "weapons/darkmatter_fire_02.wav"
+	always_load = no
+}
+sound = 
+{
+	name = "darkmatter_fire_03"
+	file = "weapons/darkmatter_fire_03.wav"
+	always_load = no
+}
+sound = 
+{
+	name = "darkmatter_fire_04"
+	file = "weapons/darkmatter_fire_04.wav"
+	always_load = no
+}
+
+sound =
+{
+	name = "tfw_artillery_fire_01"
+	file = "weapons/tfw_artillery_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_artillery_fire_02"
+	file = "weapons/tfw_artillery_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_artillery_fire_03"
+	file = "weapons/tfw_artillery_fire_03.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_artillery_hit_02"
+	file = "weapons/tfw_artillery_hit_02.wav"
+	always_load = no
+}
+
+sound =
+{
+	name = "laserstorm_fire01"
+	file = "weapons/laserstorm_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "laserstorm_fire02"
+	file = "weapons/laserstorm_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "laserstorm_fire03"
+	file = "weapons/laserstorm_fire_03.wav"
+	always_load = no
+}
+sound =
+{
+	name = "laserstorm_fire04"
+	file = "weapons/laserstorm_fire_04.wav"
+	always_load = no
+}
+sound =
+{
+	name = "laserstorm_fire05"
+	file = "weapons/laserstorm_fire_05.wav"
+	always_load = no
+}
+sound =
+{
+	name = "laserstorm_fire06"
+	file = "weapons/laserstorm_fire_06.wav"
+	always_load = no
+}
+sound =
+{
+	name = "laserstorm_hit"
+	file = "weapons/laserstorm_hit.wav"
+	always_load = no
+}
+sound =
+{
+	name = "mortar_fire_01"
+	file = "weapons/mortar_fire_01.wav"
+	always_load = no
+}
+
+sound =
+{
+	name = "tfw_missle_hit_01"
+	file = "weapons/tfw_missle_hit_01.wav"
+	always_load = no
+}
+
+sound =
+{
+	name = "tfw_shield_hit_01"
+	file = "weapons/tfw_shield_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_shield_hit_02"
+	file = "weapons/tfw_shield_hit_02.wav"
+	always_load = no
+}
+
+sound =
+{
+	name = "tfw_pt1_fire_01"
+	file = "weapons/tfw_pt1_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_pt1_fire_02"
+	file = "weapons/tfw_pt1_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_pt1_fire_03"
+	file = "weapons/tfw_pt1_fire_03.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_pt1_hit_01"
+	file = "weapons/tfw_pt1_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_pt1_hit_02"
+	file = "weapons/tfw_pt1_hit_02.wav"
+	always_load = no
+}
+
+sound =
+{
+	name = "biocannon_fire_01"
+	file = "weapons/biocannon_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "biocannon_fire_02"
+	file = "weapons/biocannon_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "biocannon_hit_01"
+	file = "weapons/biocannon_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "psicannon_fire_01"
+	file = "weapons/psicannon_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "psicannon_fire_02"
+	file = "weapons/psicannon_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "psicannon_hit_01"
+	file = "weapons/psicannon_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "gravicannon_fire_01"
+	file = "weapons/gravicannon_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "gravicannon_fire_02"
+	file = "weapons/gravicannon_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "gravicannon_hit_01"
+	file = "weapons/gravicannon_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "gravicannon_hit_02"
+	file = "weapons/gravicannon_hit_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "infector_fire_01"
+	file = "weapons/infector_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "infector_fire_02"
+	file = "weapons/infector_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "infector_hit_01"
+	file = "weapons/infector_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "infector_hit_02"
+	file = "weapons/infector_hit_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "psilance_fire_01"
+	file = "weapons/psilance_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "psilance_fire_02"
+	file = "weapons/psilance_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "psilance_hit_01"
+	file = "weapons/psilance_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "psilance_hit_02"
+	file = "weapons/psilance_hit_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "gravilance_fire_01"
+	file = "weapons/gravilance_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "gravilance_hit_01"
+	file = "weapons/gravilance_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "gravilance_fire_02"
+	file = "weapons/gravilance_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "gravilance_hit_02"
+	file = "weapons/gravilance_hit_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "guardian_fire_01"
+	file = "weapons/guardian_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "guardian_fire_02"
+	file = "weapons/guardian_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "guardian_fire_03"
+	file = "weapons/guardian_fire_03.wav"
+	always_load = no
+}
+sound =
+{
+	name = "kamikaze_fire_01"
+	file = "weapons/kamikaze_drop_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "kamikaze_fire_02"
+	file = "weapons/kamikaze_drop_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "kamikaze_hit_01"
+	file = "weapons/kamikaze_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "kamikaze_hit_02"
+	file = "weapons/kamikaze_hit_02.wav"
+	always_load = no
+}
+
+sound =
+{
+	name = "maser_windup_01"
+	file = "weapons/maser_windup_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "maser_windup_02"
+	file = "weapons/maser_windup_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "maser_fire_01"
+	file = "weapons/maser_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "maser_fire_02"
+	file = "weapons/maser_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "maser_hit_01"
+	file = "weapons/maser_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "maser_hit_02"
+	file = "weapons/maser_hit_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "phaser_fire_01"
+	file = "weapons/phaser_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "phaser_fire_02"
+	file = "weapons/phaser_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "phaser_fire_03"
+	file = "weapons/phaser_fire_03.wav"
+	always_load = no
+}
+
+sound =
+{
+	name = "tfw_torpedo_hit_01"
+	file = "weapons/tfw_torpedo_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_torpedo_hit_02"
+	file = "weapons/tfw_torpedo_hit_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_torpedo_hit_03"
+	file = "weapons/tfw_torpedo_hit_03.wav"
+	always_load = no
+}
+
+sound =
+{
+	name = "tfw_hammer_fire_01"
+	file = "weapons/tfw_hammer_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_hammer_fire_02"
+	file = "weapons/tfw_hammer_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_hammer_fire_03"
+	file = "weapons/tfw_hammer_fire_03.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_hammer_fire_04"
+	file = "weapons/tfw_hammer_fire_04.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_hammer_hit_01"
+	file = "weapons/tfw_hammer_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_hammer_hit_02"
+	file = "weapons/tfw_hammer_hit_02.wav"
+	always_load = no
+}
+#sound =
+#{
+#	name = "phaserspear_fire_01"
+#	file = "weapons/phaserspear_fire_01.wav"
+#	always_load = no
+#}
+#sound =
+#{
+#	name = "phaserspear_fire_02"
+#	file = "weapons/phaserspear_fire_02.wav"
+#	always_load = no
+#}
+#sound =
+#{
+#	name = "phaserspear_hit_01"
+#	file = "weapons/phaserspear_hit_01.wav"
+#	always_load = no
+#}
+#sound =
+#{
+#	name = "phaserspear_hit_02"
+#	file = "weapons/phaserspear_hit_02.wav"
+#	always_load = no
+#}
+##### DISTANT ###########################################
+
+sound = 
+{
+	name = "distance_darkmatter_fire_01"
+	file = "weapons/distance_darkmatter_fire_01.wav"
+	always_load = no
+}
+sound = 
+{
+	name = "distance_darkmatter_fire_02"
+	file = "weapons/distance_darkmatter_fire_02.wav"
+	always_load = no
+}
+sound = 
+{
+	name = "distance_darkmatter_fire_03"
+	file = "weapons/distance_darkmatter_fire_03.wav"
+	always_load = no
+}
+sound = 
+{
+	name = "distance_darkmatter_fire_04"
+	file = "weapons/distance_darkmatter_fire_04.wav"
+	always_load = no
+}
+
+sound =
+{
+	name = "tfw_distance_artillery_fire_01"
+	file = "weapons/tfw_distance_artillery_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_distance_artillery_fire_02"
+	file = "weapons/tfw_distance_artillery_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_distance_artillery_hit_02"
+	file = "weapons/tfw_distance_artillery_hit_02.wav"
+	always_load = no
+}
+
+sound =
+{
+	name = "distance_laserstorm_fire01"
+	file = "weapons/distance_laserstorm_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_laserstorm_fire02"
+	file = "weapons/distance_laserstorm_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_laserstorm_fire03"
+	file = "weapons/distance_laserstorm_fire_03.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_laserstorm_fire04"
+	file = "weapons/distance_laserstorm_fire_04.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_laserstorm_fire05"
+	file = "weapons/distance_laserstorm_fire_05.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_laserstorm_fire06"
+	file = "weapons/distance_laserstorm_fire_06.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_laserstorm_hit"
+	file = "weapons/distance_laserstorm_hit.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_mortar_fire01"
+	file = "weapons/distance_mortar_fire_01.wav"
+	always_load = no
+}
+
+sound =
+{
+	name = "tfw_distance_missle_hit_01"
+	file = "weapons/tfw_distance_missle_hit_01.wav"
+	always_load = no
+}
+
+sound =
+{
+	name = "tfw_distance_shield_hit_01"
+	file = "weapons/tfw_distance_shield_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_distance_shield_hit_02"
+	file = "weapons/tfw_distance_shield_hit_02.wav"
+	always_load = no
+}
+
+sound =
+{
+	name = "tfw_distance_pt1_fire_01"
+	file = "weapons/tfw_distance_pt1_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_distance_pt1_fire_02"
+	file = "weapons/tfw_distance_pt1_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_distance_pt1_fire_03"
+	file = "weapons/tfw_distance_pt1_fire_03.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_distance_pt1_hit_01"
+	file = "weapons/tfw_distance_pt1_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "tfw_distance_pt1_hit_02"
+	file = "weapons/tfw_distance_pt1_hit_02.wav"
+	always_load = no
+}
+
+sound =
+{
+	name = "distance_biocannon_fire_01"
+	file = "weapons/distance_biocannon_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_biocannon_fire_02"
+	file = "weapons/distance_biocannon_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_biocannon_hit_01"
+	file = "weapons/distance_biocannon_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_psicannon_fire_01"
+	file = "weapons/distance_psicannon_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_psicannon_fire_02"
+	file = "weapons/distance_psicannon_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_psicannon_hit_01"
+	file = "weapons/distance_psicannon_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_gravicannon_fire_01"
+	file = "weapons/distance_gravicannon_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_gravicannon_fire_02"
+	file = "weapons/distance_gravicannon_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_gravicannon_hit_01"
+	file = "weapons/distance_gravicannon_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_gravicannon_hit_02"
+	file = "weapons/distance_gravicannon_hit_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_infector_fire_01"
+	file = "weapons/distance_infector_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_infector_fire_02"
+	file = "weapons/distance_infector_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_infector_hit_01"
+	file = "weapons/distance_infector_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_infector_hit_02"
+	file = "weapons/distance_infector_hit_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_psilance_fire_01"
+	file = "weapons/distance_psilance_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_psilance_fire_02"
+	file = "weapons/distance_psilance_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_psilance_hit_01"
+	file = "weapons/distance_psilance_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_psilance_hit_02"
+	file = "weapons/distance_psilance_hit_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_gravilance_fire_01"
+	file = "weapons/distance_gravilance_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_gravilance_hit_01"
+	file = "weapons/distance_gravilance_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_gravilance_fire_02"
+	file = "weapons/distance_gravilance_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_gravilance_hit_02"
+	file = "weapons/distance_gravilance_hit_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_guardian_fire_01"
+	file = "weapons/distance_guardian_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_guardian_fire_02"
+	file = "weapons/distance_guardian_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_guardian_fire_03"
+	file = "weapons/distance_guardian_fire_03.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_kamikaze_fire_01"
+	file = "weapons/distance_kamikaze_drop_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_kamikaze_fire_02"
+	file = "weapons/distance_kamikaze_drop_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_kamikaze_hit_01"
+	file = "weapons/distance_kamikaze_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_kamikaze_hit_02"
+	file = "weapons/distance_kamikaze_hit_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_maser_fire_01"
+	file = "weapons/distance_maser_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_maser_fire_02"
+	file = "weapons/distance_maser_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_maser_hit_01"
+	file = "weapons/distance_maser_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_maser_hit_02"
+	file = "weapons/distance_maser_hit_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_phaser_fire_01"
+	file = "weapons/distance_phaser_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_phaser_fire_02"
+	file = "weapons/distance_phaser_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_phaser_fire_03"
+	file = "weapons/distance_phaser_fire_03.wav"
+	always_load = no
+}
+
+sound =
+{
+	name = "distance_tfw_torpedo_hit_01"
+	file = "weapons/distance_tfw_torpedo_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_tfw_torpedo_hit_02"
+	file = "weapons/distance_tfw_torpedo_hit_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_tfw_torpedo_hit_03"
+	file = "weapons/distance_tfw_torpedo_hit_03.wav"
+	always_load = no
+}
+
+sound =
+{
+	name = "distance_tfw_hammer_fire_01"
+	file = "weapons/distance_tfw_hammer_fire_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_tfw_hammer_fire_02"
+	file = "weapons/distance_tfw_hammer_fire_02.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_tfw_hammer_hit_01"
+	file = "weapons/distance_tfw_hammer_hit_01.wav"
+	always_load = no
+}
+sound =
+{
+	name = "distance_tfw_hammer_hit_02"
+	file = "weapons/distance_tfw_hammer_hit_02.wav"
+	always_load = no
+}
+#sound =
+#{
+#	name = "distance_phaserspear_fire_01"
+#	file = "weapons/distance_phaserspear_fire_01.wav"
+#	always_load = no
+#}
+#sound =
+#{
+#	name = "distance_phaserspear_fire_02"
+#	file = "weapons/distance_phaserspear_fire_02.wav"
+#	always_load = no
+#}
+#sound =
+#{
+#	name = "distance_phaserspear_hit_01"
+#	file = "weapons/distance_phaserspear_hit_01.wav"
+#	always_load = no
+#}
+#sound =
+#{
+#	name = "distance_phaserspear_hit_02"
+#	file = "weapons/distance_phaserspear_hit_02.wav"
+#	always_load = no
+#}

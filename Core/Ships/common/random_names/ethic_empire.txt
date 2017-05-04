@@ -1,0 +1,29 @@
+# Democracy Generic Middle Descriptive
+empire_name_parts_list = {
+	key = "generic_empire_name"
+	parts = {
+		"Interstellar" = 1
+		"Interplanetary" = 1
+		"Galactic" = 2
+		"Star" = 3
+		"Stellar" = 1
+		"Democratic" = 1
+	}
+}
+
+################
+# NAME FORMATS #
+################
+
+### Autocracy Militarist 
+
+# Autocracy Militarist 1
+empire_name_format = {
+	random_weight = {
+		factor = 1
+	}
+	format = "<autocracy_mil> of [This.Capital.System.GetName]"
+	prefix_format = "[This.Capital.System.GetName] <generic_empire_name>"
+	noun = "[This.Capital.System.GetName]"
+	# Empire of Sol
+}

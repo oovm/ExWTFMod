@@ -1,0 +1,5749 @@
+
+#########################################
+#
+# on_action_events
+#
+#########################################
+
+namespace = action
+
+@tier1influencecontact = 7
+@tier1influencecontactxenophile = 8
+@tier1influencecontactmin = 20
+@tier1influencecontactmax = 80
+
+@tier2influencecontact = 10
+@tier2influencecontactxenophile = 12
+@tier2influencecontactmin = 40
+@tier2influencecontactmax = 100
+
+@tier1materialreward = 6
+@tier1materialmin = 100
+@tier1materialmax = 500
+@tier2materialreward = 12
+@tier2materialmin = 150
+@tier2materialmax = 1000
+@tier3materialreward = 18
+@tier3materialmin = 250
+@tier3materialmax = 1500
+@tier4materialreward = 24
+@tier4materialmin = 350
+@tier4materialmax = 2000
+@tier5materialreward = 48
+@tier5materialmin = 700
+@tier5materialmax = 4000
+
+@tier1influencereward = 6
+@tier1influencemin = 40
+@tier1influencemax = 100
+@tier2influencereward = 12
+@tier2influencemin = 80
+@tier2influencemax = 175
+@tier3influencereward = 18
+@tier3influencemin = 125
+@tier3influencemax = 250
+@tier4influencereward = 24
+@tier4influencemin = 150
+@tier4influencemax = 300
+@tier5influencereward = 36
+@tier5influencemin = 250
+@tier5influencemax = 500
+@tier6influencereward = 48
+@tier6influencemin = 300
+@tier6influencemax = 600
+
+@tier1researchreward = 6
+@tier1researchmin = 60
+@tier1researchmax = 150
+@tier2researchreward = 12
+@tier2researchmin = 90
+@tier2researchmax = 250
+@tier3researchreward = 18
+@tier3researchmin = 120
+@tier3researchmax = 350
+@tier4researchreward = 24
+@tier4researchmin = 150
+@tier4researchmax = 500
+@tier5researchreward = 48
+@tier5researchmin = 300
+@tier5researchmax = 1000
+
+
+### First Contact Diplomatic Message
+country_event = {
+	id = action.1
+	title = action.1.name
+	message_desc = action.1.message
+	location = event_target:contact_empire.capital_scope
+	
+	picture_event_data = {
+		portrait = event_target:contact_empire
+		planet_background = event_target:contact_empire
+		graphical_culture = event_target:contact_empire
+		city_level = event_target:contact_empire
+		room = event_target:contact_empire
+	}
+	
+	### Normal (Not Xenophobe or Xenophile)
+	# Militarist Autocrat
+	desc = {
+		text = action.1.desc_01
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = martial_empire
+					has_government = military_dictatorship
+				}
+			}
+		}
+	}
+	# Spiritualist Autocrat
+	desc = {
+		text = action.1.desc_02
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = divine_mandate
+					has_government = transcendent_empire
+				}
+			}
+		}
+	}
+	# Materialist Autocrat
+	desc = {
+		text = action.1.desc_03
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = despotic_hegemony
+					has_government = ai_overlordship
+				}
+			}
+		}
+	}
+	# Pacifist Autocrat
+	desc = {
+		text = action.1.desc_04
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = enlightened_monarchy
+					has_government = irenic_monarchy
+				}
+			}
+		}
+	}
+	# Generic Autocrat
+	desc = {
+		text = action.1.desc_05
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = despotic_empire
+					has_government = star_empire
+				}
+			}
+		}
+	}
+	# Military Oligarch
+	desc = {
+		text = action.1.desc_06
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = military_junta
+					has_government = ordered_stratocracy
+				}
+			}
+		}
+	}
+	# Spiritualist Oligarch
+	desc = {
+		text = action.1.desc_07
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = theocratic_oligarchy
+					has_government = transcendent_oligarchy
+				}
+			}
+		}
+	}
+	# Materialist Oligarch
+	desc = {
+		text = action.1.desc_08
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = science_directorate
+					has_government = illuminated_technocracy
+				}
+			}
+		}
+	}
+	# Pacifist Oligarch
+	desc = {
+		text = action.1.desc_09
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = peaceful_bureaucracy
+					has_government = irenic_protectorate
+				}
+			}
+		}
+	}
+	# Generic Oligarch
+	desc = {
+		text = action.1.desc_10
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = plutocratic_oligarchy
+					has_government = mega_corporation
+				}
+			}
+		}
+	}
+	# Militarist Democrat
+	desc = {
+		text = action.1.desc_11
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = military_republic
+					has_government = martial_demarchy
+				}
+			}
+		}
+	}
+	# Spiritualist Democrat
+	desc = {
+		text = action.1.desc_12
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = theocratic_republic
+					has_government = transcendent_republic
+				}
+			}
+		}
+	}
+	# Materialist Democrat
+	desc = {
+		text = action.1.desc_13
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = direct_democracy
+					has_government = subconscious_consensus
+				}
+			}
+		}
+	}
+	# Pacifist Democrat
+	desc = {
+		text = action.1.desc_14
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = moral_democracy
+					has_government = irenic_democracy
+				}
+			}
+		}
+	}
+	# Generic Democrat
+	desc = {
+		text = action.1.desc_15
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = indirect_democracy
+					has_government = democratic_utopia
+				}
+			}
+		}
+	}
+	
+	### Xenophobe
+	# Militarist Autocrat
+	desc = {
+		text = action.1.desc_16
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = martial_empire
+					has_government = military_dictatorship
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Spiritualist Autocrat
+	desc = {
+		text = action.1.desc_17
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = divine_mandate
+					has_government = transcendent_empire
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Materialist Autocrat
+	desc = {
+		text = action.1.desc_18
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = despotic_hegemony
+					has_government = ai_overlordship
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Pacifist Autocrat
+	desc = {
+		text = action.1.desc_19
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = enlightened_monarchy
+					has_government = irenic_monarchy
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Generic Autocrat
+	desc = {
+		text = action.1.desc_20
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = despotic_empire
+					has_government = star_empire
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Military Oligarch
+	desc = {
+		text = action.1.desc_21
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = military_junta
+					has_government = ordered_stratocracy
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Spiritualist Oligarch
+	desc = {
+		text = action.1.desc_22
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = theocratic_oligarchy
+					has_government = transcendent_oligarchy
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Materialist Oligarch
+	desc = {
+		text = action.1.desc_23
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = science_directorate
+					has_government = illuminated_technocracy
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Pacifist Oligarch
+	desc = {
+		text = action.1.desc_24
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = peaceful_bureaucracy
+					has_government = irenic_protectorate
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Generic Oligarch
+	desc = {
+		text = action.1.desc_25
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = plutocratic_oligarchy
+					has_government = mega_corporation
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Militarist Democrat
+	desc = {
+		text = action.1.desc_26
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = military_republic
+					has_government = martial_demarchy
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Spiritualist Democrat
+	desc = {
+		text = action.1.desc_27
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = theocratic_republic
+					has_government = transcendent_republic
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Materialist Democrat
+	desc = {
+		text = action.1.desc_28
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = direct_democracy
+					has_government = subconscious_consensus
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Pacifist Democrat
+	desc = {
+		text = action.1.desc_29
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = moral_democracy
+					has_government = irenic_democracy
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Generic Democrat
+	desc = {
+		text = action.1.desc_30
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = indirect_democracy
+					has_government = democratic_utopia
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	
+	### Xenophile
+	# Militarist Autocrat
+	desc = {
+		text = action.1.desc_31
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = martial_empire
+					has_government = military_dictatorship
+				}
+			}
+		}
+	}
+	# Spiritualist Autocrat
+	desc = {
+		text = action.1.desc_32
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = divine_mandate
+					has_government = transcendent_empire
+				}
+			}
+		}
+	}
+	# Materialist Autocrat
+	desc = {
+		text = action.1.desc_33
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = despotic_hegemony
+					has_government = ai_overlordship
+				}
+			}
+		}
+	}
+	# Pacifist Autocrat
+	desc = {
+		text = action.1.desc_34
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = enlightened_monarchy
+					has_government = irenic_monarchy
+				}
+			}
+		}
+	}
+	# Generic Autocrat
+	desc = {
+		text = action.1.desc_35
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = despotic_empire
+					has_government = star_empire
+				}
+			}
+		}
+	}
+	# Military Oligarch
+	desc = {
+		text = action.1.desc_36
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = military_junta
+					has_government = ordered_stratocracy
+				}
+			}
+		}
+	}
+	# Spiritualist Oligarch
+	desc = {
+		text = action.1.desc_37
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = theocratic_oligarchy
+					has_government = transcendent_oligarchy
+				}
+			}
+		}
+	}
+	# Materialist Oligarch
+	desc = {
+		text = action.1.desc_38
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = science_directorate
+					has_government = illuminated_technocracy
+				}
+			}
+		}
+	}
+	# Pacifist Oligarch
+	desc = {
+		text = action.1.desc_39
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = peaceful_bureaucracy
+					has_government = irenic_protectorate
+				}
+			}
+		}
+	}
+	# Generic Oligarch
+	desc = {
+		text = action.1.desc_40
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = plutocratic_oligarchy
+					has_government = mega_corporation
+				}
+			}
+		}
+	}
+	# Militarist Democrat
+	desc = {
+		text = action.1.desc_41
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = military_republic
+					has_government = martial_demarchy
+				}
+			}
+		}
+	}
+	# Spiritualist Democrat
+	desc = {
+		text = action.1.desc_42
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = theocratic_republic
+					has_government = transcendent_republic
+				}
+			}
+		}
+	}
+	# Materialist Democrat
+	desc = {
+		text = action.1.desc_43
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = direct_democracy
+					has_government = subconscious_consensus
+				}
+			}
+		}
+	}
+	# Pacifist Democrat
+	desc = {
+		text = action.1.desc_44
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = moral_democracy
+					has_government = irenic_democracy
+				}
+			}
+		}
+	}
+	# Generic Democrat
+	desc = {
+		text = action.1.desc_45
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = indirect_democracy
+					has_government = democratic_utopia
+				}
+			}
+		}
+	}
+	# Cruel Foxcat
+	desc = {
+		text = action.1.desc_49
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				has_ai_personality = fanatic_purifiers
+				species_portrait = mam3
+			}
+		}
+	}
+	
+	# Fallen Empire 1
+	desc = {
+		text = action.1.desc_60
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = fallen_empire
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	# Fallen Empire 2
+	desc = {
+		text = action.1.desc_61
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = fallen_empire
+				NOT = { has_ethic = ethic_fanatic_xenophobe }
+				NOT = { has_ethic = ethic_fanatic_xenophile }
+				NOT = { has_ethic = ethic_fanatic_militarist }
+				NOT = { has_ethic = ethic_fanatic_materialist }
+				NOT = { has_ethic = ethic_fanatic_spiritualist }
+			}
+		}
+	}
+	# Fallen Empire 3
+	desc = {
+		text = action.1.desc_62
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = fallen_empire
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+	}
+	# Fallen Empire 4
+	desc = {
+		text = action.1.desc_63
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = fallen_empire
+				has_ethic = ethic_fanatic_xenophobe				
+			}
+		}
+	}
+	# Fallen Empire 5
+	desc = {
+		text = action.1.desc_64
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = fallen_empire
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+	# Fallen Empire 6
+	desc = {
+		text = action.1.desc_65
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = fallen_empire
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	# Awakened Fallen Empire 1
+	desc = {
+		text = action.1.desc_66
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = awakened_fallen_empire
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	# Awakened Fallen Empire 2
+	desc = {
+		text = action.1.desc_67
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = awakened_fallen_empire
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+	}
+	# Awakened Fallen Empire 3
+	desc = {
+		text = action.1.desc_68
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = awakened_fallen_empire
+				has_ethic = ethic_fanatic_xenophobe				
+			}
+		}
+	}
+	# Awakened Fallen Empire 4
+	desc = {
+		text = action.1.desc_69
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = awakened_fallen_empire
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+	
+	diplomatic = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		event_target:contact_empire = {
+			is_primitive = no
+			NOT = {
+				is_country_type = tiyanki
+				is_country_type = neutral_faction
+				is_country_type = faction
+				is_country_type = pirate
+				#is_country_type = nomad #triggered in a special case event
+				is_country_type = amoeba
+				is_country_type = crystal
+				is_country_type = drone
+				is_country_type = cloud
+				has_relation_flag = { flag = AbandonedRefugees who = root }
+			}
+		}
+	}
+	
+	immediate = {
+		country_event = { id = advisor.27 }
+		country_event = { id = advisor.28 }
+		country_event = { id = anomaly.4016 }
+		event_target:contact_empire = {
+			save_event_target_as = contact_speaker
+		}
+	}
+	
+	option = {
+		name = action.1.a
+		trigger = {
+
+		}
+	}
+	option = {
+		name = action.1.b
+		trigger = {
+			has_ethic = ethic_xenophobe
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.d
+		trigger = {
+			has_ethic = ethic_fanatic_xenophobe
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.c
+		trigger = {
+			has_ethic = ethic_xenophile
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.e
+		trigger = {
+			has_ethic = ethic_fanatic_xenophile
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.f
+		trigger = {
+			has_ethic = ethic_collectivist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.g
+		trigger = {
+			has_ethic = ethic_fanatic_collectivist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.h
+		trigger = {
+			has_ethic = ethic_individualist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.i
+		trigger = {
+			has_ethic = ethic_fanatic_individualist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.j
+		trigger = {
+			has_ethic = ethic_militarist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.k
+		trigger = {
+			has_ethic = ethic_fanatic_militarist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.l
+		trigger = {
+			has_ethic = ethic_pacifist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.m
+		trigger = {
+			has_ethic = ethic_fanatic_pacifist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.n
+		trigger = {
+			has_ethic = ethic_spiritualist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.o
+		trigger = {
+			has_ethic = ethic_fanatic_spiritualist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.p
+		trigger = {
+			has_ethic = ethic_materialist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.q
+		trigger = {
+			has_ethic = ethic_fanatic_materialist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.aa
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+	option = {
+		name = action.1.ab
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	option = {
+		name = action.1.ac
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			OR = {
+				has_ethic = ethic_individualist
+				has_ethic = ethic_fanatic_individualist
+			}
+		}
+	}
+	option = {
+		name = action.1.ad
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			OR = {
+				has_ethic = ethic_collectivist
+				has_ethic = ethic_fanatic_collectivist
+			}
+		}
+	}
+	option = {
+		name = action.1.ae
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	option = {
+		name = action.1.af
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	option = {
+		name = action.1.ag
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+	option = {
+		name = action.1.ah
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	option = {
+		name = action.1.ai
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+			OR = {
+				has_ethic = ethic_individualist
+				has_ethic = ethic_fanatic_individualist
+			}
+		}
+	}
+	option = {
+		name = action.1.aj
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+			OR = {
+				has_ethic = ethic_collectivist
+				has_ethic = ethic_fanatic_collectivist
+			}
+		}
+	}
+	option = {
+		name = action.1.ak
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	option = {
+		name = action.1.al
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	option = {
+		name = action.1.am
+		trigger = {
+			OR = {
+				has_ethic = ethic_collectivist
+				has_ethic = ethic_fanatic_collectivist
+			}
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	option = {
+		name = action.1.an
+		trigger = {
+			OR = {
+				has_ethic = ethic_collectivist
+				has_ethic = ethic_fanatic_collectivist
+			}
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+	option = {
+		name = action.1.ao
+		trigger = {
+			OR = {
+				has_ethic = ethic_collectivist
+				has_ethic = ethic_fanatic_collectivist
+			}
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	option = {
+		name = action.1.ap
+		trigger = {
+			OR = {
+				has_ethic = ethic_collectivist
+				has_ethic = ethic_fanatic_collectivist
+			}
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	option = {
+		name = action.1.aq
+		trigger = {
+			OR = {
+				has_ethic = ethic_individualist
+				has_ethic = ethic_fanatic_individualist
+			}
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	option = {
+		name = action.1.ar
+		trigger = {
+			OR = {
+				has_ethic = ethic_individualist
+				has_ethic = ethic_fanatic_individualist
+			}
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+	option = {
+		name = action.1.as
+		trigger = {
+			OR = {
+				has_ethic = ethic_individualist
+				has_ethic = ethic_fanatic_individualist
+			}
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	option = {
+		name = action.1.at
+		trigger = {
+			OR = {
+				has_ethic = ethic_individualist
+				has_ethic = ethic_fanatic_individualist
+			}
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	option = {
+		name = action.1.au
+		trigger = {
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	option = {
+		name = action.1.av
+		trigger = {
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	option = {
+		name = action.1.aw
+		trigger = {
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	option = {
+		name = action.1.ax
+		trigger = {
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	option = {
+		name = action.1.aaa
+		trigger = {
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_collectivist
+			has_ethic = ethic_militarist
+		}
+	}
+	option = {
+		name = action.1.aab
+		trigger = {
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_individualist
+			has_ethic = ethic_materialist
+		}
+	}
+	option = {
+		name = action.1.aac
+		trigger = {
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_individualist
+			has_ethic = ethic_spiritualist
+		}
+	}
+	option = {
+		name = action.1.aad
+		trigger = {
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_militarist
+			has_ethic = ethic_spiritualist
+		}
+	}
+	option = {
+		name = action.1.aae
+		trigger = {
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_collectivist
+			has_ethic = ethic_militarist
+		}
+	}
+	
+	after = {
+		if = {
+			limit = {
+				NOT = {
+					event_target:contact_empire = { has_relation_flag = { flag = no_coms who = root } }
+				}
+			}
+			hidden_effect = {
+				country_event = { id = progress.4 }
+				country_event = { id = progress.5 }
+				country_event = { id = progress.6 }
+				#country_event = { id = story.7 days = 30 }
+				if = {
+					limit = {
+						event_target:contact_empire = {
+							OR = {
+								is_country_type = fallen_empire
+								is_country_type = awakened_fallen_empire
+							}
+						}
+					}
+					set_country_flag = Story7
+					set_country_flag = has_encountered_other_empire
+					if = {
+						limit = { NOT = { has_country_flag = StoryFirst } }
+						set_country_flag = StoryFirst
+					}
+				}
+			}
+		}
+	}
+}
+
+### Duplicated action.1 so we can message both sides
+country_event = {
+	id = action.100
+	title = action.1.name
+	message_desc = action.1.message
+	
+	picture_event_data = {
+		portrait = event_target:contact_empire
+		planet_background = event_target:contact_empire
+		graphical_culture = event_target:contact_empire
+		city_level = event_target:contact_empire
+		room = event_target:contact_empire
+	}
+	
+	### Normal (Not Xenophobe or Xenophile)
+	# Militarist Autocrat
+	desc = {
+		text = action.1.desc_01
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = martial_empire
+					has_government = military_dictatorship
+				}
+			}
+		}
+	}
+	# Spiritualist Autocrat
+	desc = {
+		text = action.1.desc_02
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = divine_mandate
+					has_government = transcendent_empire
+				}
+			}
+		}
+	}
+	# Materialist Autocrat
+	desc = {
+		text = action.1.desc_03
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = despotic_hegemony
+					has_government = ai_overlordship
+				}
+			}
+		}
+	}
+	# Pacifist Autocrat
+	desc = {
+		text = action.1.desc_04
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = enlightened_monarchy
+					has_government = irenic_monarchy
+				}
+			}
+		}
+	}
+	# Generic Autocrat
+	desc = {
+		text = action.1.desc_05
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = despotic_empire
+					has_government = star_empire
+				}
+			}
+		}
+	}
+	# Military Oligarch
+	desc = {
+		text = action.1.desc_06
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = military_junta
+					has_government = ordered_stratocracy
+				}
+			}
+		}
+	}
+	# Spiritualist Oligarch
+	desc = {
+		text = action.1.desc_07
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = theocratic_oligarchy
+					has_government = transcendent_oligarchy
+				}
+			}
+		}
+	}
+	# Materialist Oligarch
+	desc = {
+		text = action.1.desc_08
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = science_directorate
+					has_government = illuminated_technocracy
+				}
+			}
+		}
+	}
+	# Pacifist Oligarch
+	desc = {
+		text = action.1.desc_09
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = peaceful_bureaucracy
+					has_government = irenic_protectorate
+				}
+			}
+		}
+	}
+	# Generic Oligarch
+	desc = {
+		text = action.1.desc_10
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = plutocratic_oligarchy
+					has_government = mega_corporation
+				}
+			}
+		}
+	}
+	# Militarist Democrat
+	desc = {
+		text = action.1.desc_11
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = military_republic
+					has_government = martial_demarchy
+				}
+			}
+		}
+	}
+	# Spiritualist Democrat
+	desc = {
+		text = action.1.desc_12
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = theocratic_republic
+					has_government = transcendent_republic
+				}
+			}
+		}
+	}
+	# Materialist Democrat
+	desc = {
+		text = action.1.desc_13
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = direct_democracy
+					has_government = subconscious_consensus
+				}
+			}
+		}
+	}
+	# Pacifist Democrat
+	desc = {
+		text = action.1.desc_14
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = moral_democracy
+					has_government = irenic_democracy
+				}
+			}
+		}
+	}
+	# Generic Democrat
+	desc = {
+		text = action.1.desc_15
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				NOT = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				OR = {
+					has_government = indirect_democracy
+					has_government = democratic_utopia
+				}
+			}
+		}
+	}
+	
+	### Xenophobe
+	# Militarist Autocrat
+	desc = {
+		text = action.1.desc_16
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = martial_empire
+					has_government = military_dictatorship
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}
+			}
+		}
+	}
+	# Spiritualist Autocrat
+	desc = {
+		text = action.1.desc_17
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = divine_mandate
+					has_government = transcendent_empire
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Materialist Autocrat
+	desc = {
+		text = action.1.desc_18
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = despotic_hegemony
+					has_government = ai_overlordship
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Pacifist Autocrat
+	desc = {
+		text = action.1.desc_19
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = enlightened_monarchy
+					has_government = irenic_monarchy
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Generic Autocrat
+	desc = {
+		text = action.1.desc_20
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = despotic_empire
+					has_government = star_empire
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Military Oligarch
+	desc = {
+		text = action.1.desc_21
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = military_junta
+					has_government = ordered_stratocracy
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Spiritualist Oligarch
+	desc = {
+		text = action.1.desc_22
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = theocratic_oligarchy
+					has_government = transcendent_oligarchy
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Materialist Oligarch
+	desc = {
+		text = action.1.desc_23
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = science_directorate
+					has_government = illuminated_technocracy
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Pacifist Oligarch
+	desc = {
+		text = action.1.desc_24
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = peaceful_bureaucracy
+					has_government = irenic_protectorate
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Generic Oligarch
+	desc = {
+		text = action.1.desc_25
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = plutocratic_oligarchy
+					has_government = mega_corporation
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Militarist Democrat
+	desc = {
+		text = action.1.desc_26
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = military_republic
+					has_government = martial_demarchy
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Spiritualist Democrat
+	desc = {
+		text = action.1.desc_27
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = theocratic_republic
+					has_government = transcendent_republic
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Materialist Democrat
+	desc = {
+		text = action.1.desc_28
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = direct_democracy
+					has_government = subconscious_consensus
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Pacifist Democrat
+	desc = {
+		text = action.1.desc_29
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = moral_democracy
+					has_government = irenic_democracy
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	# Generic Democrat
+	desc = {
+		text = action.1.desc_30
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+				OR = {
+					has_government = indirect_democracy
+					has_government = democratic_utopia
+				}
+				OR = {
+					NOT = { has_ai_personality = fanatic_purifiers }
+					NOT = { species_portrait = mam3 }
+				}				
+			}
+		}
+	}
+	
+	### Xenophile
+	# Militarist Autocrat
+	desc = {
+		text = action.1.desc_31
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = martial_empire
+					has_government = military_dictatorship
+				}
+			}
+		}
+	}
+	# Spiritualist Autocrat
+	desc = {
+		text = action.1.desc_32
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = divine_mandate
+					has_government = transcendent_empire
+				}
+			}
+		}
+	}
+	# Materialist Autocrat
+	desc = {
+		text = action.1.desc_33
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = despotic_hegemony
+					has_government = ai_overlordship
+				}
+			}
+		}
+	}
+	# Pacifist Autocrat
+	desc = {
+		text = action.1.desc_34
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = enlightened_monarchy
+					has_government = irenic_monarchy
+				}
+			}
+		}
+	}
+	# Generic Autocrat
+	desc = {
+		text = action.1.desc_35
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = despotic_empire
+					has_government = star_empire
+				}
+			}
+		}
+	}
+	# Military Oligarch
+	desc = {
+		text = action.1.desc_36
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = military_junta
+					has_government = ordered_stratocracy
+				}
+			}
+		}
+	}
+	# Spiritualist Oligarch
+	desc = {
+		text = action.1.desc_37
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = theocratic_oligarchy
+					has_government = transcendent_oligarchy
+				}
+			}
+		}
+	}
+	# Materialist Oligarch
+	desc = {
+		text = action.1.desc_38
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = science_directorate
+					has_government = illuminated_technocracy
+				}
+			}
+		}
+	}
+	# Pacifist Oligarch
+	desc = {
+		text = action.1.desc_39
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = peaceful_bureaucracy
+					has_government = irenic_protectorate
+				}
+			}
+		}
+	}
+	# Generic Oligarch
+	desc = {
+		text = action.1.desc_40
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = plutocratic_oligarchy
+					has_government = mega_corporation
+				}
+			}
+		}
+	}
+	# Militarist Democrat
+	desc = {
+		text = action.1.desc_41
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = military_republic
+					has_government = martial_demarchy
+				}
+			}
+		}
+	}
+	# Spiritualist Democrat
+	desc = {
+		text = action.1.desc_42
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = theocratic_republic
+					has_government = transcendent_republic
+				}
+			}
+		}
+	}
+	# Materialist Democrat
+	desc = {
+		text = action.1.desc_43
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = direct_democracy
+					has_government = subconscious_consensus
+				}
+			}
+		}
+	}
+	# Pacifist Democrat
+	desc = {
+		text = action.1.desc_44
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = moral_democracy
+					has_government = irenic_democracy
+				}
+			}
+		}
+	}
+	# Generic Democrat
+	desc = {
+		text = action.1.desc_45
+		trigger = {
+			NOT = { is_same_species = event_target:contact_empire }
+			event_target:contact_empire = {
+				is_country_type = default
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				OR = {
+					has_government = indirect_democracy
+					has_government = democratic_utopia
+				}
+			}
+		}
+	}
+	
+	# Fallen Empire 1
+	desc = {
+		text = action.1.desc_60
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = fallen_empire
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	# Fallen Empire 2
+	desc = {
+		text = action.1.desc_61
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = fallen_empire
+				NOT = { has_ethic = ethic_fanatic_xenophobe }
+				NOT = { has_ethic = ethic_fanatic_xenophile }
+				NOT = { has_ethic = ethic_fanatic_militarist }
+				NOT = { has_ethic = ethic_fanatic_materialist }
+				NOT = { has_ethic = ethic_fanatic_spiritualist }
+			}
+		}
+	}
+	# Fallen Empire 3
+	desc = {
+		text = action.1.desc_62
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = fallen_empire
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+	}
+	# Fallen Empire 4
+	desc = {
+		text = action.1.desc_63
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = fallen_empire
+				has_ethic = ethic_fanatic_xenophobe				
+			}
+		}
+	}
+	# Fallen Empire 5
+	desc = {
+		text = action.1.desc_64
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = fallen_empire
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+	# Fallen Empire 6
+	desc = {
+		text = action.1.desc_65
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = fallen_empire
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+# Awakened Fallen Empire 1
+	desc = {
+		text = action.1.desc_66
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = awakened_fallen_empire
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	# Awakened Fallen Empire 2
+	desc = {
+		text = action.1.desc_67
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = awakened_fallen_empire
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+	}
+	# Awakened Fallen Empire 3
+	desc = {
+		text = action.1.desc_68
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = awakened_fallen_empire
+				has_ethic = ethic_fanatic_xenophobe				
+			}
+		}
+	}
+	# Awakened Fallen Empire 4
+	desc = {
+		text = action.1.desc_69
+		trigger = {
+			event_target:contact_empire = {
+				is_country_type = awakened_fallen_empire
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+	
+	diplomatic = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		event_target:contact_empire = {
+			is_primitive = no
+			NOT = {
+				is_country_type = tiyanki
+				is_country_type = neutral_faction
+				is_country_type = faction
+				is_country_type = pirate
+				is_country_type = amoeba
+				is_country_type = crystal
+				is_country_type = drone
+				is_country_type = cloud
+				has_relation_flag = { flag = AbandonedRefugees who = root }
+			}
+		}
+	}
+	
+	immediate = {
+		country_event = { id = advisor.27 }
+		country_event = { id = advisor.28 }
+		country_event = { id = anomaly.4016 }
+		event_target:contact_empire = {
+			save_event_target_as = contact_speaker
+		}
+	}
+	
+	option = {
+		name = action.1.a
+		trigger = {
+
+		}
+	}
+	option = {
+		name = action.1.b
+		trigger = {
+			has_ethic = ethic_xenophobe
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.d
+		trigger = {
+			has_ethic = ethic_fanatic_xenophobe
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.c
+		trigger = {
+			has_ethic = ethic_xenophile
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.e
+		trigger = {
+			has_ethic = ethic_fanatic_xenophile
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.f
+		trigger = {
+			has_ethic = ethic_collectivist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.g
+		trigger = {
+			has_ethic = ethic_fanatic_collectivist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.h
+		trigger = {
+			has_ethic = ethic_individualist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.i
+		trigger = {
+			has_ethic = ethic_fanatic_individualist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.j
+		trigger = {
+			has_ethic = ethic_militarist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.k
+		trigger = {
+			has_ethic = ethic_fanatic_militarist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.l
+		trigger = {
+			has_ethic = ethic_pacifist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.m
+		trigger = {
+			has_ethic = ethic_fanatic_pacifist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.n
+		trigger = {
+			has_ethic = ethic_spiritualist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.o
+		trigger = {
+			has_ethic = ethic_fanatic_spiritualist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.p
+		trigger = {
+			has_ethic = ethic_materialist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.q
+		trigger = {
+			has_ethic = ethic_fanatic_materialist
+			num_ethics < 3
+		}
+	}
+	option = {
+		name = action.1.aa
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+	option = {
+		name = action.1.ab
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	option = {
+		name = action.1.ac
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			OR = {
+				has_ethic = ethic_individualist
+				has_ethic = ethic_fanatic_individualist
+			}
+		}
+	}
+	option = {
+		name = action.1.ad
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			OR = {
+				has_ethic = ethic_collectivist
+				has_ethic = ethic_fanatic_collectivist
+			}
+		}
+	}
+	option = {
+		name = action.1.ae
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	option = {
+		name = action.1.af
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	option = {
+		name = action.1.ag
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+	option = {
+		name = action.1.ah
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	option = {
+		name = action.1.ai
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+			OR = {
+				has_ethic = ethic_individualist
+				has_ethic = ethic_fanatic_individualist
+			}
+		}
+	}
+	option = {
+		name = action.1.aj
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+			OR = {
+				has_ethic = ethic_collectivist
+				has_ethic = ethic_fanatic_collectivist
+			}
+		}
+	}
+	option = {
+		name = action.1.ak
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	option = {
+		name = action.1.al
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	option = {
+		name = action.1.am
+		trigger = {
+			OR = {
+				has_ethic = ethic_collectivist
+				has_ethic = ethic_fanatic_collectivist
+			}
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	option = {
+		name = action.1.an
+		trigger = {
+			OR = {
+				has_ethic = ethic_collectivist
+				has_ethic = ethic_fanatic_collectivist
+			}
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+	option = {
+		name = action.1.ao
+		trigger = {
+			OR = {
+				has_ethic = ethic_collectivist
+				has_ethic = ethic_fanatic_collectivist
+			}
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	option = {
+		name = action.1.ap
+		trigger = {
+			OR = {
+				has_ethic = ethic_collectivist
+				has_ethic = ethic_fanatic_collectivist
+			}
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	option = {
+		name = action.1.aq
+		trigger = {
+			OR = {
+				has_ethic = ethic_individualist
+				has_ethic = ethic_fanatic_individualist
+			}
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	option = {
+		name = action.1.ar
+		trigger = {
+			OR = {
+				has_ethic = ethic_individualist
+				has_ethic = ethic_fanatic_individualist
+			}
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+	option = {
+		name = action.1.as
+		trigger = {
+			OR = {
+				has_ethic = ethic_individualist
+				has_ethic = ethic_fanatic_individualist
+			}
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	option = {
+		name = action.1.at
+		trigger = {
+			OR = {
+				has_ethic = ethic_individualist
+				has_ethic = ethic_fanatic_individualist
+			}
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	option = {
+		name = action.1.au
+		trigger = {
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	option = {
+		name = action.1.av
+		trigger = {
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	option = {
+		name = action.1.aw
+		trigger = {
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	option = {
+		name = action.1.ax
+		trigger = {
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	option = {
+		name = action.1.aaa
+		trigger = {
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_collectivist
+			has_ethic = ethic_militarist
+		}
+	}
+	option = {
+		name = action.1.aab
+		trigger = {
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_individualist
+			has_ethic = ethic_materialist
+		}
+	}
+	option = {
+		name = action.1.aac
+		trigger = {
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_individualist
+			has_ethic = ethic_spiritualist
+		}
+	}
+	option = {
+		name = action.1.aad
+		trigger = {
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_militarist
+			has_ethic = ethic_spiritualist
+		}
+	}
+	option = {
+		name = action.1.aae
+		trigger = {
+			has_ethic = ethic_xenophobe
+			has_ethic = ethic_collectivist
+			has_ethic = ethic_militarist
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				NOT = {
+					event_target:contact_empire = { has_relation_flag = { flag = no_coms who = root } }
+				}
+			}
+			hidden_effect = {
+				country_event = { id = progress.4 }
+				country_event = { id = progress.5 }
+				country_event = { id = progress.6 }
+				#country_event = { id = story.7 days = 30 } REMOVED DUE TO ON_ACTIONS ALSO TRIGGERING THIS, CAUSING SCOPING ISSUES
+				if = {
+					limit = {
+						event_target:contact_empire = {
+							OR = {
+								is_country_type = fallen_empire
+								is_country_type = awakened_fallen_empire
+							}
+						}
+					}
+					set_country_flag = Story7
+					set_country_flag = has_encountered_other_empire
+					if = {
+						limit = { NOT = { has_country_flag = StoryFirst } }
+						set_country_flag = StoryFirst
+					}
+				}
+			}
+		}
+	}
+}
+
+# Primitive Medieval Civilization Encountered
+country_event = {
+	id = action.5
+	title = "action.5.name"
+	picture = GFX_evt_medieval_alien_civilization
+	location = FROMFROM
+	show_sound = event_primitive_civilization
+	
+	desc = { # Bronze Age
+		text = action.5.desc_01
+		trigger = { event_target:primitive_civ = { has_country_flag = bronze_age } }
+	}
+	desc = { # Iron Age
+		text = action.5.desc_02
+		trigger = { event_target:primitive_civ = { has_country_flag = iron_age } }
+	}
+	desc = { # Late Medieval Age
+		text = action.5.desc_03
+		trigger = { event_target:primitive_civ = { has_country_flag = late_medieval_age } }
+	}
+	desc = { # Renaissance
+		text = action.5.desc_04
+		trigger = { event_target:primitive_civ = { has_country_flag = renaissance_age } }
+	}
+	desc = { # Steam Age
+		text = action.5.desc_05
+		trigger = { event_target:primitive_civ = { has_country_flag = steam_age } }
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		event_target:primitive_civ = {
+			NOT = { has_country_flag = humans_late_medieval_age }
+			OR = {
+				has_country_flag = bronze_age
+				has_country_flag = iron_age
+				has_country_flag = late_medieval_age
+				has_country_flag = renaissance_age
+				has_country_flag = steam_age
+			}
+		}
+	}
+
+	option = {
+		name = INTERESTING
+		hidden_effect = { country_event = { id = story.6 days = 30 } }
+	}
+}
+
+# Primitive Industrial Civilization Encountered
+country_event = {
+	id = action.6
+	title = "action.5.name"
+	picture = GFX_evt_metropolis
+	location = FROMFROM
+	show_sound = event_scanner
+	
+	desc = { # Industrial Age
+		text = action.6.desc_01
+		trigger = { event_target:primitive_civ = { has_country_flag = industrial_age } }
+	}
+	desc = { # Machine Age
+		text = action.6.desc_02
+		trigger = { event_target:primitive_civ = { has_country_flag = machine_age } }
+	}
+	desc = { # Atomic Age
+		text = action.6.desc_03
+		trigger = { event_target:primitive_civ = { has_country_flag = atomic_age } }
+	}
+	desc = { # Early Space Age
+		text = action.6.desc_04
+		trigger = { event_target:primitive_civ = { has_country_flag = early_space_age } }
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+		event_target:primitive_civ = {
+			NOT = {
+				has_country_flag = humans_machine_age
+				has_country_flag = humans_early_space_age
+			}
+			OR = {
+				has_country_flag = industrial_age
+				has_country_flag = machine_age
+				has_country_flag = atomic_age
+				has_country_flag = early_space_age
+			}
+		}
+	}
+
+	option = {
+		name = INTERESTING
+		hidden_effect = { country_event = { id = story.6 days = 30 } }
+	}
+}
+
+# Add a opinion modifier if we are hostile when communications are established
+country_event = {
+	id = action.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		is_hostile = from
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				num_killed_ships = {
+					target = from
+					value < 10
+				}
+				num_taken_planets = {
+					target = from
+					value = 0
+				}
+			}
+			add_opinion_modifier = {
+				modifier = opinion_first_contact_hostility
+				who = from
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					num_killed_ships = {
+						target = from
+						value > 9
+					}
+					num_taken_planets = {
+						target = from
+						value > 0
+					}
+				}
+			}
+			add_opinion_modifier = {
+				modifier = opinion_first_contact_war
+				who = from
+			}
+		}
+	}
+}
+
+# Conquest
+country_event = {
+	id = action.8
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		FROM = { is_country_type = default }
+		NOT = { has_communications = from }
+		is_hostile = from
+	}
+	
+	immediate = {
+		establish_communications = from
+		fromfrom = {
+			add_threat = {
+				who = root
+				amount = 4 # scales to pops
+			}		
+		
+			set_owner = root
+			set_controller = root
+		}
+	}
+}
+
+# First Contact Empires
+country_event = {
+	id = action.10
+	title = "action.10.name"
+	desc = "action.15.desc"
+	picture = GFX_evt_star_chart
+	show_sound = advisor_notification_alien_vessel_encountered
+	location = FROMFROMFROM
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = default
+		exists = capital_scope
+		NOT = { has_country_flag = day_0 }
+		from = { NOT = { has_country_flag = day_0 } }
+		FROM = {
+			OR = {
+				is_country_type = default
+				#is_country_type = nomad
+			}
+		}
+	}
+
+	immediate = {
+		capital_scope = { save_event_target_as = pc_home }
+		from = {
+			enable_special_project = {
+				name = "ESTABLISH_COMMUNICATIONS"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = "action.10.a"
+		tooltip = {
+			enable_special_project = {
+				name = "ESTABLISH_COMMUNICATIONS"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+}
+
+# Communication Established
+country_event = {
+	id = action.11
+	title = "action.11.name"
+	desc = {
+		text = "action.11.desc"
+		trigger = {
+			fromfrom = { NOT = { has_relation_flag = { who = root flag = AbandonedRefugees } } }
+		}
+	}
+	desc = {
+		text = action.11.abandoned.desc
+		trigger = {
+			fromfrom = { has_relation_flag = { who = root flag = AbandonedRefugees } }
+		}
+	}	
+	picture = GFX_evt_throne_room
+	show_sound = event_radio_chatter
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_country_flag = day_0
+		}
+		fromfrom = {
+			NOT = {
+				has_country_flag = day_0
+			}
+		}
+	}
+
+	immediate = {
+		#save_event_target_as = contact_empire
+		FROMFROM = { save_event_target_as = contact_empire }
+		establish_communications = FROMFROM
+		# TODO should also cancel the other country's research!
+	}
+
+	option = {
+		trigger = {
+			fromfrom = { NOT = { has_relation_flag = { who = root flag = AbandonedRefugees } } }
+		}
+		name = "action.11.a"
+		if = {
+			limit = {
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier2influencecontactxenophile
+				min = @tier2influencecontactmin
+				max = @tier2influencecontactmax
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier2influencecontact
+					min = @tier2influencecontactmin
+					max = @tier2influencecontactmax
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = action.1 }
+			#FROMFROM = { country_event = { id = action.100 } }
+		}
+	}
+	option = {
+		trigger = {
+			fromfrom = { has_relation_flag = { who = root flag = AbandonedRefugees } }
+			NOT = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_xenophobe
+			}
+		}
+		name = WORRYING
+		if = {
+			limit = {
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier2influencecontactxenophile
+				min = @tier2influencecontactmin
+				max = @tier2influencecontactmax
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier2influencecontact
+					min = @tier2influencecontactmin
+					max = @tier2influencecontactmax
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = action.1 }
+			#FROMFROM = { country_event = { id = action.100 } }
+		}
+	}
+	option = {
+		trigger = {
+			fromfrom = { has_relation_flag = { who = root flag = AbandonedRefugees } }
+			OR = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_xenophobe
+			}
+		}
+		name = OK
+		if = {
+			limit = {
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier2influencecontactxenophile
+				min = @tier2influencecontactmin
+				max = @tier2influencecontactmax
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier2influencecontact
+					min = @tier2influencecontactmin
+					max = @tier2influencecontactmax
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = action.1 }
+			#FROMFROM = { country_event = { id = action.100 } }
+		}
+	}
+}
+
+# Primitive planet surveyed
+ship_event = {
+	id = action.12
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		FROM = {
+			OR = {
+				AND = {
+					has_owner = yes
+					owner = { is_country_type = primitive }
+				}
+				has_planet_flag = stone_age_primitives
+			}
+		}
+	}
+	
+	immediate = {
+		owner = { 
+			save_event_target_as = ship_owner 
+			if = {
+				limit = {
+					NOT = { has_country_flag = encountered_first_primitive }
+				}
+				set_country_flag = encountered_first_primitive
+			}
+		}
+		FROM = {
+			if = {
+				limit = {
+					exists = owner
+				}
+				owner = {
+					establish_contact = { who = event_target:ship_owner }
+					establish_communications = event_target:ship_owner
+					save_event_target_as = primitive_civ
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = event_target:primitive_civ
+				event_target:primitive_civ = {
+					NOT = { has_country_flag = humans_late_medieval_age }
+					OR = {
+						has_country_flag = bronze_age
+						has_country_flag = iron_age
+						has_country_flag = late_medieval_age
+						has_country_flag = renaissance_age
+						has_country_flag = steam_age
+					}
+				}
+			}
+			owner = { country_event = { id = action.5 } }
+			break = yes
+		}
+		if = {
+			limit = {
+				exists = event_target:primitive_civ
+				event_target:primitive_civ = {
+					NOT = {
+						has_country_flag = humans_machine_age
+						has_country_flag = humans_early_space_age 
+					}
+					OR = {
+						has_country_flag = industrial_age
+						has_country_flag = machine_age
+						has_country_flag = atomic_age
+						has_country_flag = early_space_age
+					}
+				}
+			}
+			owner = { country_event = { id = action.6 } }
+			break = yes
+		}
+		if = {
+			limit = {
+				exists = event_target:primitive_civ
+				event_target:primitive_civ = { has_country_flag = humans_late_medieval_age }
+			}
+			owner = { country_event = { id = galactic_features.101 } }
+			break = yes
+		}
+		if = {
+			limit = {
+				exists = event_target:primitive_civ
+				event_target:primitive_civ = { has_country_flag = humans_machine_age }
+			}
+			owner = { country_event = { id = galactic_features.102 } }
+			break = yes
+		}
+		if = {
+			limit = {
+				exists = event_target:primitive_civ
+				event_target:primitive_civ = { has_country_flag = humans_early_space_age }
+			}
+			owner = { country_event = { id = galactic_features.103 } }
+			break = yes
+		}
+	}
+}
+
+# Aliens Establish Communications
+country_event = {
+	id = action.13
+	title = "action.13.name"
+	desc = {
+		text = "action.13.nomad.desc"
+		trigger = {
+			from = { owner = { is_country_type = nomad } }
+		}
+	}
+	desc = {
+		text = "action.13.desc"
+		trigger = {
+			from = {
+				owner = {
+					NOT = {
+						is_country_type = nomad
+						has_relation_flag = { who = root flag = AbandonedRefugees }
+					}
+				}
+			}
+		}
+	}
+	desc = {
+		text = "action.13.abandoned.desc"
+		trigger = {
+			from = { owner = { has_relation_flag = { who = root flag = AbandonedRefugees } } }
+		}
+	}
+	picture = GFX_evt_throne_room
+	show_sound = event_radio_chatter
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_country_flag = day_0
+		}
+		from = {
+			owner = {
+				NOT = {
+					has_country_flag = day_0
+				}
+			}
+		}
+	}
+
+	immediate = {
+		FROM = {
+			owner = {
+				save_event_target_as = contact_empire
+			}
+		}
+	}
+
+	option = {
+		trigger = {
+			from = { owner = { NOT = { has_relation_flag = { who = root flag = AbandonedRefugees } } } }
+		}
+		name = "action.13.a"
+		if = {
+			limit = {
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier1influencecontactxenophile
+				min = @tier1influencecontactmin
+				max = @tier1influencecontactmax
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier1influencecontact
+					min = @tier1influencecontactmin
+					max = @tier1influencecontactmax
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					from = { owner = { NOT = { is_country_type = nomad } } }
+				}
+				country_event = { id = action.100 }
+				else = {
+					country_event = { id = nomad.10 }
+				}
+			}
+		}
+	}
+	option = {
+		trigger = {
+			from = { owner = { has_relation_flag = { who = root flag = AbandonedRefugees } } }
+		}
+		name = WORRYING
+		if = {
+			limit = {
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier1influencecontactxenophile
+				min = @tier1influencecontactmin
+				max = @tier1influencecontactmax
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier1influencecontact
+					min = @tier1influencecontactmin
+					max = @tier1influencecontactmax
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					from = { owner = { NOT = { is_country_type = nomad } } }
+				}
+				country_event = { id = action.100 }
+				else = {
+					country_event = { id = nomad.10 }
+				}
+			}
+		}
+	}
+	option = {
+		trigger = {
+			from = { owner = { has_relation_flag = { who = root flag = AbandonedRefugees } } }
+			OR = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_xenophobe
+			}
+		}
+		name = "action.13.c"
+		if = {
+			limit = {
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+			add_monthly_resource_mult = {
+				resource = influence
+				value = @tier1influencecontactxenophile
+				min = @tier1influencecontactmin
+				max = @tier1influencecontactmax
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = influence
+					value = @tier1influencecontact
+					min = @tier1influencecontactmin
+					max = @tier1influencecontactmax
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					from = { owner = { NOT = { is_country_type = nomad } } }
+				}
+				country_event = { id = action.100 }
+				else = {
+					country_event = { id = nomad.10 }
+				}
+			}
+		}
+	}
+}
+
+# Primitive Civilization Conquered - HIDDEN
+country_event = {
+	id = action.14
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_country_type = primitive }
+		is_country_type = default
+	}
+	
+	immediate = {
+		from = {
+			switch = {
+				trigger = has_country_flag
+
+				bronze_age = {
+				every_owned_pop = {
+						add_modifier = {
+							modifier = culture_shock_bronze_age
+							days = 36000 #100
+						}
+					}
+				}
+
+				iron_age = {
+					every_owned_pop = {
+						add_modifier = {
+							modifier = culture_shock_iron_age
+							days = 30600 #85
+						}
+					}
+				}
+
+				late_medieval_age = {
+					every_owned_pop = {
+						add_modifier = {
+							modifier = culture_shock_late_medieval_age
+							days = 25200 #70
+						}
+					}
+				}
+
+				renaissance_age = {
+					every_owned_pop = {
+						add_modifier = {
+							modifier = culture_shock_renaissance_age
+							days = 21600 #60
+						}
+					}
+				}
+
+				steam_age = {
+					every_owned_pop = {
+						add_modifier = {
+							modifier = culture_shock_steam_age
+							days = 18000 #50
+						}
+					}
+				}
+
+				industrial_age = {
+					every_owned_pop = {
+						add_modifier = {
+							modifier = culture_shock_industrial_age
+							days = 12600 #35
+						}
+					}
+				}
+
+				machine_age = {
+					every_owned_pop = {
+						add_modifier = {
+							modifier = culture_shock_machine_age
+							days = 9000 #25
+						}
+					}
+				}
+
+				atomic_age = {
+					every_owned_pop = {
+						add_modifier = {
+							modifier = culture_shock_atomic_age
+							days = 7200 #20
+						}
+					}
+				}
+
+				early_space_age = {
+					every_owned_pop = {
+						add_modifier = {
+							modifier = culture_shock_early_space_age
+							days = 3600 #10
+						}
+					}
+				}
+			}
+		}
+
+		FROMFROM = {
+			set_owner = ROOT
+		}
+
+		every_country = {
+			limit = {
+				has_communications = root
+				is_country_type = default
+			}
+			add_opinion_modifier = {
+				who = root
+				modifier = opinion_primitive_violation
+			}
+		}
+
+		if = {
+			limit = {
+				is_ai = no
+				#NOT = { has_country_flag = primitives_invaded }
+			}
+			fromfrom = {
+				save_event_target_as = conquered_primitive_country
+			}
+			country_event = { id = action.140 }
+		}
+	}
+}
+
+# Primitive Civilization Conquered - Player info
+country_event = {
+	id = action.140
+	title = action.14.name
+	desc = action.14.desc
+	picture = GFX_evt_star_chart
+	show_sound = event_alien_signal
+	location = event_target:conquered_primitive_country
+
+	is_triggered_only = yes
+	
+	#immediate = {
+	#	set_country_flag = primitives_invaded
+	#}
+
+	option = {
+		name = action.14.a.phobe
+		custom_tooltip = action.14.a.tooltip
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_xenophobe
+			}
+		}
+	}
+	option = {
+		name = action.14.a.military
+		custom_tooltip = action.14.a.tooltip
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_militarist
+			}
+			NOT = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_xenophobe
+			}			
+		}
+	}
+	option = {
+		name = action.14.a.spirit
+		custom_tooltip = action.14.a.tooltip
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+			}
+			NOT = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_militarist
+			}
+		}
+	}
+	option = {
+		name = action.14.a.material
+		custom_tooltip = action.14.a.tooltip
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_materialist
+			}
+			NOT = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_militarist
+			}
+		}
+	}
+	option = {
+		name = action.14.a
+		custom_tooltip = action.14.a.tooltip
+		trigger = {
+			NOT = {
+				has_ethic = ethic_fanatic_xenophobe
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_materialist
+			}
+		}
+	}
+}
+
+# Culture Shock transfered to newly-born pops
+pop_event = {
+	id = action.141
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = planet
+		planet = {
+			any_pop = {
+				OR = {
+					has_modifier = culture_shock_bronze_age
+					has_modifier = culture_shock_iron_age
+					has_modifier = culture_shock_late_medieval_age
+					has_modifier = culture_shock_renaissance_age
+					has_modifier = culture_shock_steam_age
+					has_modifier = culture_shock_industrial_age
+					has_modifier = culture_shock_machine_age
+					has_modifier = culture_shock_atomic_age
+					has_modifier = culture_shock_early_space_age
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				planet = {
+					any_pop = {
+						is_same_species = root
+						has_modifier = culture_shock_bronze_age
+					}
+				}
+				NOT = { has_modifier = culture_shock_bronze_age }
+			}
+			add_modifier = {
+				modifier = culture_shock_bronze_age
+				days = 7200
+			}
+		}
+		if = {
+			limit = {
+				planet = {
+					any_pop = {
+						is_same_species = root
+						has_modifier = culture_shock_iron_age
+					}
+				}
+				NOT = { has_modifier = culture_shock_iron_age }
+			}
+			add_modifier = {
+				modifier = culture_shock_iron_age
+				days = 6120
+			}
+		}
+		if = {
+			limit = {
+				planet = {
+					any_pop = {
+						is_same_species = root
+						has_modifier = culture_shock_late_medieval_age
+					}
+				}
+				NOT = { has_modifier = culture_shock_late_medieval_age }
+			}
+			add_modifier = {
+				modifier = culture_shock_late_medieval_age
+				days = 5040
+			}
+		}
+		if = {
+			limit = {
+				planet = {
+					any_pop = {
+						is_same_species = root
+						has_modifier = culture_shock_renaissance_age
+					}
+				}
+				NOT = { has_modifier = culture_shock_renaissance_age }
+			}
+			add_modifier = {
+				modifier = culture_shock_renaissance_age
+				days = 4320
+			}
+		}
+		if = {
+			limit = {
+				planet = {
+					any_pop = {
+						is_same_species = root
+						has_modifier = culture_shock_steam_age
+					}
+				}
+				NOT = { has_modifier = culture_shock_steam_age }
+			}
+			add_modifier = {
+				modifier = culture_shock_steam_age
+				days = 3600
+			}
+		}
+		if = {
+			limit = {
+				planet = {
+					any_pop = {
+						is_same_species = root
+						has_modifier = culture_shock_industrial_age
+					}
+				}
+				NOT = { has_modifier = culture_shock_industrial_age }
+			}
+			add_modifier = {
+				modifier = culture_shock_industrial_age
+				days = 2520
+			}
+		}
+		if = {
+			limit = {
+				planet = {
+					any_pop = {
+						is_same_species = root
+						has_modifier = culture_shock_machine_age
+					}
+				}
+				NOT = { has_modifier = culture_shock_machine_age }
+			}
+			add_modifier = {
+				modifier = culture_shock_machine_age
+				days = 1800
+			}
+		}
+		if = {
+			limit = {
+				planet = {
+					any_pop = {
+						is_same_species = root
+						has_modifier = culture_shock_atomic_age
+					}
+				}
+				NOT = { has_modifier = culture_shock_atomic_age }
+			}
+			add_modifier = {
+				modifier = culture_shock_atomic_age
+				days = 1440
+			}
+		}
+		if = {
+			limit = {
+				planet = {
+					any_pop = {
+						is_same_species = root
+						has_modifier = culture_shock_early_space_age
+					}
+				}
+				NOT = { has_modifier = culture_shock_early_space_age }
+			}
+			add_modifier = {
+				modifier = culture_shock_early_space_age
+				days = 720
+			}
+		}
+	}
+}
+
+# First Contact Space Amoeba
+country_event = {
+	id = action.15
+	title = "action.10.name"
+	desc = "action.15.desc"
+	picture = GFX_evt_star_chart
+	show_sound = advisor_notification_alien_vessel_encountered
+	location = FROMFROMFROM
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_country_type = amoeba }
+		is_country_type = default
+		is_ai = no
+		NOT = { has_country_flag = amoeba_encountered }
+	}
+	
+	immediate = {
+		set_country_flag = amoeba_encountered
+		capital_scope = { save_event_target_as = pc_home }
+		from = {
+			enable_special_project = {
+				name = "INVESTIGATE_SPACE_AMOEBA"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = "action.10.a"
+		tooltip = {
+			enable_special_project = {
+				name = "INVESTIGATE_SPACE_AMOEBA"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+}
+
+# First Contact Crystals
+country_event = {
+	id = action.16
+	title = "action.10.name"
+	desc = "action.15.desc"
+	picture = GFX_evt_star_chart
+	show_sound = advisor_notification_alien_vessel_encountered
+	location = FROMFROMFROM
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_country_type = crystal }
+		is_country_type = default
+		is_ai = no
+		NOT = { has_country_flag = crystal_encountered }
+	}
+	
+	immediate = {
+		set_country_flag = crystal_encountered
+		capital_scope = { save_event_target_as = pc_home }
+		from = {
+			enable_special_project = {
+				name = "INVESTIGATE_CRYSTALS"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = "action.10.a"
+		tooltip = {
+			enable_special_project = {
+				name = "INVESTIGATE_CRYSTALS"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+}
+
+# First Contact Drones
+country_event = {
+	id = action.17
+	title = "action.10.name"
+	desc = "action.15.desc"
+	picture = GFX_evt_star_chart
+	show_sound = advisor_notification_alien_vessel_encountered
+	location = FROMFROMFROM
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_country_type = drone }
+		is_country_type = default
+		is_ai = no
+		NOT = { has_country_flag = drone_encountered }
+	}
+	
+	immediate = {
+		set_country_flag = drone_encountered
+		capital_scope = { save_event_target_as = pc_home }
+		from = {
+			enable_special_project = {
+				name = "INVESTIGATE_DRONES"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = "action.10.a"
+		tooltip = {
+			enable_special_project = {
+				name = "INVESTIGATE_DRONES"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+}
+
+# First Contact Space Clouds
+country_event = {
+	id = action.18
+	title = "action.10.name"
+	desc = "action.15.desc"
+	picture = GFX_evt_star_chart
+	show_sound = advisor_notification_alien_vessel_encountered
+	location = FROMFROMFROM
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_country_type = cloud }
+		is_country_type = default
+		is_ai = no
+		NOT = { has_country_flag = cloud_encountered }
+	}
+	
+	immediate = {
+		set_country_flag = cloud_encountered
+		capital_scope = { save_event_target_as = pc_home }
+		from = {
+			enable_special_project = {
+				name = "INVESTIGATE_SPACE_CLOUDS"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = "action.10.a"
+		tooltip = {
+			enable_special_project = {
+				name = "INVESTIGATE_SPACE_CLOUDS"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+}
+
+# First Contact Tiyanki
+country_event = {
+	id = action.25
+	title = "action.10.name"
+	desc = "action.15.desc"
+	picture = GFX_evt_star_chart
+	show_sound = advisor_notification_alien_vessel_encountered
+	location = FROMFROMFROM
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_country_type = tiyanki }
+		is_country_type = default
+		is_ai = no
+		NOT = { has_country_flag = tiyanki_encountered }
+	}
+	
+	immediate = {
+		set_country_flag = tiyanki_encountered
+		capital_scope = { save_event_target_as = pc_home }
+		from = {
+			enable_special_project = {
+				name = "INVESTIGATE_TIYANKI"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = "action.10.a"
+		tooltip = {
+			enable_special_project = {
+				name = "INVESTIGATE_TIYANKI"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+}
+
+# First Contact Pirate Critters
+country_event = {
+	id = action.50
+	title = "action.10.name"
+	desc = "action.15.desc"
+	picture = GFX_evt_star_chart
+	show_sound = advisor_notification_alien_vessel_encountered
+	location = FROMFROMFROM
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_country_type = pirate }
+		is_country_type = default
+		is_ai = no
+		NOT = { has_country_flag = pirate_encountered }
+	}
+	
+	immediate = {
+		set_country_flag = pirate_encountered
+		capital_scope = { save_event_target_as = pc_home }
+		from = {
+			enable_special_project = {
+				name = "INVESTIGATE_PIRATES"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = "action.10.a"
+		tooltip = {
+			enable_special_project = {
+				name = "INVESTIGATE_PIRATES"
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+}
+
+# New Contact opinion modifier added
+country_event = {
+	id = action.19
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = { is_country_type = default }
+
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					exists = overlord
+					AND = {
+						exists = overlord
+						overlord = {
+							is_same_value = from
+						}
+					}
+				}
+			}
+			add_opinion_modifier = {
+				modifier = opinion_new_contact
+				who = from
+			}
+		}
+	}
+}
+
+# AI Outlawed
+country_event = {
+	id = action.20
+	title = "action.20.name"
+	desc = "action.20.desc"
+	picture = GFX_evt_robot_assembly_plant
+	show_sound = event_construction
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		last_changed_policy = artificial_intelligence_policy
+		has_policy_flag = ai_outlawed
+		OR = {
+			count_owned_pops = {
+				limit = { is_species = ROBOT_POP_SPECIES_3 }
+				count > 0
+			}
+			count_owned_pops = {
+				limit = { is_species = ROBOT_POP_SPECIES_2 }
+				count > 0
+			}
+			#any_owned_planet = {
+			#	OR = {
+			#		has_building = "building_robotics_assembly_plant_2"
+			#		has_building = "building_robotics_assembly_plant_3"
+			#	}
+			#}
+		}
+	}
+	
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				OR = {
+					is_species = ROBOT_POP_SPECIES_3
+					is_species = ROBOT_POP_SPECIES_2
+				}
+			}
+			purge = yes 
+			# Should not be possible for player to abort this while the outlawed policy is in effect
+		}
+		#every_owned_planet = {
+		#	limit = { has_building = "building_robotics_assembly_plant_2" }
+		#	every_tile = {
+		#		limit = { has_building = "building_robotics_assembly_plant_2" }
+		#		set_building = building_robotics_assembly_plant
+		#	}
+		#}
+		#every_owned_planet = {
+		#	limit = { has_building = "building_robotics_assembly_plant_3" }
+		#	every_tile = {
+		#		limit = { has_building = "building_robotics_assembly_plant_3" }
+		#		set_building = building_robotics_assembly_plant
+		#	}
+		#}
+	}
+	
+	option = {
+		name = "action.20.a"
+		custom_tooltip = action.20.tooltip
+	}
+}
+
+# Other Empires react to a Pop dying in a purge
+planet_event = {
+	id = action.21
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROM = {
+			is_robot_pop = no
+			is_sentient = yes
+		}
+		is_controlled_by = FROM
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_communications = FROM
+				NOT = { is_country = FROM }
+				NOT = { is_same_species = ROOT }
+				NOT = { has_ai_personality_behaviour = purger }
+				OR = {
+					is_country_type = default
+					has_ai_personality = awakened_fallen_empire_xenophile				
+				}	
+			}
+			add_opinion_modifier = { who = FROM modifier = opinion_genocidal }
+		}
+		every_country = {
+			limit = {
+				has_communications = FROM
+				NOT = { is_country = FROM }
+				is_same_species = ROOT
+			}
+			add_opinion_modifier = { who = FROM modifier = opinion_genocidal_our_species }
+		}		
+	}
+}
+
+# Pops and Other Empires react to full orbital bombardment
+country_event = {
+	id = action.23
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_communications = ROOT
+				NOT = { is_country = ROOT }
+				NOT = { has_policy_flag = allow_orbital_bombardment_full }
+				NOT = {
+					OR = {
+						has_ethic = "ethic_militarist"
+						has_ethic = "ethic_fanatic_militarist"
+					}
+				}
+				OR = {
+					is_country_type = default
+					has_ai_personality = awakened_fallen_empire_xenophile				
+				}
+			}
+			add_opinion_modifier = { who = ROOT modifier = opinion_nuker }
+		}
+		every_owned_pop = {
+			if = {
+				limit = { pop_has_ethic = ethic_pacifist }
+				add_modifier = {
+					modifier = "pop_full_bombardment_neg"
+					days = 3600
+					clear_on_owner_change = yes
+					multiplier = 5.0
+				}
+			}
+			if = {
+				limit = { pop_has_ethic = ethic_fanatic_pacifist }
+				add_modifier = {
+					modifier = "pop_full_bombardment_neg"
+					days = 3600
+					clear_on_owner_change = yes
+					multiplier = 10.0
+				}
+			}
+		}
+	}
+}
+
+# Sets <planet_class>_surveyed country flag
+ship_event = {
+	id = action.24
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				from = { is_planet_class = pc_desert }
+				owner = { NOT = { has_country_flag = desert_surveyed } }
+			}
+			owner = { set_country_flag = desert_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_tropical }
+				owner = { NOT = { has_country_flag = tropical_surveyed } }
+			}
+			owner = { set_country_flag = tropical_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_arid }
+				owner = { NOT = { has_country_flag = arid_surveyed } }
+			}
+			owner = { set_country_flag = arid_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_continental }
+				owner = { NOT = { has_country_flag = continental_surveyed } }
+			}
+			owner = { set_country_flag = continental_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_ocean }
+				owner = { NOT = { has_country_flag = ocean_surveyed } }
+			}
+			owner = { set_country_flag = ocean_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_tundra }
+				owner = { NOT = { has_country_flag = tundra_surveyed } }
+			}
+			owner = { set_country_flag = tundra_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_arctic }
+				owner = { NOT = { has_country_flag = arctic_surveyed } }
+			}
+			owner = { set_country_flag = arctic_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_gas_giant }
+				owner = { NOT = { has_country_flag = gas_giant_surveyed } }
+			}
+			owner = { set_country_flag = gas_giant_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_asteroid }
+				owner = { NOT = { has_country_flag = asteroid_surveyed } }
+			}
+			owner = { set_country_flag = asteroid_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_molten }
+				owner = { NOT = { has_country_flag = molten_surveyed } }
+			}
+			owner = { set_country_flag = molten_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_barren }
+				owner = { NOT = { has_country_flag = barren_surveyed } }
+			}
+			owner = { set_country_flag = barren_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_barren_cold }
+				owner = { NOT = { has_country_flag = barren_cold_surveyed } }
+			}
+			owner = { set_country_flag = barren_cold_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_nuked }
+				owner = { NOT = { has_country_flag = nuked_surveyed } }
+			}
+			owner = { set_country_flag = nuked_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_toxic }
+				owner = { NOT = { has_country_flag = toxic_surveyed } }
+			}
+			owner = { set_country_flag = toxic_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_frozen }
+				owner = { NOT = { has_country_flag = frozen_surveyed } }
+			}
+			owner = { set_country_flag = frozen_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_shielded }
+				owner = { NOT = { has_country_flag = shielded_surveyed } }
+			}
+			owner = { set_country_flag = shielded_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_ai }
+				owner = { NOT = { has_country_flag = ai_surveyed } }
+			}
+			owner = { set_country_flag = ai_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_infested }
+				owner = { NOT = { has_country_flag = infested_surveyed } }
+			}
+			owner = { set_country_flag = infested_surveyed }
+		}
+		if = {
+			limit = {
+				from = { is_planet_class = pc_gaia }
+				owner = { NOT = { has_country_flag = gaia_surveyed } }
+			}
+			owner = { set_country_flag = gaia_surveyed }
+		}
+	}
+}
+
+# Your Pops react to the start of a Purge
+pop_event = {
+	id = action.26
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			is_robot_pop = no
+			from.owner = {
+				has_policy_flag = "ai_full_rights"
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				from.controller = { is_same_value = root.from.controller }
+			}
+			owner = {
+				every_owned_pop = {
+					limit = {
+						pop_has_ethic = ethic_individualist
+						OR = {
+							is_same_species = ROOT
+							NOT = { pop_has_ethic = ethic_fanatic_xenophobe }
+						}
+					}
+					add_modifier = {
+						modifier = "pop_genocidal_neg"
+						days = 3600
+						clear_on_owner_change = yes
+						multiplier = 5.0
+					}
+				}
+				every_owned_pop = {
+					limit = {
+						pop_has_ethic = ethic_fanatic_individualist
+					}
+					add_modifier = {
+						modifier = "pop_genocidal_neg"
+						days = 3600
+						clear_on_owner_change = yes
+						multiplier = 10.0
+					}
+				}
+			}
+		}
+	}
+}
+
+# Your Pops react to the cancellation of a Purge
+pop_event = {
+	id = action.27
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			FROMFROM = {
+				is_robot_pop = no
+			}
+			FROM = {
+				exists = owner
+				owner = {
+					has_policy_flag = "ai_full_rights"
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		owner = {
+			every_owned_pop = {
+				if = {
+					limit = {
+						pop_has_ethic = ethic_individualist
+						OR = {
+							is_same_species = ROOT
+							NOT = { pop_has_ethic = ethic_fanatic_xenophobe }
+						}
+					}
+					remove_modifier = "pop_genocidal_neg"
+				}
+				if = {
+					limit = { pop_has_ethic = ethic_fanatic_individualist }
+					remove_modifier = "pop_genocidal_neg"
+				}
+			}
+		}
+	}
+}
+
+# A pop has been born, enslave it any of the pop on the planet is a slave.
+pop_event = {
+	id = action.28
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		IF = {
+			limit = {
+				planet = {
+					any_pop = {
+						NOT = { is_same_value = root }
+						species = {
+							root = {
+								species = {
+									is_same_value = prevprev
+								}
+							}
+						}
+					}
+					NOT = {
+						any_pop = {
+							NOT = { is_same_value = root }
+							species = {
+								root = {
+									species = {
+										is_same_value = prevprev
+									}
+								}
+							}
+							is_enslaved = no
+						}
+					}
+				}
+			}
+			enslave_pop = yes
+		}
+	}
+}
+
+# A pop has been enslaved, remove it if we have the no growing slaves policy.
+pop_event = {
+	id = action.29
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_growing = yes
+		owner = {
+			has_policy_flag = slavery_procreation_not_allowed
+		}
+	}
+	
+	immediate = {
+		kill_pop = yes
+	}
+}
+
+# A rebel country has taken their initial planet, switch their country type.
+country_event = {
+	id = action.30
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_country_type = rebel
+	}
+	
+	immediate = {
+		set_country_type = default
+		from = {
+			from = {
+				add_war_demand = {
+					type = cede_planet
+					parameter:planet = prev
+					target = prev.owner
+					warscore_cost = 50
+				}
+			}
+			solar_system = {
+				every_fleet_in_system = {
+					limit = {
+						is_ship_class = shipclass_military_station
+						owner = { is_same_value = prevprevprev.owner }
+					}
+					set_owner = root
+				}
+			}
+		}
+		create_military_fleet = {
+			owner = this
+			scaled_size = {
+				base = 1
+				modifier = {
+					add = 1
+					#owner = {
+						num_owned_planets > 2
+					#}
+				}
+				modifier = {
+					add = 1
+					#owner = {
+						num_owned_planets > 4
+					#}
+				}
+			}
+			effect = {
+				set_location = from
+			}
+		}
+		add_modifier = {
+			modifier = "sponsored_rebels"
+			days = 7200
+		}
+		add_minerals = 200 # Should be atleast the required amount for a spaceport
+		add_energy = 200
+		add_influence = 250
+	}
+}
+
+# Encountered Fallen Empire, comms established
+#country_event = {
+#	id = action.31
+#	hide_window = yes
+#	is_triggered_only = yes
+#
+#	trigger = {
+#		is_country_type = default
+#		from = { is_country_type = fallen_empire }
+#	}
+#
+#	immediate = {
+#		establish_communications = from
+#		from = { save_event_target_as = contact_empire }
+#		country_event = { id = action.1 }
+#	}
+#}
+
+# Won war
+country_event = {
+	id = action.32
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = has_won_war
+	}
+}
+
+#Election started
+country_event = {
+	id = action.33
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_election_type = democratic
+			}
+			
+			while = {
+				count = 4
+				limit = { 
+					count_pop_factions = { 
+						limit = { exists = leader }
+						count < 4 
+					} 
+				}
+				
+				random_owned_pop = {
+					limit = {
+						is_growing = no
+						can_join_factions = yes
+						OR = {
+							NOT = { exists = pop_faction }
+							pop_faction = { is_pop_faction_type = loyalist }
+						}
+					}
+					
+					root = {
+						create_pop_faction = {
+							type = democratic_election_faction
+							parameter:empire = root
+							pop = prev
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Election ended
+country_event = {
+	id = action.34
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_election_type = democratic
+			}
+		
+			every_pop_faction = {
+				limit = {
+					is_pop_faction_type = democratic_election_faction
+				}
+				kill_pop_faction = yes
+			}
+		}
+	}
+}
+
+# Observation Posts set to Passive study when policy is downgraded to Passive
+country_event = {
+	id = action.35
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		last_changed_policy = interference
+		has_policy_flag = interference_passive
+	}
+	immediate = {
+		every_owned_ship = {
+			limit = { 
+				fleet = {
+					is_ship_size = observation_station 
+				}
+			}
+			
+			fleet = {
+				if = {
+					limit = { 
+						OR = { 
+							has_mission = covert_infiltration 
+							has_mission = specimen_collection
+						} 
+					}
+					set_mission = passive_observation
+				}
+			}
+		}
+	}
+}
+
+# Post owner switch for on_rebels_take_planet
+country_event = {
+	id = action.36
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		from = {
+			every_owned_pop = {
+				remove_modifier = "pop_recently_conquered"
+			}
+		}
+	}
+}
+
+# Won War
+country_event = {
+	id = action.37
+	title = action.37.name
+	message_desc = action.37.message
+	
+	picture_event_data = {
+		portrait = FROM
+		planet_background = FROM
+		graphical_culture = FROM
+		city_level = FROM
+		room = FROM
+	}
+	
+	desc = {
+		trigger = {
+			hidden:from = {
+				switch = {
+					trigger = has_ai_personality
+					honorbound_warriors = { text = action.37.desc.hw }
+					ruthless_capitalists = { text = action.37.desc.rc }
+					peaceful_traders = { text = action.37.desc.pt }
+					hegemonic_imperialists = { text = action.37.desc.hi }
+					federation_builders = { text = action.37.desc.fb }
+					xenophobic_isolationists = { text = action.37.desc.xi }
+					hive_mind = { text = action.37.desc.hm }
+					migrating_flock = { text = action.37.desc.mf }
+					evangelising_zealots = { text = action.37.desc.ez }
+					fanatic_purifiers = { text = action.37.desc.fp }
+					democratic_crusaders = { text = action.37.desc.dc }
+					slaving_despots = { text = action.37.desc.sd }
+					decadent_hierarchy = { text = action.37.desc.dh }
+					erudite_explorers = { text = action.37.desc.ee }
+					spiritual_seekers = { text = action.37.desc.ss }
+					harmonious_hierarchy = { text = action.37.desc.hc }
+					fallen_empire_spiritualist = { text = action.37.desc.hg }
+					fallen_empire_materialist = { text = action.37.desc.kk }
+					fallen_empire_xenophobe = { text = action.37.desc.mi }
+					fallen_empire_xenophile = { text = action.37.desc.eo }
+					metalhead = { text = action.37.desc.mh }
+					default = { text = action.37.desc.default }
+				}
+			}
+		}
+	}
+	
+	diplomatic = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+	}
+
+	option = {
+		name = action.37.a
+	}
+}
+
+# Lost War
+country_event = {
+	id = action.38
+	title = action.38.name
+	message_desc = action.38.message
+	
+	picture_event_data = {
+		portrait = FROM
+		planet_background = FROM
+		graphical_culture = FROM
+		city_level = FROM
+		room = FROM
+	}
+	
+	desc = {
+		trigger = {
+			hidden:from = {
+				switch = {
+					trigger = has_ai_personality
+					honorbound_warriors = { text = action.38.desc.hw }
+					ruthless_capitalists = { text = action.38.desc.rc }
+					peaceful_traders = { text = action.38.desc.pt }
+					hegemonic_imperialists = { text = action.38.desc.hi }
+					federation_builders = { text = action.38.desc.fb }
+					xenophobic_isolationists = { text = action.38.desc.xi }
+					hive_mind = { text = action.38.desc.hm }
+					migrating_flock = { text = action.38.desc.mf }
+					evangelising_zealots = { text = action.38.desc.ez }
+					fanatic_purifiers = { text = action.38.desc.fp }
+					democratic_crusaders = { text = action.38.desc.dc }
+					slaving_despots = { text = action.38.desc.sd }
+					decadent_hierarchy = { text = action.38.desc.dh }
+					erudite_explorers = { text = action.38.desc.ee }
+					spiritual_seekers = { text = action.38.desc.ss }
+					harmonious_hierarchy = { text = action.38.desc.hc }
+					fallen_empire_spiritualist = { text = action.38.desc.hg }
+					fallen_empire_materialist = { text = action.38.desc.kk }
+					fallen_empire_xenophobe = { text = action.38.desc.mi }
+					fallen_empire_xenophile = { text = action.38.desc.eo }
+					metalhead = { text = action.38.desc.mh }
+					default = { text = action.38.desc.default }
+				}
+			}
+		}
+	}
+	
+	diplomatic = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+	}
+
+	option = {
+		name = action.38.a
+	}
+}
+
+# White Peace
+country_event = {
+	id = action.39
+	title = action.39.name
+	message_desc = action.39.message
+	
+	picture_event_data = {
+		portrait = FROM
+		planet_background = FROM
+		graphical_culture = FROM
+		city_level = FROM
+		room = FROM
+	}
+	
+	desc = {
+		trigger = {
+			hidden:from = {
+				switch = {
+					trigger = has_ai_personality
+					honorbound_warriors = { text = action.39.desc.hw }
+					ruthless_capitalists = { text = action.39.desc.rc }
+					peaceful_traders = { text = action.39.desc.pt }
+					hegemonic_imperialists = { text = action.39.desc.hi }
+					federation_builders = { text = action.39.desc.fb }
+					xenophobic_isolationists = { text = action.39.desc.xi }
+					hive_mind = { text = action.39.desc.hm }
+					migrating_flock = { text = action.39.desc.mf }
+					evangelising_zealots = { text = action.39.desc.ez }
+					fanatic_purifiers = { text = action.39.desc.fp }
+					democratic_crusaders = { text = action.39.desc.dc }
+					slaving_despots = { text = action.39.desc.sd }
+					decadent_hierarchy = { text = action.39.desc.dh }
+					erudite_explorers = { text = action.39.desc.ee }
+					spiritual_seekers = { text = action.39.desc.ss }
+					harmonious_hierarchy = { text = action.39.desc.hc }
+					fallen_empire_spiritualist = { text = action.39.desc.hg }
+					fallen_empire_materialist = { text = action.39.desc.kk }
+					fallen_empire_xenophobe = { text = action.39.desc.mi }
+					fallen_empire_xenophile = { text = action.39.desc.eo }
+					metalhead = { text = action.39.desc.mh }
+					default = { text = action.39.desc.default }
+				}
+			}
+		}
+	}
+	
+	diplomatic = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		is_ai = no
+	}
+
+	option = {
+		name = action.39.a
+	}
+}
+
+# Establish comms when entering Fallen Empire borders
+fleet_event = {
+	id = action.40
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { is_country_type = default }
+		from = {
+			exists = space_owner
+			space_owner = {
+				OR = {
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = { has_communications = root.owner }
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			space_owner = {
+				save_event_target_as = contact_empire
+			}
+		}
+		owner = {
+			establish_contact = {
+				who = event_target:contact_empire
+				location = event_target:contact_empire.capital_scope
+			}
+			establish_communications_no_message = event_target:contact_empire
+			country_event = { id = action.1 }
+		}
+	}
+}
+
+# War is starting, notify people why their ships have gone MIA or why their wormhole stations got destroyed
+country_event = {
+	id = "action.41"
+	title = "action.41.name"
+	picture = "GFX_evt_federation_fleet"
+	is_triggered_only = yes
+	
+	trigger = {
+		from = {
+			OR = {
+				war_begun_num_fleets_gone_mia = {
+					who = prev
+					value > 0
+				}
+				war_begun_num_wormhole_stations_destroyed = {
+					who = prev
+					value > 0
+				}
+			}
+		}
+	}
+	
+	desc = {
+		trigger = {
+			text = "action.41.desc.a"
+			text = "newline"
+			hidden:from = {
+				success_text = {
+					text = "action.41.desc.b.1"
+					war_begun_num_fleets_gone_mia = {
+						who = prev
+						value = 1
+					}
+				}
+				success_text = {
+					text = "action.41.desc.b"
+					war_begun_num_fleets_gone_mia = {
+						who = prev
+						value > 1
+					}
+				}
+				text = "newline"
+				success_text = {
+					text = "action.41.desc.c.1"
+					war_begun_num_wormhole_stations_destroyed = {
+						who = prev
+						value = 1
+					}
+				}
+				success_text = {
+					text = "action.41.desc.c"
+					war_begun_num_wormhole_stations_destroyed = {
+						who = prev
+						value > 1
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "OK"
+	}	
+}
+
+# Planet transfered
+planet_event = {
+	id = action.42
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				any_tile = { has_empire_unique_building = yes }
+			}
+			every_tile = {
+				limit = {
+					has_empire_unique_building = yes
+				}
+				remove_building = yes
+			}
+		}
+	}
+}
+
+# Planet ownerless
+planet_event = {
+	id = action.43
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				any_tile = { has_building = "building_colony_shelter" }
+			}
+			every_tile = {
+				limit = {
+					has_building = "building_colony_shelter"
+				}
+				remove_building = yes
+			}
+		}
+	}
+}
+
+# A war has ended, give war participants of opposite side forced open borders.
+# Root = Winner Warleader
+# From = Loser Warleader
+# FromFrom = War
+country_event = {
+	id = action.44
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		fromfrom = {
+			every_war_participant = {
+				limit = {
+					fromfrom = {
+						is_war_participant = {
+							who = prev
+							side = Root
+						}
+					}
+				}
+				fromfrom = {
+					every_war_participant = {
+						limit = {
+							fromfrom = {
+								is_war_participant = {
+									who = prev
+									side = Root.from
+								}
+							}
+						}
+						set_closed_borders = {
+							who = prevprev
+							status = no
+							forced = "5.1.1" # 5 years
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# A white peace has been signed, give both sides forced open borders towards the opponents.
+# Root = Recipient
+# From = Actor
+# FromFrom = Main Attacker
+# FromFromFrom = Main Defender
+# FromFromFromFrom = War
+country_event = {
+	id = action.45
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		# First Country
+		country_event = {
+			id = action.44
+			scopes = {
+				from = from
+				fromfrom = fromfromfromfrom
+			}
+		}
+		# Second Country
+		from = {
+			country_event = {
+				id = action.44
+				scopes = {
+					from = root
+					fromfrom = fromfromfromfrom
+				}
+			}
+		}
+	}
+}
+
+# Star Charts have been traded
+planet_event = {
+	id = action.46
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_owner = yes
+		NOT = { exists = fromfrom }
+		owner = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = primitive
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					NOT = {
+						has_established_contact = from
+					}
+				}				
+			}
+			owner = {
+				from = {
+					establish_contact = { who = prev location = prevprev }
+				}
+			}			
+		}
+	}
+}
+
+# Remove election-filler leaders when ruler is set
+country_event = {
+	id = action.47
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				has_leader_flag = temp_election_leader
+				NOT = {
+					leader_class = ruler
+				}
+			}
+			kill_leader = {
+				show_notification = no
+			}
+		}
+	}
+}
+
+# Fail-safe emancipating appropriate slaves when slavery policy changed
+country_event = {
+	id = action.48
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		last_changed_policy = slavery
+	}
+
+	immediate = {
+		if = {
+			limit = { has_policy_flag = slavery_not_allowed }
+			every_owned_pop = {
+				limit = {
+					is_enslaved = yes
+				}
+				enslave_pop = no
+			}
+			else = {
+				if = {
+					limit = {
+						OR = {
+							has_policy_flag = slavery_allowed_regulated_xenos_only
+							has_policy_flag = slavery_allowed_xenos_only
+						}
+					}
+					every_owned_pop = {
+						limit = {
+							is_enslaved = yes
+							is_same_species = root
+						}
+						enslave_pop = no
+					}
+				}
+			}
+		}
+	}
+}
+
+# Fail-safe regularly disassembling robots when AI outlawed
+country_event = {
+	id = action.49
+	hide_window = yes
+	mean_time_to_happen = { months = 1 }
+
+	trigger = {
+		is_country_type = default
+		has_policy_flag = ai_outlawed
+		any_owned_pop = { is_robot_pop = yes }
+	}
+
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				is_robot_pop = yes
+			}
+			kill_pop = yes
+		}
+	}
+}

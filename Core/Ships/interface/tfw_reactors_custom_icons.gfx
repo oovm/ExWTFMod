@@ -1,0 +1,48 @@
+spriteTypes = {
+
+		spriteType = {
+		name = "GFX_ship_part_reactor_r6"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_reactor_r6.dds"
+	}
+
+		spriteType = {
+		name = "GFX_ship_part_reactor_r7"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_reactor_r7.dds"
+	}
+
+		spriteType = {
+		name = "GFX_ship_part_reactor_r8"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_reactor_r8.dds"
+	}
+
+		spriteType = {
+		name = "GFX_ship_part_reactor_r9"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_reactor_r9.dds"
+	}
+	
+		spriteType = {
+		name = "GFX_ship_part_reactor_r10"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_reactor_r10.dds"
+	}
+	
+		spriteType = {
+		name = "GFX_ship_part_reactor_r11"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_reactor_r11.dds"
+	}
+	
+		spriteType = {
+		name = "GFX_ship_part_reactor_r12"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_reactor_r12.dds"
+	}
+	
+		spriteType = {
+		name = "GFX_ship_part_reactor_psi1"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_reactor_psi1.dds"
+	}
+	
+		spriteType = {
+		name = "GFX_ship_part_reactor_psi2"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_reactor_psi2.dds"
+	}
+	
+}

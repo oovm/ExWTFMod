@@ -1,0 +1,16 @@
+objectTypes = {
+	pdxmesh = {
+		name = "mammalian_01_PowerStation_mesh"
+		file = "gfx/models/ships/mammalian_01/mammalian_01_PowerStation.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "miningbaseShape"
+			index = 0
+			texture_diffuse = "mammalian_01_PowerStation_diffuse.dds"
+			texture_normal = "mammalian_01_PowerStation_normal.dds"
+			texture_specular = "mammalian_01_PowerStation_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

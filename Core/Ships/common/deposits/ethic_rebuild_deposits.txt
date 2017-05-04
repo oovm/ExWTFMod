@@ -1,0 +1,203 @@
+# Possible Deposit Variables
+# modifier - weight, will replace the weight value
+# modifier - factor, will multiply the weight value
+# resources, resource and amount
+# station = station class in orbit to gather
+# if you mix resources that are not supposed to be collected by an orbital station remember to put is_orbital_slot = no
+
+
+
+d_hyperium_deposit = {
+	resources = {
+		physics_research = 1
+		engineering_research = 1
+		sr_hyperium = 1
+	}
+	station = shipclass_mining_station
+	orbital_weight = {
+		weight = 80
+	}
+	
+	drop_weight = {
+		weight = 0
+
+		modifier = {
+			weight = 4
+			planet = {
+					OR = {
+					    is_asteroid = yes
+						is_planet_class = pc_frozen
+						is_planet_class = pc_toxic
+						is_planet_class = pc_barren
+						
+
+					}
+			}
+		}
+		
+        modifier = {
+			weight = 8
+			planet = {
+
+					OR = {
+						is_planet_class = pc_gaia
+						is_planet_class = pc_molten
+						is_planet_class = pc_nuked
+						is_planet_class = pc_arid
+						is_planet_class = pc_alpine
+					}
+
+
+			}
+		}
+		
+		modifier = {
+			factor = 12
+			planet = {
+				OR = {
+					has_planet_modifier = "pm_irradiated"
+                    has_planet_modifier = "pm_mineral_rich"
+					has_planet_modifier = "pm_asteroid_impacts"
+				}
+			}
+		}		
+
+		
+		modifier = {
+			factor = 0
+			planet = {
+				OR = {
+					has_deposit = "d_immense_mineral_deposit"
+					has_deposit = "d_immense_energy_deposit"
+					has_deposit = "d_immense_society_deposit"
+					has_deposit = "d_immense_physics_deposit"
+					has_deposit = "d_immense_engineering_deposit"
+					has_strategic_resource = yes
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+d_sacred_plant_deposit = {
+	resources = {
+		society_research = 3
+		sr_sacred_plant = 1
+	}
+	station = shipclass_research_station
+	orbital_weight = {
+		weight = 60
+	}
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 4
+			planet = {
+					OR = {
+						is_planet_class = pc_gaia
+						is_planet_class = pc_continental
+						is_planet_class = pc_tropical
+						is_planet_class = pc_ocean
+						is_planet_class = pc_desert
+						is_planet_class = pc_savannah
+					    is_planet_class = pc_alpine
+
+					}
+			}
+		}
+		
+		modifier = {
+			weight = 8
+			planet = {					
+						is_planet_class = pc_gaia						
+
+			}
+		}
+		
+		modifier = {
+			factor = 4
+			planet = {
+
+					has_planet_modifier = "pm_lush"
+					has_planet_modifier = "pm_natural_beauty"
+
+
+			}
+		}
+		modifier = {
+			factor = 0
+			planet = {
+				OR = {
+					has_deposit = "d_immense_mineral_deposit"
+					has_deposit = "d_immense_energy_deposit"
+					has_deposit = "d_immense_society_deposit"
+					has_deposit = "d_immense_physics_deposit"
+					has_deposit = "d_immense_engineering_deposit"
+					has_strategic_resource = yes
+				}
+			}
+		}
+	}
+}
+
+
+
+d_sights_deposit = {
+	resources = {
+		sr_sights = 1
+	}
+	
+	
+    is_orbital_slot = no
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			planet = {
+					OR = {						
+						is_planet_class = pc_continental
+						is_planet_class = pc_tropical
+						is_planet_class = pc_ocean
+						is_planet_class = pc_desert
+						is_planet_class = pc_savannah
+					    is_planet_class = pc_alpine		
+                        is_planet_class = pc_tundra	
+                        is_planet_class = pc_arid		
+                        is_planet_class = pc_arctic							
+
+					}
+			}
+		}
+		
+		modifier = {
+			weight = 10
+			planet = {					
+						is_planet_class = pc_gaia						
+
+			}
+		}
+		
+		modifier = {
+			factor = 5
+			planet = {
+				OR = {
+					has_planet_modifier = "pm_lush"
+					has_planet_modifier = "pm_natural_beauty"
+					
+
+				}
+			}
+		}
+	}
+}
+
+
+
+

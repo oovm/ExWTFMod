@@ -1,0 +1,48 @@
+
+component_set = {
+	key = "nsc_auras"
+
+	show_in_designer = no
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "nsc_hq_auras"
+
+	show_in_designer = no
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "sc_defense_aura"
+
+	show_in_designer = no
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "special_ship_slot"
+
+	show_in_designer = no
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "station_special_auras"
+	
+	show_in_designer = no
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "strike_cruiser_aura"
+	
+	show_in_designer = no
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1	
+}

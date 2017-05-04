@@ -1,0 +1,26 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "as_missile_mesh"
+		file = "gfx/models/ships/added_models/tfw_missile_as.mesh"
+		scale = 1.0
+	meshsettings = {
+		shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "kamikaze_drone_mesh"
+		file = "gfx/models/ships/added_models/tfw_kamikaze.mesh"
+		scale = 0.8
+		
+		animation = { id = "moving"			type = "swarm_01_fighter_moving_animation" }
+	meshsettings = {
+		shader = "PdxMeshShip"
+		}
+	}
+	
+	
+}
+
+

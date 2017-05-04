@@ -1,0 +1,12 @@
+namespace = nscflag
+
+event = {
+    id = nscflag.1
+    hide_window = yes
+    fire_only_once = yes
+    immediate = {
+        every_country = {
+            set_country_flag = "has_nsc_v3"
+        }
+    }
+}

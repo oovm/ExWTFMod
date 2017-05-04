@@ -1,0 +1,63 @@
+###########CRYSTAL
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_crystal_armor_3"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_crystal_armor_3.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_crystal_armor_4"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_crystal_armor_4.dds"
+	}
+}
+
+#########ARMORS
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_armor_6"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_armor_6.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_armor_7"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_armor_7.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_armor_8"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_armor_8.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_armor_9"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_armor_9.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_armor_10"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_armor_10.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_bioarmor_1"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_bioarmor_1.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_bioarmor_2"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_bioarmor_2.dds"
+	}
+}

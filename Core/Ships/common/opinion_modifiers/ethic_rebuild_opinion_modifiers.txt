@@ -1,0 +1,463 @@
+
+
+
+
+
+
+
+# Bad Opinion of Ethic: Socialist
+opinion_of_socialism = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = -10
+			has_ethic = "ethic_capitalism"
+			FROM = { has_ethic = "ethic_socialism" }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_capitalism"
+			FROM = { has_ethic = "ethic_fanatic_socialism" }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_fanatic_capitalism"
+			FROM = { has_ethic = "ethic_socialism" }
+		}
+		modifier = {
+			add = -40
+			has_ethic = "ethic_fanatic_capitalism"
+			FROM = { has_ethic = "ethic_fanatic_socialism" }
+		}	
+	}
+}
+
+# Good Opinion of Ethic: Socialist
+opinion_of_socialism_pos = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = 25
+			has_ethic = "ethic_fanatic_socialism"
+			FROM = { has_ethic = "ethic_fanatic_socialism" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_fanatic_socialism"
+			FROM = { has_ethic = "ethic_socialism" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_socialism"
+			FROM = { has_ethic = "ethic_fanatic_socialism" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_socialism"
+			FROM = { has_ethic = "ethic_socialism" }
+		}
+	}
+}
+
+# Opinion of Ethic: Capitalist
+opinion_of_capitalism = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = -10
+			has_ethic = "ethic_socialism"
+			FROM = { has_ethic = "ethic_capitalism" }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_socialism"
+			FROM = { has_ethic = "ethic_fanatic_capitalism" }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_fanatic_socialism"
+			FROM = { has_ethic = "ethic_capitalism" }
+		}
+		modifier = {
+			add = -40
+			has_ethic = "ethic_fanatic_socialism"
+			FROM = { has_ethic = "ethic_fanatic_capitalism" }
+		}
+	}
+}
+
+# Good Opinion of Ethic: Capitalist
+opinion_of_capitalism_pos = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = 25
+			has_ethic = "ethic_fanatic_capitalism"
+			FROM = { has_ethic = "ethic_fanatic_capitalism" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_fanatic_capitalism"
+			FROM = { has_ethic = "ethic_capitalism" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_capitalism"
+			FROM = { has_ethic = "ethic_fanatic_capitalism" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_capitalism"
+			FROM = { has_ethic = "ethic_capitalism" }
+		}
+	}
+}
+
+
+
+
+
+# Bad Opinion of Ethic: Green
+opinion_of_green = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = -10
+			has_ethic = "ethic_industrial"
+			FROM = { has_ethic = "ethic_green" }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_industrial"
+			FROM = { has_ethic = "ethic_fanatic_green" }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_fanatic_industrial"
+			FROM = { has_ethic = "ethic_green" }
+		}
+		modifier = {
+			add = -40
+			has_ethic = "ethic_fanatic_industrial"
+			FROM = { has_ethic = "ethic_fanatic_green" }
+		}	
+	}
+}
+
+# Good Opinion of Ethic: Green
+opinion_of_green_pos = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = 25
+			has_ethic = "ethic_fanatic_green"
+			FROM = { has_ethic = "ethic_fanatic_green" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_fanatic_green"
+			FROM = { has_ethic = "ethic_green" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_green"
+			FROM = { has_ethic = "ethic_fanatic_green" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_green"
+			FROM = { has_ethic = "ethic_green" }
+		}
+	}
+}
+
+# Opinion of Ethic: Industrial
+opinion_of_industrial = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = -10
+			has_ethic = "ethic_green"
+			FROM = { has_ethic = "ethic_industrial" }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_green"
+			FROM = { has_ethic = "ethic_fanatic_industrial" }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_fanatic_green"
+			FROM = { has_ethic = "ethic_industrial" }
+		}
+		modifier = {
+			add = -40
+			has_ethic = "ethic_fanatic_green"
+			FROM = { has_ethic = "ethic_fanatic_industrial" }
+		}
+	}
+}
+
+# Good Opinion of Ethic: Industrial
+opinion_of_industrial_pos = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = 25
+			has_ethic = "ethic_fanatic_industrial"
+			FROM = { has_ethic = "ethic_fanatic_industrial" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_fanatic_industrial"
+			FROM = { has_ethic = "ethic_industrial" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_industrial"
+			FROM = { has_ethic = "ethic_fanatic_industrial" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_industrial"
+			FROM = { has_ethic = "ethic_industrial" }
+		}
+	}
+}
+
+
+
+
+# Bad Opinion of Ethic: elitist
+opinion_of_elitist = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = -10
+			has_ethic = "ethic_pluralist"
+			FROM = { has_ethic = "ethic_elitist" }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_pluralist"
+			FROM = { has_ethic = "ethic_fanatic_elitist" }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_fanatic_pluralist"
+			FROM = { has_ethic = "ethic_elitist" }
+		}
+		modifier = {
+			add = -40
+			has_ethic = "ethic_fanatic_pluralist"
+			FROM = { has_ethic = "ethic_fanatic_elitist" }
+		}	
+	}
+}
+
+# Good Opinion of Ethic: elitist
+opinion_of_elitist_pos = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = 25
+			has_ethic = "ethic_fanatic_elitist"
+			FROM = { has_ethic = "ethic_fanatic_elitist" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_fanatic_elitist"
+			FROM = { has_ethic = "ethic_elitist" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_elitist"
+			FROM = { has_ethic = "ethic_fanatic_elitist" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_elitist"
+			FROM = { has_ethic = "ethic_elitist" }
+		}
+	}
+}
+
+# Opinion of Ethic: pluralist
+opinion_of_pluralist = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = -10
+			has_ethic = "ethic_elitist"
+			FROM = { has_ethic = "ethic_pluralist" }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_elitist"
+			FROM = { has_ethic = "ethic_fanatic_pluralist" }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_fanatic_elitist"
+			FROM = { has_ethic = "ethic_pluralist" }
+		}
+		modifier = {
+			add = -40
+			has_ethic = "ethic_fanatic_elitist"
+			FROM = { has_ethic = "ethic_fanatic_pluralist" }
+		}
+	}
+}
+
+# Good Opinion of Ethic: pluralist
+opinion_of_pluralist_pos = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = 25
+			has_ethic = "ethic_fanatic_pluralist"
+			FROM = { has_ethic = "ethic_fanatic_pluralist" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_fanatic_pluralist"
+			FROM = { has_ethic = "ethic_pluralist" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_pluralist"
+			FROM = { has_ethic = "ethic_fanatic_pluralist" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_pluralist"
+			FROM = { has_ethic = "ethic_pluralist" }
+		}
+	}
+}
+
+
+
+# Bad Opinion of Ethic: Elitarian
+opinion_of_elitist = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = -10
+			has_ethic = "ethic_pluralist"
+			FROM = { has_ethic = "ethic_elitist" }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_pluralist"
+			FROM = { has_ethic = "ethic_fanatic_elitist" }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_fanatic_pluralist"
+			FROM = { has_ethic = "ethic_elitist" }
+		}
+		modifier = {
+			add = -40
+			has_ethic = "ethic_fanatic_pluralist"
+			FROM = { has_ethic = "ethic_fanatic_elitist" }
+		}	
+	}
+}
+
+# Good Opinion of Ethic: elitist
+opinion_of_elitist_pos = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = 25
+			has_ethic = "ethic_fanatic_elitist"
+			FROM = { has_ethic = "ethic_fanatic_elitist" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_fanatic_elitist"
+			FROM = { has_ethic = "ethic_elitist" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_elitist"
+			FROM = { has_ethic = "ethic_fanatic_elitist" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_elitist"
+			FROM = { has_ethic = "ethic_elitist" }
+		}
+	}
+}
+
+# Opinion of Ethic: pluralist
+opinion_of_pluralist = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = -10
+			has_ethic = "ethic_elitist"
+			FROM = { has_ethic = "ethic_pluralist" }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_elitist"
+			FROM = { has_ethic = "ethic_fanatic_pluralist" }
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_fanatic_elitist"
+			FROM = { has_ethic = "ethic_pluralist" }
+		}
+		modifier = {
+			add = -40
+			has_ethic = "ethic_fanatic_elitist"
+			FROM = { has_ethic = "ethic_fanatic_pluralist" }
+		}
+	}
+}
+
+# Good Opinion of Ethic: pluralist
+opinion_of_pluralist_pos = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = 25
+			has_ethic = "ethic_fanatic_pluralist"
+			FROM = { has_ethic = "ethic_fanatic_pluralist" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_fanatic_pluralist"
+			FROM = { has_ethic = "ethic_pluralist" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_pluralist"
+			FROM = { has_ethic = "ethic_fanatic_pluralist" }
+		}
+		modifier = {
+			add = 10
+			has_ethic = "ethic_pluralist"
+			FROM = { has_ethic = "ethic_pluralist" }
+		}
+	}
+}

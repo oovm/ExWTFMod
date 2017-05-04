@@ -1,0 +1,59 @@
+namespace = powerstation_bonus
+
+planet_event = {
+  id = powerstation_bonus.1
+
+  trigger = {
+    NOT = { has_planet_flag = "powerstation_bonus" }
+    is_colony = yes
+  }
+
+  hide_window = yes
+
+  mean_time_to_happen = { days = 3 } # If you don't want the event to be called every single day of the year, you can set a mean time to happen.
+
+  immediate = {
+    if = {
+      limit = {
+        solar_system = {
+          any_ship_in_system = {
+            is_ship_size = PowerStation
+          }
+        }
+      }
+      add_modifier = {
+        modifier = "powerstation_bonus_planet"
+        days = -1
+      }
+      set_planet_flag = powerstation_bonus
+    }
+  }
+}
+
+planet_event = {
+  id = powerstation_bonus.2
+
+  trigger = {
+    has_planet_flag = "powerstation_bonus"
+  }
+
+  hide_window = yes
+
+  mean_time_to_happen = { days = 3 } # If you don't want the event to be called every single day of the year, you can set a mean time to happen.
+
+  immediate = {
+    if = {
+      limit = {
+        solar_system = {
+          NOT = {
+            any_ship_in_system = {
+              is_ship_size = PowerStation
+            }
+          }
+        }
+      }
+      remove_planet_flag = powerstation_bonus
+      remove_modifier = powerstation_bonus_planet
+    }
+  }
+}

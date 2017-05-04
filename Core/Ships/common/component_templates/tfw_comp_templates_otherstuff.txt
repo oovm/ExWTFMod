@@ -1,0 +1,672 @@
+# ######################
+#      SOME STUFF      #
+# ######################
+
+#############THRUSTERS#################
+
+utility_component_template = {
+	key = "NEW_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_tfw_new_thruster_5"
+	icon_frame = 1
+	power = -25
+	cost = 25
+	modifier = {
+		ship_speed_mult = 0.7
+		ship_evasion_add = 12
+		ship_combat_speed_mult = 0.80
+	}
+
+	prerequisites = { "tech_new_thrusters_5" }
+	component_set = "thruster_components"
+	
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "NEW_SHIP_THRUSTER_6"
+	size = small
+	icon = "GFX_tfw_new_thruster_6"
+	icon_frame = 1
+	power = -30
+	cost = 30
+	modifier = {
+		ship_speed_mult = 0.8
+		ship_evasion_add = 15
+		ship_combat_speed_mult = 1.0
+	}
+
+	prerequisites = { "tech_new_thrusters_6" }
+	component_set = "thruster_components"
+	
+	ai_weight = {
+		weight = 7
+	}
+}
+
+utility_component_template = {
+	key = "TFW_FIGHT_THRUSTER"
+	size = small
+	icon = "GFX_tfw_fight_thruster"
+	icon_frame = 1
+	power = -25
+	cost = 35
+	modifier = {
+		ship_speed_mult = 0.55
+		ship_evasion_add = 20
+		ship_combat_speed_mult = 1.3
+	}
+
+	prerequisites = { "tech_tfw_fight_thrusters" }
+	component_set = "thruster_components"
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ai_personality = peaceful_traders
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ai_personality = hive_mind
+				has_ai_personality = metalhead
+				has_ai_personality = honorbound_warriors
+				has_ai_personality = ruthless_capitalists
+				has_ai_personality = evangelising_zealots
+			}
+		}
+	}	
+}
+
+utility_component_template = {
+	key = "TFW_FIGHT_THRUSTER2"
+	size = small
+	icon = "GFX_tfw_fight_thruster2"
+	icon_frame = 1
+	power = -40
+	cost = 50
+	modifier = {
+		ship_speed_mult = 0.75
+		ship_evasion_add = 25
+		ship_combat_speed_mult = 1.5
+	}
+
+	prerequisites = { "tech_tfw_fight_thrusters2" }
+	component_set = "thruster_components"
+	
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ai_personality = peaceful_traders
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ai_personality = hive_mind
+				has_ai_personality = metalhead
+				has_ai_personality = honorbound_warriors
+				has_ai_personality = ruthless_capitalists
+				has_ai_personality = evangelising_zealots
+			}
+		}
+	}	
+}
+
+##############AP_PLANTS#######################
+####1
+utility_component_template = {
+	key = "TFW_SHIELD_PUMP_1"
+	size = aux
+	icon = "GFX_tfw_shield_pump_reactor_1"
+	icon_frame = 1
+#	power = 10
+	cost = 80
+	modifier = {
+		ship_fire_rate_mult = 0.04 #+4.0%
+		ship_shield_regen_mult = 0.1 #+10.0% shield regen per day 
+	}
+	prerequisites = { "tech_shield_pumps_1" }
+	component_set = "TFW_SHIELD_PUMP_1"
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ai_personality = evangelising_zealots
+				has_ai_personality = metalhead
+				has_ai_personality = hive_mind
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = decadent_hierarchy
+				has_ai_personality = xenophobic_isolationists
+			}
+		}
+	}	
+}
+####2
+utility_component_template = {
+	key = "TFW_SHIELD_PUMP_2"
+	size = aux
+	icon = "GFX_tfw_shield_pump_reactor_2"
+	icon_frame = 1
+#	power = 20
+	cost = 160
+	modifier = {
+		ship_fire_rate_mult = 0.07
+		ship_shield_regen_mult = 0.15
+	}
+	prerequisites = { "tech_shield_pumps_2" }
+	component_set = "TFW_SHIELD_PUMP_2"
+
+	ai_weight = {
+		weight = 15
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ai_personality = evangelising_zealots
+				has_ai_personality = hive_mind
+				has_ai_personality = metalhead
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = decadent_hierarchy
+				has_ai_personality = xenophobic_isolationists
+			}
+		}
+	}	
+}
+
+####3
+utility_component_template = {
+	key = "TFW_SHIELD_PUMP_3"
+	size = aux
+	icon = "GFX_tfw_shield_pump_reactor_3"
+	icon_frame = 1
+#	power = 30
+	cost = 320
+	modifier = {
+		ship_fire_rate_mult = 0.1
+		ship_shield_regen_mult = 0.2
+	}
+	prerequisites = { "tech_shield_pumps_3" }
+	component_set = "TFW_SHIELD_PUMP_3"
+
+	ai_weight = {
+		weight = 20
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ai_personality = evangelising_zealots
+				has_ai_personality = hive_mind
+				has_ai_personality = metalhead
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = decadent_hierarchy
+				has_ai_personality = xenophobic_isolationists
+			}
+		}
+	}	
+}
+
+####4
+utility_component_template = {
+	key = "TFW_SHIELD_PUMP_4"
+	size = aux
+	icon = "GFX_tfw_shield_pump_reactor_4"
+	icon_frame = 1
+#	power = 40
+	cost = 320
+	modifier = {
+		ship_fire_rate_mult = 0.13
+		ship_shield_regen_mult = 0.25 
+	}
+	prerequisites = { "tech_shield_pumps_4" }
+	component_set = "TFW_SHIELD_PUMP_4"
+
+	ai_weight = {
+		weight = 25
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ai_personality = evangelising_zealots
+				has_ai_personality = hive_mind
+				has_ai_personality = metalhead
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = decadent_hierarchy
+				has_ai_personality = xenophobic_isolationists
+			}
+		}
+	}	
+}
+
+####5
+utility_component_template = {
+	key = "TFW_SHIELD_PUMP_5"
+	size = aux
+	icon = "GFX_tfw_shield_pump_reactor_5"
+	icon_frame = 1
+#	power = 50
+	cost = 320
+	modifier = {
+		ship_fire_rate_mult = 0.16
+		ship_shield_regen_mult = 0.3
+	}
+	prerequisites = { "tech_shield_pumps_5" }
+	component_set = "TFW_SHIELD_PUMP_5"
+
+	ai_weight = {
+		weight = 30
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_ai_personality = evangelising_zealots
+				has_ai_personality = hive_mind
+				has_ai_personality = metalhead
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = harmonious_hierarchy
+			}
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = decadent_hierarchy
+				has_ai_personality = xenophobic_isolationists
+			}
+		}
+	}	
+}
+
+#################
+# REPAIR DROIDS #
+#################
+#Repair Droid I
+utility_component_template = {
+	key = "MEDIUM_TFW_AUTO_REPAIR_1"
+	size = aux
+	icon = "GFX_tfw_auto_repair_1"
+	icon_frame = 1
+	power = -15
+	cost = 25
+
+	modifier = {
+		ship_auto_repair_add = 0.022 
+	}
+	prerequisites = { "tfw_auto_repair_1" }
+	component_set = "TFW_AUTO_REPAIR_1"
+	military_power = 1
+	
+	ai_weight = {
+		weight = 10
+	
+	modifier = {
+			factor = 2.0
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = peaceful_traders
+				has_ai_personality = harmonious_hierarchy
+				has_ai_personality = federation_builders
+			}
+		}
+	}
+}
+
+#Repair Droid II
+utility_component_template = {
+	key = "LARGE_TFW_AUTO_REPAIR_2"
+	size = aux
+	icon = "GFX_tfw_auto_repair_2"
+	icon_frame = 1
+	power = -30
+	cost = 50
+
+	modifier = {
+		ship_auto_repair_add = 0.044
+	}
+	prerequisites = { "tfw_auto_repair_2" }
+	component_set = "TFW_AUTO_REPAIR_2"
+	military_power = 1
+	
+	ai_weight = {
+		weight = 20
+	
+	modifier = {
+			factor = 2.0
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = peaceful_traders
+				has_ai_personality = harmonious_hierarchy
+				has_ai_personality = federation_builders
+			}
+		}
+	}
+}
+
+#Repair Droid III
+utility_component_template = {
+	key = "LARGE_TFW_AUTO_REPAIR_3"
+	size = aux
+	icon = "GFX_tfw_auto_repair_3"
+	icon_frame = 1
+	power = -60
+	cost = 100
+
+	modifier = {
+		ship_auto_repair_add = 0.088
+	}
+	prerequisites = { "tfw_auto_repair_3" }
+	component_set = "TFW_AUTO_REPAIR_3"
+	military_power = 1
+	
+	ai_weight = {
+		weight = 30
+	
+	modifier = {
+			factor = 2.0
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = democratic_crusaders
+				has_ai_personality = peaceful_traders
+				has_ai_personality = harmonious_hierarchy
+				has_ai_personality = federation_builders
+			}
+		}
+	}
+}
+
+########################PSI################################### 
+#Psi Repair Droid I
+utility_component_template = {
+	key = "MEDIUM_TFW_AUTO_REPAIR_PSI1"
+	size = aux
+	icon = "GFX_tfw_auto_repair_psi1"
+	icon_frame = 1
+	power = -10
+	cost = 15
+
+	modifier = {
+		ship_auto_repair_add = 0.02
+	}
+	prerequisites = { "tfw_auto_repair_psi1" }
+	component_set = "TFW_AUTO_REPAIR_PSI1"
+	military_power = 1
+	
+	ai_weight = {
+		weight = 10
+	
+	modifier = {
+			factor = 2.0
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = spiritual_seekers
+				has_ai_personality = peaceful_traders
+			}
+		}
+	}
+}
+
+#Psi Repair Droid II
+utility_component_template = {
+	key = "LARGE_TFW_AUTO_REPAIR_PSI2"
+	size = aux
+	icon = "GFX_tfw_auto_repair_psi2"
+	icon_frame = 1
+	power = -20
+	cost = 30
+
+	modifier = {
+		ship_auto_repair_add = 0.04
+	}
+	prerequisites = { "tfw_auto_repair_psi2" }
+	component_set = "TFW_AUTO_REPAIR_PSI2"
+	military_power = 1
+	
+	ai_weight = {
+		weight = 20
+	
+	modifier = {
+			factor = 2.0
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = spiritual_seekers
+				has_ai_personality = peaceful_traders
+			}
+		}
+	}
+}
+
+#Psi Repair Droid III
+utility_component_template = {
+	key = "LARGE_TFW_AUTO_REPAIR_PSI3"
+	size = aux
+	icon = "GFX_tfw_auto_repair_psi3"
+	icon_frame = 1
+	power = -40
+	cost = 60
+
+	modifier = {
+		ship_auto_repair_add = 0.08
+	}
+	prerequisites = { "tfw_auto_repair_psi3" }
+	component_set = "TFW_AUTO_REPAIR_PSI3"
+	military_power = 1
+	
+	ai_weight = {
+		weight = 30
+	
+	modifier = {
+			factor = 2.0
+			OR = {
+				has_ai_personality = erudite_explorers
+				has_ai_personality = spiritual_seekers
+				has_ai_personality = peaceful_traders
+			}
+		}
+	}
+}
+
+#########################SHIP SENSORS################################
+utility_component_template = {
+	key = "TFW_SHIP_SENSOR_5"
+	size = medium
+	icon = "GFX_tfw_sensor_5"
+	icon_frame = 1
+	power = -20
+	cost = 15
+	sensor_range = 65
+	
+	ship_modifier = {
+		ship_tracking_add = 12
+	}
+	
+	prerequisites = { "tech_tfw_sensors_5" }
+	component_set = "ship_sensor_components"
+	
+	ai_weight = {
+		weight = 2000
+	}	
+}
+
+utility_component_template = {
+	key = "TFW_SHIP_SENSOR_6"
+	size = medium
+	icon = "GFX_tfw_sensor_6"
+	icon_frame = 1
+	power = -25
+	cost = 15
+	sensor_range = 90
+	
+	ship_modifier = {
+		ship_tracking_add = 15
+	}	
+	prerequisites = { "tech_tfw_sensors_6" }
+	component_set = "ship_sensor_components"
+	
+	ai_weight = {
+		weight = 3000
+	}	
+}
+
+utility_component_template = {
+	key = "TFW_SHIP_SENSOR_7"
+	size = medium
+	icon = "GFX_tfw_sensor_7"
+	icon_frame = 1
+	power = -30
+	cost = 15
+	sensor_range = 100
+
+	ship_modifier = {
+		ship_tracking_add = 20
+	}
+	
+	prerequisites = { "tech_tfw_sensors_7" }
+	component_set = "ship_sensor_components"
+	
+	ai_weight = {
+		weight = 4500
+	}	
+}
+
+utility_component_template = {
+	key = "TFW_SHIP_PSI_SENSOR"
+	size = medium
+	icon = "GFX_tfw_psi_sensor"
+	icon_frame = 1
+	power = -26
+	cost = 15
+	sensor_range = 120
+	
+	ship_modifier = {
+		ship_tracking_add = 17
+	}
+	
+	prerequisites = { "tech_tfw_psi_sensors" }
+	component_set = "ship_sensor_components"
+	
+	ai_weight = {
+		weight = 4000
+	}	
+}
+
+#########################STATION SENSORS################################
+utility_component_template = {
+	key = "TFW_STATION_SENSOR_5"
+	size = medium
+	icon = "GFX_tfw_sensor_5"
+	icon_frame = 1
+	power = -20
+	cost = 15
+	sensor_range = 65
+	
+	prerequisites = { "tech_tfw_sensors_5" }
+	component_set = "station_sensor_components"
+	
+	ship_modifier = {
+		ship_tracking_add = 12
+	}
+	
+	ai_weight = {
+		weight = 2000
+	}	
+}
+
+utility_component_template = {
+	key = "TFW_STATION_SENSOR_6"
+	size = medium
+	icon = "GFX_tfw_sensor_6"
+	icon_frame = 1
+	power = -25
+	cost = 15
+	sensor_range = 90
+	
+	prerequisites = { "tech_tfw_sensors_6" }
+	component_set = "station_sensor_components"
+	
+	ship_modifier = {
+		ship_tracking_add = 15
+	}
+	
+	ai_weight = {
+		weight = 3000
+	}	
+}
+
+utility_component_template = {
+	key = "TFW_STATION_SENSOR_7"
+	size = medium
+	icon = "GFX_tfw_sensor_7"
+	icon_frame = 1
+	power = -30
+	cost = 15
+	sensor_range = 100
+	
+	ship_modifier = {
+		ship_tracking_add = 20
+	}
+	
+	prerequisites = { "tech_tfw_sensors_7" }
+	component_set = "station_sensor_components"
+	
+	ai_weight = {
+		weight = 4500
+	}	
+}
+
+utility_component_template = {
+	key = "TFW_STATION_PSI_SENSOR"
+	size = medium
+	icon = "GFX_tfw_psi_sensor"
+	icon_frame = 1
+	power = -26
+	cost = 15
+	sensor_range = 120
+	
+	ship_modifier = {
+		ship_tracking_add = 17
+	}
+	
+	prerequisites = { "tech_tfw_psi_sensors" }
+	component_set = "station_sensor_components"
+	
+	ai_weight = {
+		weight = 4000
+	}	
+}

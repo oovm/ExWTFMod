@@ -1,0 +1,133 @@
+###########REPAIR_DRONES
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_auto_repair_1"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_auto_repair_1.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_auto_repair_2"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_auto_repair_2.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_auto_repair_3"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_auto_repair_3.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_auto_repair_psi1"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_auto_repair_psi1.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_auto_repair_psi2"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_auto_repair_psi2.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_auto_repair_psi3"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_auto_repair_psi3.dds"
+	}
+}
+
+###########THRUSTERS
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_new_thruster_5"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_new_thruster_5.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_new_thruster_6"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_new_thruster_6.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_fight_thruster"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_fight_thruster.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_fight_thruster2"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_fight_thruster2.dds"
+	}
+}
+
+#########AP_Plants
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_shield_pump_reactor_1"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_shield_pump_reactor_1.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_shield_pump_reactor_2"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_shield_pump_reactor_2.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_shield_pump_reactor_3"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_shield_pump_reactor_3.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_shield_pump_reactor_4"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_shield_pump_reactor_4.dds"
+	}
+}
+
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_shield_pump_reactor_5"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_shield_pump_reactor_5.dds"
+	}
+}
+
+###########SENSORS
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_sensor_5"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_sensor_5.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_sensor_6"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_sensor_6.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_sensor_7"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_sensor_7.dds"
+	}
+}
+spriteTypes{
+	spriteType = {
+		name = "GFX_tfw_psi_sensor"
+		texturefile = "gfx/interface/icons/ship_parts/tfw_psi_sensor.dds"
+	}
+}

@@ -1,0 +1,53 @@
+# ==============================
+# TWEEEEEEEEEEAK for dat balance
+
+# How many ships?
+# YOU NEED TO CHANGE THIS IN COMMON/SCRIPTED_EFFECTS/NSC_EFFECTS.TXT TOO
+# SAME VALUE
+# Fleet names and such are also set in that file now.
+@hq_fleet_size = 8
+
+# How long before we replenish if some ships are missing
+@days_between_fleet_restore = 180
+
+# ==============================
+# TODO
+#
+# - Make the fleet move back to the station after engaging enemies?
+# - Make a new ship type?
+
+
+namespace = "nsc_hq_fleet"
+
+# Triggered when we need to forcefully recreate the fleet
+country_event = {
+	id = "nsc_hq_fleet.100"
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		nsc_ensure_automated_fleet = yes
+	}
+}
+
+# Periodic check to see if we have large enough fleet.
+country_event = {
+	id = "nsc_hq_fleet.10101"
+	hide_window = yes
+	mean_time_to_happen = {
+		days = @days_between_fleet_restore
+	}
+	trigger = {
+		NOT = { has_country_flag = "nsc_moving_hq" }
+		has_country_flag = "headquarters_built"
+		count_owned_ships = {
+			limit = {
+				has_ship_flag = "nsc_hq_defense_ship"
+			}
+			count < @hq_fleet_size
+		}
+	}
+	immediate = {
+		nsc_ensure_automated_fleet = yes
+	}
+}

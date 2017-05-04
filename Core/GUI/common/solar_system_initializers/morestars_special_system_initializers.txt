@@ -1,0 +1,704 @@
+@base_moon_distance = 10
+
+# Primitive Civilizations
+morespecial_init_02 = {
+	class = "rl_more_stars"
+	
+	usage = misc_system_init
+	usage_odds = 2
+
+	flags = { primitive_system }
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		orbit_distance = 20
+		count = { min = 0 max = 3 }
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		count = 1
+		orbit_distance = 0
+		class = "rl_habitable_normal"
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 15 max = 25 }
+		#tile_blockers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			random_list = {
+				# Industrial Civilization
+				50 = {
+					create_species = {
+						name = random
+						class = random
+						portrait = random
+						homeworld = THIS
+						traits = {
+							trait = random_traits
+						}
+					}
+					create_country = {
+						name = random
+						government = fragmented_nations
+						species = last_created
+						ethos = random
+						flag = {
+							icon = {
+								category = "spherical"
+								file = "flag_spherical_22.dds"
+							}
+							background= {
+								category = "backgrounds"
+								file = "new_dawn.dds"
+							}
+							colors={
+								"turquoise"
+								"green"
+								"null"
+								"null"
+							}
+						}
+						type = primitive
+					}
+					last_created_country = {
+						set_graphical_culture = industrial_01
+						random_list = {
+							25 = { 
+								set_country_flag = industrial_age 
+								set_primitive_age = industrial_age
+							}
+							25 = { 
+								set_country_flag = machine_age
+								set_primitive_age = machine_age
+							}
+							25 = { 
+								set_country_flag = atomic_age 
+								set_primitive_age = atomic_age
+							}
+							25 = { 
+								set_country_flag = early_space_age 
+								set_primitive_age = early_space_age
+							}
+						}
+					}
+					create_colony = {
+						owner = last_created_country
+						species = last_created
+						ethos = owner
+					}
+					random_tile = {
+						limit = { has_building = "building_colony_shelter" }
+						remove_building = yes
+					}
+					every_tile = {
+						limit = {
+							has_blocker = yes
+						}
+						remove_blocker = yes
+					}
+					while = {
+						count = 3			
+						random_tile = {
+							limit = {
+								has_blocker = no
+								has_building = no
+								has_grown_pop = no
+							}
+							set_blocker = tb_decrepit_dwellings
+						}
+						random_tile = {
+							limit = {
+								has_blocker = no
+								has_building = no
+								has_grown_pop = no
+							}
+							set_blocker = tb_failing_infrastructure		
+						}				
+					}					
+					while = {
+						count = 5
+						random_tile = {
+							limit = {
+								has_blocker = no
+								has_grown_pop = no
+								has_growing_pop = no
+							}
+							create_pop = {
+								species = last_created
+								ethos = owner
+							}
+						}	
+					}
+					if = {
+						limit = {
+							last_created_country = {
+								OR = {
+									has_country_flag = machine_age
+									has_country_flag = atomic_age
+									has_country_flag = early_space_age
+								}
+							}
+						}
+						random_tile = {
+							limit = {
+								has_blocker = no
+								has_grown_pop = no
+								has_growing_pop = no
+							}
+							create_pop = {
+								species = last_created
+								ethos = owner
+							}
+						}						
+					}	
+					if = {
+						limit = {
+							last_created_country = {
+								OR = {
+									has_country_flag = machine_age
+									has_country_flag = atomic_age
+									has_country_flag = early_space_age
+								}
+							}
+						}
+						random_tile = {
+							limit = { 
+								has_blocker = no 
+								has_building = no 
+								has_grown_pop = yes
+							}
+							set_building = "building_primitive_factory"
+							add_resource = {
+								resource = minerals
+								amount = 1
+								replace = yes
+							}						
+						}						
+					}					
+					if = {
+						limit = {
+							last_created_country = {
+								has_country_flag = early_space_age
+							}
+						}
+						random_tile = {
+							limit = {
+								has_blocker = no
+								has_grown_pop = no
+								has_growing_pop = no
+							}
+							create_pop = {
+								species = last_created
+								ethos = owner
+							}
+						}						
+					}	
+					if = {
+						limit = {
+							last_created_country = {
+								has_country_flag = early_space_age
+							}
+						}
+						random_tile = {
+							limit = { 
+								has_blocker = no 
+								has_building = no 
+								has_grown_pop = yes
+							}
+							set_building = "building_primitive_factory"
+							add_resource = {
+								resource = minerals
+								amount = 1
+								replace = yes
+							}						
+						}						
+					}						
+					while = {
+						count = 2
+						random_tile = {
+							limit = { 
+								has_blocker = no 
+								has_building = no 
+								has_grown_pop = yes
+							}
+							set_building = "building_primitive_factory"
+							add_resource = {
+								resource = minerals
+								amount = 1
+								replace = yes
+							}						
+						}					
+					}
+					while = {
+						count = 4
+						random_tile = {
+							limit = { 
+								has_blocker = no 
+								has_building = no 
+								has_grown_pop = yes
+							}
+							set_building = "building_primitive_farm"
+							add_resource = {
+								resource = food
+								amount = 1
+								replace = yes
+							}						
+						}					
+					}
+					last_created_country = {
+						if = {
+							limit = { has_country_flag = industrial_age }
+							PREV = {
+								while = {
+									count = 4
+									create_army = {
+										name = "Industrial Army"
+										owner = last_created
+										species = last_created
+										type = "industrial_army"
+									}
+								}
+							}
+							break = yes
+						}
+						if = {
+							limit = { has_country_flag = machine_age }
+							PREV = {
+								while = {
+									count = 5
+									create_army = {
+										name = "Industrial Army"
+										owner = last_created
+										species = last_created
+										type = "industrial_army"
+									}
+								}
+							}
+							break = yes
+						}
+						if = {
+							limit = { has_country_flag = atomic_age }
+							PREV = {
+								while = {
+									count = 4
+									create_army = {
+										name = "Post-Atomic Army"
+										owner = last_created
+										species = last_created
+										type = "postatomic_army"
+									}
+								}
+							}
+							break = yes
+						}
+						if = {
+							limit = { has_country_flag = early_space_age }
+							PREV = {
+								while = {
+									count = 5
+									create_army = {
+										name = "Post-Atomic Army"
+										owner = last_created
+										species = last_created
+										type = "postatomic_army"
+									}
+								}
+								create_fleet = {
+									name = "Space Station" 
+									effect = {
+										set_owner = last_created_country
+										create_ship = {
+											name = "Space Station"
+											design = "Space Station"
+										}
+										set_location = PREV
+									}
+								}
+							}
+							break = yes
+						}
+					}
+				}
+				# Medieval Civilization
+				50 = {
+					create_species = {
+						name = random
+						class = random
+						portrait = random
+						homeworld = THIS
+						traits = {
+							trait = random_traits
+						}
+					}
+					create_country = {
+						name = random
+						government = primitive_feudalism
+						species = last_created
+						ethos = random
+						flag = {
+							icon = {
+								category = "special"
+								file = "primitive.dds"
+							}
+							background= {
+								category = "backgrounds"
+								file = "new_dawn.dds"
+							}
+							colors={
+								"turquoise"
+								"green"
+								"null"
+								"null"
+							}
+						}
+						type = primitive
+					}
+					last_created_country = {
+						set_graphical_culture = preindustrial_01
+						random_list = {
+							20 = { 
+								set_country_flag = bronze_age 
+								set_primitive_age = bronze_age
+							}
+							20 = { 
+								set_country_flag = iron_age 
+								set_primitive_age = iron_age
+							}
+							20 = { 
+								set_country_flag = late_medieval_age 
+								set_primitive_age = late_medieval_age
+							}
+							20 = { 
+								set_country_flag = renaissance_age 
+								set_primitive_age = renaissance_age
+							}
+							20 = { 
+								set_country_flag = steam_age 
+								set_primitive_age = steam_age
+							}
+						}
+					}
+					create_colony = {
+						owner = last_created_country
+						species = last_created
+						ethos = owner
+					}
+					random_tile = {
+						limit = {
+							has_blocker = no
+							has_grown_pop = no
+							has_growing_pop = no
+						}
+						create_pop = {
+							species = last_created
+							ethos = owner
+						}
+					}
+					if = {
+						limit = {
+							last_created_country = {
+								OR = {
+									has_country_flag = steam_age
+									has_country_flag = renaissance_age
+								}
+							}
+						}
+						random_tile = {
+							limit = {
+								has_blocker = no
+								has_grown_pop = no
+								has_growing_pop = no
+							}
+							create_pop = {
+								species = last_created
+								ethos = owner
+							}
+						}						
+					}
+					random_tile = {
+						limit = { has_building = "building_colony_shelter" }
+						remove_building = yes
+					}					
+					while = {
+						count = 2
+						random_tile = {
+							limit = { 
+								has_blocker = no 
+								has_building = no 
+								has_grown_pop = yes
+							}
+							set_building = "building_primitive_farm"
+							add_resource = {
+								resource = food
+								amount = 1
+								replace = yes
+							}
+						}
+					}
+					if = {
+						limit = {
+							last_created_country = {
+								OR = {
+									has_country_flag = iron_age 
+									has_country_flag = late_medieval_age 									
+									has_country_flag = renaissance_age
+									has_country_flag = steam_age
+								}
+							}
+						}
+						random_tile = {
+							limit = {
+								has_blocker = no
+								has_grown_pop = no
+								has_growing_pop = no
+							}
+							create_pop = {
+								species = last_created
+								ethos = owner
+							}
+						}						
+						random_tile = {
+							limit = { 
+								has_blocker = no 
+								has_building = no 
+								has_grown_pop = yes
+							}
+							set_building = "building_primitive_farm"
+							add_resource = {
+								resource = food
+								amount = 1
+								replace = yes
+							}
+						}						
+					}					
+					if = {
+						limit = {
+							last_created_country = {
+								OR = {
+									has_country_flag = steam_age
+									has_country_flag = renaissance_age
+								}
+							}
+						}
+						random_tile = {
+							limit = { 
+								has_blocker = no 
+								has_building = no 
+								has_grown_pop = yes
+							}
+							set_building = "building_primitive_farm"
+							add_resource = {
+								resource = food
+								amount = 1
+								replace = yes
+							}
+						}						
+					}
+					if = {
+						limit = {
+							last_created_country = {
+								has_country_flag = steam_age
+							}
+						}
+						random_tile = {
+							limit = { 
+								has_blocker = no 
+								has_building = no 
+								has_grown_pop = yes
+							}
+							set_building = "building_primitive_factory"
+							add_resource = {
+								resource = minerals
+								amount = 1
+								replace = yes
+							}						
+						}						
+					}					
+					last_created_country = {
+						if = {
+							limit = { has_country_flag = bronze_age }
+							PREV = {
+								create_army = {
+									name = "Primitive Army"
+									owner = last_created
+									species = last_created
+									type = "primitive_army"
+								}
+							}
+							break = yes
+						}
+						if = {
+							limit = { has_country_flag = iron_age }
+							PREV = {
+								while = {
+									count = 2
+									create_army = {
+										name = "Primitive Army"
+										owner = last_created
+										species = last_created
+										type = "primitive_army"
+									}
+								}
+							}
+							break = yes
+						}
+						if = {
+							limit = { has_country_flag = late_medieval_age }
+							PREV = {
+								while = {
+									count = 3
+									create_army = {
+										name = "Primitive Army"
+										owner = last_created
+										species = last_created
+										type = "primitive_army"
+									}
+								}
+							}
+							break = yes
+						}
+						if = {
+							limit = { has_country_flag = renaissance_age }
+							PREV = {
+								while = {
+									count = 4
+									create_army = {
+										name = "Primitive Army"
+										owner = last_created
+										species = last_created
+										type = "primitive_army"
+									}
+								}
+							}
+							break = yes
+						}
+						if = {
+							limit = { has_country_flag = steam_age }
+							PREV = {
+								while = {
+									count = 3
+									create_army = {
+										name = "Industrial Army"
+										owner = last_created
+										species = last_created
+										type = "industrial_army"
+									}
+								}
+							}
+							break = yes
+						}
+					}
+				}
+			}
+		}
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		orbit_distance = 20
+		count = { min = 1 max = 4 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		orbit_distance = 20
+		count = { min = 0 max = 2 }
+	}
+}
+
+# Stone Age Primitives
+morespecial_init_05 = {
+	class = "rl_more_stars"
+	
+	usage = misc_system_init
+	usage_odds = 2
+
+	flags = { stone_age_primitive_system }
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		orbit_distance = 20
+		count = { min = 0 max = 3 }
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		count = 1
+		orbit_distance = 0
+		class = "rl_habitable_normal"
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 15 max = 25 }
+		flags = { stone_age_primitives }
+
+		init_effect = {
+			prevent_anomaly = yes
+			add_modifier = {
+				modifier = "stone_age_civilization"
+				days = -1
+			}
+		}
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		orbit_distance = 20
+		count = { min = 1 max = 4 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		orbit_distance = 20
+		count = { min = 0 max = 2 }
+	}
+}

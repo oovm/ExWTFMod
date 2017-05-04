@@ -1,0 +1,16 @@
+objectTypes = {
+	pdxmesh = {
+		name = "plantoid_01_PowerStation_mesh"
+		file = "gfx/models/ships/plantoid_01/plantoid_01_PowerStation.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "miningbaseShape"
+			index = 0
+			texture_diffuse = "plantoid_01_PowerStation_diffuse.dds"
+			texture_normal = "plantoid_01_PowerStation_normal.dds"
+			texture_specular = "plantoid_01_PowerStation_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

@@ -1,0 +1,182 @@
+﻿l_english:
+#星球类型扩展
+ pc_o_star:0 "O类恒星"
+ pc_o_star_desc:1 "These rare, titanic stars burn through their nuclear fuel in only a few million years, giving off huge amounts of heat and light. Their incredible luminosity makes them easily visible, even from many hundreds of light-years away."
+ sc_o:0 "§HO类恒星§!"
+ pc_rg_star:0 "红巨星"
+ pc_rg_star_desc:1 "Red giants are the dying throes of lower-mass stars. Having run out of hydrogen in its core, it has begun to burn helium, causing the outer layers to swell to an enormous size."
+ sc_rg:0 "§H红巨星§!"
+ pc_rsg_star:0 "Red Supergiant Star"
+ pc_rsg_star_desc:1 "Red supergiants are high-mass stars nearing the end of their lives. Their mass allows them to fuse heavier and more exotic elements before they implode in a supernova."
+ sc_rsg:0 "§HRed Supergiant Star§!"
+ pc_rhg_star:0 "Red Hypergiant Star"
+ pc_rhg_star_desc:1 "The most massive of stars end their lives as red hypergiants. These titanic stars have barely a million years left before they self-destruct in an especially catastrophic supernova."
+ sc_rhg:0 "§HRed Hypergiant Star§!"
+ pc_wd_star:0 "White Dwarf Star"
+ pc_wd_star_desc:1 "White dwarves are the end of a low-mass star's life. These dim renemants form after a red giant has exausted its fuel, causing the outer layers to be blown away and leaving the core to slowly cool."
+ sc_wd:0 "§HWhite Dwarf Star§!"
+ pc_l_star:0 "Class L Star"
+ pc_l_star_desc:1 "Brown dwarves like this one are not massive enough to sustain the fusion reactions that define a 'true' star. Class L brown dwarves output a respectable amount of heat and light, but are outshone by their larger companions."
+ sc_l:0 "§HClass L Star§!"
+ pc_t_star:0 "T类恒星"
+ pc_t_star_desc:1 "These brown dwarves output a miniscule amount of radiation, equivlant to about that of an oven. Planets around these are mainly heated by tidal energy or geothermal power."
+ sc_t:0 "§HT类恒星§!"
+ pc_y_star:0 "Class Y Star"
+ pc_y_star_desc:1 "These objects are on the fuzzy line between star and planet. They emit virtually no heat or light and are about room temperature. Planets orbiting these bodies are heated solely through geothermal energies."
+ sc_y:0 "§HClass Y Star§!"
+ pc_wr_star:0 "Wolf-Rayet Star"
+ pc_wr_star_desc:1 "Wolf-Rayet stars are in the last stages of their lives. They have run out of hydrogen and helium and are fusing the last few elements they can before fusing iron and going supernova. Their incredibly powerful stellar wind blows away the outer layers of the star."
+ sc_wr:0 "§HWolf-Rayet Star§!"
+ pc_temporal_inhibitor:0 "Temporal Inhibitor"
+ pc_temporal_inhibitor_desc:1 "This ancient structure generates the strange temporal field in which the system is contained. Who could have constructed it?"
+ pc_pr_star:0 "Primordial Star"
+ pc_pr_star_desc:1 "This star appears to be one of the first stars in the universe! Primordial stars arose from pure hydrogen straight from the big bang itself, before even galaxies took shape. These original stars all burned out in only a few million years after they were formed, but this sole survivor lives on in the unique temporal field where it will never grow old or die."
+ sc_pr:0 "§HPrimordial Star§!"
+ pc_grn_star:0 "Green Star"
+ pc_grn_star_desc:1 "How does it even exist? Normal stars do produce green light, but it is normally drowned out by the other wavelengths, resulting in a white star; however, this star is producing a distinct lime green light, and nothing else. None of our theories can yet explain this anomaly."
+ sc_grn:0 "§HGreen Star§!"
+ magnetar:0 "Magnetar"
+ magnetar_desc:0 "This young neutron star projects an extremely powerful magnetic field, many millions of times stronger than an average star's. These fields will gradually weaken into that of a mature neutron star."
+ carbon_star:0 "Carbon Star"
+ carbon_star_desc:0 "Carbon stars are giant stars with unusually large amounts of carbon in their upper atmosphere. The carbon absorbs various wavelengths of light, causing the star to glow a distinct ruby-red."
+ quasar:0 "Micro Quasar"
+ quasar_desc:0 "This black hole's accretion disk is large and incredibly luminous. As the name implies, they resemble quasars on a smaller scale."
+ quark_star:0 "Quark Star"
+ quark_star_desc:0 "This exotic star is incredibly close to collapsing into a black hole; only the quarks repelling one another can keep it from imploding."
+ oxygen_star:0 "Oxygen Rich Star"
+ oxygen_star_desc:0 "This dying star has an unusually high amount of oxygen in its atmosphere, due to the late-stage fusion processes in its core."
+ morestars.1.name:0 "Enigmatic star"
+ morestars.1.desc:0 "We have stumbled across an enormous star several times more massive than any we have seen before. There was no indication of anything unusual until we entered its gravitational domain, whereupon our sensors were overwhelmed and our ships barely able to handle its unimaginable heat. Even stranger are the four enormous structures orbiting just beyond its sphere of influence."
+ morestars.1a:0 "What is this place?"
+ morestars.2.name:0 "Strange star"
+ morestars.2.desc:0 "A green star! Our leaders swore it was some kind of prank or practical joke at first, but further reports have verified this star's utterly baffling coloration. What could have caused it to adopt such a bizzare hue?"
+ morestars.2a:0 "A fascinating discovery."
+  pc_blue_dwarf_star:0 "Blue Dwarf Star"
+ pc_blue_dwarf_star_desc:1 "When a class M red dwarf with less than 0.25 solar masses has exhausted much of its hydrogen through fusion, instead of growing in size into a red giant, it becomes hotter to mantain the thermodynamic equilibrium, thus turning into a blue dwarf."
+ sc_blue_dwarf_star:0 "§HBlue Dwarf Star§!"
+ 
+ pc_black_dwarf_star:0 "Black Dwarf Star"
+ pc_black_dwarf_star_desc:1 "This is the final stage of evolution of a white dwarf; after more than 10^15 years, its surface temperature will be less than 5K, thus radiating much less energy and heat, slowly turning into a black dwarf."
+ sc_black_dwarf_star:0 "§HBlack Dwarf Star§!"
+ 
+ pc_dark_star:0 "Dark Star"
+ pc_dark_star_desc:1 "Also called dark matter stars, these are stars formed in the early Universe before conventional stars were able to form. They are mostly composed of baryonic matter, but its dark matter component generates enough heat to prevent nuclear fusion to happen, turning them almost invisible to the naked eye."
+ sc_dark_star:0 "§HDark Star§!"
+ 
+ pc_quasi_star:0 "Quasi-Star"
+ pc_quasi_star_desc:1 "Also called black hole stars, these very massive stars formed in the early Universe, when the core of a large protostar collapsed into a black hole, but its outer layers contained the resulting burst of energy that would end up in a supernova in normal conditions. Then the infalling material into the Black Hole core generates enough radiation pressure to compensate the gravitational collapse and mantain in equilibrium the star."
+ sc_quasi_star:0 "§HQuasi-Star§!"
+ pc_strange_star:0 "Strange Star"
+ pc_strange_star_desc:1 "Some neutron stars are massive enough that the neutrons in their cores disintegrate into quarks, turning into Quark Stars, but under very high pressures, half of the up quarks that form neutrons might be converted into strange quarks. If this occurs throughout the whole volume of the star, it is renamed as strange star."
+ sc_strange_star:0 "§HStrange Star§!"
+ pc_white_hole:0 "白洞"
+ pc_white_hole_desc:1 "This is a region of spacetime in which all time-like trayectories flow outwards, this is, that nothing can enter it from the outside, although matter and light can escape from it. In this sense, it is the reverse of a black hole, from which matter and light cannot escape."
+ sc_white_hole:0 "§H白洞§!"
+ q_star:0 "Q-Star"
+ q_star_desc:0 "This is, actually, not a black hole, but a very dense neutron star made of exotic matter, sometimes called a grey hole."
+ 
+ intermediate_black_hole:0 "Intermediate mass black hole"
+ intermediate_black_hole_desc:0 "This is a black hole more massive than a stellar black hole, but less massive than a supermassive black hole such as the ones at the centers of the galaxies. They have three proposed origins. The first one states that they could have formed by two or more merging stellar black holes. The second one proposes the collision of massive stars in stellar clusters. And the third one states that they are primordial black holes fromed during the Big Bang."
+ 
+ pop_iii_star:0 "Population III star"
+ pop_iii_star_desc:0 "This star belongs to the first generation of stars formed in the Universe, thus containing very few heavy elements."
+ 
+ tz_object:0 "Thorne-Zytkow object"
+ tz_object_desc:0 "This red giant has a neutron star at its core, which it acquired by a collision between the two."
+ 
+ electroweak_star:0 "Electroweak star"
+ electroweak_star_desc:0 "The temperature at the center of this star is so high that the conditions there are such that the electromagnetic force and the weak nuclear force are combined, resulting in electroweak burning. This transforms the quarks at the core into leptons, producing just enough radiation pressure to stop the gravitational collapse of its core."
+ 
+ sr_strange_matter:0 "Strange Matter"
+ sr_strange_matter_desc:0 "The most stable form of matter in the Universe, obtained from Strange Stars."
+ 
+ sr_quark_gluon_plasma:0 "Quark-Gluon Plasma"
+ sr_quark_gluon_plasma_desc:0 "This form of matter resembles the state of the very early Universe. It is found at the core of Quark Stars."
+ 
+ tech_mine_quark_gluon_plasma:0 "Quark-Gluon plasma extraction"
+ tech_mine_quark_gluon_plasma_desc:0 "The method of extracting Quark-Gluon plasma from the cores of quark stars permits to study in detail the conditions of the early Universe."
+ 
+ tech_mine_strange_matter:0 "Strange Matter recollection"
+ tech_mine_strange_matter_desc:0 "The understanding of the most stable form of matter in the Universe allows for the construcion of stronger structures both on space and on land."
+ 
+#堕落帝国扩展
+
+ personality_fallen_empire_militarist:0 "军事至上主义"
+ personality_fallen_empire_militarist_desc:0 "这个失落帝国专注于保持与其他帝国之间的军事优势。如果当有帝国的舰队力量超过他们可能会引发他们的怒火。"
+ personality_awakened_fallen_empire_militarist:0 "沙文帝国主义"
+ personality_awakened_fallen_empire_militarist_desc:0 "这个觉醒帝国试图用他们的军事优势吞并周边弱小的种种。他们可能会试图攻击任何比他们弱的帝国。"
+
+
+#	--------------------------- --------------------------- ---------------------------
+#	Puppet States
+#	common/subjects/FEE_fallen_empire_subjects.txt
+#	--------------------------- --------------------------- ---------------------------
+
+ SUBJECT_puppet:0 "傀儡政权"
+ SUBJECT_DESC_puppet:0 "傀儡是被其控制的霸主允许有独立的外交和军事的国家。他们必须贡献§Y35%§!能源和矿物给他们的霸主以赞扬霸主的伟绩。他们被霸主允许有殖民权和对外战争权。"
+ DIPLOMACY_IS_SUBJECT:1 "§T$TYPE$在$EMPIRE|H$§!下面"
+
+#	--------------------------- --------------------------- ---------------------------
+#	Opinion Modifiers
+#	common/opinion_modifiers/FEE_opinion_modifiers.txt
+#	--------------------------- --------------------------- ---------------------------
+
+ FEE_opinion_militarist_fleet_power_dangerous:0 "危险舰队实力"
+ FEE_opinion_militarist_fleet_power_threatening:0 "威胁舰队实力"
+ FEE_opinion_militarist_fleet_power_formidable:0 "可怕舰队实力"
+ FEE_opinion_militarist_fleet_power_major:0 "强大舰队实力"
+ FEE_opinion_militarist_fleet_power_moderate:0 "普通舰队实力"
+ FEE_opinion_militarist_fleet_power_minor:0 "弱小舰队实力"
+ FEE_opinion_militarist_fleet_power_trival:0 "零散舰队实力"
+ FEE_opinion_militarist_fleet_power_none:0 "无军事实力"
+
+ FEE_opinion_militarist_awakened_equivalent:0 "银河镜像"
+ FEE_opinion_militarist_awakened_powerful:0 "强大帝国"
+ FEE_opinion_militarist_awakened_noteworthy:0 "强帝国"
+ FEE_opinion_militarist_awakened_potent:0 "稍强帝国"
+ FEE_opinion_militarist_awakened_capable:0 "普通帝国"
+ FEE_opinion_militarist_awakened_mediocre:0 "弱小帝国"
+ FEE_opinion_militarist_awakened_weak:0 "无能帝国"
+ FEE_opinion_militarist_awakened_powerless:0 "手无寸铁"
+
+ FEE_opinion_militarist_vassal_relations:0 "傀儡国家关系"
+
+ FEE_opinion_militarist_vassal_belligerent:0 "交战国"
+
+#	--------------------------- --------------------------- ---------------------------
+#	Player Homeworlds
+#	common/solar_system_initializers/FEE_player_starting_homeworld_initializer.txt
+#	--------------------------- --------------------------- ---------------------------
+
+ FEE_fallen_1_1_player_NAME:0 "§H无限灯塔\n"
+ FEE_fallen_1_1_player_DESC:0 "§H失落帝国扩展 \n--------------------------------\n§L有四个居住区的完整的环形世界。\n§G   - 4x 环形世界居住区 (25)\n\n$system_initializer_DESC$"
+
+ FEE_fallen_1_3_player_NAME:0 "§H恒心灯塔\n"
+ FEE_fallen_1_3_player_DESC:0 "§H失落帝国扩展 \n--------------------------------\n§L被破坏的环形世界只剩下一个完整的居住区。\n§G   - 1x 环形世界居住区 (25)\n\n$system_initializer_DESC$"
+
+ FEE_fallen_2_player_NAME:0 "§H天体王座\n"
+ FEE_fallen_2_player_DESC:0 "§H失落帝国扩展 \n--------------------------------\n§L巫师帝国的王座。两个盖亚世界。\n§G   - 1x 盖亚行星 (25)\n§G   - 1x 盖亚行星 (15)\n\n$system_initializer_DESC$"
+
+ FEE_fallen_3_player_NAME:0 "§H天父\n"
+ FEE_fallen_3_player_DESC:0 "§H失落帝国扩展 \n--------------------------------\n§L领域的融合。三个盖亚星球环绕着一个巨型气态星球。\n§G   - 1x 盖亚月亮 (20)\n§G   - 1x 盖亚月球 (12)\n§G   - 1x 盖亚月亮 (10)\n\n$system_initializer_DESC$"
+
+ FEE_fallen_4_player_NAME:0 "§H核心\n"
+ FEE_fallen_4_player_DESC:0 "§H失落帝国扩展 \n--------------------------------\n§L一个隐居帝国，两个盖亚世界。一个轨道。\n§G   - 1x 盖亚行星 (25)\n§G   - 1x 盖亚月亮 (12)\n\n$system_initializer_DESC$"
+
+ FEE_fallen_5_player_NAME:0 "§H天体发电机\n"
+ FEE_fallen_5_player_DESC:0 "§H失落帝国扩展 \n--------------------------------\n§L古老又失效的机器。部分环形世界和盖亚世界。\n§G   - 1x 环形世界居住区 (25)\n§G   - 1x 盖亚行星 (25)\n\n$system_initializer_DESC$"
+
+ FEE_fallen_6_player_NAME:0 "§H太空避难所\n"
+ FEE_fallen_6_player_DESC:0 "§H失落帝国扩展 \n--------------------------------\n§L一个被共有恒星环绕着神秘空间。三个分开在轨道上的盖亚世界。\n§G   - 1x 盖亚行星 (25)\n§G   - 2x 盖亚月球 (20)\n\n$system_initializer_DESC$"
+
+ FEE_fallen_7_player_NAME:0 "§H空灵堡垒\n"
+ FEE_fallen_7_player_DESC:0 "§H失落帝国扩展 \n--------------------------------\n§L生命的摇篮。有四个居住区的完整的环形世界。\n§G   - 4x 环形世界居住区 (25)\n\n$system_initializer_DESC$"
+
+ FEE_fallen_8_player_NAME:0 "§H永恒城堡\n"
+ FEE_fallen_8_player_DESC:0 "§H失落帝国扩展 \n--------------------------------\n§L一个腐朽的帝国的最后的根据地，一个类地星球和一个理想世界。\n§G   - 1x 盖亚行星 (25)\n§G   - 1x 理想的宜居行星 (25)\n\n$system_initializer_DESC$"
+
+ FEE_fallen_earth_player_NAME:0 "§H地球\n"
+ FEE_fallen_earth_player_DESC:0 "§H失落帝国扩展\n--------------------------------\n§L停滞不前的圣所有着大量不同行星。\n§G     Venus - 热带世界 (16)\n§G     Earth - 盖亚世界 (25)\n§G     Mars - 草原世界 (16)\n§G     Europa - 海洋月球 (16)\n§G     Titan - 北极月 (12)\n\n§H家园: §R人族联盟\n\n$system_initializer_DESC$"
+
+ FEE_fallen_terran_wasteland_player_NAME:0 "§H人族荒地\n"
+ FEE_fallen_terran_wasteland_player_DESC:0 "§H失落帝国扩展 \n--------------------------------\n§L一个有着大量不同行星的外星入侵以及种族灭绝的墓地宝座。\n§G     Venus - 荒野世界 (16)\n§G     Earth - 死寂世界 (25)\n§G     Mars - 盖亚世界 (25)\n§G     Europa - 死寂月球 (25)\n§G     Titan - 苔原月 (16)\n§G     Titania - 北极月 (16)\n\n§H家园: §R索尔帝国\n\n$system_initializer_DESC$"

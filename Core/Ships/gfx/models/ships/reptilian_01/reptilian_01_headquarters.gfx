@@ -1,0 +1,15 @@
+objectTypes = {
+	pdxmesh = {
+		name = "reptilian_01_headquarters_frame_mesh"
+		file = "gfx/models/ships/reptilian_01/reptilian_01_headquarters_frame.mesh"
+
+		meshsettings = {
+			name = "|mammalian_01_headquarters|mammalian_01_headquarters"
+			index = 0
+			texture_diffuse = "reptilian_01_headquarters_diffuse.dds"
+			texture_normal = "reptilian_01_headquarters_normal.dds"
+			texture_specular = "reptilian_01_headquarters_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

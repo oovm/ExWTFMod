@@ -1,0 +1,15 @@
+objectTypes = {
+	pdxmesh = {
+		name = "plantoid_01_headquarters_frame_mesh"
+		file = "gfx/models/ships/plantoid_01/plantoid_01_headquarters_frame.mesh"
+
+		meshsettings = {
+			name = "|mammalian_01_headquarters|mammalian_01_headquarters"
+			index = 0
+			texture_diffuse = "plantoid_01_headquarters_diffuse.dds"
+			texture_normal = "plantoid_01_headquarters_normal.dds"
+			texture_specular = "plantoid_01_headquarters_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

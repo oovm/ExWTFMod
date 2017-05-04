@@ -1,6 +1,0 @@
-# Triggers when the game starts
-on_game_start = {
-	events = {	
-		starter_tech.1
-	}
-}

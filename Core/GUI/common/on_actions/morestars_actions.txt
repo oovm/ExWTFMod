@@ -1,0 +1,8 @@
+# SPOILERS GO AWAY
+
+on_entering_system = {
+	events = {
+		morestars.1
+		morestars.2
+	}
+}

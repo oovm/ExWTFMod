@@ -1,0 +1,1282 @@
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 240
+@tier1cost2 = 360
+@tier1cost3 = 480
+@tier1cost4 = 600
+
+@tier2cost1 = 900
+@tier2cost2 = 1200
+@tier2cost3 = 1500
+@tier2cost4 = 1800
+
+@tier3cost1 = 2320
+@tier3cost2 = 2840
+@tier3cost3 = 3360
+@tier3cost4 = 3880
+
+@tier4cost1 = 4400
+@tier4cost2 = 4720
+@tier4cost3 = 5040
+@tier4cost4 = 5360
+@tier4cost5 = 5680
+
+@tier5cost1 = 6200
+@tier5cost2 = 6720
+@tier5cost3 = 7240
+@tier5cost4 = 7860
+@tier5cost5 = 8480
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+@tier4weight1 = 33
+@tier4weight2 = 29
+@tier4weight3 = 25
+@tier4weight4 = 20
+@tier4weight5 = 16
+
+@tier5weight1 = 15
+@tier5weight2 = 14
+@tier5weight3 = 13
+@tier5weight4 = 12 #WOW #SUCH RARE #LOL
+
+# ##################
+# Ship Thrusters
+# ##################
+
+#Antimatter Thrusters
+tech_new_thrusters_5 = {
+	area = engineering
+	cost = @tier4cost1
+	tier = 4
+	category = { rocketry }
+	ai_update_type = all	
+	prerequisites = { "tech_thrusters_4" "tech_antimatter_power" }
+	weight = @tier4weight1
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_rocketry"
+			}
+		}
+	}
+	
+	prereqfor_desc = {
+		component = {
+			title = "TECH_TFW_THRUSTER_5_TITLE"
+			desc = "TECH_TFW_THRUSTER_5_DESC"
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.25 #important component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_rocketry"
+			}
+		}
+	}
+}
+
+#Graviton Thrusters
+tech_new_thrusters_6 = {
+	area = engineering
+	cost = @tier4cost4
+	tier = 5
+	is_rare = yes
+	category = { rocketry }
+	ai_update_type = all	
+	prerequisites = { "tech_new_thrusters_5" "tech_singularity_power" }
+	weight = @tier4weight4
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_rocketry"
+			}
+		}
+	}
+	
+	prereqfor_desc = {
+		component = {
+			title = "TECH_TFW_THRUSTER_6_TITLE"
+			desc = "TECH_TFW_THRUSTER_6_DESC"
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.25 #important component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_rocketry"
+			}
+		}
+	}
+}
+
+#Fight Thrusters
+tech_tfw_fight_thrusters = {
+	area = engineering
+	cost = @tier3cost4
+	tier = 4
+	is_rare = yes
+	category = { rocketry }
+	ai_update_type = all	
+	prerequisites = { "tech_thrusters_4" }
+	weight = @tier3weight4
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.15
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_rocketry"
+			}
+		}
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_TFW_FIGHT_THRUSTER_TITLE"
+			desc = "TECH_TFW_FIGHT_THRUSTER_DESC"
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.25 #important component
+		modifier = {
+			factor = 1.15
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_rocketry"
+			}
+		}
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+#Fight Thrusters2
+tech_tfw_fight_thrusters2 = {
+	area = engineering
+	cost = @tier4cost3
+	tier = 5
+	is_rare = yes
+	category = { rocketry }
+	ai_update_type = all	
+	prerequisites = { "tech_tfw_fight_thrusters" }
+	weight = @tier4weight3
+	
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.15
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_rocketry"
+			}
+		}
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_TFW_FIGHT_THRUSTER2_TITLE"
+			desc = "TECH_TFW_FIGHT_THRUSTER2_DESC"
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.25 #important component
+		modifier = {
+			factor = 1.15
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_rocketry"
+			}
+		}
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+# ##################
+# Auxiliary PPlants
+# ##################
+#Fusion AP Plant
+tech_shield_pumps_1 = {
+	area = physics
+	cost = @tier1cost4
+	tier = 2
+	category = { field_manipulation }
+	ai_update_type = all	
+	prerequisites = { "tech_cold_fusion_power" }
+	weight = @tier2weight2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3 #good component
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#Zero Point AP Plant
+tech_shield_pumps_2 = {
+	area = physics
+	cost = @tier2cost4
+	tier = 3
+	category = { field_manipulation }
+	ai_update_type = all	
+	prerequisites = { "tech_shield_pumps_1" "tech_zero_point_power" }
+	weight = @tier3weight2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 4 #good component
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#Antimatter AP Plant
+tech_shield_pumps_3 = {
+	area = physics
+	cost = @tier3cost4
+	tier = 4
+	category = { field_manipulation }
+	ai_update_type = all	
+	prerequisites = { "tech_shield_pumps_2" "tech_antimatter_power_optimized" }
+	weight = @tier4weight2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #good component
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#Singularity AP Plant
+tech_shield_pumps_4 = {
+	area = physics
+	cost = @tier4cost3
+	tier = 4
+	category = { field_manipulation }
+	ai_update_type = all	
+	prerequisites = { "tech_shield_pumps_3" "tech_singularity_power" }
+	weight = @tier4weight4
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #good component
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#Tachyon AP Plant
+tech_shield_pumps_5 = {
+	area = physics
+	cost = @tier5cost4
+	tier = 5
+	is_rare = yes
+	category = { field_manipulation }
+	ai_update_type = all	
+	prerequisites = { "tech_shield_pumps_4" }
+	weight = @tier5weight4
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #good component
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+# ##################
+# Repair Drones
+# ##################
+
+#Repair Drone I
+tfw_auto_repair_1 = {
+	area = engineering
+	cost = @tier2cost4
+	tier = 2
+	category = { materials }
+	prerequisites = { "tech_spaceport_3" "tech_robotic_workers" }
+	ai_update_type = military
+	weight = @tier3weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.0
+			OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 0.0
+			OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}		
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#Repair Drone II
+tfw_auto_repair_2 = {
+	area = engineering
+	cost = @tier4cost1
+	tier = 3
+	category = { materials }
+	ai_update_type = military
+	prerequisites = { "tech_spaceport_4" "tfw_auto_repair_1" }
+	weight = @tier4weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.0
+			OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}			
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#Repair Drone III
+tfw_auto_repair_3 = {
+	area = engineering
+	cost = @tier4cost4
+	tier = 4
+	category = { materials }
+	ai_update_type = military
+	prerequisites = { "tech_spaceport_5" "tfw_auto_repair_2" }
+	weight = @tier4weight4
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.0
+			OR = {
+				has_ethic = "ethic_spiritualist"
+				has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}			
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# ##################
+# Psi Repair Drones
+# ##################
+
+#Mother Tech Psionic Machinery
+tfw_psi_machinery = {
+	area = society
+	cost = @tier2cost3
+	tier = 2
+	is_rare = yes
+	category = { psionics }
+	prerequisites = { "tech_spaceport_3" "tech_psionic_theory" }
+	ai_update_type = military
+	weight = @tier2weight3
+	
+	modifier = {category_psionics_research_speed_mult = 0.1}		
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.10
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.10
+			research_leader = {
+				area = society
+				has_level > 2
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_level > 3
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = society
+				has_level > 4
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_spiritualist"
+		}
+		modifier = {
+			factor = 3
+			has_ethic = "ethic_fanatic_spiritualist"
+		}
+		modifier = {
+			factor = 4
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #very rare tech
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+}
+
+#Psi Repair Drone I
+tfw_auto_repair_psi1 = {
+	area = engineering
+	cost = @tier3cost2
+	tier = 2
+	is_rare = yes
+	category = { psionics }
+	prerequisites = { "tfw_psi_machinery" }
+	ai_update_type = military
+	weight = @tier3weight2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.50
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.10
+			research_leader = {
+				area = society
+				has_level > 2
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_level > 3
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = society
+				has_level > 4
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_spiritualist"
+		}
+		modifier = {
+			factor = 3
+			has_ethic = "ethic_fanatic_spiritualist"
+		}
+		modifier = {
+			factor = 5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #very rare tech
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+}
+
+#Psi Repair Drone II
+tfw_auto_repair_psi2 = {
+	area = engineering
+	cost = @tier4cost1
+	tier = 3
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_spaceport_4" "tfw_auto_repair_psi1" }
+	weight = @tier4weight1
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.10
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.10
+			research_leader = {
+				area = society
+				has_level > 2
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_level > 3
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = society
+				has_level > 4
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_spiritualist"
+		}
+		modifier = {
+			factor = 3
+			has_ethic = "ethic_fanatic_spiritualist"
+		}
+		modifier = {
+			factor = 5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #very rare tech
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+}
+
+#Psi Repair Drone III
+tfw_auto_repair_psi3 = {
+	area = engineering
+	cost = @tier4cost4
+	tier = 4
+	is_rare = yes
+	category = { psionics }
+	ai_update_type = military
+	prerequisites = { "tech_spaceport_5" "tfw_auto_repair_psi2" }
+	weight = @tier4weight4
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.10
+			NOT = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.10
+			research_leader = {
+				area = society
+				has_level > 2
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_level > 3
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = society
+				has_level > 4
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_spiritualist"
+		}
+		modifier = {
+			factor = 3
+			has_ethic = "ethic_fanatic_spiritualist"
+		}
+		modifier = {
+			factor = 5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #very rare tech
+		modifier = {
+			factor = 2.0
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+}
+
+###########################SENSORS################################
+tech_tfw_sensors_5 = {
+	area = physics
+	cost = @tier3cost4
+	tier = 4
+	category = { voidcraft }
+	ai_update_type = all	
+	prerequisites = { "tech_sensors_4" }
+	weight = @tier3weight4
+		
+	modifier = {
+		science_ship_survey_speed = 0.05
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 1.25 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_TFW_OBSERVATORY_5_TITLE"
+			desc = "TECH_UNLOCK_TFW_OBSERVATORY_5_DESC"
+		}
+	}
+}
+
+tech_tfw_sensors_6 = {
+	area = physics
+	cost = @tier4cost3
+	tier = 4
+	category = { voidcraft }
+	ai_update_type = all	
+	prerequisites = { "tech_tfw_sensors_5" }
+	weight = @tier4weight3
+		
+	modifier = {
+		science_ship_survey_speed = 0.05
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 1.25 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_TFW_OBSERVATORY_6_TITLE"
+			desc = "TECH_UNLOCK_TFW_OBSERVATORY_6_DESC"
+		}
+	}
+}
+
+tech_tfw_sensors_7 = {
+	area = physics
+	cost = @tier4cost5
+	tier = 5
+	category = { voidcraft }
+	ai_update_type = all	
+	prerequisites = { "tech_tfw_sensors_6" }
+	weight = @tier4weight5
+		
+	modifier = {
+		science_ship_survey_speed = 0.1
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 0.2
+			NOR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 0.0
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}	
+	
+	ai_weight = {
+		factor = 1.25 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 0.2
+			NOR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 0.0
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_TFW_OBSERVATORY_7_TITLE"
+			desc = "TECH_UNLOCK_TFW_OBSERVATORY_7_DESC"
+		}
+	}
+}
+
+tech_tfw_psi_sensors = {
+	area = physics
+	cost = @tier4cost5
+	tier = 5
+	category = { voidcraft }
+	ai_update_type = all	
+	prerequisites = { "tech_tfw_sensors_6" }
+	weight = @tier4weight5
+		
+	modifier = {
+		science_ship_survey_speed = 0.1
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics" }
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.25 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics" }
+			}
+		}
+	}
+	
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_TFW_OBSERVATORY_PSI_TITLE"
+			desc = "TECH_UNLOCK_TFW_OBSERVATORY_PSI_DESC"
+		}
+	}
+}

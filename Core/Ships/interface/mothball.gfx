@@ -1,0 +1,12 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_spaceport_mothball"
+		texturefile = "gfx/interface/icons/modules/spaceport_mothball.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_mothballed"
+		texturefile = "gfx/event_pictures/mothball_event.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		allwaystransparent = yes
+	}
+}

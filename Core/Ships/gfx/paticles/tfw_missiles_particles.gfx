@@ -1,0 +1,408 @@
+objectTypes = {
+
+#A-S
+#########
+# HIT EFFECTS
+#########
+
+	pdxparticle = {
+		name = "tfw_missile_small_hit_effect"
+		type = "tfw_hit_effect"
+		
+		scale = 0.3
+	}
+	
+	pdxparticle = {
+		name = "tfw_missile_medium_hit_effect"
+		type = "tfw_hit_effect"
+		
+		scale = 0.7
+	}
+	
+	pdxparticle = {
+		name = "tfw_missile_large_hit_effect"
+		type = "tfw_hit_effect"
+		
+		scale = 1.1
+	}
+	
+#########
+# IDLE
+#########
+
+	pdxparticle = {
+		name = "tfw_missile_idle_flame_particle"
+		type = "tfw_missile_idle_flame_file"
+		
+		scale = 0.1
+	}
+	
+##################
+# SHIELD HITS
+##################
+
+	pdxparticle = {
+		name = "tfw_missile_small_shield_hit_effect"
+		type = "tfw_missile_shield_hit_effect"
+		
+		scale = 1.1
+	}
+	
+	pdxparticle = {
+		name = "tfw_missile_medium_shield_hit_effect"
+		type = "tfw_missile_shield_hit_effect"
+		
+		scale = 1.35
+	}
+	
+	pdxparticle = {
+		name = "tfw_missile_large_shield_hit_effect"
+		type = "tfw_missile_shield_hit_effect"
+		
+		scale = 1.85
+	}
+
+#A-A	
+#########
+# HIT EFFECTS2
+#########
+
+	pdxparticle = {
+		name = "tfw_missile_small_hit_effect2"
+		type = "tfw_hit_effect2"
+		
+		scale = 0.4
+	}
+	
+	pdxparticle = {
+		name = "tfw_missile_medium_hit_effect2"
+		type = "tfw_hit_effect2"
+		
+		scale = 0.8
+	}
+	
+	pdxparticle = {
+		name = "tfw_missile_large_hit_effect2"
+		type = "tfw_hit_effect2"
+		
+		scale = 1.2
+	}
+	
+
+##################
+# SHIELD HITS2
+##################
+
+	pdxparticle = {
+		name = "tfw_missile_small_shield_hit_effect2"
+		type = "tfw_missile_shield_hit_effect2"
+		
+		scale = 1.1
+	}
+	
+	pdxparticle = {
+		name = "tfw_missile_medium_shield_hit_effect2"
+		type = "tfw_missile_shield_hit_effect2"
+		
+		scale = 1.35
+	}
+	
+	pdxparticle = {
+		name = "tfw_missile_large_shield_hit_effect2"
+		type = "tfw_missile_shield_hit_effect2"
+		
+		scale = 1.85
+	}
+
+#Plasma_Torpedoes	
+####################
+#	MUZZLE FLASHES
+####################
+	pdxparticle = {
+		name = "tfw_pt1_muzzle_particle_small"
+		type = "tfw_pt1_muzzle_file"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "tfw_pt1_muzzle_particle_medium"
+		type = "tfw_pt1_muzzle_file"
+		
+		scale = 1.25
+	}
+	pdxparticle = {
+		name = "tfw_pt1_muzzle_particle_large"
+		type = "tfw_pt1_muzzle_file"
+		
+		scale = 1.5
+	}
+	
+#####
+# FLYING EFFECTS
+#####
+	pdxparticle = {
+		name = "tfw_pt1_idle_flame_particle_small"
+		type = "tfw_pt1_idle_flame_file"
+		
+		scale = 1.25
+	}
+	pdxparticle = {
+		name = "tfw_pt1_idle_particle_small"
+		type = "tfw_pt1_idle_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "tfw_pt1_idle_flame_particle_medium"
+		type = "tfw_pt1_idle_flame_file"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "tfw_pt1_idle_particle_medium"
+		type = "tfw_pt1_idle_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "tfw_pt1_idle_flame_particle_large"
+		type = "tfw_pt1_idle_flame_file"
+		
+		scale = 1.75
+	}
+	pdxparticle = {
+		name = "tfw_pt1_idle_particle_large"
+		type = "tfw_pt1_idle_file"
+		
+		scale = 1.0
+	}
+	
+#########
+# HIT EFFECTS
+#########
+	pdxparticle = {
+		name = "tfw_pt1_hit_effect_small"
+		type = "tfw_pt1_hit_effect"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "tfw_pt1_hit_effect_medium"
+		type = "tfw_pt1_hit_effect"
+		
+		scale = 1.25
+	}
+	pdxparticle = {
+		name = "tfw_pt1_hit_effect_large"
+		type = "tfw_pt1_hit_effect"
+		
+		scale = 1.5
+	}
+
+#Adv_Plasma_Torpedoes	
+####################
+#	MUZZLE FLASHES
+####################
+	pdxparticle = {
+		name = "tfw_pt2_muzzle_particle_small"
+		type = "tfw_pt2_muzzle_file"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "tfw_pt2_muzzle_particle_medium"
+		type = "tfw_pt2_muzzle_file"
+		
+		scale = 1.25
+	}
+	pdxparticle = {
+		name = "tfw_pt2_muzzle_particle_large"
+		type = "tfw_pt2_muzzle_file"
+		
+		scale = 1.5
+	}
+	
+#####
+# FLYING EFFECTS
+#####
+	pdxparticle = {
+		name = "tfw_pt2_idle_flame_particle_small"
+		type = "tfw_pt2_idle_flame_file"
+		
+		scale = 1.25
+	}
+	pdxparticle = {
+		name = "tfw_pt2_idle_particle_small"
+		type = "tfw_pt2_idle_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "tfw_pt2_idle_flame_particle_medium"
+		type = "tfw_pt2_idle_flame_file"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "tfw_pt2_idle_particle_medium"
+		type = "tfw_pt2_idle_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "tfw_pt2_idle_flame_particle_large"
+		type = "tfw_pt2_idle_flame_file"
+		
+		scale = 1.75
+	}
+	pdxparticle = {
+		name = "tfw_pt2_idle_particle_large"
+		type = "tfw_pt2_idle_file"
+		
+		scale = 1.0
+	}
+	
+#########
+# HIT EFFECTS
+#########
+	pdxparticle = {
+		name = "tfw_pt2_hit_effect_small"
+		type = "tfw_pt2_hit_effect"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "tfw_pt2_hit_effect_medium"
+		type = "tfw_pt2_hit_effect"
+		
+		scale = 1.25
+	}
+	pdxparticle = {
+		name = "tfw_pt2_hit_effect_large"
+		type = "tfw_pt2_hit_effect"
+		
+		scale = 1.5
+	}
+
+############################Swarmer Missiles############################
+		pdxparticle = {
+		name = "swarmer_missile_03_idle_particle"
+		type = "swarmer_missile_03_idle_file"
+		
+		scale = 1.0
+	}
+		pdxparticle = {
+		name = "swarmer_missile_03_hit_effect"
+		type = "swarmer_missile_03_hit_effect"
+		
+		scale = 1.0
+	}
+	
+###############INFECTOR############################
+####HITS
+	
+	pdxparticle = {
+		name = "infector_medium_hit_effect"		
+		type = "infector_hit_file"
+		
+		scale = 0.75
+	}	
+	pdxparticle = {
+		name = "infector_large_hit_effect"		
+		type = "infector_hit_file"
+		
+		scale = 1.0
+	}	
+
+####MUZZLES
+	
+	pdxparticle = {
+		name = "infector_medium_muzzle_particle"
+		type = "infector_muzzle"
+		
+		scale = 0.75
+	}
+	pdxparticle = {
+		name = "infector_large_muzzle_particle"
+		type = "infector_muzzle"
+		
+		scale = 1.0
+	}
+
+####FLYING EFFECTS
+	
+	pdxparticle = {
+		name = "infector_medium_idle_particle"
+		type = "infector_idle_file"
+		
+		scale = 0.75
+	}
+	pdxparticle = {
+		name = "infector_large_idle_particle"
+		type = "infector_idle_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "infector_medium_idle_trail_particle"
+		type = "infector_idle_trail_file"
+		
+		scale = 0.75
+	}	
+	pdxparticle = {
+		name = "infector_large_idle_trail_particle"
+		type = "infector_idle_trail_file"
+		
+		scale = 1.0
+	}	
+		
+###############KAMIKAZE############################
+####FLYING EFFECTS
+	pdxparticle = {
+		name = "kamikaze_medium_trail_particle"
+		type = "kamikaze_idle_trail_file"
+		
+		scale = 0.75
+	}
+	pdxparticle = {
+		name = "kamikaze_large_trail_particle"
+		type = "kamikaze_idle_trail_file"
+		
+		scale = 1.0
+	}
+####MUZZLES
+	
+	pdxparticle = {
+		name = "kamikaze_medium_muzzle_particle"
+		type = "kamikaze_muzzle_file"
+		
+		scale = 0.75
+	}
+	pdxparticle = {
+		name = "kamikaze_large_muzzle_particle"
+		type = "kamikaze_muzzle_file"
+		
+		scale = 1.0
+	}
+####HITS
+	
+	pdxparticle = {
+		name = "kamikaze_medium_hit_effect"		
+		type = "infector_hit_file"
+		
+		scale = 1.2
+	}	
+	pdxparticle = {
+		name = "kamikaze_large_hit_effect"		
+		type = "infector_hit_file"
+		
+		scale = 1.4
+	}		
+	
+	
+}

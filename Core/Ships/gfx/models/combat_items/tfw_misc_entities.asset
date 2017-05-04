@@ -1,0 +1,12 @@
+############JAMMER###################
+
+entity = {
+	name = "tfw_negative_effect_entity"
+	
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = "tfw_negative_effect" }
+	}
+	
+	scale = 2
+}

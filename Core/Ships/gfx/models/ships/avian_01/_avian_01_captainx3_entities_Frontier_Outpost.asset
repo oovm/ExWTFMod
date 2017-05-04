@@ -1,0 +1,369 @@
+@corvette_scale = 6.0
+@destroyer_scale = 7.0
+@cruiser_scale = 10.0
+@battleship_scale = 15.0
+@Battlecruiser_scale = 13.0
+@LightCarrier_scale = 15.0
+@Carrier_scale = 17.0
+@military_station_large = 20.0
+@Dreadnought_scale = 20.0
+@Superdreadnought_scale = 25.0
+@Flagship_scale = 30.0
+@frontier_outpost = 10
+
+
+##################         	 Frontier Outpost         ########################
+
+	entity = {
+		name = "avian_01_frontier_outpost_entity"
+		pdxmesh = "avian_01_orbital_station_frame_mesh"
+		cull_radius = 1.0 
+			
+		default_state = "idle"
+		state = { name = "idle" state_time = 5 }
+			
+		state = { name = "death" state_time = 5 looping = no
+			event = { time = 4.9 particle = "large_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+		}
+			
+		game_data = {
+			size = @frontier_outpost
+		}
+	}
+	
+	###########################
+	# FRONTIER OUTPOST TIER 1 #
+	###########################
+    
+	entity = {
+		name = "avian_01_frontier_outpost_t1_core_entity"
+		pdxmesh = "avian_01_orbital_station_mesh"	
+		
+		default_state = "idle"
+		state = { name = "idle" state_time = 5 
+			start_event = { trigger_once = yes sound = { soundeffect = "spaceport_hum_idle" } } 
+			event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		}
+		state = { name = "death" state_time = 5 looping = no
+			event = { time = 0.0 node = "explosion_1" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 0.5 node = "explosion_2" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 1.5 node = "explosion_3" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 2.0 node = "explosion_4" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 4.0 node = "explosion_5" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		}
+		locator = { name = "medium_gun_01"	position = { 0 0 0 } }
+		locator = { name = "medium_gun_02"	position = { 0 0 0 } }
+		locator = { name = "small_gun_01"	position = { 0 0 0 } }
+		locator = { name = "small_gun_02"	position = { 0 0 0 } }
+		locator = { name = "small_gun_03"	position = { 0 0 0 } }
+		locator = { name = "small_gun_04"	position = { 0 0 0 } }
+		
+		locator = { name = "explosion_1" 		position = { 0 11 3 } }
+		locator = { name = "explosion_2" 		position = { -8 3 -12.5 } }
+		locator = { name = "explosion_3" 		position = { -8 6 8.5 } }
+		locator = { name = "explosion_4" 		position = { 6 11.5 3 } }
+		locator = { name = "explosion_5" 		position = { 0 -3 6 } }
+		
+		#This locator defines where all weaponry goes on the Frontier Outpost.
+		locator = { name = "part1" position = { 0 0 0 } }
+		
+		#Opposites 1
+		locator = { name = "part2" position = { 12 2 7 } rotation = { -120 0 0 } }
+		attach = { part2 = "avian_01_frontier_outpost_assemblyyard_section_entity" }
+		
+		#Opposites 1
+		locator = { name = "part3" position = { -12 2 -7 } rotation = { 60 0 0 } }
+		attach = { part3 = "avian_01_frontier_outpost_assemblyyard_section_entity" }
+		
+		#Opposites 2
+		#locator = { name = "part4" position = { 0 2 -14 } }
+		#attach = { part4 = "avian_01_frontier_outpost_hangarbay_section_entity" }
+		
+		#Opposites 2
+		#locator = { name = "part5" position = { 0 2 14 } rotation = { 180 0 0 } }
+		#attach = { part5 = "avian_01_frontier_outpost_hangarbay_section_entity" }
+		
+		#Opposites 3
+		#locator = { name = "part6" position = { 12 2 -7 } rotation = { -60 0 0 } }
+		#attach = { part6 = "avian_01_frontier_outpost_refinery_section_entity" }
+		
+		#Opposites 3
+		#locator = { name = "part7" position = { -12 2 7 } rotation = { 120 0 0 } }
+		#attach = { part7 = "avian_01_frontier_outpost_science_section_entity" }
+		
+		scale = 0.5
+	}
+	
+	
+	###########################
+	# FRONTIER OUTPOST TIER 2 #
+	###########################
+	
+	
+	entity = {
+		name = "avian_01_frontier_outpost_t2_core_entity"
+		pdxmesh = "avian_01_orbital_station_mesh"	
+		
+		default_state = "idle"
+		state = { name = "idle" state_time = 5 
+			start_event = { trigger_once = yes sound = { soundeffect = "spaceport_hum_idle" } } 
+			event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		}
+		state = { name = "death" state_time = 5 looping = no
+			event = { time = 0.0 node = "explosion_1" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 0.5 node = "explosion_2" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 1.5 node = "explosion_3" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 2.0 node = "explosion_4" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 4.0 node = "explosion_5" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		}
+		locator = { name = "medium_gun_01"	position = { 0 0 0 } }
+		locator = { name = "medium_gun_02"	position = { 0 0 0 } }
+		locator = { name = "small_gun_01"	position = { 0 0 0 } }
+		locator = { name = "small_gun_02"	position = { 0 0 0 } }
+		locator = { name = "small_gun_03"	position = { 0 0 0 } }
+		locator = { name = "small_gun_04"	position = { 0 0 0 } }
+		
+		locator = { name = "explosion_1" 		position = { 0 11 3 } }
+		locator = { name = "explosion_2" 		position = { -8 3 -12.5 } }
+		locator = { name = "explosion_3" 		position = { -8 6 8.5 } }
+		locator = { name = "explosion_4" 		position = { 6 11.5 3 } }
+		locator = { name = "explosion_5" 		position = { 0 -3 6 } }
+		
+		#This locator defines where all weaponry goes on the Frontier Outpost.
+		locator = { name = "part1" position = { 0 0 0 } }
+		
+		#Opposites 1
+		locator = { name = "part2" position = { 12 2 7 } rotation = { -120 0 0 } }
+		attach = { part2 = "avian_01_frontier_outpost_assemblyyard_section_entity" }
+		
+		#Opposites 1
+		locator = { name = "part3" position = { -12 2 -7 } rotation = { 60 0 0 } }
+		attach = { part3 = "avian_01_frontier_outpost_assemblyyard_section_entity" }
+		
+		#Opposites 2
+		locator = { name = "part4" position = { 0 2 -14 } }
+		attach = { part4 = "avian_01_frontier_outpost_science_section_entity" }
+		
+		#Opposites 2
+		locator = { name = "part5" position = { 0 2 14 } rotation = { 180 0 0 } }
+		attach = { part5 = "avian_01_frontier_outpost_science_section_entity" }
+		
+		#Opposites 3
+		#locator = { name = "part6" position = { 12 2 -7 } rotation = { -60 0 0 } }
+		#attach = { part6 = "avian_01_frontier_outpost_refinery_section_entity" }
+		
+		#Opposites 3
+		#locator = { name = "part7" position = { -12 2 7 } rotation = { 120 0 0 } }
+		#attach = { part7 = "avian_01_frontier_outpost_science_section_entity" }
+		
+		scale = 0.5
+	}
+	
+	
+	###########################
+	# FRONTIER OUTPOST TIER 3 #
+	###########################
+	
+	
+	entity = {
+		name = "avian_01_frontier_outpost_t3_core_entity"
+		pdxmesh = "avian_01_orbital_station_mesh"	
+		
+		default_state = "idle"
+		state = { name = "idle" state_time = 5 
+			start_event = { trigger_once = yes sound = { soundeffect = "spaceport_hum_idle" } } 
+			event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		}
+		state = { name = "death" state_time = 5 looping = no
+			event = { time = 0.0 node = "explosion_1" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 0.5 node = "explosion_2" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 1.5 node = "explosion_3" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 2.0 node = "explosion_4" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 4.0 node = "explosion_5" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		}
+		locator = { name = "medium_gun_01"	position = { 0 0 0 } }
+		locator = { name = "medium_gun_02"	position = { 0 0 0 } }
+		locator = { name = "small_gun_01"	position = { 0 0 0 } }
+		locator = { name = "small_gun_02"	position = { 0 0 0 } }
+		locator = { name = "small_gun_03"	position = { 0 0 0 } }
+		locator = { name = "small_gun_04"	position = { 0 0 0 } }
+		
+		locator = { name = "explosion_1" 		position = { 0 11 3 } }
+		locator = { name = "explosion_2" 		position = { -8 3 -12.5 } }
+		locator = { name = "explosion_3" 		position = { -8 6 8.5 } }
+		locator = { name = "explosion_4" 		position = { 6 11.5 3 } }
+		locator = { name = "explosion_5" 		position = { 0 -3 6 } }
+		
+		#This locator defines where all weaponry goes on the Frontier Outpost.
+		locator = { name = "part1" position = { 0 0 0 } }
+		
+		#Opposites 1
+		locator = { name = "part2" position = { 12 2 7 } rotation = { -120 0 0 } }
+		attach = { part2 = "avian_01_frontier_outpost_assemblyyard_section_entity" }
+		
+		#Opposites 1
+		locator = { name = "part3" position = { -12 2 -7 } rotation = { 60 0 0 } }
+		attach = { part3 = "avian_01_frontier_outpost_assemblyyard_section_entity" }
+		
+		#Opposites 2
+		locator = { name = "part4" position = { 0 2 -14 } }
+		attach = { part4 = "avian_01_frontier_outpost_science_section_entity" }
+		
+		#Opposites 2
+		locator = { name = "part5" position = { 0 2 14 } rotation = { 180 0 0 } }
+		attach = { part5 = "avian_01_frontier_outpost_science_section_entity" }
+		
+		#Opposites 3
+		locator = { name = "part6" position = { 12 2 -7 } rotation = { -60 0 0 } }
+		attach = { part6 = "avian_01_frontier_outpost_refinery_section_entity" }
+		
+		#Opposites 3
+		locator = { name = "part7" position = { -12 2 7 } rotation = { 120 0 0 } }
+		attach = { part7 = "avian_01_frontier_outpost_refinery_section_entity" }
+		
+		scale = 0.5
+	}
+	
+	
+	###########################
+	# FRONTIER OUTPOST TIER 4 #
+	###########################
+	
+	
+	entity = {
+		name = "avian_01_frontier_outpost_t4_core_entity"
+		pdxmesh = "avian_01_orbital_station_mesh"	
+		
+		default_state = "idle"
+		state = { name = "idle" state_time = 5 
+			start_event = { trigger_once = yes sound = { soundeffect = "spaceport_hum_idle" } } 
+			event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		}
+		state = { name = "death" state_time = 5 looping = no
+			event = { time = 0.0 node = "explosion_1" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 0.5 node = "explosion_2" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 1.5 node = "explosion_3" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 2.0 node = "explosion_4" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 4.0 node = "explosion_5" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		}
+		locator = { name = "medium_gun_01"	position = { 0 0 0 } }
+		locator = { name = "medium_gun_02"	position = { 0 0 0 } }
+		locator = { name = "small_gun_01"	position = { 0 0 0 } }
+		locator = { name = "small_gun_02"	position = { 0 0 0 } }
+		locator = { name = "small_gun_03"	position = { 0 0 0 } }
+		locator = { name = "small_gun_04"	position = { 0 0 0 } }
+		
+		locator = { name = "explosion_1" 		position = { 0 11 3 } }
+		locator = { name = "explosion_2" 		position = { -8 3 -12.5 } }
+		locator = { name = "explosion_3" 		position = { -8 6 8.5 } }
+		locator = { name = "explosion_4" 		position = { 6 11.5 3 } }
+		locator = { name = "explosion_5" 		position = { 0 -3 6 } }
+		
+		#This locator defines where all weaponry goes on the Frontier Outpost.
+		locator = { name = "part1" position = { 0 0 0 } }
+		
+		#Opposites 1 - Set 1
+		locator = { name = "part2" position = { 12 2 7 } rotation = { -120 0 0 } }
+		attach = { part2 = "avian_01_frontier_outpost_hangarbay_section_entity" }
+		
+		#Opposites 1 - Set 2
+		locator = { name = "part3" position = { -12 2 -7 } rotation = { 60 0 0 } }
+		attach = { part3 = "avian_01_frontier_outpost_refinery_section_entity" }
+		
+		#Opposites 2 - Set 1
+		locator = { name = "part4" position = { 0 2 -14 } }
+		attach = { part4 = "avian_01_frontier_outpost_hangarbay_section_entity" }
+		
+		#Opposites 2 - Set 2
+		locator = { name = "part5" position = { 0 2 14 } rotation = { 180 0 0 } }
+		attach = { part5 = "avian_01_frontier_outpost_refinery_section_entity" }
+		
+		#Opposites 3 - Set 1
+		locator = { name = "part7" position = { -12 2 7 } rotation = { 120 0 0 } }
+		attach = { part7 = "avian_01_frontier_outpost_hangarbay_section_entity" }
+		
+		#Opposites 3 - Set 2
+		locator = { name = "part6" position = { 12 2 -7 } rotation = { -60 0 0 } }
+		attach = { part6 = "avian_01_frontier_outpost_refinery_section_entity" }
+		
+		scale = 0.5
+	}
+	
+
+	############################
+	# FRONTIER OUTPOST MODULES #
+	############################
+	
+	
+	entity = {
+			name = "avian_01_frontier_outpost_assemblyyard_section_entity"
+			pdxmesh = "avian_01_orbital_station_assemblyyard_section_mesh"
+			
+			default_state = "idle"
+				state = { name = "idle" state_time = 5
+				event = { time = 0 node = "runway_light_left_r_01" particle = "ship_light_blue_regular_effect" keep_particle = yes trigger_once = yes }
+				event = { time = 0.1 node = "runway_light_left_r_02" particle = "ship_light_blue_regular_effect" keep_particle = yes trigger_once = yes }
+				event = { time = 0.2 node = "runway_light_left_r_03" particle = "ship_light_blue_regular_effect" keep_particle = yes trigger_once = yes }
+				event = { time = 0.3 node = "runway_light_left_r_04" particle = "ship_light_blue_regular_effect" keep_particle = yes trigger_once = yes }
+				event = { time = 0.4 node = "runway_light_left_r_05" particle = "ship_light_blue_regular_effect" keep_particle = yes trigger_once = yes }
+				event = { time = 0.5 node = "runway_light_left_r_06" particle = "ship_light_blue_regular_effect" keep_particle = yes trigger_once = yes }
+				event = { time = 0.6 node = "runway_light_left_r_07" particle = "ship_light_blue_regular_effect" keep_particle = yes trigger_once = yes }
+				event = { time = 0.7 node = "runway_light_left_r_08" particle = "ship_light_blue_regular_effect" keep_particle = yes trigger_once = yes }
+				event = { time = 0 node = "runway_light_left_l_01" particle = "ship_light_blue_regular_effect" keep_particle = yes trigger_once = yes }
+				event = { time = 0.1 node = "runway_light_left_l_02" particle = "ship_light_blue_regular_effect" keep_particle = yes trigger_once = yes }
+				event = { time = 0.2 node = "runway_light_left_l_03" particle = "ship_light_blue_regular_effect" keep_particle = yes trigger_once = yes }
+				event = { time = 0.3 node = "runway_light_left_l_04" particle = "ship_light_blue_regular_effect" keep_particle = yes trigger_once = yes }
+				event = { time = 0.4 node = "runway_light_left_l_05" particle = "ship_light_blue_regular_effect" keep_particle = yes trigger_once = yes }
+				event = { time = 0.5 node = "runway_light_left_l_06" particle = "ship_light_blue_regular_effect" keep_particle = yes trigger_once = yes }
+				event = { time = 0.6 node = "runway_light_left_l_07" particle = "ship_light_blue_regular_effect" keep_particle = yes trigger_once = yes }
+				event = { time = 0.7 node = "runway_light_left_l_08" particle = "ship_light_blue_regular_effect" keep_particle = yes trigger_once = yes }
+				
+				event = { time = 0.8 node = "runway_light_end" particle = "ship_light_blue_regular_effect" keep_particle = yes trigger_once = yes }
+			}
+			
+			scale = 1.0
+		}
+
+		entity = {
+			name = "avian_01_frontier_outpost_hangarbay_section_entity"
+			pdxmesh = "avian_01_orbital_station_hangarbay_section_mesh"
+			
+		default_state = "idle"
+		state = { name = "idle" state_time = 2
+			event = { time = 0.35 node = "runway_light_01" particle = "ship_light_blue_rolling_effect" keep_particle = yes trigger_once = yes }
+			event = { time = 0.3 node = "runway_light_02" particle = "ship_light_blue_rolling_effect" keep_particle = yes trigger_once = yes }
+			event = { time = 0.25 node = "runway_light_03" particle = "ship_light_blue_rolling_effect" keep_particle = yes trigger_once = yes }
+			event = { time = 0.2 node = "runway_light_04" particle = "ship_light_blue_rolling_effect" keep_particle = yes trigger_once = yes }
+			event = { time = 0.15 node = "runway_light_05" particle = "ship_light_blue_rolling_effect" keep_particle = yes trigger_once = yes }
+			event = { time = 0.1 node = "runway_light_06" particle = "ship_light_blue_rolling_effect" keep_particle = yes trigger_once = yes }
+			event = { time = 0.05 node = "runway_light_07" particle = "ship_light_blue_rolling_effect" keep_particle = yes trigger_once = yes }
+			event = { time = 0 node = "runway_light_08" particle = "ship_light_blue_rolling_effect" keep_particle = yes trigger_once = yes }
+			event = { time = 1.6 node = "light_locator_end" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		}
+		
+			scale = 1.0
+		}
+
+		entity = {
+		name = "avian_01_frontier_outpost_refinery_section_entity"
+		pdxmesh = "avian_01_orbital_station_refinery_section_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle" animation = "rotate"
+			event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		}
+		
+			scale = 1.0
+		}
+
+		entity = {
+		name = "avian_01_frontier_outpost_science_section_entity"
+		pdxmesh = "avian_01_orbital_station_science_section_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle" state_time = 5
+			event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+			event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		}
+			scale = 1.0
+		}

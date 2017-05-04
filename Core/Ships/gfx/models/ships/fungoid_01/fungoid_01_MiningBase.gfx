@@ -1,0 +1,16 @@
+objectTypes = {
+	pdxmesh = {
+		name = "fungoid_01_MiningBase_mesh"
+		file = "gfx/models/ships/fungoid_01/fungoid_01_MiningBase.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "|energy_station|energy_station"
+			index = 0
+			texture_diffuse = "fungoid_01_MiningBase_diffuse.dds"
+			texture_normal = "fungoid_01_MiningBase_normal.dds"
+			texture_specular = "fungoid_01_MiningBase_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}
